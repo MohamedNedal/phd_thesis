@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.31)  13 AUG 2023 16:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.31)  20 AUG 2023 00:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -364,26 +364,26 @@ Overfull \hbox (14.71985pt too wide) in paragraph at lines 50--50
 []\OT1/cmr/bx/n/12 Discussion of the re-sults and im-pli-ca-tions for op-er-a-tional space weather
  []
 
-(main.bbl
+[2] [3] [4] [5] [6] [7] (main.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [2] (main.aux)
+) [8] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F990BF5E599E084375F6D09732AB9B0B;10402.
+(rerunfilecheck)             Checksum: 1E74A252C0856A129D4775699C6F57F3;10756.
  ) 
 Here is how much of TeX's memory you used:
- 10794 strings out of 476410
- 173397 string characters out of 5789585
- 1863845 words of memory out of 5000000
- 30983 multiletter control sequences out of 15000+600000
- 516908 words of font info for 48 fonts, out of 8000000 for 9000
+ 10815 strings out of 476410
+ 173608 string characters out of 5789585
+ 1865845 words of memory out of 5000000
+ 30994 multiletter control sequences out of 15000+600000
+ 517897 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,76p,914b,535s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on main.pdf (2 pages, 88950 bytes).
+ 75i,6n,76p,1500b,535s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\DELL\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (8 pages, 152995 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 212 PDF objects out of 1000 (max. 8388607)
+ 49 named destinations out of 1000 (max. 500000)
+ 225 words of extra memory for PDF output out of 10000 (max. 10000000)
 
