@@ -1,0 +1,30 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Chapter 1: Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Background and Motivation}{1}{section.2}%
+\contentsline {section}{\numberline {3}Objectives and Scope}{4}{section.3}%
+\contentsline {section}{\numberline {4}Outline}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Background and significance of studying heliophysics}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Overview of the solar corona and its dynamics}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Introduction to Coronal Bright Fronts (CBFs)}{7}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Solar Energetic Particles (SEPs) and their relevance to space weather}{7}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Solar type III radio bursts and their significance}{7}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Objective of the thesis and organization of the chapters}{7}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Chapter 2: Characterization of the Early Dynamics of Coronal Bright Fronts}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Overview of the methodology used for analyzing CBFs}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Description of the Solar Particle Radiation Environment Analysis and Forecasting - Acceleration and Scattering Transport (SPREAdFAST) framework}{7}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Data sources and instrumentation}{7}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Multi-event study of early-stage SEP acceleration by CME-driven shocks}{7}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Multi-scale image preprocessing and feature tracking method for remote coronal waves characterization}{7}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Implications of the findings for space weather forecasting and SEP events}{7}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Chapter 3: Forecasting Solar Energetic Proton Integral Fluxes with Bi-Directional Long Short-Term Memory Neural Networks}{7}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Overview of the SEP forecasting problem and its importance}{7}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Introduction to the BiLSTM neural network model}{7}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Discussion of the results and implications for operational space weather forecasting}{8}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Chapter 4: Coronal Diagnostics of Solar Type-III Radio Bursts Using LOFAR and PSP Observations}{8}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Description of the observational data from LOFAR and PSP}{8}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Data preprocessing techniques}{8}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Characterizing the type III radio bursts}{8}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Imaging of radio emission sources using LOFAR interferometric observations}{8}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Analysis and modeling of plasma parameters and magnetic field}{8}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Notable findings and their implications for understanding type III radio bursts}{8}{subsection.7.6}%
+\contentsline {section}{\numberline {8}Chapter 6: Conclusion and Future Directions}{8}{section.8}%

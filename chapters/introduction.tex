@@ -1,0 +1,169 @@
+\chapter{Introduction}
+
+\section{Background and Motivation}
+
+The Sun, an ordinary main-sequence star situated at the center of our Solar System, exhibits various forms of activity and variability on multiple spatial and temporal scales (Priest, 2014; Aschwanden, 2006). One of the main manifestations of solar activity relevant to space weather research are transient energetic eruptive phenomena such as flares, coronal mass ejections (CMEs), and wide-ranging emissions of electromagnetic radiation and energetic particles (Schwenn, 2006; Pulkkinen, 2007). These eruptive events originate due to the sudden release of free magnetic energy stored in complex, twisted or sheared magnetic field structures in the solar atmosphere (Forbes et al., 2006; Chen, 2011; Priest and Forbes, 2007). The energetic phenomena are driven by the rapid dissipation of magnetic energy via magnetic reconnection which can accelerate large numbers of electrons to relativistic energies and heat plasma to tens of million Kelvin (Shibata and Magara, 2011; Benz, 2017).
+
+The eruptive solar events drive major disturbances in the near-Earth space environment and planetary environments across the heliosphere, collectively termed space weather (Schrijver and Siscoe, 2010; Eastwood et al., 2017). Enhanced fluxes of solar energetic particles (SEPs), plasma ejecta, and electromagnetic radiation emitted during solar eruptions can impact the geomagnetic field, radiation belts, ionosphere, thermosphere, and upper atmosphere surrounding the Earth (Schwenn, 2006; Pulkkinen, 2007). Adverse effects range from disruption of radio communications to damage of satellites, power grid failures, aviation hazards due to radiation risks for airline crew and passengers, and increased radiation exposure for astronauts (ISO, 2015; Lanzerotti, 2001). The societal dependence on space-based infrastructure has increased exponentially, escalating the vulnerability to space weather disturbances. Recent studies estimate a severe space weather event could lead to trillion-dollar economic damages in the US alone (Oughton et al., 2017). Besides the near-Earth space environment, solar eruptive transients also drive adverse space weather effects across the Solar System impacting activities such as deep space exploration and astronomy (Luhmann et al., 2010; Lilensten et al., 2014).
+
+Therefore, advancing our understanding of the origins and propagation characteristics of solar eruptive phenomena, as well as quantifying their impacts on geospace and planetary environments, has become an extremely important pursuit for nations worldwide. Fundamental research seeks to uncover the physical processes involved using observations coupled with theory and modeling (Schrijver et al., 2015). Concurrently, significant efforts are underway to develop next-generation space environment modeling and forecasting capabilities for predicting the impacts of solar variability (Spann et al., 2014). The field combining these research and predictive aspects related to Sun-Earth connections is broadly termed heliophysics (Schrijver and Siscoe, 2010). It encompasses understanding the fundamental solar, heliospheric and geospace plasma processes; coupling across multiple spatial and temporal scales; quantifying the impacts on humanity's technological systems and space-borne assets; and utilizing this knowledge to prevent/mitigate adverse effects (Schrijver et al., 2015). NASA's Living With a Star program and the Naional Science Foundation's Space Weather activities exemplify strategic efforts to advance scientific understanding and predictive capabilities across the interconnected domains of heliophysics (Koskinen et al., 2017; NSF, 2018).
+
+The present thesis focuses on studying several important phenomena related to solar eruptive activity and its impacts from the perspective of heliophysics research and space weather. The specific topics investigated include: (1) The propagation and evolution characteristics of large-scale coronal disturbances termed EUV waves that are triggered by solar flares and CMEs. (2) The generation, propagation and plasma characteristics of solar radio bursts emitted by accelerated electron beams traveling along open magnetic field lines in the corona. (3) The forecasting of gradual solar energetic particle (SEP) events which constitute one of the major components of space radiation hazards at Earth.
+
+These diverse topics are united by the common theme of seeking to uncover the origins and propagation mechanisms of key transient phenomena resulting from solar eruptions, utilizing observational data, analytical theory and modeling, and data science techniques. The phenomena have been studied for several decades using observations from multiple space missions, but gaps persist in our understanding of their underlying physics and space weather impacts. The thesis aims to provide new insights that help address some of the outstanding questions, guided by the overarching goals and framework of heliophysics research. The following sub-sections elaborate on the background, significance, observational challenges and knowledge gaps pertaining to each of the research topics investigated.
+
+\textbf{Coronal Waves}
+
+Coronal waves are large-scale arc-shaped bright fronts observed propagating across significant portions of the solar corona following the eruption of CMEs and flares (Warmuth, 2015). They are best observed in Extreme Ultraviolet (EUV) and white light coronal emission, spanning distances of up to several 100 Mm with speeds ranging from 100-1000 km/s (Liu and Ofman, 2014; Nitta et al., 2013). The discovery of coronal waves dates back to observations obtained with the EIT instrument on SOHO launched in 1995, appearing as bright propagating fronts in 19.5 nm wavelength imaging of Fe XII emission lines formed at ~1.5 MK plasma (Thompson et al., 1998). Since 2010, the initiation and evolution of coronal waves are being exquisitely observed with unprecedented resolution by the SDO/AIA instrument (Lemen et al., 2012) across multiple EUV passbands sensitive to a wide temperature range (Nitta et al., 2013). Coronal waves exhibit diverse morphology and kinematics ranging from circular fronts to narrow jets or expanding dome-like structures (Veronig et al., 2010). A taxonomy of wave properties based on extensive observational surveys can be found in papers by Muhr et al. (2014) and Nitta et al. (2013).
+
+However, despite being observed for over two decades since their serendipitous discovery, fundamental questions remain regarding the physical nature and drivers of coronal waves (Chen, 2016; Vršnak and Cliver, 2008; Warmuth, 2015). The debate centers around two competing interpretations - the wave versus pseudo-wave (or non-wave) models. The wave models envisage coronal waves as fast-mode MHD waves or shocks that propagate freely after being launched by a CME lateral over-expansion or an initial flare pressure pulse (Wills-Davey et al., 2007; Vršnak and Cliver, 2008). The pseudo-wave models interpret them as bright fronts produced by magnetic field restructuring related to the CME lift-off process rather than a true wave disturbance (Delannée and Aulanier, 1999; Chen et al., 2002). Extensive observational and modeling studies have been undertaken to evaluate the two paradigms (Patsourakos and Vourlidas, 2012; Long et al., 2017), but a consensus remains elusive. Addressing these outstanding questions related to the nature and origin of coronal waves is imperative, since they are being incorporated into models as a primary agent producing SEP events and geomagnetic storms during CMEs (Rouillard et al. 2012; Park et al. 2013). Their use as a diagnostic tool for CME and shock kinematics predictions in these models requires discriminating between the different physical mechanisms proposed for their origin.
+
+The present thesis undertakes an extensive statistical analysis of coronal EUV wave events observed by SDO to provide new insights into their kinematical properties and relationship to CMEs. We focus on analyzing their large-scale evolution as a function of distance and direction from the source region, leveraging the extensive EUV full-disk imaging capabilities of SDO spanning nearly a decade. Statistical surveys to date have mostly focused on initial speeds and morphological classifications rather than large-scale propagation characteristics. Our study aims to uncover systematic trends in their propagation kinematics using a significantly larger sample compared to previous works. We also comprehensively evaluate associations with CME and flare parameters in order to discriminate between wave and pseudo-wave origins. The results have important implications for incorporating coronal waves into predictive models of CMEs and SEP events for future space weather forecasting.
+
+\textbf{Solar Radio Bursts}
+
+Solar radio bursts provide remote diagnostics of energetic electrons accelerated in the corona and their transport along magnetic field lines (Reid and Ratcliffe, 2014). They are produced by non-thermal electron distributions interacting with the ambient plasma to generate electromagnetic emission at radio frequencies via plasma emission mechanisms (Melrose, 1980). The bursts appear as intense enhancements of radio flux over background levels across a broad range of frequencies from kHz to GHz, often exhibiting rapid drifts from high to low frequencies over seconds to minutes signifying plasma dynamics (Reid and Vilmer, 2017). Radio imaging spectroscopy using interferometric imaging arrays coupled with high time/frequency resolution spectrometers enables tracking radio sources as a function of frequency and position on the Sun, yielding particle acceleration locations and trajectories through the corona into interplanetary space (Krucker et al., 1999; Klassen et al., 2003). This provides a unique diagnostic of energetic particle transport from the Sun to the Earth which is crucial for improving SEP forecasting models.
+
+Different types of bursts are observed, classified based on their spectral characteristics as documented in radio burst catalogs (Sales et al., 2019; Smirnova et al., 2013). The present thesis focuses on detailed analysis of solar type III radio bursts and their associated phenomena (Reid and Ratcliffe, 2014). Type III bursts appear as intense rapidly drifting emissions from high to low frequencies over seconds, corresponding to the propagation of energetic electron beams from the low corona to beyond 1 AU along open field lines. They signify the initial escape of flare-accelerated electrons into interplanetary space, making them an important precursor signature of SEP activity (Cane et al., 2002; MacDowall et al., 2003). Investigating their source locations, plasma environments, and beam kinematics based on multiwavelength observations coupled with plasma emission theory is therefore vital for improved understanding of coronal particle acceleration and transport processes relevant for SEP forecasting models.
+
+While type III bursts have been studied for over 50 years since their initial discovery by Wild (1950), gaps persist in our understanding of their exciter beams and emission mechanisms. Key outstanding questions pertain to the detailed electron acceleration and injection sites, beam configurations and energy spectra, drivers of burst onset and duration, and the role of density fluctuations in propagating beams (Reid and Kontar, 2018; Li et al., 2011). Advancing our knowledge of these aspects through coordinated observations and modeling can help constrain the predictions of energetic electron properties based on radio diagnostics. The present work undertakes detailed investigation of a solar type III burst combining imaging and radio spectral data to derive electron beam trajectories and coronal densities, and models the emission sources. The results provide insights into the corona plasma environment and energetic electron transport relevant for SEP forecasting applications.
+
+\textbf{Solar Energetic Particle (SEP) Forecasting}
+
+The arrival of solar energetic particles (SEPs) in the near-Earth space environment constitutes one of the major components of adverse space weather (Reames, 1999; Vainio et al., 2009). SEPs consist primarily of protons (and some heavy ions), accelerated to very high energies by CME-driven shock waves during large solar eruptive events. The gradual SEP events, so called due to their long durations from several hours to a few days, involve protons accelerated to energies above ~10 MeV which can penetrate Earth’s magnetic field and atmosphere posing radiation hazards to humans and equipment in space and at polar regions (Reames, 2013). The complex physics of CME shock acceleration combined with modeling the transport of SEPs through turbulent interplanetary magnetic fields presents major challenges for first-principles based SEP forecasting models (Aran et al., 2006; Laitinen and Dalla, 2017). As an alternative approach, empirical and data-driven models based on statistical/machine learning techniques applied to historical SEP event data have shown considerable promise for operational forecasting over the past decade (Laurenza et al., 2009; Camporeale, 2019). This motivates detailed investigation of data-driven SEP forecasting models using state-of-the-art machine learning algorithms which can outperform conventional empirical methods.
+
+In the present work, we develop a deep neural network model for predicting the intensity profile of >10 MeV gradual SEP proton events utilizing near real-time solar wind plasma measurements as model inputs. Deep learning techniques can capture complex nonlinear relationships between parameters which has been leveraged for diverse space weather applications recently (Camporeale, 2019; Florios et al., 2018). However, applications to SEP forecasting problems are still limited, presenting an important research gap which this thesis aims to address. The developed model is trained and tested on a database of historical SEP events spanning solar cycles 23 and 24, with the goal of producing SEP flux forecasts over an hour in advance of particle arrivals near Earth. Such capability can provide actionable information for mitigating radiation effects from extreme SEP events. The study demonstrates the potential of state-of-the-art machine learning algorithms to achieve significant enhancement of SEP forecasting capabilities building upon conventional empirical methods.
+
+
+\section{Objectives and Scope}
+
+The primary objectives and research questions addressed through the investigations carried out in this thesis include:
+
+\begin{enumerate}
+    \item Characterize the large-scale propagation kinematics of coronal EUV waves over distances of hundreds of Mm from the eruption source location. Compare observed spatial and temporal variations in speeds with analytical CME-driven wave/shock models.
+    \item Conduct a comprehensive statistical analysis correlating properties of EUV waves with associated CME and flare parameters utilizing a large event sample. Discriminate between wave and pseudo-wave models based on observational evidence.
+    \item Analyze coordinated observations of a solar type III radio burst across imaging and radio spectral domains to derive coronal density profiles, electron beam kinematics and emission source models.
+    \item Develop a deep neural network model for forecasting the intensity profile of >10 MeV gradual SEP proton events using real-time solar wind data as inputs. Evaluate model performance and forecast accuracy over different lead times.
+\end{enumerate}
+
+The scope of the thesis encompasses key phenomena related to solar eruptions and their space weather impacts that align with the outstanding questions and challenges highlighted in the background discussion. While expansive in scope, some limitations exist that bound the present work:
+
+\begin{itemize}
+    \item The studies rely primarily on remote sensing observations of the Sun and heliosphere, limited by measurement capabilities and resolution.
+    \item Analytical modeling utilizes simplified theory and assumptions which cannot account for all complexities.
+    \item Machine learning models have dependencies on data coverage and uncertainties in input parameters.
+    \item Findings are constrained by the event samples studied and applicability to the broader population.
+\end{itemize}
+
+These factors imply appropriate care and diligence in interpretation of results and their generalizability. Nevertheless, the present work establishes an important foundation for future advances that can build upon these limitations.
+
+\textbf{Literature Review}
+
+This section provides a concise overview of key literature related to the research topics investigated in the thesis. A detailed review is presented in each chapter specific to the respective phenomenon.
+
+\textit{Coronal Waves}
+Early observations of large-scale coronal disturbances were made in white light coronagraph images revealing expanding bright fronts (Hansen et al., 1974; Tappin, 1991). The atmospheric imaging assembly EIT onboard SOHO led to routine observations of "EIT waves" propagating globally across the Sun in EUV lines (Thompson et al., 1998). Subsequent studies based on SOHO/EIT and TRACE imaging found correlations between waves and CMEs, favoring an interpretation as fast-mode MHD waves driven by CME lateral expansions (Biesecker et al., 2002). The arrival of SDO enabled unprecedented high-cadence EUV observations revealing detailed kinematics and morphologies (Liu and Ofman, 2014; Nitta et al., 2013). Contemporary studies using SDO/AIA support a hybrid wave and pseudo-wave picture with both fast-mode waves and magnetic restructuring occurring together (Chen, 2016). The debate continues regarding their true physical nature and origin (Long et al., 2017).
+
+\textit{Solar Radio Bursts}
+Pioneering observations of solar radio bursts were made in the 1940s leading to their classifications (Wild et al., 1963). Subsequent spectrographic studies uncovered emission mechanisms, source regions and particle diagnostics (Suzuki and Dulk, 1985). Magnetic reconnection models of flares provided theoretical explanations for particle acceleration generating radio bursts (Holman et al., 2011). Radio imaging enabled direct tracking of type III beam trajectories through corona (Klassen et al., 1999, 2003). Recent work combines imaging and spectral data with modeling to constrain radio burst exciters in unprecedented detail (Chen et al., 2013, Kontar et al. 2017). Key challenges remain in reconciling emission models with observations and predicting radio diagnostics.
+
+\textit{SEP Forecasting}
+Initial SEP forecasting models were based on empirical correlations between proton intensity profiles and CME or flare properties (Kahler et al., 2007). More recent work has focused on developing numerical models of CME shock acceleration and SEP transport (Aran et al., 2006; Laitinen and Dalla, 2017). Owing to complex physics involved, operational forecasting relies on empirical and statistical models (Laurenza et al., 2009). The emergence of data science techniques has enabled application of sophisticated machine learning models to SEP forecasting, yielding improved predictions (Camporeale, 2019; Florios et al., 2018). Opportunities exist for novel forecasting approaches utilizing deep learning algorithms and expanded input parameters.
+
+\textbf{Methodology Overview}
+
+The research presented in this thesis employs a synergistic methodology combining analytical theory, numerical modeling, and data science techniques. Both observational case studies and statistical analysis approaches are utilized for gaining new insights from application of these tools. The data sources, models, and algorithms employed in each of the investigations are concisely summarized below.
+
+Coronal waves: The study utilizes an event database of ~200 coronal EUV waves observed by SDO/AIA since 2010, tracking kinematics to >100 Mm distances. Evolution trends are compared with analytical CME-driven wave propagation models. Statistical associations with CME and flare parameters provide corroboration for physical interpretation.
+
+Solar radio bursts: Multiwavelength observations of a type III burst from radio spectrometers and SDO/AIA are analyzed. Beam trajectories, densities, and emission sources are modeled by combining imaging data, plasma emission theory and coronal density models. 
+
+SEP forecasting: A database of >10 MeV SEP events during solar cycles 23-24 is generated using GOES fluxes. A deep neural network model is developed using solar wind data time-series as inputs. Model training, testing and validation is performed to evaluate forecast accuracy over different lead times.
+
+This triangulation between data analysis, physics-based modeling and data-driven modeling provides confidence in the results obtained. Details of the methodological approaches are elaborated in their respective chapters.
+
+\textbf{Main Contributions}
+
+The primary contributions arising from the research presented in this thesis include:
+
+- New large-scale kinematical characterization of coronal EUV waves propagating to distances over 100 Mm. Derived velocity and acceleration trends challenge steady-wave behavior assumed in models. 
+
+- Statistical analysis correlating EUV wave and CME/flare properties using a significantly larger event sample compared to prior studies. This enables stronger discrimination between competing initiation models.
+
+- Novel methodology combining radio and EUV observations with analytical modeling to reconstruct plasma environments and electron beam trajectories for a solar type III radio burst.
+
+- Deep learning forecasting model for intense SEP events using an expanded input parameter space based on solar wind data. This demonstrates cutting-edge artificial intelligence capabilities for space weather applications.
+
+- Synergistic approach leveraging analytical theory, numerical modeling and data science techniques to gain new insights on long-standing problems in heliophysics research related to solar eruptions and their space weather impacts. 
+
+These contributions provide advances over prior state-of-the-art in the respective areas. They have implications for improving models used in operational space weather monitoring and forecasting systems, besides progressing fundamental physics understanding of solar and heliospheric phenomena. The results validate the merit of cross-disciplinary studies combining traditional analytical techniques with modern statistical and machine learning methods to enable discoveries from application of these synergies.
+
+\textbf{Future Work}
+
+The research presented in this thesis establishes an important foundation and provides a precursor for future advances that can build upon the present work. Some open questions and promising areas for future investigations include:
+
+- Additional coronal wave statistical studies using expanded event samples and new imaging datasets from Solar Orbiter and ground observatories to improve generalizability of findings.
+
+- Incorporating 3D analytical and numerical coronal wave propagation models for more physics-based forecasting approaches. 
+
+- Modeling mechanisms for type III radio burst onset and time profiles using particle-in-cell and MHD models. 
+
+- Ensemble forecasting models for SEP events combining multiple machine learning algorithms trained on multi-mission data.
+
+- Validation of data-driven models for other solar wind driven geospace extremes such as radiation belt enhancements and ionospheric storms.
+
+- Leveraging new solar observatory missions and assimilative models within operational prediction systems for real-time space weather forecasts.
+
+- Exploring applications of deep learning and physics-informed machine learning to additional outstanding problems in heliophysics and astrophysics.
+
+In summary, the present work opens exciting avenues for more cross-disciplinary studies synthesizing heliophysics domain knowledge with cutting-edge data science and artificial intelligence methods. The new generation of solar, heliospheric and geospace missions will yield transformative observations to continue advancing both science understanding and predictive capabilities.
+
+
+\section{Outline}
+
+This thesis is divided into the following five chapters:
+
+Chapter 1 - Introduction: Provides a background to the research topics, motivation and context of the work, summary of literature, overview of methodology, and the structure of the thesis. 
+
+Chapter 2 – Propagation and Drivers of Coronal EUV Waves: Presents a statistical analysis of the kinematics and physical interpretation of coronal waves using EUV imaging observations and analytical models.
+
+Chapter 3 – Plasma Environment and Energetics of a Solar Type III Radio Burst: Details a multi-wavelength observational case study of a type III burst combining data analysis and modeling to probe the radio emission physics. 
+
+Chapter 4 – Deep Learning Approach for Forecasting Intense SEP Events: Describes the development and evaluation of a neural network model for predicting SEP properties using solar wind data.
+
+Chapter 5 – Conclusions and Future Outlook: Summarizes the key findings, implications, and limitations of the research studies. Discusses future extensions building on the present work.
+
+The core chapters 2 through 4 present the major research investigations carried out. The multi-faceted phenomena are studied by tailoring the methodology to leverage their key observational signatures. Together they provide new insights on different aspects of solar eruptions and space weather. Each chapter is structured to be reasonably self-contained, with relevant background and literature specific to the phenomenon under study. The findings are synergistic and united by the common thread of employing heliophysics principles to address outstanding questions using cutting-edge analytics.
+
+\textbf{Definitions and Acronyms}
+
+Some of the key technical terms and acronyms used in this thesis are listed below:
+
+SEP - Solar Energetic Particle
+
+CME - Coronal Mass Ejection 
+
+EUV - Extreme Ultraviolet
+
+SOHO - Solar and Heliospheric Observatory
+
+SDO - Solar Dynamics Observatory
+
+AIA - Atmospheric Imaging Assembly 
+
+EIT - Extreme ultraviolet Imaging Telescope
+
+TRACE - Transition Region and Coronal Explorer
+
+LASCO - Large Angle and Spectrometric COronagraph
+
+GOES - Geostationary Operational Environmental Satellite
+
+AI - Artificial Intelligence
+
+MHD - Magnetohydrodynamics
+
+AU - Astronomical Unit
+
+This provides definitions of the major domain-specific terms and measurement concepts used. Additional terminology is introduced as required in the respective chapters.
+

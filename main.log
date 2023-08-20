@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.31)  20 AUG 2023 00:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.31)  20 AUG 2023 17:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -343,47 +343,67 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
  (C:\Users\DELL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx))
 Package hyperref Info: Link coloring ON on input line 15.
- (main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 
-Overfull \hbox (3.53091pt too wide) in paragraph at lines 24--24
-[]\OT1/cmr/bx/n/12 Solar En-er-getic Par-ti-cles (SEPs) and their rel-e-vance to space weather 
- []
+No file main.toc.
+\tf@toc=\write4
+\openout4 = `main.toc'.
 
-
-Overfull \hbox (7.19823pt too wide) in paragraph at lines 41--41
-\OT1/cmr/bx/n/14.4 Fluxes with Bi-Directional Long Short-Term Mem-ory Neu-
- []
+(chapters/introduction.tex
+chapters/introduction.tex:1: Undefined control sequence.
+l.1 \chapter
+            {Introduction}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 [1
 
-{C:/Users/DELL/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (14.71985pt too wide) in paragraph at lines 50--50
+{C:/Users/DELL/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3] [4] [5])
+Overfull \hbox (3.53091pt too wide) in paragraph at lines 27--27
+[]\OT1/cmr/bx/n/12 Solar En-er-getic Par-ti-cles (SEPs) and their rel-e-vance to space weather 
+ []
+
+[6]
+Overfull \hbox (7.19823pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/14.4 Fluxes with Bi-Directional Long Short-Term Mem-ory Neu-
+ []
+
+
+Overfull \hbox (14.71985pt too wide) in paragraph at lines 59--59
 []\OT1/cmr/bx/n/12 Discussion of the re-sults and im-pli-ca-tions for op-er-a-tional space weather
  []
 
-[2] [3] [4] [5] [6] [7] (main.bbl
+[7] (main.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 ) [8] (main.aux)
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1E74A252C0856A129D4775699C6F57F3;10756.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  EE09308A15C07D971E7A3B710B53FADF;10806.
  ) 
 Here is how much of TeX's memory you used:
- 10815 strings out of 476410
- 173608 string characters out of 5789585
- 1865845 words of memory out of 5000000
- 30994 multiletter control sequences out of 15000+600000
+ 10797 strings out of 476410
+ 173434 string characters out of 5789585
+ 1866845 words of memory out of 5000000
+ 30972 multiletter control sequences out of 15000+600000
  517897 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,76p,1500b,535s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,6n,76p,1530b,536s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\DELL\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (8 pages, 152995 bytes).
+Output written on main.pdf (8 pages, 137194 bytes).
 PDF statistics:
- 212 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 225 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
