@@ -1,27 +1,56 @@
-\documentclass{book}
+\documentclass[12pt,letterpaper]{report}
+%\documentclass[a4paper,oneside,12pt]{book}
 
+\usepackage[cp1251]{inputenc}
 \usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{breakurl}        % For breaking URLs easily trough lines
+\def\UrlFont{\sf}            % define the fonts for the URLs
+\usepackage{adjustbox}
+\usepackage{appendix}
+\usepackage{rotating}
+%\usepackage{hyperref}
+\usepackage{float}
+%\restylefloat{table}
+\usepackage[wby]{callouts}
+\usepackage{mmap}
+
+%\documentclass[12pt, a4paper]{report}
+\usepackage{natbib}
+\usepackage{subfiles}  % Allows for separate chapter files
 % Set page size and margins
 % Replace `letterpaper' with `a4paper' for UK/EU standard size
-\usepackage[a4paper, top=2cm, bottom=2cm, left=3cm, right=3cm, marginparwidth=1.75cm]{geometry}
-\usepackage{amsmath}
-\usepackage{graphicx}
+%\usepackage[a4paper, top=2cm, bottom=2cm, left=3cm, right=3cm, marginparwidth=1.75cm]{geometry}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
+\def\kms{\textrm{km}$\,$\textrm{s}$^{-\!1}$} 
+\def\rsun{R$_{\odot}$}
+
+\begin{document}
 
 \title{From the Sun to Earth: Exploring the Multifaceds of Solar Eruptive Events}
 \author{Mohamed Nedal}
-
-\begin{document}
+\date{\today}
 
 %\maketitle
 \tableofcontents
 
-\input{chapters/ch1_Intro}
-\input{chapters/ch2_Radio}
-\input{chapters/ch3_SEPs}
+% Include each chapter
+\include{ch1_Intro}
+\include{ch2_Radio}
+\include{ch3_SEPs}
 
-\bibliographystyle{alpha}
+%\appendix
+%\include{AppendixI/appI}
+%\include{AppendixII/appII}
+
+\bibliographystyle{apj}
 \bibliography{refs}
 
 \end{document}

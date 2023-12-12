@@ -1,3 +1,228 @@
-\begin{thebibliography}{}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{BAeFG{\etalchar{+}}20}
+
+\bibitem[AN69]{altschuler1969magnetic}
+Martin~D Altschuler and Gordon Newkirk.
+\newblock Magnetic fields and the structure of the solar corona: I: Methods of
+  calculating coronal fields.
+\newblock {\em Solar Physics}, 9:131--149, 1969.
+
+\bibitem[BAeFG{\etalchar{+}}20]{boudjada20}
+Mohammed~Y Boudjada, Ahmed Abou~el Fadl, Patrick~HM Galopeau, Eimad Al-Haddad,
+  and Helmut Lammer.
+\newblock Observations of solar type iii radio bursts by<?
+  xmltex$\backslash$break?> cassini/rpws experiment.
+\newblock {\em Advances in Radio Science}, 18:83--87, 2020.
+
+\bibitem[BAL{\etalchar{+}}21]{berghmans21}
+David Berghmans, Fr{\'e}d{\'e}ric Auch{\`e}re, David~M Long, Elie Soubri{\'e},
+  Marilena Mierla, Andrei~N Zhukov, Udo Sch{\"u}hle, Patrick Antolin, Louise
+  Harra, Susanna Parenti, et~al.
+\newblock Extreme-uv quiet sun brightenings observed by the solar orbiter/eui.
+\newblock {\em Astronomy \& Astrophysics}, 656:L4, 2021.
+
+\bibitem[BCC{\etalchar{+}}22]{badman22}
+Samuel~T. Badman, Eoin Carley, Luis~Alberto Cañizares, Nina Dresing, Lan~K.
+  Jian, David Lario, Peter~T. Gallagher, Juan C.~Martínez Oliveros, Marc
+  Pulupa, and Stuart~D. Bale.
+\newblock Tracking a beam of electrons from the low solar corona into
+  interplanetary space with the low frequency array, parker solar probe, and 1
+  au spacecraft.
+\newblock {\em The Astrophysical Journal}, 938(2):95, oct 2022.
+
+\bibitem[BHM08]{bonnin8}
+X.~{Bonnin}, S.~{Hoang}, and M.~{Maksimovic}.
+\newblock {The directivity of solar type III bursts at hectometer and kilometer
+  wavelengths: Wind-Ulysses observations}.
+\newblock {\em \aap}, 489(1):419--427, October 2008.
+
+\bibitem[CGL{\etalchar{+}}21]{Cattell_2021}
+Cynthia {Cattell}, Lindsay {Glesener}, Benjamin {Leiran}, John {Dombeck}, Keith
+  {Goetz}, Juan~Carlos {Mart{\'\i}nez Oliveros}, Samuel~T. {Badman}, Marc
+  {Pulupa}, and Stuart~D. {Bale}.
+\newblock {Periodicities in an active region correlated with Type III radio
+  bursts observed by Parker Solar Probe}.
+\newblock {\em \aap}, 650:A6, June 2021.
+
+\bibitem[CII13]{chen13}
+Naihwa Chen, Wing-Huen Ip, and Davina Innes.
+\newblock Flare-associated type iii radio bursts and dynamics of the euv jet
+  from sdo/aia and rhessi observations.
+\newblock {\em The Astrophysical Journal}, 769(2):96, 2013.
+
+\bibitem[DFM{\etalchar{+}}21]{dabrowski21}
+Bartosz Dabrowski, Pawe{\l} Flisek, Katarzyna Miku{\l}a, Adam Fro{\'n},
+  Christian Vocks, Jasmina Magdaleni{\'c}, Andrzej Krankowski, PeiJin Zhang,
+  Pietro Zucca, and Gottfried Mann.
+\newblock Type iii radio bursts observations on 20th august 2017 and 9th
+  september 2017 with lofar ba{\l}dy telescope.
+\newblock {\em Remote Sensing}, 13(1):148, 2021.
+
+\bibitem[DSL{\etalchar{+}}85]{dulk85}
+GA~Dulk, Jean-Louis Steinberg, Alain Lecacheux, Sang Hoang, and Robert~John
+  MacDowall.
+\newblock The visibility of type iii radio bursts originating behind the sun.
+\newblock {\em Astronomy and Astrophysics}, 150:L28--L30, 1985.
+
+\bibitem[ELL{\etalchar{+}}98]{ergun98}
+RE~Ergun, D~Larson, RP~Lin, JP~McFadden, CW~Carlson, KA~Anderson, L~Muschietti,
+  M~McCarthy, GK~Parks, H~Reme, et~al.
+\newblock Wind spacecraft observations of solar impulsive electron events
+  associated with solar type iii radio bursts.
+\newblock {\em The Astrophysical Journal}, 503(1):435, 1998.
+
+\bibitem[FVB{\etalchar{+}}16]{fox16}
+NJ~Fox, MC~Velli, SD~Bale, R~Decker, A~Driesman, RA~Howard, Justin~C Kasper,
+  J~Kinnison, M~Kusterer, D~Lario, et~al.
+\newblock The solar probe plus mission: humanity’s first visit to our star.
+\newblock {\em Space Science Reviews}, 204(1):7--48, 2016.
+
+\bibitem[GA76]{gurnett76}
+Donald~A Gurnett and Roger~R Anderson.
+\newblock Electron plasma oscillations associated with type iii radio bursts.
+\newblock {\em Science}, 194(4270):1159--1162, 1976.
+
+\bibitem[GA77]{gurnett77}
+Donald~A Gurnett and Roger~R Anderson.
+\newblock Plasma wave electric fields in the solar wind: Initial results from
+  helios 1.
+\newblock {\em Journal of Geophysical Research}, 82(4):632--650, 1977.
+
+\bibitem[GDP{\etalchar{+}}23]{Gieseler2023}
+Jan {Gieseler}, Nina {Dresing}, Christian {Palmroos}, Johan~L. {Freiherr von
+  Forstner}, Daniel~J. {Price}, Rami {Vainio}, Athanasios {Kouloumvakos}, Laura
+  {Rodr{\'\i}guez-Garc{\'\i}a}, Domenico {Trotta}, Vincent {G{\'e}not}, Arnaud
+  {Masson}, Markus {Roth}, and Astrid {Veronig}.
+\newblock {Solar-MACH: An open-source tool to analyze solar magnetic connection
+  configurations}.
+\newblock {\em Frontiers in Astronomy and Space Sciences}, 9:384, February
+  2023.
+
+\bibitem[HBB{\etalchar{+}}21]{harra2021active}
+Louise Harra, David~H Brooks, Stuart~D Bale, Cristina~Hemilse Mandrini,
+  Krzysztof Barczynski, Rohit Sharma, Samuel~T Badman, S~Vargas Dom{\'\i}nguez,
+  and Marc Pulupa.
+\newblock The active region source of a type iii radio storm observed by parker
+  solar probe during encounter 2.
+\newblock {\em Astronomy \& Astrophysics}, 650:A7, 2021.
+
+\bibitem[HENJ19]{hale_1919}
+George~E. {Hale}, Ferdinand {Ellerman}, S.~B. {Nicholson}, and A.~H. {Joy}.
+\newblock {The Magnetic Polarity of Sun-Spots}.
+\newblock {\em \apj}, 49:153, April 1919.
+
+\bibitem[KSM{\etalchar{+}}20]{Krupar_2020}
+Vratislav {Krupar}, Adam {Szabo}, Milan {Maksimovic}, Oksana {Kruparova},
+  Eduard~P. {Kontar}, Laura~A. {Balmaceda}, Xavier {Bonnin}, Stuart~D. {Bale},
+  Marc {Pulupa}, David~M. {Malaspina}, John~W. {Bonnell}, Peter~R. {Harvey},
+  Keith {Goetz}, Thierry {Dudok de Wit}, Robert~J. {MacDowall}, Justin~C.
+  {Kasper}, Anthony~W. {Case}, Kelly~E. {Korreck}, Davin~E. {Larson}, Roberto
+  {Livi}, Michael~L. {Stevens}, Phyllis~L. {Whittlesey}, and Alexander~M.
+  {Hegedus}.
+\newblock {Density Fluctuations in the Solar Wind Based on Type III Radio
+  Bursts Observed by Parker Solar Probe}.
+\newblock {\em \apjs}, 246(2):57, February 2020.
+
+\bibitem[KYK{\etalchar{+}}17]{kontar17}
+Eduard~P Kontar, Sijie Yu, AA~Kuznetsov, AG~Emslie, B~Alcock, NLS Jeffrey,
+  VN~Melnik, NH~Bian, and P~Subramanian.
+\newblock Imaging spectroscopy of solar radio burst fine structures.
+\newblock {\em Nature communications}, 8(1):1515, 2017.
+
+\bibitem[LSHD89]{lecacheux89}
+A.~{Lecacheux}, J.~L. {Steinberg}, S.~{Hoang}, and G.~A. {Dulk}.
+\newblock {Characteristics of type III bursts in the solar wind from
+  simultaneous observations on board ISEE-3 and Voyager}.
+\newblock {\em \aap}, 217(1-2):237--250, June 1989.
+
+\bibitem[Mad19]{madjarska19}
+Maria~S Madjarska.
+\newblock Coronal bright points.
+\newblock {\em Living Reviews in Solar Physics}, 16(1):2, 2019.
+
+\bibitem[Mel17]{melrose17}
+DB~Melrose.
+\newblock Coherent emission mechanisms in astrophysical plasmas.
+\newblock {\em Reviews of Modern Plasma Physics}, 1:1--81, 2017.
+
+\bibitem[MG17]{morosan17}
+D.~E. {Morosan} and P.~T. {Gallagher}.
+\newblock {Characteristics of type III radio bursts and solar S bursts}.
+\newblock In G.~{Fischer}, G.~{Mann}, M.~{Panchenko}, and P.~{Zarka}, editors,
+  {\em Planetary Radio Emissions VIII}, pages 357--368, January 2017.
+
+\bibitem[MLS{\etalchar{+}}99]{mhd99}
+Zoran Miki{\'c}, Jon~A Linker, Dalton~D Schnack, Roberto Lionello, and Alfonso
+  Tarditi.
+\newblock Magnetohydrodynamic modeling of the global solar corona.
+\newblock {\em Physics of Plasmas}, 6(5):2217--2224, 1999.
+
+\bibitem[PBB{\etalchar{+}}20]{pulupa20}
+Marc {Pulupa}, Stuart~D. {Bale}, Samuel~T. {Badman}, J.~W. {Bonnell},
+  Anthony~W. {Case}, Thierry~Dudok {de Wit}, Keith {Goetz}, Peter~R. {Harvey},
+  Alexander~M. {Hegedus}, Justin~C. {Kasper}, Kelly~E. {Korreck}, Vladimir
+  {Krasnoselskikh}, Davin {Larson}, Alain {Lecacheux}, Roberto {Livi},
+  Robert~J. {MacDowall}, Milan {Maksimovic}, David~M. {Malaspina}, Juan~Carlos
+  {Mart{\'\i}nez Oliveros}, Nicole {Meyer-Vernet}, Michel {Moncuquet}, Michael
+  {Stevens}, and Phyllis {Whittlesey}.
+\newblock {Statistics and Polarization of Type III Radio Bursts Observed in the
+  Inner Heliosphere}.
+\newblock {\em \apjs}, 246(2):49, February 2020.
+
+\bibitem[{Pic}06]{pick6}
+M.~{Pick}.
+\newblock {Radio Emissions from the Sun and the Interplanetary Medium}.
+\newblock In Jean-Pierre {Rozelot}, editor, {\em Solar and Heliospheric Origins
+  of Space Weather Phenomena}, volume 699, page 119. 2006.
+
+\bibitem[Rei20]{reid20}
+Hamish~AS Reid.
+\newblock A review of recent solar type iii imaging spectroscopy.
+\newblock {\em Frontiers in Astronomy and Space Sciences}, 7:56, 2020.
+
+\bibitem[RGF{\etalchar{+}}09]{reiner9}
+M~Jꎬ Reiner, Keith Goetz, J~Fainberg, Michael~L Kaiser, Milan Maksimovic,
+  Baptiste Cecconi, Sang Hoang, Stuart~D Bale, and J-L Bougeret.
+\newblock Multipoint observations of solar type iii radio bursts from stereo
+  and wind.
+\newblock {\em Solar Physics}, 259:255--276, 2009.
+
+\bibitem[RR14]{reid14}
+Hamish Andrew~Sinclair Reid and Heather Ratcliffe.
+\newblock A review of solar type iii radio bursts.
+\newblock {\em Research in Astronomy and Astrophysics}, 14(7):773, 2014.
+
+\bibitem[SHVK12]{saint12}
+Pascal Saint-Hilaire, Nicole Vilmer, and Alain Kerdraon.
+\newblock A decade of solar type iii radio bursts observed by the nan{\c{c}}ay
+  radioheliograph 1998--2008.
+\newblock {\em The Astrophysical Journal}, 762(1):60, 2012.
+
+\bibitem[SWN69]{schatten1969model}
+Kenneth~H Schatten, John~M Wilcox, and Norman~F Ness.
+\newblock A model of interplanetary and coronal magnetic fields.
+\newblock {\em Solar Physics}, 6:442--455, 1969.
+
+\bibitem[vHWG{\etalchar{+}}13]{lofar13}
+Michael~P van Haarlem, Michael~W Wise, AW~Gunst, George Heald, John~P McKean,
+  Jason~WT Hessels, A~Ger de~Bruyn, Ronald Nijboer, John Swinbank, Richard
+  Fallows, et~al.
+\newblock Lofar: The low-frequency array.
+\newblock {\em Astronomy \& astrophysics}, 556:A2, 2013.
+
+\bibitem[WM50]{wild50}
+J.~P. {Wild} and L.~L. {McCready}.
+\newblock {Observations of the Spectrum of High-Intensity Solar Radiation at
+  Metre Wavelengths. I. The Apparatus and Spectral Types of Solar Burst
+  Observed}.
+\newblock {\em Australian Journal of Scientific Research A Physical Sciences},
+  3:387, September 1950.
+
+\bibitem[YTP{\etalchar{+}}18]{young18}
+Peter~R Young, Hui Tian, Hardi Peter, Robert~J Rutten, Chris~J Nelson, Zhenghua
+  Huang, Brigitte Schmieder, Gregal~JM Vissers, Shin Toriumi, Luc HM~Rouppe
+  van~der Voort, et~al.
+\newblock Solar ultraviolet bursts.
+\newblock {\em Space Science Reviews}, 214:1--39, 2018.
 
 \end{thebibliography}
