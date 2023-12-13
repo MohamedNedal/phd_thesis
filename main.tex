@@ -1,56 +1,36 @@
-\documentclass[12pt,letterpaper]{report}
-%\documentclass[a4paper,oneside,12pt]{book}
-
-\usepackage[cp1251]{inputenc}
-\usepackage[english]{babel}
+\documentclass[12pt,a4paper]{report}
+%\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{cite}
-\usepackage{amsmath}
-\usepackage{gensymb}
-\usepackage{amssymb}
-\usepackage{multirow}
-\usepackage{array}
-\usepackage{breakurl}        % For breaking URLs easily trough lines
-\def\UrlFont{\sf}            % define the fonts for the URLs
-\usepackage{adjustbox}
-\usepackage{appendix}
-\usepackage{rotating}
-%\usepackage{hyperref}
-\usepackage{float}
-%\restylefloat{table}
-\usepackage[wby]{callouts}
-\usepackage{mmap}
-
-%\documentclass[12pt, a4paper]{report}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
 \usepackage{natbib}
-\usepackage{subfiles}  % Allows for separate chapter files
-% Set page size and margins
-% Replace `letterpaper' with `a4paper' for UK/EU standard size
-%\usepackage[a4paper, top=2cm, bottom=2cm, left=3cm, right=3cm, marginparwidth=1.75cm]{geometry}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
-\def\kms{\textrm{km}$\,$\textrm{s}$^{-\!1}$} 
-\def\rsun{R$_{\odot}$}
+% Set the page margins if needed
+\usepackage[left=1.5in, right=1in, top=1in, bottom=1in]{geometry}
+
+% Custom commands or styles can go here
 
 \begin{document}
 
-\title{From the Sun to Earth: Exploring the Multifaceds of Solar Eruptive Events}
-\author{Mohamed Nedal}
-\date{\today}
+\input{front_page} % Front page
 
-%\maketitle
-\tableofcontents
+\pagenumbering{roman} % Roman numeral page numbering for front matter
 
-% Include each chapter
-\include{ch1_Intro}
-\include{ch2_Radio}
-\include{ch3_SEPs}
+\input{acknowledgments} % Acknowledgments
 
-%\appendix
-%\include{AppendixI/appI}
-%\include{AppendixII/appII}
+\tableofcontents % Table of contents
 
-\bibliographystyle{apj}
+\newpage
+\pagenumbering{arabic} % Switch to Arabic page numbering for main matter
+
+% Include chapter files
+\input{chapter1/ch1}
+\input{chapter2/ch2}
+%\input{chapter3/ch3}
+
+% Bibliography
+\bibliographystyle{aa} % aasjournal, aa, plainnat
 \bibliography{refs}
 
 \end{document}

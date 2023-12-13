@@ -1,9 +1,8 @@
 \chapter{Multi-Viewpoint Solar Radio Observations: Integrating Space-based and Ground-based Data for Coronal Diagnostics}
-\label{chapter1}
-%\maketitle{Integrating LOFAR and PSP Observations for Coronal Diagnostics}
+\label{chapter2}
 
 \section{Introduction}
-Type III radio bursts are manifestations of transient energetic electron beams injected into the solar corona, propagating along the interplanetary magnetic field (IMF) lines \citep{ergun98, pick6, reid20}. As these beams traverse the corona, they trigger plasma waves (also known as Langmuir waves) that are then transformed into radio emission at the local plasma frequency or its harmonic components \citep{melrose17}. 
+Type III radio bursts are manifestations of transient energetic electron beams injected into the solar corona, propagating along the interplanetary magnetic field (IMF) lines \citep{ergun98, pick6, reid20}. As these beams traverse the corona, they trigger plasma waves (also known as Langmuir waves) that are then transformed into radio emission at the local plasma frequency or its harmonic components \citep{melrose17}.
 In the radio spectrograms, type III bursts are usually observed as intense emissions that drift in frequency over timescales of several seconds to minutes and over a wide range of frequencies, from metric to decametric wavelengths \citep{wild50, lecacheux89, bonnin8}, making them detectable by ground-based instruments on Earth and various spacecraft within the heliosphere. 
 The frequency of the radio emission is directly related to the plasma density, making type III bursts a valuable diagnostic tool for examining the inner heliosphere and the processes that drive solar active phenomena, such as solar flares and coronal mass ejections \citep{reid14, kontar17}.
 
@@ -50,25 +49,26 @@ The solar disk was quiet, including only one AR that is visible with no X-rays a
 Nevertheless, the very sensitive LOFAR telescope detected a number of bursts close to noon. We checked PSP data, and we found bursts there as well.
 Meanwhile, from the EUVI and AIA images, we see that there are numerous small localized regions of relatively higher intensity (i.e., likely small-scale coronal brightenings spots or campfires; see \citet{young18, madjarska19, berghmans21}).
 In the next subsections, we introduce the PSP and LOFAR instruments and their observations of the radio bursts.
+
 \begin{figure}
 \centering
-\includegraphics[width=0.9\hsize]{figs/ch2/all_dyspec.png}
+\includegraphics[width=0.9\hsize]{chapter2/figs/all_dyspec.png}
 \caption{Radio dynamic spectra for a single burst obtained from multiple instruments. The top-left panel is from the LOFAR/LBA instrument, the top-right is from the PSP/FIELDS instrument, the bottom-left is from the STEREO/SWAVES instrument, and the bottom-right is from the Wind/WAVES. The vertical red dashed line denotes the start time of the burst.}
 \label{fig_alldyspec}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=0.8\hsize]{figs/ch2/solarMach.pdf}
+\includegraphics[width=0.8\hsize]{chapter2/figs/solarMach.pdf}
   \caption{Top view of the spacecraft positions in the ecliptic plane at 12:15 UT on April 3, 2019, with the Sun-Earth line as the reference point for longitude. The Earth's location is representative of the positions of LOFAR, Wind/WAVES, and GOES-15/XRS instruments. The spacecraft were connected back to the Sun by a 400 km/s reference Parker Spiral. The black arrow represents the longitude of AR12737 and the blue arrow represents the longitude of the AR12738. The gray dotted lines are the background Parker spiral field lines. The black dashed spiral shows the field line connected to the AR12737, and the blue dashed spiral is connected to the AR12738. The figure is generated using the Solar MAgnetic Connection Haus (\href{https://github.com/jgieseler/solarmach}{Solar-MACH}) tool \citep{Gieseler2023}.}
      \label{locations}
 \end{figure}
 
 \begin{figure*}[ht]
 \centering
-\includegraphics[width=\hsize]{figs/ch2/aia_sta_cutout.pdf}
-\includegraphics[width=12cm]{figs/ch2/xrs_eve.pdf}
-\caption{Exploring the X-ray and extreme ultraviolet (EUV) emissions from the Sun. The top panel showcases a cutout region of the SDO/AIA 193$\AA$ image of the solar disk along with the STEREO-A EUVI 195$\AA$ point of view. The white curve is the limb of the solar disk as seen by AIA from the right side. The red and blue colors are the contours of the line-of-sight magnetogram from the SDO/HMI instrument. The levels are (50, 100, 150, 300, 500, 1000) Gauss. The middle panel shows the X-ray flux from the GOES-14 spacecraft shows minimum activity. The bottom panel shows the time series of the ESP Quad band from the SDO/EVE instrument, which shows the solar irradiance in the extreme ultraviolet (EUV) band.}
+\includegraphics[width=\hsize]{chapter2/figs/aia_sta_cutout.pdf}
+\includegraphics[width=12cm]{chapter2/figs/xrs_eve.pdf}
+\caption{Exploring the X-ray and extreme ultraviolet (EUV) emissions from the Sun. The top panel showcases a cutout region of the SDO/AIA 193\,\AA image of the solar disk along with the STEREO-A EUVI 195\,\AA point of view. The white curve is the limb of the solar disk as seen by AIA from the right side. The red and blue colors are the contours of the line-of-sight magnetogram from the SDO/HMI instrument. The levels are (50, 100, 150, 300, 500, 1000) Gauss. The middle panel shows the X-ray flux from the GOES-14 spacecraft shows minimum activity. The bottom panel shows the time series of the ESP Quad band from the SDO/EVE instrument, which shows the solar irradiance in the extreme ultraviolet (EUV) band.}
 \label{soldisk_xrs}
 \end{figure*}
 
@@ -96,5 +96,3 @@ In the next subsections, we introduce the PSP and LOFAR instruments and their ob
 \section{Summary and conclusions}
 
 
-
-\end{document}
