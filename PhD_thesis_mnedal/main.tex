@@ -1,0 +1,67 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+
+\setkeys{Gin}{draft=True} %if True, all figures will print as just an empty box (useful when you don't want to wait for an entire dissertation with figures to compile)
+
+% define sympols
+\newcommand{\degree}{$\,^o\,$}
+\newcommand{\almost}{$\,\sim\,$}
+\newcommand{\rsun}{$\,R_\odot\,$}
+\newcommand{\percc}{$\,cm^{-3}\,$}
+\newcommand{\kms}{$\,km\,s^{-1}\,$}
+
+% Custom commands or styles can go here
+%\includeonly{chapter1/ch1} % Include only Chapter 1
+
+
+
+
+\begin{document}
+
+\input{front_page}
+
+\pagenumbering{roman}
+
+\chapter*{Abstract}
+The following are the 3 abstracts of my 3 main papers. Merge them together in a single abstract with a narrative story ...
+
+We present a comprehensive characterization of 61 Coronal Mass Ejection (CME)-driven compressive waves known as Coronal Bright Fronts (CBFs) observed in the low solar corona between 2010 and 2017. These CBFs have been found to be associated with Solar Energetic Particle (SEP) events near Earth, indicating their importance in understanding space weather phenomena.
+The aim of this study is to analyze and describe the early dynamics of CBFs using a physics-based heliospheric SEP forecasting system known as the Solar Particle Radiation Environment Analysis and Forecasting - Acceleration and Scattering Transport (SPREAdFAST) framework. This framework utilizes a chain of data-driven analytic and numerical models to predict SEP fluxes at multiple locations in the inner heliosphere by considering their acceleration at CMEs near the Sun and subsequent interplanetary transport.
+To estimate the time-dependent plasma and compression parameters of the CBFs, we utilized sequences of base-difference images obtained from the Atmospheric Imaging Assembly (AIA) instrument on board the Solar Dynamics Observatory (SDO) satellite, and measurements of the height-time profiles of the coronal waves obtained from the Large Angle and Spectrometric COronagraph (LASCO) instrument on board the Solar and Heliospheric Observatory (SOHO) satellite. We employed kinematic measurements and plasma model results to derive these parameters. The SPREAdFAST framework facilitated the analysis and correlation of these observations with SEP events near Earth.
+Our analysis yielded statistical relations and distributions for both the shocks and plasma parameters associated with the 61 CBFs investigated. By combining the observations from the AIA and LASCO instruments, as well as the data products from the SPREAdFAST framework, we obtained a comprehensive understanding of the early dynamics of CBFs, including their temporal evolution, plasma properties, and compressional characteristics. These findings contribute to the growing body of knowledge in the field and have implications for space weather forecasting and the study of SEP events.
+
+This study aims to investigate the ambiguous source and the underlying physical processes of the type III radio bursts that occurred on April 3, 2019, through the utilization of multi-wavelength observations from the Low-Frequency Array (LOFAR) radio telescope and the Parker Solar Probe (PSP) space mission, as well as incorporating results from a Potential Field Source Surface (PFSS) and magnetohydrodynamic (MHD) models. The primary goal is to identify the spatial and temporal characteristics of the radio sources, as well as the plasma conditions along their trajectories.
+We applied data preprocessing techniques to combine high- and low-frequency observations from LOFAR and PSP between 2.6 kHz and 80 MHz. We then extracted information on the frequency drift and speed of the accelerated electron beams from the dynamic spectra. Additionally, we used LOFAR interferometric observations to image the sources of the radio emission at multiple frequencies and determine their locations and kinematics in the corona. Lastly, we analyzed the plasma parameters and magnetic field along the trajectories of the radio sources using PFSS and MHD model results.
+We present several notable findings related to type III radio bursts. Firstly, through our automated implementation, we were able to effectively identify and characterize 9 type III radio bursts in the LOFAR-PSP combined dynamic spectrum and 16 type III bursts in the LOFAR dynamic spectrum. We found that the frequency drift for the detected type III bursts in the combined spectrum ranges between 0.24 and 4 MHz s$^{-1}$, while the speeds of the electron beams range between 0.013 and 0.12 C. Secondly, our imaging observations show that the electrons responsible for these bursts originate from the same source and within a short time frame of fewer than 30 minutes. Finally, our analysis provides informative insights into the physical conditions along the path of the electron beams. For instance, we found that the plasma density obtained from the magnetohydrodynamic algorithm outside a sphere (MAS) model is significantly lower than the expected theoretical density.
+   
+Solar energetic particles are mainly protons and originate from the Sun during solar flares or coronal shock waves. Forecasting the Solar Energetic Protons (SEP) flux is critical for several operational sectors, such as communication and navigation systems, space exploration missions, and aviation flights, as the hazardous radiation may endanger astronauts’, aviation crew and passengers’ health, the delicate electronic components of satellites, space stations, and ground power stations. Therefore, the prediction of the SEP flux is of high importance to our lives and may help mitigate the negative impacts of one of the serious space weather transient phenomena on the near-Earth space environment. Numerous SEP prediction models are being developed with a variety of approaches, such as empirical models, probabilistic models, physics-based models, and AI-based models. In this work, we use the bi-directional long short-term memory (BiLSTM) neural network model architecture to train SEP forecasting models for 3 standard integral GOES channels ($>$10 MeV, $>$30 MeV, $>$60 MeV) with 3 forecast windows (1-day, 2-day, and 3-day ahead) based on daily data obtained from the OMNIWeb database from 1976 to 2019. As the SEP variability is modulated by the solar cycle, we select input parameters that capture the short-term, typically within a span of a few hours, and long-term, typically spanning several days, fluctuations in solar activity. We take the F10.7 index, the sunspot number, the time series of logarithm of the x-ray flux, the solar wind speed, and the average strength of the interplanetary magnetic field as input parameters to our model. The results are validated with an out-of-sample testing set and benchmarked with other types of models.
+
+
+\chapter*{Acknowledgments}
+For my family ...
+
+\tableofcontents
+\listoftables
+\listoffigures
+%\newpage
+
+\pagenumbering{arabic}
+
+\include{chapter1/ch1}
+\include{chapter2/ch2}
+\include{chapter3/ch3}
+\include{chapter4/ch4}
+\appendix
+\include{appendix}
+
+\bibliographystyle{style_files/aa} % aasjournal, agu08_bbl_link, plainnat
+%\bibliographystyle{plain}
+\bibliography{refs}
+
+\end{document}

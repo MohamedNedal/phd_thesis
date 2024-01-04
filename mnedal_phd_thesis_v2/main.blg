@@ -1,0 +1,84 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: chapter1/ch1.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: chapter2/ch2.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: chapter3/ch3.aux
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+A level-1 auxiliary file: appendix.aux
+Reallocating 'name_of_file' (item size: 1) to 3 items.
+The style file: aa.bst
+Reallocating 'name_of_file' (item size: 1) to 5 items.
+Database file #1: refs.bib
+Warning--I didn't find a database entry for "pick_2006"
+Warning--I didn't find a database entry for "chen_2013"
+Warning--I didn't find a database entry for "wild_1950"
+Warning--I didn't find a database entry for "hale_2019"
+Warning--I didn't find a database entry for "zhang_2022"
+Warning--to sort, need author or key in ishikawa_2017
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Warning--empty author in ishikawa_2017
+Warning--empty journal in benz_1988
+Warning--Journal of Physics: Conference Series, Vol. 900Both volume and number fields in gopalswamy_2017
+You can't pop an empty literal stack for entry gopalswamy_2017
+while executing---line 1684 of file aa.bst
+Warning--Journal of Physics: Conference Series, Vol. 900Both volume and number fields in kahler_2017
+You can't pop an empty literal stack for entry kahler_2017
+while executing---line 1684 of file aa.bst
+Warning--AIP Conference Proceedings, Vol. 781Both volume and number fields in kota_2005
+You can't pop an empty literal stack for entry kota_2005
+while executing---line 1684 of file aa.bst
+Warning--AIP Conference Proceedings, Vol. 1436Both volume and number fields in ng_2012
+You can't pop an empty literal stack for entry ng_2012
+while executing---line 1684 of file aa.bst
+Warning--empty publisher in pick6
+Warning--empty publisher in priest_forbes_2007
+Warning--AIP Conference Proceedings, Vol. 516Both volume and number fields in reames_2000
+You can't pop an empty literal stack for entry reames_2000
+while executing---line 1684 of file aa.bst
+Warning--empty journal in tsurutani_1985
+You've used 160 entries,
+            3039 wiz_defined-function locations,
+            1523 strings with 36198 characters,
+and the built_in function-call counts, 85993 in all, are:
+= -- 7019
+> -- 7614
+< -- 66
++ -- 2599
+- -- 2375
+* -- 7400
+:= -- 15933
+add.period$ -- 160
+call.type$ -- 160
+change.case$ -- 1417
+chr.to.int$ -- 150
+cite$ -- 173
+duplicate$ -- 3028
+empty$ -- 4274
+format.name$ -- 2809
+if$ -- 16911
+int.to.chr$ -- 11
+int.to.str$ -- 1
+missing$ -- 151
+newline$ -- 484
+num.names$ -- 638
+pop$ -- 1441
+preamble$ -- 1
+purify$ -- 1417
+quote$ -- 0
+skip$ -- 2597
+stack$ -- 0
+substring$ -- 3387
+swap$ -- 92
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1434
+warning$ -- 11
+while$ -- 640
+width$ -- 0
+write$ -- 1594
+(There were 5 error messages)
