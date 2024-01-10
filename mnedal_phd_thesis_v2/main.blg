@@ -7,23 +7,49 @@ Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: chapter2/ch2.aux
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: chapter3/ch3.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: chapter4/ch4.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: chapter5/ch5.aux
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 A level-1 auxiliary file: appendix.aux
 Reallocating 'name_of_file' (item size: 1) to 3 items.
 The style file: aa.bst
 Reallocating 'name_of_file' (item size: 1) to 5 items.
+Reallocating 'field_info' (item size: 4) to 11600 items.
 Database file #1: refs.bib
+Repeated entry---line 1947 of file refs.bib
+ : @article{pulkkinen_2007
+ :                        ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "olah_2015" isn't style-file defined
+--line 2789 of file refs.bib
+Repeated entry---line 3811 of file refs.bib
+ : @article{del_2011
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3895 of file refs.bib
+ : @article{mann_2018
+ :                   ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "pick_2006"
 Warning--I didn't find a database entry for "chen_2013"
-Warning--I didn't find a database entry for "wild_1950"
-Warning--I didn't find a database entry for "hale_2019"
 Warning--I didn't find a database entry for "zhang_2022"
 Warning--to sort, need author or key in ishikawa_2017
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Warning--empty author in ishikawa_2017
 Warning--empty journal in benz_1988
+Warning--Space Weather of the Heliosphere: Processes and Forecasts, Vol.~13Both volume and number fields in dalla_2017
+You can't pop an empty literal stack for entry dalla_2017
+while executing---line 1684 of file aa.bst
 Warning--Journal of Physics: Conference Series, Vol. 900Both volume and number fields in gopalswamy_2017
 You can't pop an empty literal stack for entry gopalswamy_2017
+while executing---line 1684 of file aa.bst
+Warning--Proceedings of Machine Learning Research, Vol.~32, Proceedings of the 31st International Conference on Machine Learning, ed. E.~P. Xing \& T.~JebaraBoth volume and number fields in graves_2014
+You can't pop an empty literal stack for entry graves_2014
+while executing---line 1684 of file aa.bst
+Warning--AIP Conference Proceedings, Vol. 1216Both volume and number fields in jackson_2010
+You can't pop an empty literal stack for entry jackson_2010
 while executing---line 1684 of file aa.bst
 Warning--Journal of Physics: Conference Series, Vol. 900Both volume and number fields in kahler_2017
 You can't pop an empty literal stack for entry kahler_2017
@@ -31,54 +57,63 @@ while executing---line 1684 of file aa.bst
 Warning--AIP Conference Proceedings, Vol. 781Both volume and number fields in kota_2005
 You can't pop an empty literal stack for entry kota_2005
 while executing---line 1684 of file aa.bst
+Warning--Annales Geophysicae, Vol.~28Both volume and number fields in mierla_2010
+You can't pop an empty literal stack for entry mierla_2010
+while executing---line 1684 of file aa.bst
 Warning--AIP Conference Proceedings, Vol. 1436Both volume and number fields in ng_2012
 You can't pop an empty literal stack for entry ng_2012
 while executing---line 1684 of file aa.bst
-Warning--empty publisher in pick6
+Warning--empty publisher in perez_Suarez_2011
+Warning--empty publisher in pick_radio_2006
 Warning--empty publisher in priest_forbes_2007
 Warning--AIP Conference Proceedings, Vol. 516Both volume and number fields in reames_2000
 You can't pop an empty literal stack for entry reames_2000
 while executing---line 1684 of file aa.bst
+Warning--no book title in reames_2021
+`title' is a missing field, not a string, for entry reames_2021
+while executing---line 1684 of file aa.bst
+Warning--empty publisher in reames_2021
 Warning--empty journal in tsurutani_1985
-You've used 160 entries,
+Warning--empty institution in wilson_1988
+You've used 261 entries,
             3039 wiz_defined-function locations,
-            1523 strings with 36198 characters,
-and the built_in function-call counts, 85993 in all, are:
-= -- 7019
-> -- 7614
-< -- 66
-+ -- 2599
-- -- 2375
-* -- 7400
-:= -- 15933
-add.period$ -- 160
-call.type$ -- 160
-change.case$ -- 1417
-chr.to.int$ -- 150
-cite$ -- 173
-duplicate$ -- 3028
-empty$ -- 4274
-format.name$ -- 2809
-if$ -- 16911
-int.to.chr$ -- 11
+            2048 strings with 62013 characters,
+and the built_in function-call counts, 149606 in all, are:
+= -- 12123
+> -- 13983
+< -- 110
++ -- 4723
+- -- 4389
+* -- 12970
+:= -- 27621
+add.period$ -- 261
+call.type$ -- 261
+change.case$ -- 2487
+chr.to.int$ -- 256
+cite$ -- 282
+duplicate$ -- 5016
+empty$ -- 7152
+format.name$ -- 5129
+if$ -- 29503
+int.to.chr$ -- 6
 int.to.str$ -- 1
-missing$ -- 151
-newline$ -- 484
-num.names$ -- 638
-pop$ -- 1441
+missing$ -- 240
+newline$ -- 787
+num.names$ -- 1045
+pop$ -- 2564
 preamble$ -- 1
-purify$ -- 1417
+purify$ -- 2484
 quote$ -- 0
-skip$ -- 2597
+skip$ -- 4371
 stack$ -- 0
-substring$ -- 3387
-swap$ -- 92
-text.length$ -- 6
+substring$ -- 5647
+swap$ -- 182
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1434
-warning$ -- 11
-while$ -- 640
+type$ -- 2322
+warning$ -- 19
+while$ -- 1050
 width$ -- 0
-write$ -- 1594
-(There were 5 error messages)
+write$ -- 2609
+(There were 13 error messages)

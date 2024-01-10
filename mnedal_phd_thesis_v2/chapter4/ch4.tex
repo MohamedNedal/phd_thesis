@@ -22,7 +22,7 @@ In \citet{aminalragia_2021}, they used neural networks to provide probabilities 
 \citet{kasapis_2022} employed ML techniques to anticipate the occurrence of a SEP event in an active region that generates flares. They utilized the Space-Weather MDI Active Region Patches (SMARP) dataset, which comprises observations of solar magnetograms between June 1996 and August 2010. The SMARP dataset had a success rate of 72\% in accurately predicting whether an active region that produces a flare would result in a SEP event. Moreover, it provided a competitive lead time of 55.3 min in forecasting SEP events.
 
 \citet{engell_2017} introduced the Space Radiation Intelligence System (SPRINTS), a technology that uses pre- and post-event data to forecast solar-driven events such as SEP. It integrates automatic detections and ML to produce forecasts. Results show that SPRINTS can predict SEP with an 56\% probability of detection and 34\% false alarm rate.
-Nevertheless, the HESPERIA REleASE tools provide real-time predictions of the proton flux at L1 by using near-relativistic electrons as a warning for the later arrival of protons and have been set to operation\citep{malandraki_2018}. Historical data analysis indicates high prediction accuracy, with a low false alarm rate of approximately 30\% and a high probability of detection of 63\% \citep{malandraki_2018}.
+Nevertheless, the HESPERIA REleASE tools provide real-time predictions of the proton flux at L1 by using near-relativistic electrons as a warning for the later arrival of protons and have been set to operation \citep{malandraki_2018}. Historical data analysis indicates high prediction accuracy, with a low false alarm rate of approximately 30\% and a high probability of detection of 63\% \citep{malandraki_2018}.
 
 Forecasting SEP is a critical task that serves operational needs and provides insight into the broader field of space weather science and heliophysics. As emphasized in previous works, a high precision forecasting model is urgently required to predict SEP flux within a period of time, given the risks associated with these events. This highlights the critical requirement for a dependable forecasting system that can mitigate the risks associated with SEP.
 
@@ -113,17 +113,19 @@ In order to ensure consistency across all features, all durations of the time se
 There were missing data values in the original dataset; for the $B_{avg}$ (\almost10.7\%), $V_{sw}$ (\almost10.5\%), F10.7-index (\almost0.08\%), short-band x-ray flux (\almost8\%), long-band x-ray flux (\almost9.8\%), and proton fluxes (\almost4.3\%). The data gaps were linearly interpolated.
 
 \begin{figure}[h!]
-    \centerline{\includegraphics[width=0.9\textwidth]{chapter4/figs/subplots_dataSplit_allFeatures.pdf}}
+	\centering
+    \includegraphics[width=0.9\textwidth]{chapter4/figs/subplots_dataSplit_allFeatures.pdf}
     \caption{Data splitting for all input features, showing the training, validation, and testing sets. Daily data from 1976-12-25 00:00 to 2019-07-30 00:00. The gray shading labels the solar cycles from SC21 to SC24.}
 \label{fig_allFeatures}
 \end{figure}
 
-In timeseries forecasting, it is a common practise to take a continuous set of data points from the main dataset to be the validation set and another smaller chunk of data to be the test set, for instance in \citet{pala_2019, benson_2020, zhang_2022, zhu_2022}. 
+In timeseries forecasting, it is a common practice to take a continuous set of data points from the main dataset to be the validation set and another smaller chunk of data to be the test set, for instance in \citet{pala_2019, benson_2020, zhang_2022, zhu_2022}. 
 From our experiments, I got descent results when I applied the same data split method, but the results were a bit biased toward the end of the solar cycle 24 and the testing set was biased towards a quiet period. So, I adopted the 9-2-1 strategy, that is taking from each year 9 months to be added in the training set, 2 months to be added in the validation set, and 1 month to be added in the test set. This is applied over the $\sim$43 years of data (Fig.~\ref{fig_allFeatures}), which yields 74.29\% of the data for the training set, 16.2\% for the validation set, and 9.51\% for the testing set. By doing so, I eliminated the need to do cross-validation and hence, made the training more efficient.
 It is worth to mention that the timeseries data must not be shuffled as that will break temporal and logical order of measurements, which must be maintained.
 
 \begin{figure}[htp]
-    \centerline{\includegraphics[width=\textwidth]{chapter4/figs/dataset_split_corr.pdf}}
+	\centering
+    \includegraphics[width=\textwidth]{chapter4/figs/dataset_split_corr.pdf}
     \caption{Correlation matrices show the correlation between the features in the training, validation, and test sets.}
 \label{fig_dataCorr}
 \end{figure}
@@ -140,7 +142,8 @@ BiLSTM networks are advantageous than traditional LSTM networks in a variety of 
 However, BiLSTM networks are computationally more expensive than regular LSTM networks due to the need for processing the input sequence in both directions. They also have a higher number of parameters and require more training data to achieve good performance.
 
 \begin{figure}[htp]
-    \centerline{\includegraphics[width=0.6\textwidth]{chapter4/figs/diagram.drawio.pdf}}
+	\centering
+    \includegraphics[width=0.6\textwidth]{chapter4/figs/diagram.drawio.pdf}
     \caption{Architecture of a single BiLSTM layer. The blue circles at the bottom labeled by \textit{($x_0$, $x_1$, $x_2$, ..., $x_i$)} are the input data values at multiple time steps. The purple circles, on the other hand, are the output data values at multiple time steps labeled by \textit{($y_0$, $y_1$, $y_2$, ..., $y_i$)}. The dark green and light green boxes are the activation units of the forward layer and the backward layer, respectively. The orange and yellow circles are the hidden states at the forward layer and the backward layer, respectively. Both the forward and backward layers composes a single hidden BiLSTM layer. The figure is adopted from \citet{olah_2015}}
 \label{fig_model}
 \end{figure}
@@ -162,7 +165,8 @@ To determine the most suitable model for our objective and provide justifiable r
 First I examined the naive (persistence) model, which is very simplistic and assumes that the timeseries values will remain constant in the future. In other words, it assumes that the future value will be the same as the most recent historical value. That was the baseline. Next I examined the moving-average model, which calculates the future values based on the average value of historical data within a specific time widow. This gives a little bit lower error.
 
 \begin{figure}[htp]
-    \centerline{\includegraphics[width=0.5\textwidth]{chapter4/figs/sliding_window_lstm.pdf}}
+	\centering
+    \includegraphics[width=0.5\textwidth]{chapter4/figs/sliding_window_lstm.pdf}
     \caption{Illustration of the sliding window technique for a sample of 10 timesteps, where each number denotes a distinct time step. As an example here, the input horizon (blue color) length is 4 timesteps and the output horizon length is 3 timesteps. The input window slides 1 time step at a time across the entire data sequence to generate 4 distinct input and forecast horizon pairs. The purple, orange, and green colors of the output horizon represent 1-day, 2-day, and 3-day ahead forecasting, respectively. The timesteps of 1-day ahead forecasting across the data sequences are then concatenated into a single timeseries list that is called 1-day ahead prediction. The same for 2-day and 3-day ahead.}
 \label{fig_slide_window}
 \end{figure}
@@ -173,7 +177,8 @@ In order to prepare the data in a readable format to the ML models, I created a 
 This approach minimized the imbalance of active days, with high SEP fluxes, and quiet days.
 
 \begin{figure}[htp]
-    \centerline{\includegraphics[width=\textwidth]{chapter4/figs/models_benchmark.pdf}}
+	\centering
+    \includegraphics[width=\textwidth]{chapter4/figs/models_benchmark.pdf}
     \caption{Benchmarking of 10 models, shows the Huber loss for the validation and test sets.}
 \label{fig_benchmark}
 \end{figure}
@@ -205,7 +210,8 @@ The learning rate refers to the rate at which the model's parameters are updated
 I noticed that at the epochs where the learning rate has changed, there were bumps in the loss curves across all the energy channels, which is expected. This highlights the boundaries within which the learning rate yields better performance.
 
 \begin{figure}[htp]
-    \centerline{\includegraphics[width=\textwidth]{chapter4/figs/loss_curve_allenergies.pdf}}
+	\centering
+    \includegraphics[width=\textwidth]{chapter4/figs/loss_curve_allenergies.pdf}
     \caption{\textit{Left Panel} - The Huber loss vs. the number of training epochs for the BiLSTM model for the validation and test sets, for the 3 energy channels. \textit{Middle Panel} - The mean absolute error (MAE); the model's metric vs. the number of training epochs. \textit{Right Panel} - Shows how the learning rate of the Adam optimizer changes over the number of epochs.}
 \label{fig_lossCurve}
 \end{figure}
@@ -218,32 +224,32 @@ Figure~\ref{fig_model_vs_obs_valset} shows how good the model predictions are (o
 
 \begin{figure}[htp]
     \centering
-    \begin{subfigure}
+    \begin{subfigure}{0.4\textwidth}
          \centering
-         \includegraphics[width=0.4\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF10.pdf}
+         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF10.pdf}
     \end{subfigure}
     %\hfill
-    \begin{subfigure}
+    \begin{subfigure}{0.4\textwidth}
          \centering
-         \includegraphics[width=0.4\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF10.pdf}
+         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF10.pdf}
     \end{subfigure}
-    \begin{subfigure}
+    \begin{subfigure}{0.4\textwidth}
          \centering
-         \includegraphics[width=0.4\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF30.pdf}
-    \end{subfigure}
-    %\hfill
-    \begin{subfigure}
-         \centering
-         \includegraphics[width=0.4\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF30.pdf}
-    \end{subfigure}
-    \begin{subfigure}
-         \centering
-         \includegraphics[width=0.4\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF60.pdf}
+         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF30.pdf}
     \end{subfigure}
     %\hfill
-    \begin{subfigure}
+    \begin{subfigure}{0.4\textwidth}
          \centering
-         \includegraphics[width=0.4\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF60.pdf}
+         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF30.pdf}
+    \end{subfigure}
+    \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF60.pdf}
+    \end{subfigure}
+    %\hfill
+    \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF60.pdf}
     \end{subfigure}
 \caption{Correlation between the model predictions and observations for 1-day, 2-day, and 3-day ahead for $>$10 MeV (top panel), $>$30 MeV (middle panel), and $>$60 MeV (bottom panel). The panels in the left column represent all the points of the validation set, those in the right column represent all the observations points with daily mean flux $\geq$10 pfu.}
 \label{fig_model_vs_obs_valset}
@@ -255,32 +261,32 @@ The points were more dispersed between 1 and 1.5 on the x-axis, which reflected 
 
 \begin{figure}[htp]
     \centering
-    \begin{subfigure}
+    \begin{subfigure}{0.4\textwidth}
          \centering
-         \includegraphics[width=0.4\textwidth]{chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF10.pdf}
+         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF10.pdf}
     \end{subfigure}
     %\hfill
-    \begin{subfigure}
+    \begin{subfigure}{0.4\textwidth}
          \centering
-         \includegraphics[width=0.4\textwidth]{chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF10.pdf}
+         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF10.pdf}
     \end{subfigure}
-    \begin{subfigure}
+    \begin{subfigure}{0.4\textwidth}
          \centering
-         \includegraphics[width=0.4\textwidth]{chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF30.pdf}
-    \end{subfigure}
-    %\hfill
-    \begin{subfigure}
-         \centering
-         \includegraphics[width=0.4\textwidth]{chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF30.pdf}
-    \end{subfigure}
-    \begin{subfigure}
-         \centering
-         \includegraphics[width=0.4\textwidth]{chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF60.pdf}
+         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF30.pdf}
     \end{subfigure}
     %\hfill
-    \begin{subfigure}
+    \begin{subfigure}{0.4\textwidth}
          \centering
-         \includegraphics[width=0.4\textwidth]{chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF60.pdf}
+         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF30.pdf}
+    \end{subfigure}
+    \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF60.pdf}
+    \end{subfigure}
+    %\hfill
+    \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF60.pdf}
     \end{subfigure}
 \caption{Same as Figure~\ref{fig_model_vs_obs_valset} but for the test set.}
 \label{fig_model_vs_obs_tstset}
@@ -298,25 +304,29 @@ The decline in correlation at the $>$30 MeV channel is consistent with the findi
 A summary of the performance results of the models for both the validation set and test set is presented in Table~\ref{table_performance}.
 
 \begin{figure}[h!]
-    \centerline{\includegraphics[width=\textwidth]{chapter4/figs/comparison_crosscorr_tstset_1day_3channels.pdf}}
+	\centering
+    \includegraphics[width=\textwidth]{chapter4/figs/comparison_crosscorr_tstset_1day_3channels.pdf}
     \caption{Comparison between the model outputs and observations of the test set for the 3 energy channels. In addition to the rolling-mean window correlation for 1-day ahead predictions.}
 \label{fig_crosscorr_tstset}
 \end{figure}
 
 \begin{figure}[htp]
-    \centerline{\includegraphics[width=\textwidth]{chapter4/figs/log_pf10/examples_10_tstset.pdf}}
+	\centering
+    \includegraphics[width=\textwidth]{chapter4/figs/log_pf10/examples_10_tstset.pdf}
     \caption{The model's forecasts for the out-of-sample testing set for the $>$10 MeV channel are shown at forecast horizons of 1 day, 2 days, and 3 days ahead, using samples of data from December in selected years mentioned in the top-left side of the plots.}
 \label{fig_examples_pf10_tstset}
 \end{figure}
 
 \begin{figure}[htp]
-    \centerline{\includegraphics[width=\textwidth]{chapter4/figs/log_pf30/examples_30_tstset.pdf}}
+	\centering
+    \includegraphics[width=\textwidth]{chapter4/figs/log_pf30/examples_30_tstset.pdf}
     \caption{The model's forecasts for the out-of-sample testing set for the $>$30 MeV channel are shown at forecast horizons of 1 day, 2 days, and 3 days ahead, using samples of data from December in selected years mentioned in the top-left side of the plots.}
 \label{fig_examples_pf30_tstset}
 \end{figure}
 
 \begin{figure}[htp]
-    \centerline{\includegraphics[width=\textwidth]{chapter4/figs/log_pf60/examples_60_tstset.pdf}}
+	\centering
+    \includegraphics[width=\textwidth]{chapter4/figs/log_pf60/examples_60_tstset.pdf}
     \caption{The model's forecasts for the out-of-sample testing set for the $>$60 MeV channel are shown at forecast horizons of 1 day, 2 days, and 3 days ahead, using samples of data from December in selected years mentioned in the top-left side of the plots.}
 \label{fig_examples_pf60_tstset}
 \end{figure}
@@ -359,13 +369,14 @@ The evaluation of the model revealed notable trends as the length of the output 
 \centering
 \caption{Confusion matrix for the energy channel $\geq$10 MeV predictions in the test set.}
 \label{table_skillscores}
-\begin{tabular}{lccccccccccc}
-\hline
-E \textgreater{}10 MeV & No. events & TP & TN   & FP & FN \\ \hline
-1-day ahead            & 15         & 21 & 1441 & 2  & 13 \\ \hline
-2-day ahead            & 13         & 14 & 1441 & 2  & 20 \\ \hline
-3-day ahead            & 5          & 5  & 1443 & 0  & 29 \\ \hline
-\end{tabular}
+%\begin{tabular}{lccccccccccc}
+\begin{tabular}{lccccc}
+	\hline
+	\bf{E \textgreater{}10 MeV} & \bf{No. events} & \bf{TP} & \bf{TN} & \bf{FP} & \bf{FN} \\ \hline
+	1-day ahead            & 15         & 21 & 1441 & 2  & 13 \\ \hline
+	2-day ahead            & 13         & 14 & 1441 & 2  & 20 \\ \hline
+	3-day ahead            & 5          & 5  & 1443 & 0  & 29 \\ \hline
+	\end{tabular}
 \end{table}
 
 \begin{table}[htp]
@@ -379,9 +390,9 @@ E \textgreater{}10 MeV & No. events & TP & TN   & FP & FN \\ \hline
 \multirow{3}{*}{Our BiLSTM model}        & 1-Day      & 0.618        & 0.087        & 0.531        & 0.732        & 0.001         & 0.583        & 0.99                                  & 0.913                                  \\ \cline{2-10} 
                                          & 2-Day      & 0.412        & 0.125        & 0.287        & 0.553        & 0.001         & 0.389        & 0.985                                 & 0.875                                  \\ \cline{2-10} 
                                          & 3-Day      & 0.147        & 0            & 0.147        & 0.252        & 0             & 0.147        & 0.980                                 & 1                                      \\ \hline
-\multicolumn{2}{l}{UMASEP-10 \citep{Nunez_2011}}           & 0.822        & 0.219        & ---          & ---          & ---           & ---          & ---                                   & ---                                    \\ \hline
-\multicolumn{2}{l}{PCA \citep{Papaioannou_2018}}     & 0.587        & 0.245        & ---          & 0.65         & ---           & ---          & ---                                   & ---                                    \\ \hline
-\multicolumn{2}{l}{SPARX \citep{Dalla_2017}}         & 0.5          & 0.57         & ---          & ---          & 0.32          & 0.3          & ---                                   & ---                                    \\ \hline
+\multicolumn{2}{l}{UMASEP-10 \citep{nunez_2011}}           & 0.822        & 0.219        & ---          & ---          & ---           & ---          & ---                                   & ---                                    \\ \hline
+\multicolumn{2}{l}{PCA \citep{papaioannou_2018}}     & 0.587        & 0.245        & ---          & 0.65         & ---           & ---          & ---                                   & ---                                    \\ \hline
+\multicolumn{2}{l}{SPARX \citep{dalla_2017}}         & 0.5          & 0.57         & ---          & ---          & 0.32          & 0.3          & ---                                   & ---                                    \\ \hline
 \multicolumn{2}{l}{SPRINTS \citep{engell_2017}}      & 0.56         & 0.34         & ---          & 0.58         & ---           & ---          & ---                                   & ---                                    \\ \hline
 \multicolumn{2}{l}{REleASE \citep{malandraki_2018}} & 0.63         & 0.3          & ---          & ---          & ---           & ---          & ---                                   & ---                                    \\ \hline
 \end{tabular}
@@ -410,7 +421,7 @@ The observed reduction in correlation necessitates further investigation to dete
 I plan to expand upon this work by performing short-term forecasting using hourly-averaged data. This extension will involve integrating additional relevant features such as the location and area of active regions and coronal holes on the Sun.
 
 BiLSTM networks are particularly useful for tasks involving sequential data such as timeseries forecasting. Given their capacity to handle input sequences in both directions in time and capture long-term dependencies, they are valuable in a broad range of applications. Nonetheless, one should carefully consider their data requirements and computational complexity before adopting them.
-Our results emphasize that the use of deep learning models in forecasting tasks in heliophysics are promising and encouraging, as pointed out by \citet{zhang_2022}.
+Our results emphasize that the use of deep learning models in forecasting tasks in heliophysics are promising and encouraging, as pointed out by \citet{zhang_lstm_2022}.
 
 This work is a stepping stone towards real-time forecasting of SEP flux based on the public-available datasets. As an extension, I are currently working on developing a set of models that deliver near-real time prediction of SEP fluxes at multiple energy bands, multiple forecasting windows, with hourly-averaged data resolution, with a more sophisticated model architecture, as well as more features that address the state of solar activity more comprehensively. 
 I plan to extend the analysis to include more recent data from solar cycle 25, in order to improve the accuracy of the models.

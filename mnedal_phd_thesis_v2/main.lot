@@ -2,6 +2,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Characteristics of the type III bursts detected via the automatic algorithm from the combined spectrum.}}{15}{table.caption.9}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Characteristics of the type III bursts detected via the automatic algorithm from the combined spectrum.}}{25}{table.caption.12}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Configuration of the ML model. (1) refers to the error value for 1-day forecasting. Same for (2) refers to 2-day forecasting, and (3) for 3-day forecasting. $^*$In the 1D-CNN layer, 32 filters, a kernel size of 5, and strides of 1 were used.}}{29}{table.caption.15}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Summary of the performance results of the models for the validation and test sets.}}{50}{table.caption.32}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Confusion matrix for the energy channel $\geq $10 MeV predictions in the test set.}}{52}{table.caption.33}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Comparing the skill scores with previous models. The dashed entries mean the data is unavailable (\citet {whitman_2022} for more details).}}{52}{table.caption.34}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces Radial distances and densities at the first ($R_1$) and last ($R_2$) radio sources were obtained from the 2.5$\times $Newkirk model, as well as their impact parameters $r_1$ and $r_2$, respectively.}}{61}{table.caption.36}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Configuration of the ML model. (1) refers to the error value for 1-day forecasting. Same for (2) refers to 2-day forecasting, and (3) for 3-day forecasting. $^*$In the 1D-CNN layer, 32 filters, a kernel size of 5, and strides of 1 were used.}}{65}{table.caption.38}%

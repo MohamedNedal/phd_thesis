@@ -3,8 +3,88 @@
 
 \section{Appendix for Radio Observation-related Work}
 \label{ch3_appendix_lofar_psp}
+\subsection{Persistent imaging technique}
+\label{ch3_append_a}
+Persistent imaging is a technique used in medical imaging, particularly ultrasound imaging, to create a continuous, real-time display of the anatomy being imaged (see \citeauthor{pysz_2011} \citeyear{pysz_2011}, and references within). The core idea of persistent imaging is to use persistence, or the ability of the human eye to retain an image for a brief moment after it has disappeared to create a more informative and visually clear image \citep{fredkin_1995, thompson_2016}.
 
+At every image in a time-ordered series, the technique keeps the old pixel value if it is brighter than the current pixel value, else it takes the current pixel's value. The result is saved as the current persistence image. Then, the next image in the series is evaluated by comparing it pixel by pixel with respect to the previous persistence image. The resulting image emphasizes the changes between the current image and the previous persistent image, making them more visible to the human eye.
 
+The persistent imaging technique can be described mathematically by a set of equations. If we let $I(t,x,y)$ be the intensity at time $t$ and pixel coordinates $(x,y)$, and let $P(t,x,y)$ be the persistence image at time $t$ and pixel coordinates $(x,y)$, then the persistence image at time $t$ is computed as:
+\begin{equation}
+	P(t,x,y) = max\{I(t,x,y), P(t-1,x,y)\}
+	,\end{equation}
+where \textbf{max} represents the maximum of its two arguments. The current image at time $t$ is then evaluated with respect to the previous persistence image as follows:
+\begin{equation}
+	I^`(t,x,y) = max\{I(t,x,y) - P(t-1,x,y), 0\}
+	,\end{equation}
+The resulting image $I'(t,x,y)$ is a modified version of the current image that emphasizes the differences from the previous persistence image.
+
+The persistent imaging technique has been shown to improve the visual quality of ultrasound images and other medical imaging modalities, and is commonly used in clinical practice. In this paper, we utilize the persistent imaging technique to improve the visualization of the solar radio sources of type III emissions (Fig.~\ref{fig_persistence}).
+
+\subsection{Resolving the radio emission location ambiguity}
+\label{ch3_append_b}
+In this part, we show that the -Z solution of Equation~\ref{zpos} is highly unlikely in our case. Figure~\ref{fig_negZ_posZ} shows the positive and negative solutions of Equation~\ref{zpos}. We take the innermost and outermost coronal radio sources at $R_1$ and $R_2$, respectively, as an example. $r_1$ and $r_2$ are the projections of $R_1$ and $R_2$ on the POS, respectively. Harmonic radio emission from $R_1$ will theoretically be absorbed by a region along the LOS with plasma frequency (and corresponding density) equal to or higher than the harmonic emission frequency at $R_1$. In the case of the spherically symmetric Newkirk model, the highest density location the emission from $R_1$ could pass through is $r_1$ on the POS. Thus, for harmonic radio emission from behind the POS (-Z, where Z = 0 is defined at the center of the Sun and positive Z is towards the observer) to be observed at the Earth, it must satisfy the following condition:
+\begin{equation}
+	2f_{R_1} > f_{r_1}
+	\label{eq_assumption}
+	,\end{equation}
+where $f_{R_1}$ is the plasma frequency of radio emission that occurred behind the POS, and $f_{r_1}$ is the plasma frequency at the projected location of $r_1$ on the POS.
+The relation between the local plasma frequency and the electron density is defined by the equation:
+\begin{equation}
+	f[MHz] = 8.93 \times 10^{-3} \sqrt{n[cm^{-3}]}
+	\label{eq_plasmafreq}
+	.\end{equation}
+The Newkirk electron-density model \citep{newkirk_1961, newkirk_1967} describes the typical densities in the outer part of the corona according to the following equation:
+\begin{equation}
+	n[cm^{-3}] = \alpha \; 4.2 \times 10^4 \; 10^{4.32 \frac{R_\odot}{r}}
+	\label{eq_newkirk}
+	,\end{equation}
+where $\alpha$ is the fold number (i.e., a multiplicative factor that accounts for the density variations based on the degree of solar activity), and $r$ is the radial distance from the Sun in solar radii.
+By substituting Equations~\ref{eq_plasmafreq} and~\ref{eq_newkirk} into Equation~\ref{eq_assumption}, we obtain
+\begin{equation}
+	\frac{n_{r_1}}{n_{R_1}} = \frac{10^{4.32 \frac{R_\odot}{r_1}}}{10^{4.32 \frac{R_\odot}{R_1}}} < 4.
+	\label{eq_condition}
+\end{equation}
+After reduction we obtain the final formula that must be satisfied under these assumptions in order for radio emission behind the POS to pass through the corona and reach the Earth:
+\begin{equation}
+	\frac{r_1}{R_\odot} < \left( \frac{log 2}{2.16} + \frac{R_\odot}{R_1} \right)^{-1}.
+\end{equation}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\hsize]{chapter3/figs/negZ_posZ_solutions.pdf}
+	\caption{Schematic shows the locations of the radio sources for the +Z and -Z solutions of Equation~\ref{zpos}. The Sun is located in the middle as an orange circle, with a horizontal dashed black line representing the POS. The vertical dashed green line represents the Sun-Earth LOS. The dashed blue and red circles represent the plasma spheres of density equivalent to the observation frequencies of the innermost and outermost radio sources at $R_1$ and $R_2$, respectively, under the Newkirk model assumption of spherically-symmetric density distribution. The impact parameters $r_1$ and $r_2$ are the projection of $R_1$ and $R_2$ on the POS. The dot-dashed blue and red circles are the circles passing through the impact parameters $r_1$ and $r_2$, respectively.}
+	\label{fig_negZ_posZ}
+\end{figure}
+From Figure~\ref{fig_negZ_posZ}, $r_1$ and $r_2$ will always be smaller than $R_1$ and $R_2$, respectively. The Newkirk model requires that the density at $r_1$ and $r_2$ be significantly higher than the density at $R_1$ and $R_2$, respectively (Table~\ref{table_negZ}). Additionally, from the geometric representation in Figure~\ref{fig_negZ_posZ}, we find that the electron density at $r_1$ is higher than at ${R_1}$, hence the radio emission cannot reach the Earth from that point behind the POS \citep{mann_2018}.
+
+From Table~\ref{table_negZ}, the assumption of Equation~\ref{eq_condition} is not satisfied. Thus, the -Z solution is invalid in our case. This implies that the harmonic emission from behind the POS will not reach the Earth. Thus, the +Z assumption is the valid solution.
+\begin{table}[h!]
+	\centering
+	\caption{Radial distances and densities at the first ($R_1$) and last ($R_2$) radio sources were obtained from the 2.5$\times$Newkirk model, as well as their impact parameters $r_1$ and $r_2$, respectively.}
+	\label{table_negZ}
+	\begin{tabular}{cccc}
+		\hline
+		Point & Radial distance ($R_\odot$) & Density (cm$^{-3}$) & Ratio ($n_r/n_R$)\\ \hline
+		$r_1$ & 1.58 & 5.69$\times10^7$ & \multirow{2}{*}{11.81}\\
+		$R_1$ & 1.81 & 4.82$\times10^6$ & \\ \hline
+		$r_2$ & 2.6 & 2.59$\times10^7$ & \multirow{2}{*}{14.23}\\
+		$R_2$ & 3.49 & 1.82$\times10^6$ & \\ \hline
+	\end{tabular}
+\end{table}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\hsize]{chapter3/figs/wind_vs_sta_fluxdens.pdf}
+	\caption{Cut of the flux density at 700 kHz observed by Wind (left panel) and STEREO-A (right panel). Note:\ for STEREO-A, there is no exact frequency channel at 700 kHz; therefore we selected the nearest one (675 kHz).}
+	\label{fig_cutpower}
+\end{figure}
+
+Furthermore, we analyzed the time difference of arrival of the radio emission at interplanetary wavelengths in Figure~\ref{fig_cutpower}. Specifically, we compared the timing of peak signals at a low frequency between two spacecraft, Wind and STEREO. This analysis was conducted under the assumption of two possible scenarios:
+\begin{itemize}
+	\item one in which the radio emission source follows a trajectory that is roughly equidistant between Wind and STEREO -- if the $+Z$ assumption is true.
+	\item the trajectory implies significantly longer travel times from the source to Wind compared to STEREO -- if the $-Z$ assumption is true.
+\end{itemize}
+Examining the data, we selected the frequency channel 700 kHz observed by Wind and its nearest counterpart 675 kHz for STEREO. Interestingly, the difference in the arrival times of these signals was merely one minute, which is within the bounds of the time resolution of the instrument. This negligible difference in arrival times supports the $+Z$ assumption for the beam trajectory, meaning it travels approximately at an equal distance between the two spacecraft.
 
 \section{Appendix for SEP-related Work}
 \label{ch4_appendix_eval}
