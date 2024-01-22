@@ -14,7 +14,7 @@
 
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Wavetrack: A Flexible Framework for Automated Recognition and Tracking of Wave-Like Events in Solar Imagery}
 \subsection{Overview}
@@ -65,19 +65,19 @@ The processing involved the creation of base images through the averaging of a s
 \subsection{Image Filtering Techniques}
 Specific image filtering techniques, including thresholding, wavelet decomposition, and segmentation, formed the cornerstone of the method. Initial thresholding applied to the absolute values of pixels in the base difference images narrowed the dynamic range, concentrating on the segment containing the object of interest.
 
-Subsequent to thresholding, the base difference images underwent \'A trous wavelet' decomposition into multiple scales. Each wavelet coefficient underwent relative thresholding based on the statistical distribution of pixel intensities at each decomposition level. The segmentation process yielded object masks for each time step, subsequently multiplied by the original data to reveal the intensity of different parts of the object.
+Subsequent to thresholding, the base difference images underwent \'A trous wavelet decomposition into multiple scales. Each wavelet coefficient underwent relative thresholding based on the statistical distribution of pixel intensities at each decomposition level. The segmentation process yielded object masks for each time step, subsequently multiplied by the original data to reveal the intensity of different parts of the object.
 
 Given the variations in statistical distributions of pixel intensities in base and running difference images, tailored approaches were applied. In base difference images, pixel intensities were constrained to a specific segment, focusing on the object of interest, such as a CBF. Running difference images, employed to identify eruption initiation, depended on the specific features and objects under observation.
 
-The \'A trous wavelet transform,' constituting a multi-scale data representation, significantly contributed to the recognition and tracking of solar images. This hierarchical decomposition enabled the extraction of specific objects and their masks from imaging observations, facilitating their tracking and temporal evolution. The \'A trous wavelet decomposition' enhanced the clarity and intensity of faint features like EUV waves, offering a flexible framework applicable to various solar phenomena across different wavelengths. This method emerges as a valuable tool for comprehensively analyzing and understanding the dynamics of solar features, including CME shock waves and filaments.
+The \'A trous wavelet transform, constituting a multi-scale data representation, significantly contributed to the recognition and tracking of solar images. This hierarchical decomposition enabled the extraction of specific objects and their masks from imaging observations, facilitating their tracking and temporal evolution. The \'A trous wavelet decomposition enhanced the clarity and intensity of faint features like EUV waves, offering a flexible framework applicable to various solar phenomena across different wavelengths. This method emerges as a valuable tool for comprehensively analyzing and understanding the dynamics of solar features, including CME shock waves and filaments.
 
 The study introduced the Wavetrack package, designed for automated detection and tracking of dynamic coronal features in solar observations. Utilizing wavelet decomposition, feature enhancement and filtering, and object recomposition, Wavetrack identified and tracked features such as CBFs and eruptive filaments. This object-oriented Python framework, adaptable to both on-disk and off-limb features, enables tracking of features that bifurcate over time.
 
 \subsection{Wavetrack for Coronal Wave Tracking}
-In tracking coronal waves, Wavetrack utilized wavelet decomposition, feature enhancement, and filtering techniques. The \'A trous wavelet decomposition' method enhanced faint features like EUV waves, capturing different scales of features through convolutions. Automated feature recognition, incorporating intensity thresholding, image posterization, median filtering, segmentation, and intensity level splitting, identified and isolated coronal wave features. The output comprised time-dependent pixel masks, representing the tracked coronal wave, applicable to generating final feature maps for both on-disk and off-limb features.
+In tracking coronal waves, Wavetrack utilized wavelet decomposition, feature enhancement, and filtering techniques. The \'A trous wavelet decomposition method enhanced faint features like EUV waves, capturing different scales of features through convolutions. Automated feature recognition, incorporating intensity thresholding, image posterization, median filtering, segmentation, and intensity level splitting, identified and isolated coronal wave features. The output comprised time-dependent pixel masks, representing the tracked coronal wave, applicable to generating final feature maps for both on-disk and off-limb features.
 
 \subsection{Wavetrack for Filament Tracking}
-For filament tracking, Wavetrack followed a process involving wavelet decomposition, feature recognition, object mask generation, and image recomposition. The \'A trous wavelet decomposition' identified different scales of features, and subsequent processing enhanced the features for ease of tracking. Object masks generated for each time step isolated filament features, and image recomposition from weighted wavelet scales produced final feature maps. The choice of images, such as inverted AIA 193Å images, depended on source data and filament velocity.
+For filament tracking, Wavetrack followed a process involving wavelet decomposition, feature recognition, object mask generation, and image recomposition. The \'A trous wavelet decomposition identified different scales of features, and subsequent processing enhanced the features for ease of tracking. Object masks generated for each time step isolated filament features, and image recomposition from weighted wavelet scales produced final feature maps. The choice of images, such as inverted AIA 193Å images, depended on source data and filament velocity.
 
 \subsection{Fourier Local Correlation Tracking (FLCT) Model}
 To determine the plane-of-sky velocity and speed of solar features, the study employed the FLCT model, utilizing the Fourier Local Correlation Tracking (FLCT) method. Through the analysis of consecutive solar images and the tracking of feature motion over time, the FLCT algorithm was applied to object masks derived from the Wavetrack methodology. The resultant output furnished detailed maps of instantaneous velocity, contributing to a deeper understanding of the expansion and evolution of solar features such as Coronal Bright Fronts (CBFs) and erupting filaments.
@@ -85,33 +85,62 @@ To determine the plane-of-sky velocity and speed of solar features, the study em
 The overall methodology of the study integrated advanced image processing techniques, incorporating wavelet transform, image filtering, feature detection algorithms, and machine learning. This comprehensive approach facilitated an in-depth analysis of solar observations. Notably, the Wavetrack package emerged as a versatile tool, specifically valuable in the tracking of dynamic coronal features. Its application provided significant insights into the intricate dynamics governing the solar environment.
 
 \subsection{Results}
+The study presents several examples and case studies that demonstrate the application of the Wavetrack package. Here are some of the examples mentioned:
 
-The document presents several examples and case studies that demonstrate the application of the Wavetrack package. Here are some of the examples mentioned:
-1. May 11, 2011 event: The Wavetrack algorithm was used to track both an erupting filament and the coronal bright front (CBF) it drives. The relationship between the driver and wave was studied using the segmented features from AIA 193Å observations.
-2. September 29, 2013 event: Wavetrack was applied to a large-scale filament in a slow eruption. The segmented filament feature was overlaid on the solar corona, and the on-disk feature was consistently tracked during the eruption.
-3. December 12, 2013 event: Wavetrack was used to track the evolution of driven and non-driven regions of the CBF. The method revealed the relation between the CBF and eruptive features.
-These examples demonstrate the versatility of Wavetrack in recognizing and tracking various solar features, both on the solar disk and off the solar limb.
+\begin{enumerate}
+	\item \textbf{May 11, 2011 event}:
+	The Wavetrack algorithm was used to track both an erupting filament and the coronal bright front it drives. The relationship between the driver and wave was studied using the segmented features from AIA 193\AA observations.
+	
+	\item \textbf{September 29, 2013 event}: Wavetrack was applied to a large-scale filament in a slow eruption. The segmented filament feature was overlaid on the solar corona, and the on-disk feature was consistently tracked during the eruption.
+	
+	\item \textbf{December 12, 2013 event}: Wavetrack was used to track the evolution of driven and non-driven regions of the CBF. The method revealed the relation between the CBF and eruptive features. These examples demonstrate the versatility of Wavetrack in recognizing and tracking various solar features, both on the solar disk and off the solar limb.
+	
+	\item \textbf{June 07, 2011 event}: For this event, the variation in speed between the geometric center and center of mass is up to 300 \kms in the radial direction. The angle between the geometric center and center of mass changes quite a lot as different parts of the compressive front brighten and dim. However, the angle remains relatively stable, changing only slightly during this event.
+\end{enumerate}
 
-For the June 07, 2011 event, the variation in speed between the geometric center (GC) and center of mass (CM) is up to 300 km/s in the radial direction. The angle between the GC and CM changes quite a lot as different parts of the compressive front brighten and dim. However, the angle remains relatively stable, changing only slightly during this event.
+Here, I will just focus on the first event since it was accompanied with a coronal bright front.
 
-The main results of the paper are as follows:
-1. The Wavetrack framework, which utilizes an \'A trous wavelet decomposition method, is effective in enhancing solar EUV and white light images and improving the clarity and intensity of faint features.
-2. The Wavetrack method allows for the segmentation and tracking of solar dynamic features, such as coronal bright fronts (CBFs), over time. It provides a simple metric with a one-dimensional time series for characterizing the evolution of these features.
-3. The Wavetrack framework is widely applicable to different types of solar dynamic features and different observational data.
-4. The method has some limitations, such as the need for manual input in setting object criteria and fine-tuning parameters for specific events. These limitations will be addressed in future work.
-Overall, the Wavetrack framework provides a valuable tool for analyzing and tracking solar dynamic features in observational data.
+The Wavetrack methodology was applied to analyze three previously investigated eruptive events observed by the AIA telescope \citep{kozarev_2015, kozarev_2017}. In the first event on May 11, 2011, an erupting filament induced a relatively bright Coronal Bright Front (CBF) on the northwest region of the solar disk near the limb. The second event, occurring on June 07, 2011, originated close to the southwest limb and featured a large and luminous CBF. On December 12, 2013, the third event, also originating near the southwest limb, was examined.
 
-The conclusions drawn from the study are as follows:
-1. The Wavetrack method is effective in segmenting and tracking solar dynamic features, such as coronal bright fronts (CBFs) and filaments, in observational data.
-2. The Wavetrack method allows for the analysis of feature evolution over time by calculating the time-dependent vector between the pixel geometric center and the center of mass.
-3. The method can successfully capture the extent of CBFs in consecutive time steps, even in regions with different pixel distributions and intensities.
-4. Wavetrack is capable of tracking multiple separate parts of the same feature.
-5. The method is widely applicable to different types of solar dynamic features and different observational data.
-6. The limitations of the method, such as the need for manual input in setting object criteria and fine-tuning parameters for specific events, will be addressed in future work.
+Figure 4 illustrates the successfully extracted Wavetrack CBF objects for the three events, observed at four time points, each separated by 3 minutes. Wavetrack object masks, when applied to base difference images, were visualized using a blue-green color map overlaid on the original AIA 193\AA observations in grayscale to emphasize the CBFs. Across all three events, Wavetrack adeptly delineated the extent of the CBF in consecutive time steps, demonstrating its ability to track the evolution of CBFs both on the solar disk and off the limb. This capability was maintained despite the distinct pixel distributions and intensities in these two regions. The application of Wavetrack facilitated the detailed study of the time-dependent shapes and changing intensity distributions of CBFs, separate from the broader corona. Moreover, Wavetrack effectively selected CBF objects under different coronal activity states. For instance, despite increased coronal activity on December 12, 2013, Wavetrack successfully segmented the CBF. Importantly, the segmentation of the CBF in the last event highlighted Wavetrack's capability to track multiple separate parts of the same feature.
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\hsize]{chapter2/figs/fig_1105011_wave_filament_fourpanel_plot.png}
+	\caption{Wavetrack images showing progression of a CBF and filament on May 11, 2011. Three snapshots captured \almost2 minutes apart track the CBF and filament over time. Credit goes to \citet{stepanyuk_2022}.}
+	\label{fig_wavetrack_cbf_filament}
+\end{figure}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\hsize]{chapter2/figs/wavetrack_figure_110511.png}
+	\caption{Wavetrack images of a May 11, 2011 eruption, with CBF mask applied. Four image pairs shown, separated by 2 minutes, to track CBF over time. Credit goes to \citet{stepanyuk_2022}.}
+	\label{fig_wavetrack_cbf_center}
+\end{figure}
 
+The Wavetrack code was further applied to isolate and study the kinematics of CBFs and filaments in detail. The Fourier Local Correlation Tracking (FLCT) method, extensively utilized for estimating horizontal flows in photospheric magnetograms, was employed for this purpose. Initially proposed as a cross-correlation technique for precise motion measurement, FLCT calculates a 2D flow field that best resembles the scalar field between two consecutive 2D maps.
 
+Figure 7 displays four pairs of consecutive AIA images from the May 11, 2011 event, used as input for the FLCT algorithm. Each pair, separated by 24 seconds, is strategically chosen to observe the CBF progression over 6 minutes. The corresponding FLCT results, presented in Figure 8, show the instantaneous plane-of-sky direction of motion and speed of each CBF region. Notably, the results reveal the uneven expansion of the CBF from the central source. In this event, the thinnest part of the CBF, strongly driven by the erupting filament, exhibited the fastest motion compared to other regions on the disk and off the limb. This nuanced information, not discernible from intensity observations alone, underscores the value of our combined Wavetrack and FLCT approach in elucidating the dynamic behavior of coronal features.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\hsize]{chapter2/figs/flct_wave_filament_doubleplot_figure_110511.png}
+	\caption{FLCT model output for four image pairs from Fig. 3. Left: the plane-of-sky velocity vectors. Right: plane-of-sky speed. Credit goes to \citet{stepanyuk_2022}.}
+	\label{fig_flct_110511}
+\end{figure}
+
+\subsection{Conclusions}
+In this study, led by \citet{stepanyuk_2022}, we introduce Wavetrack, an innovative approach designed for the automated identification and monitoring of dynamic coronal phenomena. Employing wavelet decomposition, feature enhancement, filtering, and ultimate object recomposition, Wavetrack generates time-dependent masks for feature pixels. These masks can be applied to integral or base-difference images, yielding comprehensive feature maps. Notably, Wavetrack excels in tracing pixels associated with faint, large-scale features, such as coronal bright fronts/EUV waves in AIA observations, and has demonstrated efficacy in tracking eruptive filaments.
+Operable for both on-disk and off-limb features, Wavetrack adeptly follows features that evolve into distinct components over time. Implemented as a versatile, object-oriented framework in Python, Wavetrack is freely accessible for download and utilization.
+
+The application of Wavetrack to four distinct events, with emphasis on three – the CBFs occurring on May 11 and June 07, 2011, and December 12, 2013 – reveals its proficiency in tracking complete CBF pixel maps. These model results, when integrated with the FLCT method for calculating plane-of-sky speeds, unveil the dynamic evolution of driven and non-driven regions within CBFs, as well as their correlation with eruptive filament drivers. Our findings indicate that drivers induce a compression effect, causing CBF thinning and increased speed, aligning with theoretical models. However, the brightness of CBFs in the driven regions, as observed in AIA data, does not necessarily exhibit a significant increase.
+
+Furthermore, Wavetrack facilitates the tracking of temporal changes in feature regions by computing the time-dependent vector between the pixel geometric center and the center of mass, determined by weighing the observed pixel intensities. This proves particularly valuable for large-scale features like CBFs, providing a straightforward metric in the form of a one-dimensional time series for characterizing feature evolution.
+
+While the method demonstrates widespread applicability to various solar dynamic features and observational data, it currently relies on human input for the segmentation of specific feature types, particularly dim ones. Manual setting of object criteria, including threshold intervals and recomposition weight coefficients, is necessary. In instances of base difference imaging, precise selection of the base image is crucial to prevent contamination of input data with spurious features. Additionally, parameter fine-tuning through trial and error may be required for specific events. These limitations are acknowledged, and future work will address them to enhance the model's versatility.
+
+The methodology holds promise for extensive application across diverse solar dynamic features and observational datasets. Subsequent research endeavors will extend its use to in-depth studies of filament evolution and coronagraph data. The objective is to refine our comprehension of how large-scale eruptive fronts manifest variations across distinct observational contexts, spanning the low and middle corona.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Geomagnetic Storms: CME Speed De-Projection vs. In Situ Analysis}
 This study, led by \citet{miteva_2023}, examines the relationship between the intensity of geomagnetic storms (GS) and parameters of solar and interplanetary phenomena. We utilize the recently developed PyThea framework to reconstruct the 3D geometry of geo-effective CMEs and compare on-sky and de-projected values, focusing on the reliability of the de-projection capabilities. Spheroid, ellipsoid, and graduated cylindrical shell models are used. We collected parameters of the GS-associated phenomena. Considerable variation in 3D de-projections of CME speeds was obtained depending on the reconstruction model chosen and subjective observations. Fast CME speeds combined with frontal magnetic structure orientation when reaching Earth's magnetosphere proved the best indicator of GS strength. More accurate estimations of geometry, direction, and de-projected speeds are critical for operational GS forecasting in space weather prediction schemes.
@@ -160,42 +189,144 @@ All utilized databases, catalogs, and publicly available lists pertinent to the 
 
 %\subsubsection{GSs and IP Phenomena} % should i put the table or remove this text?
 \subsection{GSs and IP Phenomena} % should i put the table or remove this text?
-The findings pertaining to Geomagnetic Storms (GSs) and their associated Interplanetary Coronal Mass Ejections (ICMEs) and Interplanetary (IP) shocks are succinctly presented in Table 1. The initial column designates the event number (#), a consistent reference utilized throughout this paper. Columns (2) and (3) detail the GS date, hour (mm-dd/hr), and the corresponding Dst index (in nT). Subsequently, columns (4)–(6) expound upon the ICME parameters [43], drawing from the Wind database accessible at \url{https://wind.nasa.gov/ICME_catalog/ICME_catalog_viewer.php} (accessed on 5 April 2023). The sheath duration (D, in hours), representing the temporal span between the initiation times of the ICME and the magnetic structure, is computed from the available timings within the plots offered by the aforementioned Wind database, and is presented in column (7). The ICME in situ measured speed is extracted from both the Wind and ACE databases, with the exception of E11 where no ICME is reported.
+The findings pertaining to Geomagnetic Storms (GSs) and their associated Interplanetary Coronal Mass Ejections (ICMEs) and Interplanetary (IP) shocks are succinctly presented in Table 1 in \citet{miteva_2023}. The initial column designates the event number (\#), a consistent reference utilized throughout this paper. Columns (2) and (3) detail the GS date, hour (mm-dd/hr), and the corresponding Dst index (in nT). Subsequently, columns (4)–(6) expound upon the ICME parameters \citep{nieves_2018}, drawing from the Wind database accessible at this website\footnote{\url{https://wind.nasa.gov/ICME_catalog/ICME_catalog_viewer.php}}. The sheath duration (D, in hours), representing the temporal span between the initiation times of the ICME and the magnetic structure, is computed from the available timings within the plots offered by the aforementioned Wind database, and is presented in column (7). The ICME in situ measured speed is extracted from both the Wind and ACE databases, with the exception of E11 where no ICME is reported.
 
-Column (8) integrates the minimum Bz component throughout the Interplanetary Coronal Mass Ejection (ICME) duration, as ascertained from the data available at \url{https://cdaweb.gsfc.nasa.gov/} (accessed on 5 April 2023), thereby enhancing the comprehensiveness of the dataset. In Column (9), we conduct a qualitative assessment of the ICME arrival orientation. Specifically, we visually inspect the intersection point between the ICME structure and Earth using ecliptic plane animations accessible at http://helioweather.net/archive/ (accessed on 5 April 2023). The orientations are denoted as either 'hit' (nose) or 'f' (flank) arrivals. Instances of discrepancies among diverse data sources, such as the presence of solar wind streams or Corotating Interaction Regions (CIRs) visible in animations contradicting ICME arrivals identified through in situ data, are marked as 'u' (uncertain) in the same column. This classification signifies situations where a distinct ICME structure propagating through the Interplanetary (IP) space could not be conclusively observed. Noteworthy is the occurrence of swift solar wind flows and/or CIRs recorded near Earth during ICME and/or shock wave events. For instance, in the cases of E11 and E18, a CIR was identified as their IP origin by [35]; however, in contrast to these findings, our methodology does not differentiate between ICME and sheath origins.
+Column (8) integrates the minimum Bz component throughout the Interplanetary Coronal Mass Ejection (ICME) duration, as ascertained from the data available at this website\footnote{\url{https://cdaweb.gsfc.nasa.gov/}}, thereby enhancing the comprehensiveness of the dataset. In Column (9), we conduct a qualitative assessment of the ICME arrival orientation. Specifically, we visually inspect the intersection point between the ICME structure and Earth using ecliptic plane animations accessible at this website\footnote{\helioweatherurl}. The orientations are denoted as either \textit{hit} (nose) or \textit{f} (flank) arrivals. Instances of discrepancies among diverse data sources, such as the presence of solar wind streams or Corotating Interaction Regions (CIRs) visible in animations contradicting ICME arrivals identified through in situ data, are marked as 'u' (uncertain) in the same column. This classification signifies situations where a distinct ICME structure propagating through the IP space could not be conclusively observed. Noteworthy is the occurrence of swift solar wind flows and/or CIRs recorded near Earth during ICME and/or shock wave events. For instance, in the cases of E11 and E18, a CIR was identified as their IP origin by \citet{qiu_2022}; however, in contrast to these findings, our methodology does not differentiate between ICME and sheath origins.
 
-The final columns, (10)–(13), enumerate the properties of the IP shock, incorporating timing, speed, magnetic field, density, temperature jump at the shock interface, and the Mach number (Mms). These details are sourced from Wind satellite data, \url{http://www.ipshocks.fi/database} (accessed on 5 April 2023), with the exception of E24, where the median shock speed is derived from \url{https://lweb.cfa.harvard.edu/shocks/wi_data/} (accessed on 5 April 2023). Notably, for E17, E18, and E25, no IP shocks are reported in either database.
+The final columns, (10)–(13), enumerate the properties of the IP shock, incorporating timing, speed, magnetic field, density, temperature jump at the shock interface, and the Mach number (Mms). These details are sourced from Wind satellite data, available at this website\footnote{\url{http://www.ipshocks.fi/database}}, with the exception of E24, where the median shock speed is derived from this website\footnote{\url{https://lweb.cfa.harvard.edu/shocks/wi_data/}}. Notably, for E17, E18, and E25, no IP shocks are reported in either database.
 
 %\subsubsection{GSs and Solar Phenomena} % should i put the table or remove this text?
 \subsection{GSs and Solar Phenomena} % should i put the table or remove this text?
-In the context of five cases denoted as E05, E11, E17, E18, and E22, our attempts to identify Solar Flares (SFs) or Coronal Mass Ejections (CMEs) were unsuccessful. Furthermore, in an additional six cases, the specification of SFs proved unattainable. The ensuing presentation provides details on the parameters of the remaining cases, specifically focusing on the solar origins associated with Geomagnetic Storms (GSs), as outlined in Table 2.
+In the context of five cases denoted as E05, E11, E17, E18, and E22, our attempts to identify Solar Flares (SFs) or Coronal Mass Ejections (CMEs) were unsuccessful. Furthermore, in an additional six cases, the specification of SFs proved unattainable. The ensuing presentation provides details on the parameters of the remaining cases, specifically focusing on the solar origins associated with Geomagnetic Storms (GSs), as outlined in Table~\ref{tab_GS_sol}.
 
-Columns (2)–(5) of Table 2 elucidate the properties of the GS-associated SFs, while columns (6) to (9) furnish the parameters of the GS-associated CMEs. The identified SFs exhibit a range of magnitudes from C1.2 to X5.4 and are predominantly positioned proximate to the solar disk center, with the exception of E02 and E03. The CMEs associated with these events possess on-sky projected speeds, denoted as 2D, spanning from 126 to 2684 km/s, extracted from the SOHO-LASCO CDAW catalog. Notably, the majority of the GS-associated CMEs (15 out of 20) exhibit a halo configuration, while three others are in close proximity to halo.
+Columns (2)–(5) of Table~\ref{tab_GS_sol} elucidate the properties of the GS-associated SFs, while columns (6) to (9) furnish the parameters of the GS-associated CMEs. The identified SFs exhibit a range of magnitudes from C1.2 to X5.4 and are predominantly positioned proximate to the solar disk center, with the exception of E02 and E03. The CMEs associated with these events possess on-sky projected speeds, denoted as 2D, spanning from 126 to 2684 \kms, extracted from the SOHO-LASCO CDAW catalog. Notably, the majority of the GS-associated CMEs (15 out of 20) exhibit a halo configuration, while three others are in close proximity to halo.
 
 It is imperative to note that events with uncertain CME origins have been excluded from the subsequent 3D analyses. Specifically, in the case of E07, the unique orientation of the double CME rendered the de-projection procedure unfeasible for the same CME structure, leading to its exclusion from the 3D analyses. Additionally, for seven other cases (E12, E14–E16, E19, E23, E25), the online tool utilized for analyses failed to retrieve data simultaneously from both spacecraft. Consequently, these cases have also been omitted from the 3D analyses.
 
-For the remaining 12 cases, successful 3D CME speed reconstructions were achieved from each model. The mean values, based on 2 or 4 available fits (as detailed in the subsequent subsection), are presented in the concluding columns (10)–(12) of Table 2. This comprehensive overview provides a foundation for the subsequent analytical discussions, offering a detailed characterization of the solar events associated with the studied GSs.
+For the remaining 12 cases, successful 3D CME speed reconstructions were achieved from each model. The mean values, based on 2 or 4 available fits (as detailed in the subsequent subsection), are presented in the concluding columns (10)–(12) of Table~\ref{tab_GS_sol}. This comprehensive overview provides a foundation for the subsequent analytical discussions, offering a detailed characterization of the solar events associated with the studied GSs.
 
 %\subsubsection{PyThea 3D De-Projection Tool}
 \subsection{PyThea 3D De-Projection Tool}
-The de-projection methodology employed in this investigation relies on the innovative PyThea online tool designed for the 3D reconstruction of Coronal Mass Ejections (CMEs) and shock waves [19]. All three available models within PyThea, namely spheroid, ellipsoid, and GCS, are applied in this study. The fitting procedure is conducted independently by two observers within our team. Figure 1 presents an illustrative example of the fits for event E03.
+The de-projection methodology employed in this investigation relies on the innovative PyThea online tool designed for the 3D reconstruction of CMEs and shock waves \citep{kouloumvakos_2022}. All three available models within PyThea, namely spheroid, ellipsoid, and the graduated cylindrical shell (GCS), are applied in this study. The fitting procedure is conducted independently by two observers within our team. Figure~\ref{fig_3D_fit} presents an illustrative example of the fits for event E03.
 
-Upon scrutinizing the fitting outcomes for this particular example, it becomes evident that the reconstructions exhibit a discernible bias. The observer's subjective 'choice' of structures to align with the model introduces a level of variability. In the top row of Figure 1, distinct shock-related structures (manifested as the bending of streamers) are observed, upon which the idealized Geocentric Solar Coordinates (GCS) flux rope geometry is fitted. Consequently, there is a likelihood of overestimating the CME width. Despite this bias, it is noteworthy that the overall results, including directivity and speed for event E03, are minimally impacted. However, it is acknowledged that the complexity of structure choices can lead to larger discrepancies among different observers.
+\begin{figure}[htp]
+	\centering
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{chapter2/figs/Fig_s1.png}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{chapter2/figs/Fig_e1.png}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{chapter2/figs/Fig_g1.png}
+	\end{subfigure}
+	\medskip % Add some vertical space between rows
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{chapter2/figs/Fig_s2.png}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{chapter2/figs/Fig_e2.png}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{chapter2/figs/Fig_g2.png}
+	\end{subfigure}
+	\caption{3D reconstructions of a CME (E03) using the spheroid, ellipsoid, and GCS model from the PyThea tool performed by observers 1 and 2 (top and bottom row, respectively). Credit goes to \citet{miteva_2023}.}
+	\label{fig_3D_fit}
+\end{figure}
 
-This study places emphasis on deriving de-projected CME speeds based on fits conducted at two distinct time steps. For each of the three models, the initial CME longitude and latitude are manually specified, utilizing the provided locations of the CME-accompanied Solar Flares (SFs). It is important to note that these values exhibit minimal to no substantial changes post-finalization of the fitting procedure. Consequently, the final CME directivity provided by PyThea is considered to be a relatively crude estimate. The ultimate orientations of the CME in Interplanetary (IP) space and at Earth are derived solely from qualitative information extracted from animations available at this website\footnote{\helioweatherurl}. This approach ensures a rigorous and consistent basis for evaluating the de-projected CME speeds in our analyses.
+Upon scrutinizing the fitting outcomes for this particular example, it becomes evident that the reconstructions exhibit a discernible bias. The observer's subjective \textit{choice} of structures to align with the model introduces a level of variability. In the top row of Figure~\ref{fig_3D_fit}, distinct shock-related structures (manifested as the bending of streamers) are observed, upon which the idealized GCS flux rope geometry is fitted. Consequently, there is a likelihood of overestimating the CME width. Despite this bias, it is noteworthy that the overall results, including directivity and speed for event E03, are minimally impacted. However, it is acknowledged that the complexity of structure choices can lead to larger discrepancies among different observers.
 
-\subsection{Results} % which figures should i import from the paper?
+This study places emphasis on deriving de-projected CME speeds based on fits conducted at two distinct time steps. For each of the three models, the initial CME longitude and latitude are manually specified, utilizing the provided locations of the CME-accompanied SFs. It is important to note that these values exhibit minimal to no substantial changes post-finalization of the fitting procedure. Consequently, the final CME directivity provided by PyThea is considered to be a relatively crude estimate. The ultimate orientations of the CME in IP space and at Earth are derived solely from qualitative information extracted from animations available at this website\footnote{\helioweatherurl}. This approach ensures a rigorous and consistent basis for evaluating the de-projected CME speeds in our analyses.
+
+\subsection{Results}
 \subsubsection{Projection Effects}
 In our investigation a fitting analysis of approximately 10 CMEs was undertaken by two designated observers within our research team, I was one of the observers. This analysis involved the utilization of all three models available in the PyThea framework, each selected based on the evaluators' individual considerations.
 
-To elucidate, the fitting process was executed at two distinct time steps to derive a velocity parameter based on the height–time estimation. For each specific event, both observers iteratively conducted the 3D de-projection procedure twice, resulting in averaged values for the CME speeds. These values are meticulously presented in Table 3, rounded to the nearest tenth. The disparity between these two fitting instances is denoted as an error (or uncertainty), spanning from 10 \kms to twice the estimated speed. Additionally, Figure 2 illustrates the correlation between 3D speeds and the corresponding estimated errors for each observer. Notably, considerable variability is observed in both plots, particularly concerning the GCS model; nonetheless, a discernible positive trend emerges between the estimated error magnitude and the CME speed.
+To elucidate, the fitting process was executed at two distinct time steps to derive a velocity parameter based on the height–time estimation. For each specific event, both observers iteratively conducted the 3D de-projection procedure twice, resulting in averaged values for the CME speeds. These values are meticulously presented in Table~\ref{tab_fits}, rounded to the nearest tenth. The disparity between these two fitting instances is denoted as an error (or uncertainty), spanning from 10 \kms to twice the estimated speed. Additionally, Figure 2 illustrates the correlation between 3D speeds and the corresponding estimated errors for each observer. Notably, considerable variability is observed in both plots, particularly concerning the GCS model; nonetheless, a discernible positive trend emerges between the estimated error magnitude and the CME speed.
 
 The inherent subjectivity and diverse levels of experience among observers play a crucial role in the visual fitting procedure. Noteworthy distinctions in evaluated speeds are evident not only between individual observers using the same model (e.g., spheroid fit for E06) but also between a single observer applying different models (e.g., spheroid and GCS for E13). Furthermore, variations in operating system software further contributed to differences in results. Notably, events E04, E08, and E21 were not completed by both observers due to either PyThea computing resource failures or the substantial uncertainty associated with the visual assessment of CME structures.
 
-Our findings underscore the well-established subjectivity inherent in procedures relying on personal judgment for fit quality, where the alignment of structures with the model is subjective. A more comprehensive explanation of this human-in-the-loop bias is detailed in \citep{verbeke_2022}. The specific values of CME speeds are meticulously outlined in Table 3, while their averaged values, categorized by model, as determined by both observers, are presented in Table 2. These averaged values will serve as the basis for subsequent correlation studies.
+Our findings underscore the well-established subjectivity inherent in procedures relying on personal judgment for fit quality, where the alignment of structures with the model is subjective. A more comprehensive explanation of this human-in-the-loop bias is detailed in \citep{verbeke_2022}. The specific values of CME speeds are meticulously outlined in Table~\ref{tab_fits}, while their averaged values, categorized by model, as determined by both observers, are presented in Table~\ref{tab_GS_sol}. These averaged values will serve as the basis for subsequent correlation studies.
+	
+\begin{table}[htp]
+	\tiny
+	\caption{Parameters of the solar origin, SFs, and CMEs for GSs from Table 1 in \citet{miteva_2023}. All times are in UT, speeds in \kms, AW and MPA in degrees. Credit goes to \citet{miteva_2023}.}
+	\label{tab_GS_sol}
+	\begin{adjustbox}{width=\textwidth}
+		\begin{tabular}{@{}cccccccccccc@{}}
+			\toprule
+			\textbf{\#} & \textbf{Event} & \textbf{SF} & \textbf{Onset} & \textbf{Location} & \textbf{Time} & \textbf{Speed} & \textbf{AW} & \textbf{MPA} & \textbf{Spheroid} & \textbf{Elliptical} & \textbf{GCS} \\
+			(1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10) & (11) & (12) \\
+			\midrule
+			\textbf{2011}\\
+			E01 & 08-04 & M9.3 & 03:41 & N19W36 & 04:12 & 1315 & 360 & 298 & 1990 & 1920 & 1780 \\
+			E02 & 09-24 & M7.1 & 12:33 & N10S56 & 12:48 & 1915 & 360 & 78 & 1570 & 1590 & 1720 \\
+			E03 & 10-22 & M1.3 & 10:00 & N25W77 & 10:24 & 1005 & 360 & 311 & 760 & 690 & 840 \\
+			\textbf{2012} \\
+			E04 & 03-07 & X5.4 & 00:02 & N17S27 & 00:24 & 2684 & 360 & 57 & 2150 & 2460 & 2530 \\
+			E05 & \multicolumn{8}{c}{uncertain origin} & - & - & -\\
+			E06 & 07-12 & X1.4 & 15:37 & S15W01 & 16:48 & 885 & 360 & 158 & 1060 & 1780 & 1520 \\
+			E07 & 09-28 & C3.7 & 23:36 & N06W34 & 24:12 & 947 & 360 & 251 & \multicolumn{3}{c}{multiple CMEs}\\
+			E08 & 10-05 & \multicolumn{3}{c}{uncertain} & 02:48 & 612 & 284 & 202 & 350 & 360 & 350 \\
+			E09 & 11-09 & \multicolumn{3}{c}{uncertain} & 15:12 & 559 & 276 & 157 & 660 & 570 & 720 \\
+			\textbf{2013}\\
+			E10 & 03-15 & X1.1 & 05:46 & N11S11 & 07:12 & 1063 & 360 & 112 & 720 & 1040 & 1110 \\
+			E11 & \multicolumn{8}{c}{uncertain origin} & - & - & -\\
+			E12 & 06-28 & \multicolumn{3}{c}{uncertain} & 02:00 & 1037 & 360 & 214 & \multicolumn{3}{c}{no SOHO images}\\
+			\textbf{2014} \\
+			E13 & 02-16 & M1.1 & 09:20 & S11E01 & 10:00 & 634 & 360 & 227 & 340 & 690 & 890 \\
+			\textbf{2015}\\
+			E14 & 01-03 & C1.2 & 03:06 & S05E21 & 03:12 & 163 & 153 & 144 & \multicolumn{3}{c}{no STEREO images} \\
+			E15 & 03-15 & C9.1 & 01:15 & S22W25 & 01:48 & 719 & 360 & 240 & \multicolumn{3}{c}{no STEREO images} \\
+			E16 & 06-21 & M2.6 & 02:06 & N12E13 & 02:36 & 1366 & 360 & 72 & \multicolumn{3}{c}{no STEREO images} \\
+			E17 & \multicolumn{8}{c}{uncertain origin} & - & - & - \\
+			E18 & \multicolumn{8}{c}{uncertain origin} & - & - & - \\
+			E19 & 12-16 & C6.6 & 08:34 & S13W04 & 09:36 & 579 & 360 & 334 & \multicolumn{3}{c}{no STEREO images} \\
+			\textbf{2016} \\
+			E20 & 12-28 & M1.8 & 11:20 & S23W11 & 12:12 & 1212 & 360 & 163 & 820 & 680 & 1080 \\
+			E21 & 01-14 & \multicolumn{3}{c}{uncertain} & 23:24 & 191 & 360 & 234 & 620 & 440 & 280 \\
+			E22 & \multicolumn{8}{c}{uncertain origin} & - & - & - \\
+			\textbf{2017}\\
+			E23 & 05-23 & \multicolumn{3}{c}{uncertain} & 05:00 & 259 & 243 & 281 & \multicolumn{3}{c}{no SOHO images}\\
+			E24 & 09-04 & M5.5 & 20:28 & S11W16 & 20:36 & 1418 & 360 & 184 & 1020 & 1290 & 990 \\
+			\textbf{2018}\\
+			E25 & 08-20 & \multicolumn{3}{c}{uncertain} & 21:24 & 126 & 120 & 266 & \multicolumn{3}{c}{no STEREO images} \\
+			\bottomrule
+			\end{tabular}
+		\end{adjustbox}
+	\end{table}
+
+\begin{table}[htp]
+	\caption{CME Speeds (\kms) for Observers 1 and 2. Credit goes to \citet{miteva_2023}.}
+	\label{tab_fits}
+	\centering
+	\begin{tabular}{ccccccc}
+		\toprule
+		\textbf{\#} & \multicolumn{2}{c}{\textbf{Spheroid}} & \multicolumn{2}{c}{\textbf{Ellipsoid}} & \multicolumn{2}{c}{\textbf{GCS}} \\
+		& \textbf{obs1} & \textbf{obs2} & \textbf{obs1} & \textbf{obs2} & \textbf{obs1} & \textbf{obs2} \\
+		\midrule
+		E01 & $2170\pm870$ & $1800\pm270$ & $2130\pm200$ & $1710\pm450$ & $1590\pm100$ & $1760\pm10$ \\
+		E02 & $1780\pm140$ & $1350\pm50$  & $1880\pm580$ & $1310\pm90$ & $1780\pm260$ & $1630\pm130$ \\
+		E03 & $770\pm40$ & $740\pm10$ & $640\pm180$ & $740\pm180$ & $1020\pm170$ & $700\pm270$ \\
+		E04 & - & $2150\pm140$ & - & $2460\pm70$ & - & $2530\pm630$ \\
+		E06 & $1410\pm420$ & $710\pm70$ & $1870\pm50$ & $1700\pm300$ & $1680\pm870$ & $1560\pm470$ \\
+		E08 & $350\pm90$ & - & $360\pm150$  & - & $350\pm70$ & - \\
+		E09 & $690\pm280$ & $630\pm150$ & $550\pm170$  & $590\pm60$ & $670\pm610$ & $710\pm220$ \\
+		E10 & $840\pm380$ & $610\pm1040$ & $1120\pm360$ & $960\pm90$ & $1160\pm650$ & $1310\pm80$ \\
+		E13 & $320\pm90$ & $350\pm50$ & $620\pm140$ & $750\pm160$ & $780\pm80$ & $1310\pm700$ \\
+		E20 & $830\pm190$ & $800\pm600$ & $790\pm90$ & $570\pm20$ & $1240\pm280$ & $1130\pm230$ \\
+		E21 & $620\pm230$ & - & $440\pm40$ & - & $280\pm180$ & - \\
+		E24 & $750\pm270$ & $1310\pm220$ & $880\pm350$ & $2020\pm960$ & $950\pm120$ & $1560\pm540$ \\
+		\bottomrule
+	\end{tabular}
+\end{table}
 
 \subsubsection{Correlation between GSs, Coronal and Near-Sun Parameters}
-In Figure 3, we present a scatter plot depicting the relationship between the modulus of the GS Dst index and the CME speed, as derived from the data in Table 2. To enhance clarity, the averaged results of the three model fits are collectively illustrated and labeled as '3D-mean' in Table 4. These values are juxtaposed with the 2D SOHO-LASCO CME speed. Horizontal lines, representing the error estimates from the 3D de-projections, are also included for completeness, despite the substantial overlap. For demonstrative purposes, we highlight the largest error value among the two observers, as outlined in Table 3.
+In Figure 3, we present a scatter plot depicting the relationship between the modulus of the GS Dst index and the CME speed, as derived from the data in Table~\ref{tab_GS_sol}. To enhance clarity, the averaged results of the three model fits are collectively illustrated and labeled as '3D-mean' in Table 4. These values are juxtaposed with the 2D SOHO-LASCO CME speed. Horizontal lines, representing the error estimates from the 3D de-projections, are also included for completeness, despite the substantial overlap. For demonstrative purposes, we highlight the largest error value among the two observers, as outlined in Table 3.
 
 The analysis conducted reveals no discernible trend between the Dst index and the CME speed, irrespective of whether the 3D de-projection or the 2D CME speeds are considered. It is important to note that, due to data constraints, 3D speed de-projections were not feasible for the most robust GSs. This limitation results in a skewed distribution of the 3D speeds, impacting the overall findings. Despite the modest sample size (comprising between 10 and 20 event pairs), the quality of the fit is assessed through Pearson correlations. The correlation coefficients, reflecting the relationship between all CME speed estimations and the GS Dst index, are systematically documented in Table 4. These coefficients range from negligible (e.g., 0.04 for the 2D LASCO speeds) to moderate (with the highest value reaching 0.55, observed with the GCS model). Importantly, no significant correlations are identified between the Dst index and other coronal parameters, such as SF class, location, and CME AW, as inclusively presented in the same table for comprehensive evaluation.
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{270}
+\begin{thebibliography}{272}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{ish(2017)}]{ishikawa_2017}
@@ -689,6 +689,11 @@ Newkirk, G. 1967, Annual Review of Astronomy and Astrophysics, 5, 213
 Ng, C.~K., Reames, D.~V., \& Tylka, A.~J. 2012in , American Institute of
   Physics, 212--218
 
+\bibitem[{Nieves-Chinchilla {et~al.}(2018)Nieves-Chinchilla, Vourlidas,
+  Raymond, Linton, Al-Haddad, Savani, Szabo, \& Hidalgo}]{nieves_2018}
+Nieves-Chinchilla, T., Vourlidas, A., Raymond, J.~C., {et~al.} 2018, Solar
+  Physics, 293, 1
+
 \bibitem[{{Nindos} {et~al.}(2008){Nindos}, {Aurass}, {Klein}, \&
   {Trottet}}]{nindos_2008}
 {Nindos}, A., {Aurass}, H., {Klein}, K.~L., \& {Trottet}, G. 2008, \solphys,
@@ -944,6 +949,11 @@ Stansby, D., Yeates, A., \& Badman, S.~T. 2020, Journal of Open Source
 \bibitem[{{Starck} \& {Murtagh}(2002)}]{starck_2002}
 {Starck}, J.-L. \& {Murtagh}, F. 2002, {Astronomical image and data analysis}
   (Springer Netherlands)
+
+\bibitem[{Stepanyuk {et~al.}(2022)Stepanyuk, Kozarev, \&
+  Nedal}]{stepanyuk_2022}
+Stepanyuk, O., Kozarev, K., \& Nedal, M. 2022, Journal of Space Weather and
+  Space Climate, 12, 20
 
 \bibitem[{Sundermeyer {et~al.}(2014)Sundermeyer, Alkhouli, Wuebker, \&
   Ney}]{sundermeyer_2014}
