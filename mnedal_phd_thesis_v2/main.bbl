@@ -1,4 +1,4 @@
-\begin{thebibliography}{282}
+\begin{thebibliography}{286}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{ish(2017)}]{ishikawa_2017}
@@ -114,6 +114,11 @@ Brewer, D.~A., Barth, J.~L., Label, K.~A., Kauffman, W.~J., \& Giffin, G. 2002,
 \bibitem[{Bruno \& Richardson(2021)}]{bruno_2021}
 Bruno, A. \& Richardson, I.~G. 2021, Solar Physics, 296, 36
 
+\bibitem[{Byrne {et~al.}(2013)Byrne, Long, Gallagher, Bloomfield, Maloney,
+  McAteer, Morgan, \& Habbal}]{byrne_2013}
+Byrne, J., Long, D., Gallagher, P., {et~al.} 2013, Astronomy \& Astrophysics,
+  557, A96
+
 \bibitem[{Camporeale(2019)}]{camporeale_2019}
 Camporeale, E. 2019, Space weather, 17, 1166
 
@@ -187,6 +192,11 @@ Desai, M. \& Giacalone, J. 2016, Living Reviews in Solar Physics, 13, 3
   Marsh, Crosby, Malandraki, \& Tsiropoula}]{dierckxsens_2015}
 Dierckxsens, M., Tziotziou, K., Dalla, S., {et~al.} 2015, Solar Physics, 290,
   841
+
+\bibitem[{Downs {et~al.}(2021)Downs, Warmuth, Long, Bloomfield, Kwon, Veronig,
+  Vourlidas, \& Vr{\v{s}}nak}]{downs_2021}
+Downs, C., Warmuth, A., Long, D.~M., {et~al.} 2021, The Astrophysical Journal,
+  911, 118
 
 \bibitem[{Dulk {et~al.}(1985)Dulk, Steinberg, Lecacheux, Hoang, \&
   MacDowall}]{dulk_1985}
@@ -596,6 +606,10 @@ Long, D.~M., Bloomfield, D.~S., Chen, P.-F., {et~al.} 2017, Solar physics, 292,
 \bibitem[{{Long} {et~al.}(2011){Long}, {DeLuca}, \& {Gallagher}}]{long_2011}
 {Long}, D.~M., {DeLuca}, E.~E., \& {Gallagher}, P.~T. 2011, apjl, 741, L21
 
+\bibitem[{Long {et~al.}(2021)Long, Reid, Valori, \& O'Kane}]{long_2021}
+Long, D.~M., Reid, H.~A., Valori, G., \& O'Kane, J. 2021, The Astrophysical
+  Journal, 921, 61
+
 \bibitem[{Ma {et~al.}(2011)Ma, Raymond, Golub, Lin, Chen, Grigis, Testa, \&
   Long}]{ma_2011}
 Ma, S., Raymond, J.~C., Golub, L., {et~al.} 2011, The Astrophysical Journal,
@@ -963,6 +977,11 @@ Schwenn, R. 2006, Living reviews in solar physics, 3, 1
   Gopalswamy, Yashiro, Kumar, M{\"a}kel{\"a}, \& Xie}]{selvakumaran_2016}
 Selvakumaran, R., Veenadhari, B., Akiyama, S., {et~al.} 2016, Journal of
   Geophysical Research: Space Physics, 121, 8188
+
+\bibitem[{Sheeley~Jr {et~al.}(1999)Sheeley~Jr, Walters, Wang, \&
+  Howard}]{sheeley_1999}
+Sheeley~Jr, N., Walters, J., Wang, Y.-M., \& Howard, R. 1999, Journal of
+  Geophysical Research: Space Physics, 104, 24739
 
 \bibitem[{Shibata \& Magara(2011)}]{shibata_2011}
 Shibata, K. \& Magara, T. 2011, Living Reviews in Solar Physics, 8, 1

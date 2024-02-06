@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.24)  27 JAN 2024 01:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.24)  7 FEB 2024 00:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -606,32 +606,76 @@ Package natbib Warning: Citation `chen_2013' on page 5 undefined on input line
  (chapter2/ch2.tex
 Chapter 2.
 
-Package natbib Warning: Citation `long_2021' on page 9 undefined on input line 
-14.
+Package natbib Warning: Citation `Thompson_1998' on page 9 undefined on input l
+ine 9.
 
 
-Package natbib Warning: Citation `downs_2021' on page 9 undefined on input line
- 14.
+Package natbib Warning: Citation `Vrsnak_2008' on page 9 undefined on input lin
+e 9.
 
 
-LaTeX Warning: Reference `fig1' on page 9 undefined on input line 16.
+Package natbib Warning: Citation `magdaleni_2010' on page 9 undefined on input 
+line 9.
 
 
-Package natbib Warning: Citation `sheeley_1999' on page 9 undefined on input li
-ne 16.
+Package natbib Warning: Citation `nindos_2011' on page 9 undefined on input lin
+e 9.
 
 
-Package natbib Warning: Citation `byrne_2013' on page 9 undefined on input line
- 18.
+Package natbib Warning: Citation `pick_2006' on page 9 undefined on input line 
+9.
 
 
-LaTeX Warning: Reference `fig2' on page 9 undefined on input line 18.
+Package natbib Warning: Citation `Thompson_2009' on page 9 undefined on input l
+ine 9.
 
 
-LaTeX Warning: Reference `fig2' on page 9 undefined on input line 19.
+Package natbib Warning: Citation `lemen_2011' on page 9 undefined on input line
+ 10.
 
 
-LaTeX Warning: Reference `fig2' on page 9 undefined on input line 20.
+Package natbib Warning: Citation `Vrsnak_2008' on page 9 undefined on input lin
+e 10.
+
+
+Package natbib Warning: Citation `olmedo_2012' on page 9 undefined on input lin
+e 13.
+
+
+Package natbib Warning: Citation `domingo_1995soho' on page 9 undefined on inpu
+t line 13.
+
+
+Package natbib Warning: Citation `patsourakosetal_2009' on page 9 undefined on 
+input line 13.
+
+
+Package natbib Warning: Citation `Kozarev_2011' on page 9 undefined on input li
+ne 13.
+
+
+Package natbib Warning: Citation `Kozarev_2011' on page 9 undefined on input li
+ne 13.
+
+
+Package natbib Warning: Citation `ofman_2002interaction' on page 9 undefined on
+ input line 13.
+
+
+Package natbib Warning: Citation `mann_2003formation' on page 9 undefined on in
+put line 13.
+
+
+Package natbib Warning: Citation `piantschitsch_2018numerical' on page 9 undefi
+ned on input line 13.
+
+
+Package natbib Warning: Citation `Thompson_1999' on page 9 undefined on input l
+ine 13.
+
+
+Package natbib Warning: Citation `Kozarev_2022' on page 9 undefined on input li
+ne 14.
 
 [9
 
@@ -639,116 +683,131 @@ LaTeX Warning: Reference `fig2' on page 9 undefined on input line 20.
 
 
 ]
-Overfull \hbox (11.03188pt too wide) in paragraph at lines 42--43
+<chapter2/figs/fig_s2m_segments_geometry.jpg, id=1054, 1120.185pt x 1351.0475pt
+>
+File: chapter2/figs/fig_s2m_segments_geometry.jpg Graphic file (type jpg)
+<use chapter2/figs/fig_s2m_segments_geometry.jpg>
+Package pdftex.def Info: chapter2/figs/fig_s2m_segments_geometry.jpg  used on i
+nput line 26.
+(pdftex.def)             Requested size: 317.07614pt x 382.41379pt.
+ [10] [11 <./chapter2/figs/fig_s2m_segments_geometry.jpg>]
+<chapter2/figs/fig_110511_kinematics.jpg, id=1074, 1872.9975pt x 1638.12pt>
+File: chapter2/figs/fig_110511_kinematics.jpg Graphic file (type jpg)
+<use chapter2/figs/fig_110511_kinematics.jpg>
+Package pdftex.def Info: chapter2/figs/fig_110511_kinematics.jpg  used on input
+ line 42.
+(pdftex.def)             Requested size: 407.66833pt x 356.53818pt.
+ [12 <./chapter2/figs/fig_110511_kinematics.jpg>]
+Overfull \hbox (11.03188pt too wide) in paragraph at lines 73--74
 []\OT1/cmr/m/n/10 The uti-liza-tion of ex-treme ul-tra-vi-o-let (EUV) imag-ing,
  fa-cil-i-tated by in-stru-ments such as STEREO/EUVI
  []
 
-[10] [11] [12]
-<chapter2/figs/fig_1105011_wave_filament_fourpanel_plot.png, id=1136, 1392.2012
+[13] [14] [15]
+<chapter2/figs/fig_1105011_wave_filament_fourpanel_plot.png, id=1210, 1392.2012
 5pt x 338.26375pt>
 File: chapter2/figs/fig_1105011_wave_filament_fourpanel_plot.png Graphic file (
 type png)
 <use chapter2/figs/fig_1105011_wave_filament_fourpanel_plot.png>
 Package pdftex.def Info: chapter2/figs/fig_1105011_wave_filament_fourpanel_plot
-.png  used on input line 126.
+.png  used on input line 157.
 (pdftex.def)             Requested size: 407.66833pt x 99.04884pt.
-<chapter2/figs/wavetrack_figure_110511.png, id=1142, 1037.8775pt x 2043.635pt>
+<chapter2/figs/wavetrack_figure_110511.png, id=1216, 1037.8775pt x 2043.635pt>
 File: chapter2/figs/wavetrack_figure_110511.png Graphic file (type png)
 <use chapter2/figs/wavetrack_figure_110511.png>
 Package pdftex.def Info: chapter2/figs/wavetrack_figure_110511.png  used on inp
-ut line 133.
+ut line 164.
 (pdftex.def)             Requested size: 317.07614pt x 624.35242pt.
- [13]
-<chapter2/figs/flct_wave_filament_doubleplot_figure_110511.png, id=1155, 738.76
+ [16 <./chapter2/figs/fig_1105011_wave_filament_fourpanel_plot.png>] [17 <./cha
+pter2/figs/wavetrack_figure_110511.png>]
+<chapter2/figs/flct_wave_filament_doubleplot_figure_110511.png, id=1236, 738.76
 pt x 1309.89375pt>
 File: chapter2/figs/flct_wave_filament_doubleplot_figure_110511.png Graphic fil
 e (type png)
 <use chapter2/figs/flct_wave_filament_doubleplot_figure_110511.png>
 Package pdftex.def Info: chapter2/figs/flct_wave_filament_doubleplot_figure_110
-511.png  used on input line 144.
+511.png  used on input line 175.
 (pdftex.def)             Requested size: 317.07614pt x 562.20401pt.
- [14 <./chapter2/figs/fig_1105011_wave_filament_fourpanel_plot.png>] [15 <./cha
-pter2/figs/wavetrack_figure_110511.png>] [16 <./chapter2/figs/flct_wave_filamen
-t_doubleplot_figure_110511.png>] [17] [18] [19]
-<chapter2/figs/Fig_s1.png, id=1389, 334.97145pt x 328.8285pt>
+ [18] [19 <./chapter2/figs/flct_wave_filament_doubleplot_figure_110511.png>] [2
+0] [21] [22]
+<chapter2/figs/Fig_s1.png, id=1462, 334.97145pt x 328.8285pt>
 File: chapter2/figs/Fig_s1.png Graphic file (type png)
 <use chapter2/figs/Fig_s1.png>
-Package pdftex.def Info: chapter2/figs/Fig_s1.png  used on input line 232.
+Package pdftex.def Info: chapter2/figs/Fig_s1.png  used on input line 263.
 (pdftex.def)             Requested size: 135.89174pt x 133.39558pt.
-<chapter2/figs/Fig_e1.png, id=1390, 334.97145pt x 328.8285pt>
+<chapter2/figs/Fig_e1.png, id=1463, 334.97145pt x 328.8285pt>
 File: chapter2/figs/Fig_e1.png Graphic file (type png)
 <use chapter2/figs/Fig_e1.png>
-Package pdftex.def Info: chapter2/figs/Fig_e1.png  used on input line 236.
+Package pdftex.def Info: chapter2/figs/Fig_e1.png  used on input line 267.
 (pdftex.def)             Requested size: 135.89174pt x 133.39558pt.
-<chapter2/figs/Fig_g1.png, id=1391, 334.97145pt x 328.8285pt>
+<chapter2/figs/Fig_g1.png, id=1464, 334.97145pt x 328.8285pt>
 File: chapter2/figs/Fig_g1.png Graphic file (type png)
 <use chapter2/figs/Fig_g1.png>
-Package pdftex.def Info: chapter2/figs/Fig_g1.png  used on input line 240.
+Package pdftex.def Info: chapter2/figs/Fig_g1.png  used on input line 271.
 (pdftex.def)             Requested size: 135.89174pt x 133.39558pt.
-<chapter2/figs/Fig_s2.png, id=1392, 930.47626pt x 913.4125pt>
+<chapter2/figs/Fig_s2.png, id=1465, 930.47626pt x 913.4125pt>
 File: chapter2/figs/Fig_s2.png Graphic file (type png)
 <use chapter2/figs/Fig_s2.png>
-Package pdftex.def Info: chapter2/figs/Fig_s2.png  used on input line 244.
+Package pdftex.def Info: chapter2/figs/Fig_s2.png  used on input line 275.
 (pdftex.def)             Requested size: 135.89174pt x 133.39613pt.
-<chapter2/figs/Fig_e2.png, id=1393, 334.97145pt x 328.8285pt>
+<chapter2/figs/Fig_e2.png, id=1466, 334.97145pt x 328.8285pt>
 File: chapter2/figs/Fig_e2.png Graphic file (type png)
 <use chapter2/figs/Fig_e2.png>
-Package pdftex.def Info: chapter2/figs/Fig_e2.png  used on input line 248.
+Package pdftex.def Info: chapter2/figs/Fig_e2.png  used on input line 279.
 (pdftex.def)             Requested size: 135.89174pt x 133.39558pt.
-<chapter2/figs/Fig_g2.png, id=1394, 334.97145pt x 328.8285pt>
+<chapter2/figs/Fig_g2.png, id=1467, 334.97145pt x 328.8285pt>
 File: chapter2/figs/Fig_g2.png Graphic file (type png)
 <use chapter2/figs/Fig_g2.png>
-Package pdftex.def Info: chapter2/figs/Fig_g2.png  used on input line 252.
+Package pdftex.def Info: chapter2/figs/Fig_g2.png  used on input line 283.
 (pdftex.def)             Requested size: 135.89174pt x 133.39558pt.
- [20 <./chapter2/figs/Fig_s1.png> <./chapter2/figs/Fig_e1.png> <./chapter2/figs
+ [23 <./chapter2/figs/Fig_s1.png> <./chapter2/figs/Fig_e1.png> <./chapter2/figs
 /Fig_g1.png> <./chapter2/figs/Fig_s2.png> <./chapter2/figs/Fig_e2.png> <./chapt
-er2/figs/Fig_g2.png>] [21] [22] [23]) [24]
+er2/figs/Fig_g2.png>] [24] [25] [26]) [27]
 \openout2 = `chapter3/ch3.aux'.
 
  (chapter3/ch3.tex
 Chapter 3.
-[25
+[28
 
 
 
 
-] [26]
+] [29]
 Overfull \hbox (2.75398pt too wide) in paragraph at lines 44--48
 \OT1/cmr/m/n/10 and STEREO space-craft were al-most aligned (close in an an-gu-
 lar sense) with the Sun, the STEREO/EUVI
  []
 
-<chapter3/figs/all_dyspec.png, id=1569, 710.8959pt x 570.6921pt>
+<chapter3/figs/all_dyspec.png, id=1642, 710.8959pt x 570.6921pt>
 File: chapter3/figs/all_dyspec.png Graphic file (type png)
 <use chapter3/figs/all_dyspec.png>
 Package pdftex.def Info: chapter3/figs/all_dyspec.png  used on input line 56.
 (pdftex.def)             Requested size: 407.66833pt x 327.2746pt.
-<chapter3/figs/solarMach.pdf, id=1570, 615.64789pt x 451.30571pt>
+<chapter3/figs/solarMach.pdf, id=1643, 615.64789pt x 451.30571pt>
 File: chapter3/figs/solarMach.pdf Graphic file (type pdf)
 <use chapter3/figs/solarMach.pdf>
 Package pdftex.def Info: chapter3/figs/solarMach.pdf  used on input line 63.
 (pdftex.def)             Requested size: 362.37569pt x 265.64828pt.
-<chapter3/figs/aia_sta_cutout.pdf, id=1577, 1208.68764pt x 393.44112pt>
+<chapter3/figs/aia_sta_cutout.pdf, id=1650, 1208.68764pt x 393.44112pt>
 File: chapter3/figs/aia_sta_cutout.pdf Graphic file (type pdf)
 <use chapter3/figs/aia_sta_cutout.pdf>
 Package pdftex.def Info: chapter3/figs/aia_sta_cutout.pdf  used on input line 7
 0.
 (pdftex.def)             Requested size: 452.9679pt x 147.44398pt.
-<chapter3/figs/xrs_eve.pdf, id=1578, 496.32301pt x 353.46428pt>
+<chapter3/figs/xrs_eve.pdf, id=1651, 496.32301pt x 353.46428pt>
 File: chapter3/figs/xrs_eve.pdf Graphic file (type pdf)
 <use chapter3/figs/xrs_eve.pdf>
 Package pdftex.def Info: chapter3/figs/xrs_eve.pdf  used on input line 71.
 (pdftex.def)             Requested size: 341.43306pt x 243.1571pt.
-[27] [28 <./chapter3/figs/all_dyspec.png>] [29 <./chapter3/figs/solarMach.pdf>]
-[30]
-<chapter3/figs/auto_detect_typeIIIs.png, id=1676, 618.6312pt x 427.5975pt>
+[30] [31 <./chapter3/figs/all_dyspec.png>] [32 <./chapter3/figs/solarMach.pdf>]
+[33]
+<chapter3/figs/auto_detect_typeIIIs.png, id=1749, 618.6312pt x 427.5975pt>
 File: chapter3/figs/auto_detect_typeIIIs.png Graphic file (type png)
 <use chapter3/figs/auto_detect_typeIIIs.png>
 Package pdftex.def Info: chapter3/figs/auto_detect_typeIIIs.png  used on input 
 line 103.
 (pdftex.def)             Requested size: 362.37569pt x 250.47302pt.
-<chapter3/figs/lofar_dyspec_detect__snapshot_coords.pdf, id=1677, 902.5689pt x 
+<chapter3/figs/lofar_dyspec_detect__snapshot_coords.pdf, id=1750, 902.5689pt x 
 375.21825pt>
 File: chapter3/figs/lofar_dyspec_detect__snapshot_coords.pdf Graphic file (type
  pdf)
@@ -756,34 +815,34 @@ File: chapter3/figs/lofar_dyspec_detect__snapshot_coords.pdf Graphic file (type
 Package pdftex.def Info: chapter3/figs/lofar_dyspec_detect__snapshot_coords.pdf
   used on input line 131.
 (pdftex.def)             Requested size: 452.9679pt x 188.30714pt.
-<chapter3/figs/subplots.pdf, id=1684, 1195.38245pt x 1044.78748pt>
+<chapter3/figs/subplots.pdf, id=1757, 1195.38245pt x 1044.78748pt>
 File: chapter3/figs/subplots.pdf Graphic file (type pdf)
 <use chapter3/figs/subplots.pdf>
 Package pdftex.def Info: chapter3/figs/subplots.pdf  used on input line 147.
 (pdftex.def)             Requested size: 452.9679pt x 395.89148pt.
- [31] [32] [33]
-<chapter3/figs/pfss3d_radSources_burst_angle.pdf, id=1773, 461.47406pt x 463.73
+ [34] [35] [36]
+<chapter3/figs/pfss3d_radSources_burst_angle.pdf, id=1847, 461.47406pt x 463.73
 247pt>
 File: chapter3/figs/pfss3d_radSources_burst_angle.pdf Graphic file (type pdf)
 <use chapter3/figs/pfss3d_radSources_burst_angle.pdf>
 Package pdftex.def Info: chapter3/figs/pfss3d_radSources_burst_angle.pdf  used 
 on input line 237.
 (pdftex.def)             Requested size: 203.83417pt x 204.82834pt.
-<chapter3/figs/pfss3d_radSources_burst_side.pdf, id=1774, 450.9648pt x 450.9648
+<chapter3/figs/pfss3d_radSources_burst_side.pdf, id=1848, 450.9648pt x 450.9648
 pt>
 File: chapter3/figs/pfss3d_radSources_burst_side.pdf Graphic file (type pdf)
 <use chapter3/figs/pfss3d_radSources_burst_side.pdf>
 Package pdftex.def Info: chapter3/figs/pfss3d_radSources_burst_side.pdf  used o
 n input line 243.
 (pdftex.def)             Requested size: 203.83417pt x 203.83371pt.
-<chapter3/figs/pfss3d_radSources_burst_top.pdf, id=1775, 450.9648pt x 450.9648p
+<chapter3/figs/pfss3d_radSources_burst_top.pdf, id=1849, 450.9648pt x 450.9648p
 t>
 File: chapter3/figs/pfss3d_radSources_burst_top.pdf Graphic file (type pdf)
 <use chapter3/figs/pfss3d_radSources_burst_top.pdf>
 Package pdftex.def Info: chapter3/figs/pfss3d_radSources_burst_top.pdf  used on
  input line 249.
 (pdftex.def)             Requested size: 203.83417pt x 203.83371pt.
-<chapter3/figs/pfss3d_radSources_burst_front.pdf, id=1776, 450.9648pt x 450.964
+<chapter3/figs/pfss3d_radSources_burst_front.pdf, id=1850, 450.9648pt x 450.964
 8pt>
 File: chapter3/figs/pfss3d_radSources_burst_front.pdf Graphic file (type pdf)
 <use chapter3/figs/pfss3d_radSources_burst_front.pdf>
@@ -791,7 +850,7 @@ Package pdftex.def Info: chapter3/figs/pfss3d_radSources_burst_front.pdf  used
 on input line 255.
 (pdftex.def)             Requested size: 203.83417pt x 203.83371pt.
 <chapter3/figs/LOFAR_FORWARD_plasma_diag_forwtime_2019-04-01T03-42-06.452.pdf, 
-id=1777, 1020.8801pt x 1310.17397pt>
+id=1851, 1020.8801pt x 1310.17397pt>
 File: chapter3/figs/LOFAR_FORWARD_plasma_diag_forwtime_2019-04-01T03-42-06.452.
 pdf Graphic file (type pdf)
 <use chapter3/figs/LOFAR_FORWARD_plasma_diag_forwtime_2019-04-01T03-42-06.452.p
@@ -799,205 +858,206 @@ df>
 Package pdftex.def Info: chapter3/figs/LOFAR_FORWARD_plasma_diag_forwtime_2019-
 04-01T03-42-06.452.pdf  used on input line 264.
 (pdftex.def)             Requested size: 443.9066pt x 569.68118pt.
-<chapter3/figs/scatterplots_FORWARD_plasma_diagnostics_2019-04-01_4R.pdf, id=17
-78, 998.7424pt x 568.21973pt>
+<chapter3/figs/scatterplots_FORWARD_plasma_diagnostics_2019-04-01_4R.pdf, id=18
+52, 998.7424pt x 568.21973pt>
 File: chapter3/figs/scatterplots_FORWARD_plasma_diagnostics_2019-04-01_4R.pdf G
 raphic file (type pdf)
 <use chapter3/figs/scatterplots_FORWARD_plasma_diagnostics_2019-04-01_4R.pdf>
 Package pdftex.def Info: chapter3/figs/scatterplots_FORWARD_plasma_diagnostics_
 2019-04-01_4R.pdf  used on input line 271.
 (pdftex.def)             Requested size: 452.9679pt x 257.70802pt.
- [34]) [35] [36] [37 <./chapter3/figs/aia_sta_cutout.pdf> <./chapter3/figs/xrs_
-eve.pdf>] [38 <./chapter3/figs/auto_detect_typeIIIs.png> <./chapter3/figs/lofar
-_dyspec_detect__snapshot_coords.pdf>] [39 <./chapter3/figs/subplots.pdf>] [40 <
+ [37]) [38] [39] [40 <./chapter3/figs/aia_sta_cutout.pdf> <./chapter3/figs/xrs_
+eve.pdf>] [41 <./chapter3/figs/auto_detect_typeIIIs.png> <./chapter3/figs/lofar
+_dyspec_detect__snapshot_coords.pdf>] [42 <./chapter3/figs/subplots.pdf>] [43 <
 ./chapter3/figs/pfss3d_radSources_burst_angle.pdf> <./chapter3/figs/pfss3d_radS
 ources_burst_side.pdf> <./chapter3/figs/pfss3d_radSources_burst_top.pdf> <./cha
-pter3/figs/pfss3d_radSources_burst_front.pdf>] [41 <./chapter3/figs/LOFAR_FORWA
+pter3/figs/pfss3d_radSources_burst_front.pdf>] [44 <./chapter3/figs/LOFAR_FORWA
 RD_plasma_diag_forwtime_2019-04-01T03-42-06.452.pdf>]
-[42 <./chapter3/figs/scatterplots_FORWARD_plasma_diagnostics_2019-04-01_4R.pdf>
+[45 <./chapter3/figs/scatterplots_FORWARD_plasma_diagnostics_2019-04-01_4R.pdf>
 ]
 \openout2 = `chapter4/ch4.aux'.
 
  (chapter4/ch4.tex
 Chapter 4.
-[43
+[46
 
 
 
 
-] [44] [45] [46]
+] [47] [48] [49]
 
-LaTeX Warning: Reference `sdsdsd' on page 47 undefined on input line 80.
+LaTeX Warning: Reference `sdsdsd' on page 50 undefined on input line 98.
 
+[50]
 
-Package natbib Warning: Citation `torsti_1995' on page 47 undefined on input li
-ne 91.
+Package natbib Warning: Citation `torsti_1995' on page 51 undefined on input li
+ne 109.
 
-[47] [48] [49] [50]
-<chapter4/figs/subplots_dataSplit_allFeatures.pdf, id=2623, 1132.23184pt x 1429
+[51] [52] [53] [54]
+<chapter4/figs/subplots_dataSplit_allFeatures.pdf, id=2750, 1132.23184pt x 1429
 .05095pt>
 File: chapter4/figs/subplots_dataSplit_allFeatures.pdf Graphic file (type pdf)
 <use chapter4/figs/subplots_dataSplit_allFeatures.pdf>
 Package pdftex.def Info: chapter4/figs/subplots_dataSplit_allFeatures.pdf  used
- on input line 202.
+ on input line 220.
 (pdftex.def)             Requested size: 407.66833pt x 514.52338pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Package natbib Warning: Citation `zhang_2022' on page 51 undefined on input lin
-e 207.
+Package natbib Warning: Citation `zhang_2022' on page 55 undefined on input lin
+e 225.
 
-[51]
-<chapter4/figs/dataset_split_corr.pdf, id=2643, 1696.1901pt x 507.31659pt>
+<chapter4/figs/dataset_split_corr.pdf, id=2758, 1696.1901pt x 507.31659pt>
 File: chapter4/figs/dataset_split_corr.pdf Graphic file (type pdf)
 <use chapter4/figs/dataset_split_corr.pdf>
 Package pdftex.def Info: chapter4/figs/dataset_split_corr.pdf  used on input li
-ne 213.
+ne 231.
 (pdftex.def)             Requested size: 452.9679pt x 135.47554pt.
- [52 <./chapter4/figs/subplots_dataSplit_allFeatures.pdf>]
+[55] [56 <./chapter4/figs/subplots_dataSplit_allFeatures.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./chapter4/figs/diagram.drawio.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<chapter4/figs/diagram.drawio.pdf, id=2742, 637.42137pt x 300.1614pt>
+<chapter4/figs/diagram.drawio.pdf, id=2870, 637.42137pt x 300.1614pt>
 File: chapter4/figs/diagram.drawio.pdf Graphic file (type pdf)
 <use chapter4/figs/diagram.drawio.pdf>
 Package pdftex.def Info: chapter4/figs/diagram.drawio.pdf  used on input line 2
-31.
+49.
 (pdftex.def)             Requested size: 271.7835pt x 127.9814pt.
-[53 <./chapter4/figs/dataset_split_corr.pdf>]
+[57 <./chapter4/figs/dataset_split_corr.pdf> <./chapter4/figs/diagram.drawio.pd
+f>]
 
 pdfTeX warning: pdflatex.exe (file ./chapter4/figs/sliding_window_lstm.pdf): PD
 F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<chapter4/figs/sliding_window_lstm.pdf, id=2813, 291.00719pt x 141.6492pt>
+<chapter4/figs/sliding_window_lstm.pdf, id=2951, 291.00719pt x 141.6492pt>
 File: chapter4/figs/sliding_window_lstm.pdf Graphic file (type pdf)
 <use chapter4/figs/sliding_window_lstm.pdf>
 Package pdftex.def Info: chapter4/figs/sliding_window_lstm.pdf  used on input l
-ine 254.
+ine 272.
 (pdftex.def)             Requested size: 226.48395pt x 110.24384pt.
 
-Package natbib Warning: Citation `zhang_2022' on page 54 undefined on input lin
-e 259.
+Package natbib Warning: Citation `zhang_2022' on page 58 undefined on input lin
+e 277.
 
-<chapter4/figs/models_benchmark.pdf, id=2819, 1072.86699pt x 457.06949pt>
+<chapter4/figs/models_benchmark.pdf, id=2957, 1072.86699pt x 457.06949pt>
 File: chapter4/figs/models_benchmark.pdf Graphic file (type pdf)
 <use chapter4/figs/models_benchmark.pdf>
 Package pdftex.def Info: chapter4/figs/models_benchmark.pdf  used on input line
- 266.
+ 284.
 (pdftex.def)             Requested size: 452.9679pt x 192.97914pt.
-[54 <./chapter4/figs/diagram.drawio.pdf> <./chapter4/figs/sliding_window_lstm.p
-df>] [55 <./chapter4/figs/models_benchmark.pdf>]
-<chapter4/figs/loss_curve_allenergies.pdf, id=2910, 1284.76115pt x 345.18333pt>
+[58 <./chapter4/figs/sliding_window_lstm.pdf>]
+<chapter4/figs/loss_curve_allenergies.pdf, id=2981, 1284.76115pt x 345.18333pt>
 
 File: chapter4/figs/loss_curve_allenergies.pdf Graphic file (type pdf)
 <use chapter4/figs/loss_curve_allenergies.pdf>
 Package pdftex.def Info: chapter4/figs/loss_curve_allenergies.pdf  used on inpu
-t line 299.
+t line 317.
 (pdftex.def)             Requested size: 452.9679pt x 121.70084pt.
-<chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF10.pdf, id=2916, 521.
+ [59 <./chapter4/figs/models_benchmark.pdf>]
+<chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF10.pdf, id=3040, 521.
 52373pt x 405.8519pt>
 File: chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF10.pdf Graphic f
 ile (type pdf)
 <use chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF10.pdf>
 Package pdftex.def Info: chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log
-_PF10.pdf  used on input line 314.
+_PF10.pdf  used on input line 332.
 (pdftex.def)             Requested size: 181.18439pt x 140.99751pt.
 <chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF10.pdf, id
-=2917, 521.52373pt x 405.8519pt>
+=3041, 521.52373pt x 405.8519pt>
 File: chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF10.pd
 f Graphic file (type pdf)
 <use chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF10.pdf
 >
 Package pdftex.def Info: chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG
-_PF_LT1_log_PF10.pdf  used on input line 319.
+_PF_LT1_log_PF10.pdf  used on input line 337.
 (pdftex.def)             Requested size: 181.18439pt x 140.99751pt.
-<chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF30.pdf, id=2918, 521.
+<chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF30.pdf, id=3042, 521.
 52373pt x 405.8519pt>
 File: chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF30.pdf Graphic f
 ile (type pdf)
 <use chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF30.pdf>
 Package pdftex.def Info: chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log
-_PF30.pdf  used on input line 323.
+_PF30.pdf  used on input line 341.
 (pdftex.def)             Requested size: 181.18439pt x 140.99751pt.
 <chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF30.pdf, id
-=2919, 521.52373pt x 405.8519pt>
+=3043, 521.52373pt x 405.8519pt>
 File: chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF30.pd
 f Graphic file (type pdf)
 <use chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF30.pdf
 >
 Package pdftex.def Info: chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG
-_PF_LT1_log_PF30.pdf  used on input line 328.
+_PF_LT1_log_PF30.pdf  used on input line 346.
 (pdftex.def)             Requested size: 181.18439pt x 140.99751pt.
-<chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF60.pdf, id=2920, 521.
+<chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF60.pdf, id=3044, 521.
 52373pt x 405.8519pt>
 File: chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF60.pdf Graphic f
 ile (type pdf)
 <use chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF60.pdf>
 Package pdftex.def Info: chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log
-_PF60.pdf  used on input line 332.
+_PF60.pdf  used on input line 350.
 (pdftex.def)             Requested size: 181.18439pt x 140.99751pt.
 <chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF60.pdf, id
-=2921, 521.52373pt x 405.8519pt>
+=3045, 521.52373pt x 405.8519pt>
 File: chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF60.pd
 f Graphic file (type pdf)
 <use chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF60.pdf
 >
 Package pdftex.def Info: chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG
-_PF_LT1_log_PF60.pdf  used on input line 337.
+_PF_LT1_log_PF60.pdf  used on input line 355.
 (pdftex.def)             Requested size: 181.18439pt x 140.99751pt.
-<chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF10.pdf, id=2923, 509.
+<chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF10.pdf, id=3047, 509.
 5493pt x 405.8519pt>
 File: chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF10.pdf Graphic f
 ile (type pdf)
 <use chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF10.pdf>
 Package pdftex.def Info: chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log
-_PF10.pdf  used on input line 351.
+_PF10.pdf  used on input line 369.
 (pdftex.def)             Requested size: 181.18439pt x 144.31065pt.
 <chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF10.pdf, id
-=2924, 504.12277pt x 405.8519pt>
+=3048, 504.12277pt x 405.8519pt>
 File: chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF10.pd
 f Graphic file (type pdf)
 <use chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF10.pdf
 >
 Package pdftex.def Info: chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG
-_PF_LT1_log_PF10.pdf  used on input line 356.
+_PF_LT1_log_PF10.pdf  used on input line 374.
 (pdftex.def)             Requested size: 181.18439pt x 145.86505pt.
-<chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF30.pdf, id=2925, 509.
+<chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF30.pdf, id=3049, 509.
 5493pt x 405.8519pt>
 File: chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF30.pdf Graphic f
 ile (type pdf)
 <use chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF30.pdf>
 Package pdftex.def Info: chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log
-_PF30.pdf  used on input line 360.
+_PF30.pdf  used on input line 378.
 (pdftex.def)             Requested size: 181.18439pt x 144.31065pt.
 <chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF30.pdf, id
-=2926, 504.12277pt x 405.8519pt>
+=3050, 504.12277pt x 405.8519pt>
 File: chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF30.pd
 f Graphic file (type pdf)
 <use chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF30.pdf
 >
 Package pdftex.def Info: chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG
-_PF_LT1_log_PF30.pdf  used on input line 365.
+_PF_LT1_log_PF30.pdf  used on input line 383.
 (pdftex.def)             Requested size: 181.18439pt x 145.86505pt.
-<chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF60.pdf, id=2927, 509.
+<chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF60.pdf, id=3051, 509.
 5493pt x 405.8519pt>
 File: chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF60.pdf Graphic f
 ile (type pdf)
 <use chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF60.pdf>
 Package pdftex.def Info: chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log
-_PF60.pdf  used on input line 369.
+_PF60.pdf  used on input line 387.
 (pdftex.def)             Requested size: 181.18439pt x 144.31065pt.
 <chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF60.pdf, id
-=2928, 504.12277pt x 405.8519pt>
+=3052, 504.12277pt x 405.8519pt>
 File: chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF60.pd
 f Graphic file (type pdf)
 <use chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF60.pdf
 >
 Package pdftex.def Info: chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG
-_PF_LT1_log_PF60.pdf  used on input line 374.
+_PF_LT1_log_PF60.pdf  used on input line 392.
 (pdftex.def)             Requested size: 181.18439pt x 145.86505pt.
- [56 <./chapter4/figs/loss_curve_allenergies.pdf>] [57 <./chapter4/figs/scatter
+ [60 <./chapter4/figs/loss_curve_allenergies.pdf>] [61 <./chapter4/figs/scatter
 plot_obs_vs_model_valset_3in1_log_PF10.pdf> <./chapter4/figs/scatterplot_obs_vs
 _model_valset_3in1_LOG_PF_LT1_log_PF10.pdf
 
@@ -1026,7 +1086,7 @@ n a single page
 pdfTeX warning: pdflatex.exe (file ./chapter4/figs/scatterplot_obs_vs_model_val
 set_3in1_LOG_PF_LT1_log_PF60.pdf): PDF inclusion: multiple pdfs with page group
  included in a single page
->] [58 <./chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF10.pdf> <./c
+>] [62 <./chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_log_PF10.pdf> <./c
 hapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF10.pdf
 
 pdfTeX warning: pdflatex.exe (file ./chapter4/figs/scatterplot_obs_vs_model_tst
@@ -1055,104 +1115,100 @@ pdfTeX warning: pdflatex.exe (file ./chapter4/figs/scatterplot_obs_vs_model_tst
 set_3in1_LOG_PF_LT1_log_PF60.pdf): PDF inclusion: multiple pdfs with page group
  included in a single page
 >]
-<chapter4/figs/comparison_crosscorr_tstset_1day_3channels.pdf, id=3594, 954.030
+<chapter4/figs/comparison_crosscorr_tstset_1day_3channels.pdf, id=3724, 954.030
 5pt x 1102.87411pt>
 File: chapter4/figs/comparison_crosscorr_tstset_1day_3channels.pdf Graphic file
  (type pdf)
 <use chapter4/figs/comparison_crosscorr_tstset_1day_3channels.pdf>
 Package pdftex.def Info: chapter4/figs/comparison_crosscorr_tstset_1day_3channe
-ls.pdf  used on input line 393.
+ls.pdf  used on input line 411.
 (pdftex.def)             Requested size: 452.9679pt x 523.65189pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<chapter4/figs/log_pf10/examples_10_tstset.pdf, id=3595, 940.23267pt x 649.5736
+<chapter4/figs/log_pf10/examples_10_tstset.pdf, id=3725, 940.23267pt x 649.5736
 5pt>
 File: chapter4/figs/log_pf10/examples_10_tstset.pdf Graphic file (type pdf)
 <use chapter4/figs/log_pf10/examples_10_tstset.pdf>
 Package pdftex.def Info: chapter4/figs/log_pf10/examples_10_tstset.pdf  used on
- input line 400.
+ input line 418.
 (pdftex.def)             Requested size: 452.9679pt x 312.94156pt.
-<chapter4/figs/log_pf30/examples_30_tstset.pdf, id=3596, 940.23267pt x 649.5736
+<chapter4/figs/log_pf30/examples_30_tstset.pdf, id=3726, 940.23267pt x 649.5736
 5pt>
 File: chapter4/figs/log_pf30/examples_30_tstset.pdf Graphic file (type pdf)
 <use chapter4/figs/log_pf30/examples_30_tstset.pdf>
 Package pdftex.def Info: chapter4/figs/log_pf30/examples_30_tstset.pdf  used on
- input line 407.
+ input line 425.
 (pdftex.def)             Requested size: 452.9679pt x 312.94156pt.
-<chapter4/figs/log_pf60/examples_60_tstset.pdf, id=3597, 940.23267pt x 649.5736
+<chapter4/figs/log_pf60/examples_60_tstset.pdf, id=3727, 940.23267pt x 649.5736
 5pt>
 File: chapter4/figs/log_pf60/examples_60_tstset.pdf Graphic file (type pdf)
 <use chapter4/figs/log_pf60/examples_60_tstset.pdf>
 Package pdftex.def Info: chapter4/figs/log_pf60/examples_60_tstset.pdf  used on
- input line 414.
+ input line 432.
 (pdftex.def)             Requested size: 452.9679pt x 312.94156pt.
+ [63 <./chapter4/figs/comparison_crosscorr_tstset_1day_3channels.pdf>]
+[64 <./chapter4/figs/log_pf10/examples_10_tstset.pdf>] [65 <./chapter4/figs/log
+_pf30/examples_30_tstset.pdf>] [66 <./chapter4/figs/log_pf60/examples_60_tstset
+.pdf>]
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 4
-27.
-(C:\Users\DELL\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+45.
+ (C:\Users\DELL\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 427.
- [59]
-[60 <./chapter4/figs/comparison_crosscorr_tstset_1day_3channels.pdf>] [61 <./ch
-apter4/figs/log_pf10/examples_10_tstset.pdf>] [62 <./chapter4/figs/log_pf30/exa
-mples_30_tstset.pdf>] [63 <./chapter4/figs/log_pf60/examples_60_tstset.pdf>]
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 445.
 LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <10> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 460.
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 478.
 
-[64]) [65]
+[67] [68]) [69]
 \openout2 = `chapter5/ch5.aux'.
 
  (chapter5/ch5.tex
 Chapter 5.
-[66
+[70
 
 
 
 
-]) [67]
+]) [71]
 \openout2 = `appendix.aux'.
 
  (appendix.tex
 Appendix A.
-[68
+[72
 
 
 
 
 ]
-<chapter3/figs/negZ_posZ_solutions.pdf, id=3964, 600.84816pt x 488.77794pt>
+<chapter3/figs/negZ_posZ_solutions.pdf, id=4088, 600.84816pt x 488.77794pt>
 File: chapter3/figs/negZ_posZ_solutions.pdf Graphic file (type pdf)
 <use chapter3/figs/negZ_posZ_solutions.pdf>
 Package pdftex.def Info: chapter3/figs/negZ_posZ_solutions.pdf  used on input l
 ine 55.
 (pdftex.def)             Requested size: 362.37569pt x 294.78302pt.
- [69 <./chapter3/figs/negZ_posZ_solutions.pdf>]
-<chapter3/figs/wind_vs_sta_fluxdens.pdf, id=4036, 1076.41528pt x 280.94334pt>
+ [73 <./chapter3/figs/negZ_posZ_solutions.pdf>]
+<chapter3/figs/wind_vs_sta_fluxdens.pdf, id=4160, 1076.41528pt x 280.94334pt>
 File: chapter3/figs/wind_vs_sta_fluxdens.pdf Graphic file (type pdf)
 <use chapter3/figs/wind_vs_sta_fluxdens.pdf>
 Package pdftex.def Info: chapter3/figs/wind_vs_sta_fluxdens.pdf  used on input 
 line 77.
 (pdftex.def)             Requested size: 407.66833pt x 106.39948pt.
- [70 <./chapter3/figs/wind_vs_sta_fluxdens.pdf>] [71] [72] [73] [74]) [75] (mai
-n.bbl [76
+ [74 <./chapter3/figs/wind_vs_sta_fluxdens.pdf>] [75] [76] [77] [78]) [79] (mai
+n.bbl [80
 
 
 
-] [77] [78]
-[79] [80]
-Underfull \hbox (badness 1603) in paragraph at lines 762--764
+] [81] [82]
+[83] [84]
+Underfull \hbox (badness 1603) in paragraph at lines 776--778
 []\OT1/cmr/m/n/10 Paouris, E., Vourl-i-das, A., Pa-paioan-nou, A., & Anas-tasia
 dis, A. 2021, Space Weather, 19,
  []
 
-[81] [82] [83] [84])
+[85] [86] [87] [88])
 
 Package natbib Warning: There were undefined citations.
 
-[85] (main.aux (chapter1/ch1.aux) (chapter2/ch2.aux) (chapter3/ch3.aux)
+[89] (main.aux (chapter1/ch1.aux) (chapter2/ch2.aux) (chapter3/ch3.aux)
 (chapter4/ch4.aux) (chapter5/ch5.aux) (appendix.aux))
  ***********
 LaTeX2e <2023-11-01>
@@ -1163,16 +1219,16 @@ L3 programming layer <2023-12-11>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E3EE1F41E627DF2FDC336791D58E35E3;14431.
+(rerunfilecheck)             Checksum: DCE6C730EF6498C3542FEDAAEDD42BC3;14579.
  ) 
 Here is how much of TeX's memory you used:
- 15903 strings out of 474494
- 277516 string characters out of 5744385
- 1984460 words of memory out of 5000000
- 37349 multiletter control sequences out of 15000+600000
+ 15939 strings out of 474494
+ 278550 string characters out of 5744385
+ 1985460 words of memory out of 5000000
+ 37375 multiletter control sequences out of 15000+600000
  565700 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,17n,79p,1705b,1119s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,17n,79p,1705b,1121s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\DELL\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1
 000.pk><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/
@@ -1198,9 +1254,9 @@ ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/DE
 LL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/
 Users/DELL/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.p
 fb>
-Output written on main.pdf (92 pages, 40120327 bytes).
+Output written on main.pdf (96 pages, 43197008 bytes).
 PDF statistics:
- 4396 PDF objects out of 5155 (max. 8388607)
- 579 named destinations out of 1000 (max. 500000)
- 847 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4521 PDF objects out of 5155 (max. 8388607)
+ 589 named destinations out of 1000 (max. 500000)
+ 857 words of extra memory for PDF output out of 10000 (max. 10000000)
 
