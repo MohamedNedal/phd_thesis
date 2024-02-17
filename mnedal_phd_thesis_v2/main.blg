@@ -5,36 +5,6 @@ Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: chapter1/ch1.aux
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: chapter2/ch2.aux
-Case mismatch error between cite keys Thompson_1998 and thompson_1998
----line 3 of file chapter2/ch2.aux
- : \citation{Thompson_1998
- :                        ,veronig_2010,Vrsnak_2008,magdaleni_2010,nindos_2011}
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys Thompson_2009 and thompson_2009
----line 4 of file chapter2/ch2.aux
- : \citation{pick_2006,nindos_2008,Thompson_2009
- :                                              }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys Vrsnak_2008 and vrsnak_2008
----line 6 of file chapter2/ch2.aux
- : \citation{Vrsnak_2008
- :                      }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys Kozarev_2011 and kozarev_2011
----line 15 of file chapter2/ch2.aux
- : \citation{Kozarev_2011
- :                       }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys Kozarev_2011 and kozarev_2011
----line 16 of file chapter2/ch2.aux
- : \citation{Kozarev_2011
- :                       }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys Kozarev_2022 and kozarev_2022
----line 20 of file chapter2/ch2.aux
- : \citation{Kozarev_2022
- :                       }
-I'm skipping whatever remains of this command
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: chapter3/ch3.aux
 Reallocating 'name_of_file' (item size: 1) to 17 items.
@@ -46,33 +16,41 @@ A level-1 auxiliary file: appendix.aux
 Reallocating 'name_of_file' (item size: 1) to 3 items.
 The style file: aa.bst
 Reallocating 'name_of_file' (item size: 1) to 5 items.
-Reallocating 'field_info' (item size: 4) to 12450 items.
+Reallocating 'field_info' (item size: 4) to 12600 items.
 Database file #1: refs.bib
-Repeated entry---line 2214 of file refs.bib
+Repeated entry---line 2394 of file refs.bib
  : @article{pulkkinen_2007
  :                        ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "olah_2015" isn't style-file defined
---line 3056 of file refs.bib
+--line 3236 of file refs.bib
 Reallocating 'str_pool' (item size: 1) to 130000 items.
-Repeated entry---line 4078 of file refs.bib
+Repeated entry---line 4258 of file refs.bib
  : @article{del_2011
  :                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4162 of file refs.bib
+Repeated entry---line 4268 of file refs.bib
+ : @article{kong_2018
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4279 of file refs.bib
+ : @article{altschuler_1969
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4289 of file refs.bib
+ : @article{schatten_1969
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4299 of file refs.bib
+ : @article{thompson_2006
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4342 of file refs.bib
  : @article{mann_2018
  :                   ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "pick_2006"
 Warning--I didn't find a database entry for "chen_2013"
-Warning--I didn't find a database entry for "lemen_2011"
-Warning--I didn't find a database entry for "olmedo_2012"
-Warning--I didn't find a database entry for "domingo_1995soho"
-Warning--I didn't find a database entry for "patsourakosetal_2009"
-Warning--I didn't find a database entry for "ofman_2002interaction"
-Warning--I didn't find a database entry for "mann_2003formation"
-Warning--I didn't find a database entry for "piantschitsch_2018numerical"
-Warning--I didn't find a database entry for "Thompson_1999"
+Warning--I didn't find a database entry for "ontiveros_2009"
 Warning--I didn't find a database entry for "torsti_1995"
 Warning--I didn't find a database entry for "zhang_2022"
 Warning--to sort, need author or key in ishikawa_2017
@@ -105,6 +83,7 @@ You can't pop an empty literal stack for entry ng_2012
 while executing---line 1684 of file aa.bst
 Warning--empty publisher in perez_Suarez_2011
 Warning--empty publisher in pick_radio_2006
+Warning--empty publisher in pick_2006
 Warning--empty publisher in priest_forbes_2007
 Warning--AIP Conference Proceedings, Vol. 516Both volume and number fields in reames_2000
 You can't pop an empty literal stack for entry reames_2000
@@ -115,45 +94,45 @@ while executing---line 1684 of file aa.bst
 Warning--empty publisher in reames_2021
 Warning--empty journal in tsurutani_1985
 Warning--empty institution in wilson_1988
-You've used 286 entries,
+You've used 300 entries,
             3039 wiz_defined-function locations,
-            2165 strings with 67459 characters,
-and the built_in function-call counts, 164441 in all, are:
-= -- 13302
-> -- 15436
-< -- 110
-+ -- 5218
-- -- 4848
-* -- 14319
-:= -- 30385
-add.period$ -- 286
-call.type$ -- 286
-change.case$ -- 2737
-chr.to.int$ -- 280
-cite$ -- 307
-duplicate$ -- 5482
-empty$ -- 7814
-format.name$ -- 5651
-if$ -- 32397
-int.to.chr$ -- 7
+            2229 strings with 70462 characters,
+and the built_in function-call counts, 172814 in all, are:
+= -- 13976
+> -- 16228
+< -- 117
++ -- 5486
+- -- 5097
+* -- 15050
+:= -- 31917
+add.period$ -- 300
+call.type$ -- 300
+change.case$ -- 2874
+chr.to.int$ -- 293
+cite$ -- 322
+duplicate$ -- 5763
+empty$ -- 8215
+format.name$ -- 5941
+if$ -- 34059
+int.to.chr$ -- 8
 int.to.str$ -- 1
-missing$ -- 265
-newline$ -- 862
-num.names$ -- 1145
-pop$ -- 2811
+missing$ -- 277
+newline$ -- 904
+num.names$ -- 1202
+pop$ -- 2958
 preamble$ -- 1
-purify$ -- 2734
+purify$ -- 2871
 quote$ -- 0
-skip$ -- 4774
+skip$ -- 5021
 stack$ -- 0
-substring$ -- 6215
-swap$ -- 184
-text.length$ -- 12
+substring$ -- 6516
+swap$ -- 207
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2547
-warning$ -- 19
-while$ -- 1147
+type$ -- 2670
+warning$ -- 20
+while$ -- 1206
 width$ -- 0
-write$ -- 2859
-(There were 19 error messages)
+write$ -- 3000
+(There were 17 error messages)

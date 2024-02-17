@@ -10,75 +10,80 @@
 \contentsline {section}{\numberline {1.5}Outline}{7}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Characterization of Coronal Bright Fronts}{9}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Introduction}{9}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Observations}{10}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Data Analysis and Methods}{10}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}The SPREAdFAST Framework}{10}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}CBF Kinematics and Geometric Modeling - Case Study May 11, 2011}{10}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Results and Discussion}{13}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Conclusions}{13}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Wavetrack: A Flexible Framework for Automated Recognition and Tracking of Wave-Like Events in Solar Imagery}{13}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Overview}{13}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Image Filtering Techniques}{15}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Wavetrack for Coronal Wave Tracking}{15}{subsection.2.6.3}%
-\contentsline {subsection}{\numberline {2.6.4}Wavetrack for Filament Tracking}{15}{subsection.2.6.4}%
-\contentsline {subsection}{\numberline {2.6.5}Fourier Local Correlation Tracking (FLCT) Model}{15}{subsection.2.6.5}%
-\contentsline {subsection}{\numberline {2.6.6}Results}{16}{subsection.2.6.6}%
-\contentsline {subsection}{\numberline {2.6.7}Conclusions}{18}{subsection.2.6.7}%
-\contentsline {section}{\numberline {2.7}Geomagnetic Storms: CME Speed De-Projection vs. In Situ Analysis}{18}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Overview}{20}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}GSs and IP Phenomena}{22}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}GSs and Solar Phenomena}{22}{subsection.2.7.3}%
-\contentsline {subsection}{\numberline {2.7.4}PyThea 3D De-Projection Tool}{23}{subsection.2.7.4}%
-\contentsline {subsection}{\numberline {2.7.5}Results}{24}{subsection.2.7.5}%
-\contentsline {subsubsection}{Projection Effects}{24}{section*.11}%
-\contentsline {subsubsection}{Correlation between GSs, Coronal and Near-Sun Parameters}{25}{section*.14}%
-\contentsline {subsubsection}{Correlation between GSs and IP Parameters}{25}{section*.15}%
-\contentsline {subsubsection}{On the GS Strength Forecasting Based on Solar and IP Parameters}{26}{section*.16}%
-\contentsline {subsection}{\numberline {2.7.6}Discussion}{26}{subsection.2.7.6}%
-\contentsline {chapter}{\numberline {3}Solar Radio Observations: Integrating Space-based and Ground-based Data for Coronal Diagnostics}{28}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introduction}{28}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Observations}{30}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}PSP Observations}{30}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}LOFAR Observations}{33}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Methods}{33}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Imaging of radio sources}{33}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Modeling}{35}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Results and discussion}{35}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Detection and characterization of type III radio bursts}{35}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Imaging of radio emission sources}{36}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Plasma diagnostics and magnetic field analysis}{36}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Summary and conclusions}{37}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Modeling and Forecasting of Solar Energetic Protons (SEP)}{46}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{46}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Early-Stage SEP Acceleration by CME-Driven Shocks}{49}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Overview}{49}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Event Selection}{50}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Coronal SEP Acceleration}{51}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Input Data and Spectral Fitting}{51}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Transport of Accelerated SEPs and Comparison with ERNE Observations}{51}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Results and Discussions}{53}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}Conclusions}{53}{subsection.4.2.7}%
-\contentsline {section}{\numberline {4.3}Solar Proton Flux Forecasting with Deep Learning Models}{54}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Data preparation}{54}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Method}{55}{subsection.4.3.2}%
-\contentsline {subsubsection}{The Bi-LSTM Model}{56}{section*.29}%
-\contentsline {subsubsection}{Model Selection}{58}{section*.31}%
-\contentsline {subsection}{\numberline {4.3.3}Results and discussion}{59}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Conclusions}{68}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Summary and Future Work}{70}{chapter.5}%
-\contentsline {section}{\numberline {5.1}}{70}{section.5.1}%
-\contentsline {section}{\numberline {5.2}}{70}{section.5.2}%
-\contentsline {section}{\numberline {5.3}}{70}{section.5.3}%
-\contentsline {section}{\numberline {5.4}}{70}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Future Work}{70}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Definitions and Acronyms}{70}{section.5.6}%
-\contentsline {chapter}{\numberline {A}Appendix}{72}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Appendix for Radio Observation-related Work}{72}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Persistent imaging technique}{72}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Resolving the radio emission location ambiguity}{72}{subsection.A.1.2}%
-\contentsline {section}{\numberline {A.2}Appendix for SEP-related Work}{74}{section.A.2}%
-\contentsline {subsection}{\numberline {A.2.1}Terminologies}{74}{subsection.A.2.1}%
-\contentsline {subsection}{\numberline {A.2.2}Mathematical Representation of the LSTM NN Model}{76}{subsection.A.2.2}%
-\contentsline {subsection}{\numberline {A.2.3}Evaluation Metrics}{77}{subsection.A.2.3}%
-\contentsline {subsection}{\numberline {A.2.4}Model Configuration}{77}{subsection.A.2.4}%
-\contentsline {subsection}{\numberline {A.2.5}Skill Scores}{78}{subsection.A.2.5}%
+\contentsline {section}{\numberline {2.2}EUV Observations}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Data Analysis and Methods}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}The SPREAdFAST Framework}{14}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Modeling}{14}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}CBF Kinematics and Geometric Modeling - Case Study May 11, 2011}{15}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Event Context}{15}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Low Corona Part}{16}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Middle/Outer Corona Part}{19}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Statistical Study}{19}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Results and Discussion}{26}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Conclusions}{26}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Wavetrack: A Flexible Framework for Automated Recognition and Tracking of Wave-Like Events in Solar Imagery}{26}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Overview}{26}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Image Filtering Techniques}{28}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Wavetrack for Coronal Wave Tracking}{29}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.4}Wavetrack for Filament Tracking}{29}{subsection.2.8.4}%
+\contentsline {subsection}{\numberline {2.8.5}Fourier Local Correlation Tracking (FLCT) Model}{29}{subsection.2.8.5}%
+\contentsline {subsection}{\numberline {2.8.6}Results}{29}{subsection.2.8.6}%
+\contentsline {subsection}{\numberline {2.8.7}Conclusions}{33}{subsection.2.8.7}%
+\contentsline {section}{\numberline {2.9}Geomagnetic Storms: CME Speed De-Projection vs. In Situ Analysis}{33}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Overview}{33}{subsection.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}GSs and IP Phenomena}{35}{subsection.2.9.2}%
+\contentsline {subsection}{\numberline {2.9.3}GSs and Solar Phenomena}{36}{subsection.2.9.3}%
+\contentsline {subsection}{\numberline {2.9.4}PyThea 3D De-Projection Tool}{36}{subsection.2.9.4}%
+\contentsline {subsection}{\numberline {2.9.5}Results}{37}{subsection.2.9.5}%
+\contentsline {subsubsection}{Projection Effects}{37}{section*.25}%
+\contentsline {subsubsection}{Correlation between GSs, Coronal and Near-Sun Parameters}{39}{section*.28}%
+\contentsline {subsubsection}{Correlation between GSs and IP Parameters}{39}{section*.29}%
+\contentsline {subsubsection}{On the GS Strength Forecasting Based on Solar and IP Parameters}{39}{section*.30}%
+\contentsline {subsection}{\numberline {2.9.6}Discussion}{40}{subsection.2.9.6}%
+\contentsline {chapter}{\numberline {3}Solar Radio Observations: Integrating Space-based and Ground-based Data for Coronal Diagnostics}{42}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{42}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Observations}{44}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}PSP Observations}{44}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}LOFAR Observations}{47}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Methods}{47}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Imaging of radio sources}{47}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Modeling}{49}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Results and discussion}{49}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Detection and characterization of type III radio bursts}{49}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Imaging of radio emission sources}{50}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Plasma diagnostics and magnetic field analysis}{50}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Summary and conclusions}{51}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Modeling and Forecasting of Solar Energetic Protons (SEP)}{60}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{60}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Early-Stage SEP Acceleration by CME-Driven Shocks}{63}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Overview}{63}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Event Selection}{64}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Coronal SEP Acceleration}{65}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Input Data and Spectral Fitting}{65}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Transport of Accelerated SEPs and Comparison with ERNE Observations}{65}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Results and Discussions}{67}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}Conclusions}{67}{subsection.4.2.7}%
+\contentsline {section}{\numberline {4.3}Solar Proton Flux Forecasting with Deep Learning Models}{68}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Data preparation}{68}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Method}{69}{subsection.4.3.2}%
+\contentsline {subsubsection}{The Bi-LSTM Model}{70}{section*.43}%
+\contentsline {subsubsection}{Model Selection}{72}{section*.45}%
+\contentsline {subsection}{\numberline {4.3.3}Results and discussion}{73}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Conclusions}{82}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Summary and Future Work}{84}{chapter.5}%
+\contentsline {section}{\numberline {5.1}}{84}{section.5.1}%
+\contentsline {section}{\numberline {5.2}}{84}{section.5.2}%
+\contentsline {section}{\numberline {5.3}}{84}{section.5.3}%
+\contentsline {section}{\numberline {5.4}}{84}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Future Work}{84}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Definitions and Acronyms}{84}{section.5.6}%
+\contentsline {chapter}{\numberline {A}Appendix}{86}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Appendix for Radio Observation-related Work}{86}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Persistent imaging technique}{86}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Resolving the radio emission location ambiguity}{86}{subsection.A.1.2}%
+\contentsline {section}{\numberline {A.2}Appendix for SEP-related Work}{88}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Terminologies}{88}{subsection.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Mathematical Representation of the LSTM NN Model}{90}{subsection.A.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Evaluation Metrics}{91}{subsection.A.2.3}%
+\contentsline {subsection}{\numberline {A.2.4}Model Configuration}{91}{subsection.A.2.4}%
+\contentsline {subsection}{\numberline {A.2.5}Skill Scores}{92}{subsection.A.2.5}%

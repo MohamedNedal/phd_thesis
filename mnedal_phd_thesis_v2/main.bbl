@@ -1,4 +1,4 @@
-\begin{thebibliography}{286}
+\begin{thebibliography}{300}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{ish(2017)}]{ishikawa_2017}
@@ -193,6 +193,9 @@ Desai, M. \& Giacalone, J. 2016, Living Reviews in Solar Physics, 13, 3
 Dierckxsens, M., Tziotziou, K., Dalla, S., {et~al.} 2015, Solar Physics, 290,
   841
 
+\bibitem[{Domingo {et~al.}(1995)Domingo, Fleck, \& Poland}]{domingo_1995}
+Domingo, V., Fleck, B., \& Poland, A.~I. 1995, Solar Physics, 162, 1
+
 \bibitem[{Downs {et~al.}(2021)Downs, Warmuth, Long, Bloomfield, Kwon, Veronig,
   Vourlidas, \& Vr{\v{s}}nak}]{downs_2021}
 Downs, C., Warmuth, A., Long, D.~M., {et~al.} 2021, The Astrophysical Journal,
@@ -223,6 +226,9 @@ Echer, E. \& Gonzalez, W. 2022, Advances in Space Research, 70, 2830
 \bibitem[{Echer {et~al.}(2013)Echer, Tsurutani, \& Gonzalez}]{echer_2013}
 Echer, E., Tsurutani, B., \& Gonzalez, W. 2013, Journal of Geophysical
   Research: Space Physics, 118, 385
+
+\bibitem[{Efron(1979)}]{efron_1979}
+Efron, B. 1979, The Annals of Statistics, 7, 1
 
 \bibitem[{Engell {et~al.}(2017)Engell, Falconer, Schuh, Loomis, \&
   Bissett}]{engell_2017}
@@ -561,6 +567,11 @@ Le, G.-M. \& Zhang, X.-F. 2017, Research in Astronomy and Astrophysics, 17, 123
 {Lecacheux}, A., {Steinberg}, J.~L., {Hoang}, S., \& {Dulk}, G.~A. 1989, \aap,
   217, 237
 
+\bibitem[{Lemen {et~al.}(2011)Lemen, Akin, Boerner, Chou, Drake, Duncan,
+  Edwards, Friedlaender, Heyman, Hurlburt, {et~al.}}]{lemen_2011}
+Lemen, J.~R., Akin, D.~J., Boerner, P.~F., {et~al.} 2011, in The solar dynamics
+  observatory (Springer), 17--40
+
 \bibitem[{Lemen {et~al.}(2012)Lemen, Title, Akin, Boerner, Chou, Drake, Duncan,
   Edwards, Friedlaender, Heyman, {et~al.}}]{lemen_2012}
 Lemen, J.~R., Title, A.~M., Akin, D.~J., {et~al.} 2012, Solar Physics, 275, 17
@@ -623,14 +634,23 @@ MacDowall, R., Lara, A., Manoharan, P., {et~al.} 2003, Geophysical research
 \bibitem[{Madjarska(2019)}]{madjarska_2019}
 Madjarska, M.~S. 2019, Living Reviews in Solar Physics, 16, 2
 
-\bibitem[{{Magdaleni{\'c}} {et~al.}(2010){Magdaleni{\'c}}, {Marqu{\'e}},
-  {Zhukov}, {Vr{\v{s}}nak}, \& {{\v{Z}}ic}}]{magdalenic_2010}
+\bibitem[{{Magdaleni{\'c}} {et~al.}(2010{\natexlab{a}}){Magdaleni{\'c}},
+  {Marqu{\'e}}, {Zhukov}, {Vr{\v{s}}nak}, \& {{\v{Z}}ic}}]{magdalenic_2010}
 {Magdaleni{\'c}}, J., {Marqu{\'e}}, C., {Zhukov}, A.~N., {Vr{\v{s}}nak}, B., \&
-  {{\v{Z}}ic}, T. 2010, \apj, 718, 266
+  {{\v{Z}}ic}, T. 2010{\natexlab{a}}, \apj, 718, 266
+
+\bibitem[{{Magdaleni{\'c}} {et~al.}(2010{\natexlab{b}}){Magdaleni{\'c}},
+  {Marqu{\'e}}, {Zhukov}, {Vr{\v{s}}nak}, \& {{\v{Z}}ic}}]{magdaleni_2010}
+{Magdaleni{\'c}}, J., {Marqu{\'e}}, C., {Zhukov}, A.~N., {Vr{\v{s}}nak}, B., \&
+  {{\v{Z}}ic}, T. 2010{\natexlab{b}}, \apj, 718, 266
 
 \bibitem[{Malandraki \& Crosby(2018)}]{malandraki_2018}
 Malandraki, O.~E. \& Crosby, N.~B. 2018, Solar particle radiation storms
   forecasting and analysis: the HESPERIA HORIZON 2020 project and beyond
+
+\bibitem[{Mann {et~al.}(2003)Mann, Klassen, Aurass, \& Classen}]{mann_2003}
+Mann, G., Klassen, A., Aurass, H., \& Classen, H.-T. 2003, Astronomy \&
+  Astrophysics, 400, 329
 
 \bibitem[{{Mann, G.} {et~al.}(2018){Mann, G.}, {Breitling, F.}, {Vocks, C.},
   {Aurass, H.}, {Steinmetz, M.}, {Strassmeier, K. G.}, {Bisi, M. M.}, {Fallows,
@@ -658,6 +678,11 @@ Malandraki, O.~E. \& Crosby, N.~B. 2018, Solar particle radiation storms
 \bibitem[{Manu {et~al.}(2022)Manu, Balan, Zhang, \& Xing}]{manu_2022}
 Manu, V., Balan, N., Zhang, Q.-H., \& Xing, Z.-Y. 2022, Journal of Geophysical
   Research: Space Physics, 127, e2022JA030747
+
+\bibitem[{{Markwardt}(2009)}]{markwardt_2009}
+{Markwardt}, C.~B. 2009, in Astronomical Society of the Pacific Conference
+  Series, Vol. 411, Astronomical Data Analysis Software and Systems XVIII, ed.
+  D.~A. {Bohlender}, D.~{Durand}, \& P.~{Dowler}, 251
 
 \bibitem[{Melrose(1980)}]{melrose_1980}
 Melrose, D. 1980, Space Science Reviews, 26, 3
@@ -726,6 +751,11 @@ Ng, C.~K., Reames, D.~V., \& Tylka, A.~J. 2012in , American Institute of
 Nieves-Chinchilla, T., Vourlidas, A., Raymond, J.~C., {et~al.} 2018, Solar
   Physics, 293, 1
 
+\bibitem[{{Nindos} {et~al.}(2011){Nindos}, {Alissandrakis}, {Hillaris}, \&
+  {Preka-Papadema}}]{nindos_2011}
+{Nindos}, A., {Alissandrakis}, C.~E., {Hillaris}, A., \& {Preka-Papadema}, P.
+  2011, \aap, 531, A31
+
 \bibitem[{{Nindos} {et~al.}(2008){Nindos}, {Aurass}, {Klein}, \&
   {Trottet}}]{nindos_2008}
 {Nindos}, A., {Aurass}, H., {Klein}, K.~L., \& {Trottet}, G. 2008, \solphys,
@@ -757,8 +787,16 @@ Odstrcil, D., Riley, P., \& Zhao, X. 2004, Journal of Geophysical Research:
 {Offringa}, A.~R., {McKinley}, B., {Hurley-Walker}, N., {et~al.} 2014, \mnras,
   444, 606
 
+\bibitem[{Ofman \& Thompson(2002)}]{ofman_2002}
+Ofman, L. \& Thompson, B. 2002, The Astrophysical Journal, 574, 440
+
 \bibitem[{Olah(2015)}]{olah_2015}
 Olah, C. 2015, Neural Networks, Types, and Functional Programming, [Blog post]
+
+\bibitem[{Olmedo {et~al.}(2012)Olmedo, Vourlidas, Zhang, \&
+  Cheng}]{olmedo_2012}
+Olmedo, O., Vourlidas, A., Zhang, J., \& Cheng, X. 2012, The Astrophysical
+  Journal, 756, 143
 
 \bibitem[{{Ontiveros} \& {Vourlidas}(2009)}]{ontiveross_2009}
 {Ontiveros}, V. \& {Vourlidas}, A. 2009, apj, 693, 267
@@ -794,6 +832,9 @@ Park, J., Innes, D.~E., Bucik, R., \& Moon, Y.-J. 2013, The Astrophysical
 \bibitem[{{Parker}(1960)}]{parker_1960}
 {Parker}, E.~N. 1960, Astrophysical Journal, 132, 821
 
+\bibitem[{Patsourakos \& Vourlidas(2009)}]{patsourakos_2009}
+Patsourakos, S. \& Vourlidas, A. 2009, The Astrophysical Journal, 700, L182
+
 \bibitem[{Patsourakos \& Vourlidas(2012)}]{patsourakos_2012}
 Patsourakos, S. \& Vourlidas, A. 2012, Solar Physics, 281, 187
 
@@ -813,9 +854,23 @@ Patsourakos, S. \& Vourlidas, A. 2012, Solar Physics, 281, 187
 {Pesnell}, W.~D., {Thompson}, B.~J., \& {Chamberlin}, P.~C. 2012, solphys, 275,
   3
 
+\bibitem[{Piantschitsch {et~al.}(2018)Piantschitsch, Vr{\v{s}}nak, Hanslmeier,
+  Lemmerer, Veronig, Hernandez-Perez, \&
+  {\v{C}}alogovi{\'c}}]{piantschitsch_2018}
+Piantschitsch, I., Vr{\v{s}}nak, B., Hanslmeier, A., {et~al.} 2018, The
+  Astrophysical Journal, 860, 24
+
 \bibitem[{{Pick}(2006)}]{pick_radio_2006}
 {Pick}, M. 2006, in Solar and Heliospheric Origins of Space Weather Phenomena,
   ed. J.-P. {Rozelot}, Vol. 699, 119
+
+\bibitem[{{Pick} {et~al.}(2006){Pick}, {Forbes}, {Mann}, {Cane}, {Chen},
+  {Ciaravella}, {Cremades}, {Howard}, {Hudson}, {Klassen}, {Klein}, {Lee},
+  {Linker}, {Maia}, {Mikic}, {Raymond}, {Reiner}, {Simnett}, {Srivastava},
+  {Tripathi}, {Vainio}, {Vourlidas}, {Zhang}, {Zurbuchen}, {Sheeley}, \&
+  {Marqu{\'e}}}]{pick_2006}
+{Pick}, M., {Forbes}, T.~G., {Mann}, G., {et~al.} 2006, {Multi-Wavelength
+  Observations of CMEs and Associated Phenomena}, Vol.~21, 341
 
 \bibitem[{{Podladchikova} \& {Berghmans}(2005)}]{podladchikova_2005}
 {Podladchikova}, O. \& {Berghmans}, D. 2005, Solar Physics, 228, 265
@@ -927,6 +982,9 @@ Saiz, E., Cerrato, Y., Cid, C., {et~al.} 2013, Journal of Space Weather and
 
 \bibitem[{Samwel \& Miteva(2023)}]{samwel_2023}
 Samwel, S. \& Miteva, R. 2023, Advances in Space Research, 72, 3440
+
+\bibitem[{Savitzky \& Golay(1964)}]{savitzky_1964}
+Savitzky, A. \& Golay, M.~J. 1964, Analytical chemistry, 36, 1627
 
 \bibitem[{Schatten {et~al.}(1969)Schatten, Wilcox, \& Ness}]{schatten_1969}
 Schatten, K.~H., Wilcox, J.~M., \& Ness, N.~F. 1969, Solar Physics, 6, 442
@@ -1043,16 +1101,21 @@ Thernisien, A. 2011, The Astrophysical Journal Supplement Series, 194, 33
   Howard}]{thernisien_2009}
 Thernisien, A., Vourlidas, A., \& Howard, R. 2009, Solar Physics, 256, 111
 
-\bibitem[{Thompson {et~al.}(1998)Thompson, Plunkett, Gurman, Newmark, St.~Cyr,
-  \& Michels}]{thompson_1998}
-Thompson, B., Plunkett, S., Gurman, J., {et~al.} 1998, Geophysical Research
-  Letters, 25, 2465
-
 \bibitem[{Thompson \& Young(2016)}]{thompson_2016}
 Thompson, B. \& Young, C. 2016, The Astrophysical Journal, 825, 27
 
+\bibitem[{Thompson {et~al.}(1999)Thompson, Gurman, Neupert, Newmark,
+  Delaboudiniere, Cyr, Stezelberger, Dere, Howard, \& Michels}]{thompson_1999b}
+Thompson, B.~c., Gurman, J., Neupert, W., {et~al.} 1999, The Astrophysical
+  Journal, 517, L151
+
 \bibitem[{{Thompson} \& {Myers}(2009)}]{thompson_2009}
 {Thompson}, B.~J. \& {Myers}, D.~C. 2009, \apjs, 183, 225
+
+\bibitem[{{Thompson} {et~al.}(1998){Thompson}, {Plunkett}, {Gurman}, {Newmark},
+  {St.~Cyr}, \& {Michels}}]{thompson_1998}
+{Thompson}, B.~J., {Plunkett}, S.~P., {Gurman}, J.~B., {et~al.} 1998, grl, 25,
+  2465
 
 \bibitem[{{Thompson, W. T.}(2006)}]{thompson_2006}
 {Thompson, W. T.} 2006, A\&A, 449, 791
