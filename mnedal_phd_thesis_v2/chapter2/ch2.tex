@@ -1,8 +1,6 @@
-\chapter{Characterization of Coronal Bright Fronts}
+\chapter{Remote Observations -- Early-stages and Later-stages of Eruption}
 \label{chapter2}
 % just give a brief summary on the content of the chapter ...
-
-
 
 \section{Introduction}
 Coronal Mass Ejections (CMEs) stand out as one of the prevalent expressions of solar activity. Typically discerned through white light observations \citep{vourlidas_2003, zhang_2006, bein_2011}. CMEs exhibit various facets in ultraviolet and radio wavelengths \citep{bastian_2001, veronig_2010}. Notably, the early phases of CMEs are effectively observed in EUV light, facilitated by instruments like the Atmospheric Imaging Assembly (AIA) aboard the Solar Dynamics Observatory (SDO) \citep{lemen_2011, pesnell_2012}. These eruptions may induce shock waves in the solar corona when their propagation velocities surpass the local speed of information, typically represented by the fast magnetosonic speed. Such shock waves are visibly identified in EUV as EUV waves \citep{thompson_1998}, also acknowledged as Coronal Bright Fronts \citep[CBFs]{long_2011}.
@@ -356,35 +354,6 @@ To obtain the kinematics in the AIA FOV, a Savitzky-Golay fit is applied, follow
 The spheroid, centered on the eruption source, maintains its aspect ratio throughout the event. Once the S2M wraps around the Sun, points behind the plane passing through the eruption source point, and perpendicular to the radial direction at that point, are removed from consideration. The S2M is divided into a cap and two side zones, denoted by blue, green, and red points in Figure~\ref{fig_segments}. This division allows for the investigation of variations in the plasma environment as the CBF traverses in the radial and lateral directions.
 The \textit{nose} of the shock model is defined as the collection of all model points on the spheroidal cap subtending a half-angle of $\pi$/7 from the semi-major axis of the spheroid at each time step. The remaining points on the shock surface are divided into two flanks or zones, with the dividing plane parallel to the Sun-Earth line. Plasma parameters at points on these three surfaces can be examined separately, providing insights into the differences in the plasma environment through which the CBF passes, as demonstrated in Figure~\ref{fig_segments}.
 
-
-
-
-\section{Results and Discussion}
-
-
-
-
-
-\section{Conclusions}
-We have conducted a comprehensive study focusing on the characterization of 26 historical CME-driven CBFs in the low solar corona. These events were accompanied by type III radio bursts, and SEP events near Earth and were observed by the AIA instrument onboard the SDO spacecraft in the EUV 193 $\AA$ band. To achieve this, we utilized the SPREAdFAST framework, which encompasses physics-based and data-driven models to estimate the coronal magnetic field, dynamics of coronal shock waves, energetic particle acceleration, and SEP propagation in the heliosphere.
-
-Our analysis relied on sequences of base-difference images obtained from the AIA instrument. These images served as the primary input data for our investigation. We employed these data to generate annulas plots and J-maps to estimate the kinematic measurements in both the radial and lateral directions for the EUV waves.
-
-In order to obtain a thorough understanding of the CBFs, we computed various time-dependent and distance-dependent kinematic parameters. These included shock speed, acceleration, intensity, and thickness of the front, peak, and back edges of the waves, as well as the major and minor axes and the rate of change of the waves' aspect ratios. To augment our analysis based on AIA observations, we incorporated LASCO measurements up to 17\rsun. This additional data is important in improving the characterization of the SEP spectra near the Sun.
-
-The analysis of kinematic measurements played a pivotal role in our study as they enabled us to generate time-dependent 3D geometric models of wavefronts. In addition, these measurements provided valuable insights for deriving time-dependent plasma diagnostics by incorporating the outcomes of the MHD and DEM models.
-
-To accurately represent the shocks, we employed shock kinematic measurements to fit a geometric spheroid surface model for each measured time step. This approach allowed us to capture the intricate characteristics of the shocks with precision.
-
-In order to gain a deeper understanding of the phenomenon, we explored the parametrized relationships between the modeled plasma parameters. Through this analysis, we aimed to identify potential connections and interdependencies, shedding light on the complex dynamics at play.
-
-Overall, our findings in this study and in \cite{kozarev_2022} as well as \cite{stepanyuk_2022} contribute to a nuanced understanding of shock kinematics and shock plasma parameters.
-
-Moving forward, our future investigations will focus on examining SEP acceleration near the Sun, as well as investigating the transport of coronal and interplanetary particles using the insights gained from our models. Additionally, we aim to refine the methods of shock and coronal parameters characterization, which will contribute to enhancing the accuracy and reliability of the results.
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Wavetrack: A Flexible Framework for Automated Recognition and Tracking of Wave-Like Events in Solar Imagery}
@@ -460,7 +429,7 @@ The study presents several examples and case studies that demonstrate the applic
 
 \begin{enumerate}
 	\item \textbf{May 11, 2011 event}:
-	The Wavetrack algorithm was used to track both an erupting filament and the coronal bright front it drives. The relationship between the driver and wave was studied using the segmented features from AIA 193\AA observations.
+	The Wavetrack algorithm was used to track both an erupting filament and the coronal bright front it drives. The relationship between the driver and wave was studied using the segmented features from AIA 193 $\AA$ observations.
 	
 	\item \textbf{September 29, 2013 event}: Wavetrack was applied to a large-scale filament in a slow eruption. The segmented filament feature was overlaid on the solar corona, and the on-disk feature was consistently tracked during the eruption.
 	
@@ -471,18 +440,18 @@ The study presents several examples and case studies that demonstrate the applic
 
 Here, I will just focus on the first event since it was accompanied with a coronal bright front.
 
-The Wavetrack methodology was applied to analyze three previously investigated eruptive events observed by the AIA telescope \citep{kozarev_2015, kozarev_2017}. In the first event on May 11, 2011, an erupting filament induced a relatively bright Coronal Bright Front (CBF) on the northwest region of the solar disk near the limb. The second event, occurring on June 07, 2011, originated close to the southwest limb and featured a large and luminous CBF. On December 12, 2013, the third event, also originating near the southwest limb, was examined.
+The Wavetrack methodology was applied to analyze three previously investigated eruptive events observed by the AIA telescope \citep{kozarev_2015, kozarev_2017}. In the first event on May 11, 2011, an erupting filament induced a relatively bright CBF on the northwest region of the solar disk near the limb. The second event, occurring on June 07, 2011, originated close to the southwest limb and featured a large and luminous CBF. On December 12, 2013, the third event, also originating near the southwest limb, was examined.
 
-Figure 4 illustrates the successfully extracted Wavetrack CBF objects for the three events, observed at four time points, each separated by 3 minutes. Wavetrack object masks, when applied to base difference images, were visualized using a blue-green color map overlaid on the original AIA 193\AA observations in grayscale to emphasize the CBFs. Across all three events, Wavetrack adeptly delineated the extent of the CBF in consecutive time steps, demonstrating its ability to track the evolution of CBFs both on the solar disk and off the limb. This capability was maintained despite the distinct pixel distributions and intensities in these two regions. The application of Wavetrack facilitated the detailed study of the time-dependent shapes and changing intensity distributions of CBFs, separate from the broader corona. Moreover, Wavetrack effectively selected CBF objects under different coronal activity states. For instance, despite increased coronal activity on December 12, 2013, Wavetrack successfully segmented the CBF. Importantly, the segmentation of the CBF in the last event highlighted Wavetrack's capability to track multiple separate parts of the same feature.
+Figure 4 illustrates the successfully extracted Wavetrack CBF objects for the three events, observed at four time points, each separated by 3 minutes. Wavetrack object masks, when applied to base difference images, were visualized using a blue-green color map overlaid on the original AIA 193 $\AA$ observations in grayscale to emphasize the CBFs. Across all three events, Wavetrack adeptly delineated the extent of the CBF in consecutive time steps, demonstrating its ability to track the evolution of CBFs both on the solar disk and off the limb. This capability was maintained despite the distinct pixel distributions and intensities in these two regions. The application of Wavetrack facilitated the detailed study of the time-dependent shapes and changing intensity distributions of CBFs, separate from the broader corona. Moreover, Wavetrack effectively selected CBF objects under different coronal activity states. For instance, despite increased coronal activity on December 12, 2013, Wavetrack successfully segmented the CBF. Importantly, the segmentation of the CBF in the last event highlighted Wavetrack's capability to track multiple separate parts of the same feature.
 
-\begin{figure}
+\begin{figure}[!htp]
 	\centering
 	\includegraphics[width=0.9\hsize]{chapter2/figs/fig_1105011_wave_filament_fourpanel_plot.png}
 	\caption{Wavetrack images showing progression of a CBF and filament on May 11, 2011. Three snapshots captured \almost2 minutes apart track the CBF and filament over time. Credit goes to \citet{stepanyuk_2022}.}
 	\label{fig_wavetrack_cbf_filament}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htp]
 	\centering
 	\includegraphics[width=0.7\hsize]{chapter2/figs/wavetrack_figure_110511.png}
 	\caption{Wavetrack images of a May 11, 2011 eruption, with CBF mask applied. Four image pairs shown, separated by 2 minutes, to track CBF over time. Credit goes to \citet{stepanyuk_2022}.}
@@ -491,35 +460,33 @@ Figure 4 illustrates the successfully extracted Wavetrack CBF objects for the th
 
 The Wavetrack code was further applied to isolate and study the kinematics of CBFs and filaments in detail. The Fourier Local Correlation Tracking (FLCT) method, extensively utilized for estimating horizontal flows in photospheric magnetograms, was employed for this purpose. Initially proposed as a cross-correlation technique for precise motion measurement, FLCT calculates a 2D flow field that best resembles the scalar field between two consecutive 2D maps.
 
-Figure 7 displays four pairs of consecutive AIA images from the May 11, 2011 event, used as input for the FLCT algorithm. Each pair, separated by 24 seconds, is strategically chosen to observe the CBF progression over 6 minutes. The corresponding FLCT results, presented in Figure 8, show the instantaneous plane-of-sky direction of motion and speed of each CBF region. Notably, the results reveal the uneven expansion of the CBF from the central source. In this event, the thinnest part of the CBF, strongly driven by the erupting filament, exhibited the fastest motion compared to other regions on the disk and off the limb. This nuanced information, not discernible from intensity observations alone, underscores the value of our combined Wavetrack and FLCT approach in elucidating the dynamic behavior of coronal features.
+Figure~\ref{fig_wavetrack_cbf_center} displays four pairs of consecutive AIA images from the May 11, 2011 event, used as input for the FLCT algorithm. Each pair, separated by 24 seconds, is strategically chosen to observe the CBF progression over 6 minutes. The corresponding FLCT results, presented in Figure~\ref{fig_flct_110511}, show the instantaneous plane-of-sky direction of motion and speed of each CBF region. Notably, the results reveal the uneven expansion of the CBF from the central source. In this event, the thinnest part of the CBF, strongly driven by the erupting filament, exhibited the fastest motion compared to other regions on the disk and off the limb. This nuanced information, not discernible from intensity observations alone, underscores the value of our combined Wavetrack and FLCT approach in elucidating the dynamic behavior of coronal features.
 
-\begin{figure}
+\begin{figure}[!htp]
 	\centering
 	\includegraphics[width=0.7\hsize]{chapter2/figs/flct_wave_filament_doubleplot_figure_110511.png}
 	\caption{FLCT model output for four image pairs from Fig. 3. Left: the plane-of-sky velocity vectors. Right: plane-of-sky speed. Credit goes to \citet{stepanyuk_2022}.}
 	\label{fig_flct_110511}
 \end{figure}
 
-\subsection{Conclusions}
-In this study, led by \citet{stepanyuk_2022}, we introduce Wavetrack, an innovative approach designed for the automated identification and monitoring of dynamic coronal phenomena. Employing wavelet decomposition, feature enhancement, filtering, and ultimate object recomposition, Wavetrack generates time-dependent masks for feature pixels. These masks can be applied to integral or base-difference images, yielding comprehensive feature maps. Notably, Wavetrack excels in tracing pixels associated with faint, large-scale features, such as coronal bright fronts/EUV waves in AIA observations, and has demonstrated efficacy in tracking eruptive filaments.
-Operable for both on-disk and off-limb features, Wavetrack adeptly follows features that evolve into distinct components over time. Implemented as a versatile, object-oriented framework in Python, Wavetrack is freely accessible for download and utilization.
+In Figure~\ref{fig_wavetrack_center_of_mass}, the kinematics of the centers of mass (CM) and geometric centers (GC) of the Coronal Bright Front (CBF) were thoroughly analyzed. The research provided detailed metrics over time, including X-axis and Y-axis positions measured from the projected solar center in solar radii, radial distances in \rsun, and radial speeds of the GC and CM points in kilometers per second. The angle between the position vectors of GC and CM, denoted as $\theta(GC-CM)$, was also calculated in degrees. The results illustrated a clear split between the radial positions of GC and CM, with a noticeable shift to the south of the CM after 02:26 UT. This shift was supported by the evolution of the angle $\theta(GC-CM)$, indicating a gradual increase in the wave's thickness in the southwest of the front. Despite these positional changes, the speeds of the GC and CM points varied only slightly, ranging from 0 to 100 \kms. Additionally, the kinematics of the center of mass and geometric centers for the May 11, 2011 event are depicted, showcasing the X-, Y-, and R-positions, distance magnitudes, and angle variations between the two points over time. These findings offer valuable insights into the dynamic behavior and evolution of the CBF during the specified solar event.
 
-The application of Wavetrack to four distinct events, with emphasis on three – the CBFs occurring on May 11 and June 07, 2011, and December 12, 2013 – reveals its proficiency in tracking complete CBF pixel maps. These model results, when integrated with the FLCT method for calculating plane-of-sky speeds, unveil the dynamic evolution of driven and non-driven regions within CBFs, as well as their correlation with eruptive filament drivers. Our findings indicate that drivers induce a compression effect, causing CBF thinning and increased speed, aligning with theoretical models. However, the brightness of CBFs in the driven regions, as observed in AIA data, does not necessarily exhibit a significant increase.
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=0.7\hsize]{chapter2/figs/event_110511_01_centers_of_mass.png}
+	\caption{Analysis of the center of mass and geometric centers' motion during the May 11, 2011 event. The different rows present the X-, Y-, and R- positions for both GC and CM, the distance between GC and CM in kilometers, and the angle between these two points over time. Credit goes to \citet{stepanyuk_2022}.}
+	\label{fig_wavetrack_center_of_mass}
+\end{figure}
 
-Furthermore, Wavetrack facilitates the tracking of temporal changes in feature regions by computing the time-dependent vector between the pixel geometric center and the center of mass, determined by weighing the observed pixel intensities. This proves particularly valuable for large-scale features like CBFs, providing a straightforward metric in the form of a one-dimensional time series for characterizing feature evolution.
-
-While the method demonstrates widespread applicability to various solar dynamic features and observational data, it currently relies on human input for the segmentation of specific feature types, particularly dim ones. Manual setting of object criteria, including threshold intervals and recomposition weight coefficients, is necessary. In instances of base difference imaging, precise selection of the base image is crucial to prevent contamination of input data with spurious features. Additionally, parameter fine-tuning through trial and error may be required for specific events. These limitations are acknowledged, and future work will address them to enhance the model's versatility.
-
-The methodology holds promise for extensive application across diverse solar dynamic features and observational datasets. Subsequent research endeavors will extend its use to in-depth studies of filament evolution and coronagraph data. The objective is to refine our comprehension of how large-scale eruptive fronts manifest variations across distinct observational contexts, spanning the low and middle corona.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Geomagnetic Storms: CME Speed De-Projection vs. In Situ Analysis}
 This study, led by \citet{miteva_2023}, examines the relationship between the intensity of geomagnetic storms (GS) and parameters of solar and interplanetary phenomena. We utilize the recently developed PyThea framework to reconstruct the 3D geometry of geo-effective CMEs and compare on-sky and de-projected values, focusing on the reliability of the de-projection capabilities. Spheroid, ellipsoid, and graduated cylindrical shell models are used. We collected parameters of the GS-associated phenomena. Considerable variation in 3D de-projections of CME speeds was obtained depending on the reconstruction model chosen and subjective observations. Fast CME speeds combined with frontal magnetic structure orientation when reaching Earth's magnetosphere proved the best indicator of GS strength. More accurate estimations of geometry, direction, and de-projected speeds are critical for operational GS forecasting in space weather prediction schemes.
 
 \subsection{Overview}
-Solar eruptive events like coronal mass ejections (CMEs) and solar flares (SFs) can generate disturbances that propagate through interplanetary space and impact Earth's magnetosphere, leading to space weather effects \citep{fletcher_2011, webb_2012, klein_2017, temmer_2021}. The electromagnetic radiation from SFs arrives at Earth first, followed by energetic particles. The plasma clouds of CMEs take longer, from tens of hours up to a few days, to impact Earth's environment \citep{malandraki_2018, gopalswamy_sun_sw_2022}. The temporary disruption of Earth's magnetosphere and atmosphere due to these solar events are known as geomagnetic storms (GSs) \citep{gonzalez_1994, saiz_2013, lakhina_2016}.
+Solar eruptive events like CMEs and solar flares (SFs) can generate disturbances that propagate through interplanetary space and impact Earth's magnetosphere, leading to space weather effects \citep{fletcher_2011, webb_2012, klein_2017, temmer_2021}. The electromagnetic radiation from SFs arrives at Earth first, followed by energetic particles. The plasma clouds of CMEs take longer, from tens of hours up to a few days, to impact Earth's environment \citep{malandraki_2018, gopalswamy_sun_sw_2022}. The temporary disruption of Earth's magnetosphere and atmosphere due to these solar events are known as geomagnetic storms (GSs) \citep{gonzalez_1994, saiz_2013, lakhina_2016}.
 
-The coupling between solar wind plasma and Earth's magnetosphere occurs through magnetic reconnection, enabled when the interplanetary (IP) magnetic field turns southward (negative Bz component) and impacts Earth at high speed, as during CMEs \citep{dungey_1961, akasofu_1981, echer_2022}. This leads to increased particle injection into the magnetosphere and atmosphere, causing bright auroral displays. Drifting electrons and protons also drive the westward ring current responsible for decreases in the horizontal magnetic field measured by the disturbance storm time (Dst) index \citep{gonzalez_1994, saiz_2013, lakhina_2016}.
+The coupling between solar wind plasma and Earth's magnetosphere occurs through magnetic reconnection, enabled when the interplanetary (IP) magnetic field turns southward (negative $B_z$ component) and impacts Earth at high speed, as during CMEs \citep{dungey_1961, akasofu_1981, echer_2022}. This leads to increased particle injection into the magnetosphere and atmosphere, causing bright auroral displays. Drifting electrons and protons also drive the westward ring current responsible for decreases in the horizontal magnetic field measured by the disturbance storm time (Dst) index \citep{gonzalez_1994, saiz_2013, lakhina_2016}.
 
 Fast CMEs propagating through IP space (ICMEs) cause the most intense GSs, with sudden Dst decreases, compared to gradual storms from corotating interaction regions (CIRs) \citep{tsurutani_1997, zhang_2007, wu_2016, borovsky_2006}. ICME shock waves and magnetic ejecta produce cascading effects in near-Earth space that can disrupt technology \citep{pulkkinen_2007}.
 
@@ -529,22 +496,22 @@ Accurately predicting when an incoming disturbance will impact Earth requires de
 
 Further developing reconstruction techniques to correct for projection effects can improve CME propagation understanding and impact forecasting \citep{thernisien_2009, mierla_2010, wood_2010, thernisien_2011}. Several CME propagation models exist \citep{odstrcil_2004, xie_2004, vrvsnak_2013, pomoell_2018}. A study found 2D CME speeds underestimate 3D speeds by \almost20\% while 2D widths overestimate 3D widths \citep{jang_2016}. Another study showed observer bias in 3D modeling using graduated cylindrical shells, even for experienced observers \citep{verbeke_2022}. CME structure interpretation differs, and line-of-sight integration leads to non-unique solutions.
 
-This study focuses on deducing CME directionality and near-Sun speeds using new tools like PyThea \citep{kouloumvakos_2022}. We analyze geo-effective cycle 24 CMEs using multiple reconstruction techniques by two team members. Comparisons are made between derived parameters and storm intensity (Dst). CME speed correlations with ICME and IP shock speeds evaluate 3D de-projection value for arrival forecasting. Other IP parameters are also examined, including shock speed, plasma jumps, and magnetic fields near L1. We examine the correlation between the intensity of geomagnetic storms and parameters of solar and interplanetary phenomena. More specifically, we focus on the speed and geometry of CMEs, as well as interplanetary shocks, as these factors are known to play a significant role in the occurrence and intensity of geomagnetic storms. The objective of the study is to analyze the correlations between the intensity of geomagnetic storms (GS) and parameters of solar and interplanetary (IP) phenomena. The study also aims to perform 3D geometry reconstructions of geo-effective coronal mass ejections (CMEs) using the PyThea framework and compare the de-projected CME speeds with in situ data.
+This study focuses on deducing CME directionality and near-Sun speeds using new tools like PyThea \citep{kouloumvakos_2022}. We analyze geo-effective cycle 24 CMEs using multiple reconstruction techniques by two team members. Comparisons are made between derived parameters and Dst. CME speed correlations with ICME and IP shock speeds evaluate 3D de-projection value for arrival forecasting. Other IP parameters are also examined, including shock speed, plasma jumps, and magnetic fields near L1. We examine the correlation between the intensity of geomagnetic storms and parameters of solar and interplanetary phenomena. More specifically, we focus on the speed and geometry of CMEs, as well as interplanetary shocks, as these factors are known to play a significant role in the occurrence and intensity of geomagnetic storms. The objective of the study is to analyze the correlations between the intensity of GS and parameters of solar and IP phenomena. The study also aims to perform 3D geometry reconstructions of geo-effective CMEs using the PyThea framework and compare the de-projected CME speeds with in situ data.
 
 %\subsection{Data Analysis and Methods}
-The event selection process for this investigation commenced with the identification of significant Geomagnetic Storms (GSs) within Solar Cycle 24 (SC24). These storms were characterized by a Dst index exceeding 100 nT, as per the classification outlined in \citet{gonzalez_1994}. A total of 25 GSs were identified, with Dst indices ranging from 101 to 234 nT. Previous studies have explored the solar and Interplanetary (IP) origins of these GSs in SC24 \citep{gopalswamy_gs_2022, qiu_2022, besliu_2022, abe_2023}. However, the comprehensive review of all pertinent literature falls beyond the purview of this study. It is noteworthy that SC24 exhibited a reduced number of GSs in comparison to preceding solar cycles \citep{selvakumaran_2016}.
+The event selection process for this investigation commenced with the identification of significant GSs within Solar Cycle 24 (SC24). These storms were characterized by a Dst index exceeding 100 nT, as per the classification outlined in \citet{gonzalez_1994}. A total of 25 GSs were identified, with Dst indices ranging from 101 to 234 nT. Previous studies have explored the solar and IP origins of these GSs in SC24 \citep{gopalswamy_gs_2022, qiu_2022, besliu_2022, abe_2023}. However, the comprehensive review of all pertinent literature falls beyond the purview of this study. It is noteworthy that SC24 exhibited a reduced number of GSs in comparison to preceding solar cycles \citep{selvakumaran_2016}.
 
 In our investigation, distinct from prior analyses, our objective was to establish a causal connection between the identified GSs and potential IP and/or solar phenomena. This approach mirrors methodologies employed by other researchers \citep{zhang_2007, gonzalez_2007, gopalswamy_2008, echer_2013, manu_2022}. To delineate the solar and IP drivers, we employed an association procedure widely acknowledged in the field of Space Weather (SW) research. The methodology involves searching for the IP and solar origins of a GS storm within a specific timeframe preceding the reported GS occurrence at Earth. The sequential steps of our approach are delineated below:
 
 \begin{enumerate}
 	\item \textbf{Temporal Association with IP and ICME Events}:
-	We initiated the analysis with a temporal association between the GS and recorded IP shocks in the vicinity of Earth. This association was established within a 1-day period preceding the reported minimum Dst of the GS. A parallel procedure was employed for the association with Interplanetary Coronal Mass Ejections (ICMEs) reported in proximity to Earth. Additionally, animations from the \textit{helioweather} archive\footnote{\helioweatherurl} (accessed on 5 April 2023) were utilized to validate potential ICME and IP shock candidates.
+	We initiated the analysis with a temporal association between the GS and recorded IP shocks in the vicinity of Earth. This association was established within a 1-day period preceding the reported minimum Dst of the GS. A parallel procedure was employed for the association with ICMEs reported in proximity to Earth. Additionally, animations from the \textit{helioweather} archive\footnote{\helioweatherurl} (accessed on 5 April 2023) were utilized to validate potential ICME and IP shock candidates.
 	
-	\item \textbf{Association with Coronal Mass Ejections (CMEs)}:
-	Subsequently, we extended the association to include Coronal Mass Ejections (CMEs) within a 3-to-5 day window prior to the IP (or GS) timing. Information from available solar and IP event catalogs, as well as animations from the \textit{helioweather} archive\footnotemark[\value{footnote}] (accessed on 5 April 2023), was employed for this purpose.
+	\item \textbf{Association with CMEs}:
+	Subsequently, we extended the association to include CMEs within a 3-to-5 day window prior to the IP (or GS) timing. Information from available solar and IP event catalogs, as well as animations from the \textit{helioweather} archive\footnotemark[\value{footnote}] (accessed on 5 April 2023), was employed for this purpose.
 	
-	\item \textbf{Completion of the Association with Solar Flares (SFs)}:
-	The final step involved associating the GS with the identification of a Solar Flare (SF) linked to the previously associated CME. This association was based on timing (within one hour between the SF onset and CME timing) and location constraints (the SF location had to align with the solar quadrant reported in the measurement position angle, MPA, of the CME).
+	\item \textbf{Completion of the Association with SFs}:
+	The final step involved associating the GS with the identification of a SF linked to the previously associated CME. This association was based on timing (within one hour between the SF onset and CME timing) and location constraints (the SF location had to align with the solar quadrant reported in the measurement position angle, MPA, of the CME).
 \end{enumerate}
 
 All utilized databases, catalogs, and publicly available lists pertinent to the analysis are summarized as follows:
@@ -558,17 +525,15 @@ All utilized databases, catalogs, and publicly available lists pertinent to the 
 	\item IP shock database (Wind)\footnote{\url{http://www.ipshocks.fi/database}},\footnote{\url{https://lweb.cfa.harvard.edu/shocks/wi_data/}} (accessed on 5 April 2023).
 \end{itemize}
 
-%\subsubsection{GSs and IP Phenomena} % should i put the table or remove this text?
-\subsection{GSs and IP Phenomena} % should i put the table or remove this text?
-The findings pertaining to Geomagnetic Storms (GSs) and their associated Interplanetary Coronal Mass Ejections (ICMEs) and Interplanetary (IP) shocks are succinctly presented in Table 1 in \citet{miteva_2023}. The initial column designates the event number (\#), a consistent reference utilized throughout this paper. Columns (2) and (3) detail the GS date, hour (mm-dd/hr), and the corresponding Dst index (in nT). Subsequently, columns (4)–(6) expound upon the ICME parameters \citep{nieves_2018}, drawing from the Wind database accessible at this website\footnote{\url{https://wind.nasa.gov/ICME_catalog/ICME_catalog_viewer.php}}. The sheath duration (D, in hours), representing the temporal span between the initiation times of the ICME and the magnetic structure, is computed from the available timings within the plots offered by the aforementioned Wind database, and is presented in column (7). The ICME in situ measured speed is extracted from both the Wind and ACE databases, with the exception of E11 where no ICME is reported.
+\subsection{GSs and IP Phenomena}
+The findings pertaining to GSs and their associated ICMEs and IP shocks are succinctly presented in Table 1 in \citet{miteva_2023}. The initial column designates the event number (\#), a consistent reference utilized throughout this paper. Columns (2) and (3) detail the GS date, hour (mm-dd/hr), and the corresponding Dst index (in nT). Subsequently, columns (4)–(6) expound upon the ICME parameters \citep{nieves_2018}, drawing from the Wind database accessible at this website\footnote{\url{https://wind.nasa.gov/ICME_catalog/ICME_catalog_viewer.php}}. The sheath duration (D, in hours), representing the temporal span between the initiation times of the ICME and the magnetic structure, is computed from the available timings within the plots offered by the aforementioned Wind database, and is presented in column (7). The ICME in situ measured speed is extracted from both the Wind and ACE databases, with the exception of E11 where no ICME is reported.
 
-Column (8) integrates the minimum Bz component throughout the Interplanetary Coronal Mass Ejection (ICME) duration, as ascertained from the data available at this website\footnote{\url{https://cdaweb.gsfc.nasa.gov/}}, thereby enhancing the comprehensiveness of the dataset. In Column (9), we conduct a qualitative assessment of the ICME arrival orientation. Specifically, we visually inspect the intersection point between the ICME structure and Earth using ecliptic plane animations accessible at this website\footnote{\helioweatherurl}. The orientations are denoted as either \textit{hit} (nose) or \textit{f} (flank) arrivals. Instances of discrepancies among diverse data sources, such as the presence of solar wind streams or Corotating Interaction Regions (CIRs) visible in animations contradicting ICME arrivals identified through in situ data, are marked as 'u' (uncertain) in the same column. This classification signifies situations where a distinct ICME structure propagating through the IP space could not be conclusively observed. Noteworthy is the occurrence of swift solar wind flows and/or CIRs recorded near Earth during ICME and/or shock wave events. For instance, in the cases of E11 and E18, a CIR was identified as their IP origin by \citet{qiu_2022}; however, in contrast to these findings, our methodology does not differentiate between ICME and sheath origins.
+Column (8) integrates the minimum Bz component throughout the ICME duration, as ascertained from the data available at this website\footnote{\url{https://cdaweb.gsfc.nasa.gov/}}, thereby enhancing the comprehensiveness of the dataset. In Column (9), we conduct a qualitative assessment of the ICME arrival orientation. Specifically, we visually inspect the intersection point between the ICME structure and Earth using ecliptic plane animations accessible at this website\footnote{\helioweatherurl}. The orientations are denoted as either \textit{hit} (nose) or \textit{f} (flank) arrivals. Instances of discrepancies among diverse data sources, such as the presence of solar wind streams or CIRs visible in animations contradicting ICME arrivals identified through in situ data, are marked as 'u' (uncertain) in the same column. This classification signifies situations where a distinct ICME structure propagating through the IP space could not be conclusively observed. Noteworthy is the occurrence of swift solar wind flows and/or CIRs recorded near Earth during ICME and/or shock wave events. For instance, in the cases of E11 and E18, a CIR was identified as their IP origin by \citet{qiu_2022}; however, in contrast to these findings, our methodology does not differentiate between ICME and sheath origins.
 
 The final columns, (10)–(13), enumerate the properties of the IP shock, incorporating timing, speed, magnetic field, density, temperature jump at the shock interface, and the Mach number (Mms). These details are sourced from Wind satellite data, available at this website\footnote{\url{http://www.ipshocks.fi/database}}, with the exception of E24, where the median shock speed is derived from this website\footnote{\url{https://lweb.cfa.harvard.edu/shocks/wi_data/}}. Notably, for E17, E18, and E25, no IP shocks are reported in either database.
 
-%\subsubsection{GSs and Solar Phenomena} % should i put the table or remove this text?
-\subsection{GSs and Solar Phenomena} % should i put the table or remove this text?
-In the context of five cases denoted as E05, E11, E17, E18, and E22, our attempts to identify Solar Flares (SFs) or Coronal Mass Ejections (CMEs) were unsuccessful. Furthermore, in an additional six cases, the specification of SFs proved unattainable. The ensuing presentation provides details on the parameters of the remaining cases, specifically focusing on the solar origins associated with Geomagnetic Storms (GSs), as outlined in Table~\ref{tab_GS_sol}.
+\subsection{GSs and Solar Phenomena}
+In the context of five cases denoted as E05, E11, E17, E18, and E22, our attempts to identify SFs or Coronal Mass Ejections (CMEs) were unsuccessful. Furthermore, in an additional six cases, the specification of SFs proved unattainable. The ensuing presentation provides details on the parameters of the remaining cases, specifically focusing on the solar origins associated with GSs, as outlined in Table~\ref{tab_GS_sol}.
 
 Columns (2)–(5) of Table~\ref{tab_GS_sol} elucidate the properties of the GS-associated SFs, while columns (6) to (9) furnish the parameters of the GS-associated CMEs. The identified SFs exhibit a range of magnitudes from C1.2 to X5.4 and are predominantly positioned proximate to the solar disk center, with the exception of E02 and E03. The CMEs associated with these events possess on-sky projected speeds, denoted as 2D, spanning from 126 to 2684 \kms, extracted from the SOHO-LASCO CDAW catalog. Notably, the majority of the GS-associated CMEs (15 out of 20) exhibit a halo configuration, while three others are in close proximity to halo.
 
@@ -576,11 +541,10 @@ It is imperative to note that events with uncertain CME origins have been exclud
 
 For the remaining 12 cases, successful 3D CME speed reconstructions were achieved from each model. The mean values, based on 2 or 4 available fits (as detailed in the subsequent subsection), are presented in the concluding columns (10)–(12) of Table~\ref{tab_GS_sol}. This comprehensive overview provides a foundation for the subsequent analytical discussions, offering a detailed characterization of the solar events associated with the studied GSs.
 
-%\subsubsection{PyThea 3D De-Projection Tool}
 \subsection{PyThea 3D De-Projection Tool}
 The de-projection methodology employed in this investigation relies on the innovative PyThea online tool designed for the 3D reconstruction of CMEs and shock waves \citep{kouloumvakos_2022}. All three available models within PyThea, namely spheroid, ellipsoid, and the graduated cylindrical shell (GCS), are applied in this study. The fitting procedure is conducted independently by two observers within our team. Figure~\ref{fig_3D_fit} presents an illustrative example of the fits for event E03.
 
-\begin{figure}[htp]
+\begin{figure}[!htp]
 	\centering
 	\begin{subfigure}[b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{chapter2/figs/Fig_s1.png}
@@ -615,23 +579,71 @@ This study places emphasis on deriving de-projected CME speeds based on fits con
 
 \subsection{Results}
 \subsubsection{Projection Effects}
-In our investigation a fitting analysis of approximately 10 CMEs was undertaken by two designated observers within our research team, I was one of the observers. This analysis involved the utilization of all three models available in the PyThea framework, each selected based on the evaluators' individual considerations.
+In our investigation, a fitting analysis of approximately 10 CMEs was undertaken by two designated observers within our research team, I was one of the observers. This analysis involved the utilization of all three models available in the PyThea framework, each selected based on the evaluators' individual considerations.
 
 To elucidate, the fitting process was executed at two distinct time steps to derive a velocity parameter based on the height–time estimation. For each specific event, both observers iteratively conducted the 3D de-projection procedure twice, resulting in averaged values for the CME speeds. These values are meticulously presented in Table~\ref{tab_fits}, rounded to the nearest tenth. The disparity between these two fitting instances is denoted as an error (or uncertainty), spanning from 10 \kms to twice the estimated speed. Additionally, Figure 2 illustrates the correlation between 3D speeds and the corresponding estimated errors for each observer. Notably, considerable variability is observed in both plots, particularly concerning the GCS model; nonetheless, a discernible positive trend emerges between the estimated error magnitude and the CME speed.
 
 The inherent subjectivity and diverse levels of experience among observers play a crucial role in the visual fitting procedure. Noteworthy distinctions in evaluated speeds are evident not only between individual observers using the same model (e.g., spheroid fit for E06) but also between a single observer applying different models (e.g., spheroid and GCS for E13). Furthermore, variations in operating system software further contributed to differences in results. Notably, events E04, E08, and E21 were not completed by both observers due to either PyThea computing resource failures or the substantial uncertainty associated with the visual assessment of CME structures.
 
 Our findings underscore the well-established subjectivity inherent in procedures relying on personal judgment for fit quality, where the alignment of structures with the model is subjective. A more comprehensive explanation of this human-in-the-loop bias is detailed in \citep{verbeke_2022}. The specific values of CME speeds are meticulously outlined in Table~\ref{tab_fits}, while their averaged values, categorized by model, as determined by both observers, are presented in Table~\ref{tab_GS_sol}. These averaged values will serve as the basis for subsequent correlation studies.
-	
-\begin{table}[htp]
+
+\begin{landscape}
+	\footnotesize
+	\begin{longtable}{ccccccccccccc}
+		\caption{Characteristics of GSs, ICMEs, and IP Shock Waves. Magnetic Obstacle (MO) categorized as Flux-rope (Fr), Small rotation flux-rope (F-), Large rotation flux-rope (F+), Complex (Cx), or Ejecta (E). The timestamp includes month (mm), day (dd), and time (UT). Dst is measured in nT, speed in \kms, $\Delta$ (duration from ICME start to MO start) in hours, $B_z$ in nT, hit locations denoted as n (nose), f (flank), */** (fast/slow speed), u (streamer/no clear ICME). {\bf Additional abbreviations:} $X$: magnetic field/plasma density/temperature; d/u: downstream/upstream side of the shock interface; $M_{\rm ms}$: Mach number. Credit goes to \citet{miteva_2023}.}
+		\label{tab_GS_IP}\\
+			\toprule
+			\textbf{\#}	& \multicolumn{2}{c}{\textbf{GS}} & \multicolumn{6}{c}{\textbf{ICME parameters}} & \multicolumn{4}{c}{\textbf{IP shock parameters}} \\
+			& mm-dd/hr & Dst & mm-dd/time & type & speed Wind/ACE & $\Delta$ & $B_z$ & hit & mm-dd/time & speed & $X_d/X_u$ & $M_{\rm ms}$ \\
+			(1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10) & (11) & (12) & (13)\\
+			\midrule
+			\textbf{2011}\\
+			E01	& 08-06/04 & $-$115 & {\it 08-06/22:00} & - & -/540 & - & $-$22.8 & f* & 08-05/18:41 & 789 & 2.52/1.37/2.21 & 3.7 \\
+			E02	& 09-26/24 & $-$118 & {\it 09-26/22:00} & - & -/580 & - & $-$33.6 &  f & 09-26/11:44 & 544 & 2.35/2.56/2.64 & 2.4 \\
+			E03	& 10-25/02 & $-$147 & 10-24/17:41 & Cx & 483/460 & 6.7 & $-$24.6 &  f & 10-24/17:40	& 542 & 2.16/2.94/4.88 & 2.5 \\
+			\textbf{2012} \\
+			E04 & 03-09/09 & $-$145 & 03-08/10:32 & Cx & 576/550 & 9.4 & $-$19.2 &  n & 03-08/10:31 & 1245 & 1.42/1.31/1.25 & 8.4 \\
+			E05 & 04-24/05 & $-$120 & 04-23/02:15 & F- & 373/370 &  14.6 & $-$15.9 &  f & 04-23/02:15 & 416 & 2.45/2.44/1.87 & 1.7 \\
+			E06 & 07-15/17 & $-$139 & 07-14/17:39 & Fr & 491/490 & 12.6 & $-$20.0 &  n & 07-14/17:39 & 617 & 2.08/2.53/4.29 & 3.3	\\
+			E07	& 10-01/05 & $-$122 & 09-30/10:14 & Cx & 354/370 & 2.0 & $-$21.2 &  f & 09-30/22:19	& 452 & 2.55/2.00/2.05 & 2.5 \\ 
+			E08	& 10-09/09 & $-$109 & 10-08/04:12 & Fr & 398/390 & 11.6 & $-$16.0 &  u & 10-08/04:12 & 445 & 1.96/2.01/1.63 & 1.7 \\
+			E09	& 11-14/08 & $-$108 & 11-12/22:12 & F+ & 381/380 &  10.2  & $-$20.6 &  f & 11-12/22:12 & 386 & 2.18/2.20/1.08 & 1.6	\\
+			\textbf{2013}\\
+			E10 & 03-17/21 & $-$132 & 03-17/05:21 & Fr & 529/520 & 8.8 & $-$19.3 &  n & 03-17/05:22 & 719 & 2.45/2.68/10.5 & 4.1 \\ 
+			E11 & 06-01/09 & $-$124 & - & - & -/- & - & $-$8.8 &   u & 05-31/15:12 & 410 & 2.90/2.16/2.83 & 2.1 \\
+			E12	& 06-29/07 & $-$102 & 06-27/13:51 & Fr & 391/- & 12.5 & $-$12.4 &  u & 06-30/10:42 & 349 & 1.55/1.61/1.27 & 1.4 \\
+			\textbf{2014} \\
+			E13	& 02-19/09 & $-$119 & 02-18/05:59 & Fr & 421/520 & 9.1 & $-$15.4 &  u & 02-19/03:10 & 597 & 1.82/1.69/1.51 & 1.9 \\
+			\textbf{2015}\\
+			E14	& 01-07/12 & $-$107 & 01-07/05:38 & F+ & 451/450 & 0.8 & $-$20.4 &  u & 01-07/05:39 & 494 & 1.70/1.73/1.89 & 1.2 \\
+			E15 & 03-17/23 & $-$234 & {\it 03-17/13:00} & - & -/560 & - & $-$26.0 &  f* & 03-17/04:00 & 562 & 2.52/2.43/3.50 & 2.6	\\ 
+			E16 & 06-23/05 & $-$198 & 06-22/18:07 & Cx & 598/610 &  8.3 & $-$39.0 &  n & 06-22/18:08 & 767 & 3.34/3.63/6.70 & 4.1	\\
+			E17	& 09-09/13 & $-$105 & 09-07/13:05 & F+ & 468/460 & 10.4 & $-$12.6 &  u & - & - & - & -\\ 
+			E18	& 10-07/23 & $-$130 & 10-06/21:35 & Fr & 425/- & 0 &  $-$9.2 & u & - & - & - & - \\ 
+			E19	& 12-20/23 & $-$166 & 12-19/15:35 & Fr & 398/400 & 22.1 & $-$19.0 &  n & 12-19/15:38 & 563 & 2.49/2.25/4.87 & 3.0 \\ 
+			\textbf{2016} \\
+			E20	& 01-01/01 & $-$116 & {\it 12-31/17:00} & - & -/440 & - & $-$16.3 &   n** & 12-31/00:18 & 404 & 2.20/2.27/3.99 & 2.6 \\
+			E21	& 01-20/17 & $-$101 & 01-19/03:31 & Fr & 362/370 & 7.9 & $-$11.6 &  f & 01-18/21:21 & 350 & 1.73/1.91/1.60 & 1.7 \\ 
+			E22	& 10-13/18 & $-$110 & 10-12/21:37 & F+ & 384/390 &  8.8 &  $-$6.9 &  u & 10-12/21:16	& 431 & 1.82/2.47/4.43 & 1.9 \\
+			\textbf{2017}\\
+			E23	& 05-28/08 & $-$125 & 05-27/13:45 & F+ & 318/360 & 9.1 & $-$20.2 &  f & 05-27/14:42 & 378 & 2.68/2.94/2.95 & 1.9	\\ 
+			E24	& 09-08/02 & $-$122 & 09-07/16:17 & E & 683/460 &  8.0  & $-$32.2 &  f* & 09-07/{\it 22:28} & {\it 718} & - & - \\
+			\textbf{2018}\\
+			E25	& 08-26/07 & $-$175 & 08-25/01:02 & F+ & 406/410 & 11.0 & $-$6.8 &  n & - & - & - & - \\ 
+			\bottomrule
+		\end{longtable}
+\end{landscape}
+
+\begin{table}[!htp]
 	\tiny
-	\caption{Parameters of the solar origin, SFs, and CMEs for GSs from Table 1 in \citet{miteva_2023}. All times are in UT, speeds in \kms, AW and MPA in degrees. Credit goes to \citet{miteva_2023}.}
+	\caption{Parameters of the solar origin, SFs, and CMEs for GSs from Table~\ref{tab_GS_IP}. All times are in UT, speeds in \kms, AW and MPA in degrees. Credit goes to \citet{miteva_2023}.}
 	\label{tab_GS_sol}
 	\begin{adjustbox}{width=\textwidth}
 		\begin{tabular}{@{}cccccccccccc@{}}
 			\toprule
-			\textbf{\#} & \textbf{Event} & \textbf{SF} & \textbf{Onset} & \textbf{Location} & \textbf{Time} & \textbf{Speed} & \textbf{AW} & \textbf{MPA} & \textbf{Spheroid} & \textbf{Elliptical} & \textbf{GCS} \\
-			(1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10) & (11) & (12) \\
+			\textbf{\#}	& \multicolumn{4}{c}{\textbf{SF parameters}} & \multicolumn{4}{c}{\textbf{2D CME parameters}} & \multicolumn{3}{c}{\textbf{3D CME speed}} \\
+			& mm-dd & class & onset & location & time & speed & AW & MPA & spheroid & elliptical & GCS  \\
+			(1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10) & (11) & (12)  \\
 			\midrule
 			\textbf{2011}\\
 			E01 & 08-04 & M9.3 & 03:41 & N19W36 & 04:12 & 1315 & 360 & 298 & 1990 & 1920 & 1780 \\
@@ -671,7 +683,7 @@ Our findings underscore the well-established subjectivity inherent in procedures
 		\end{adjustbox}
 	\end{table}
 
-\begin{table}[htp]
+\begin{table}[!htp]
 	\caption{CME Speeds (\kms) for Observers 1 and 2. Credit goes to \citet{miteva_2023}.}
 	\label{tab_fits}
 	\centering
@@ -697,39 +709,237 @@ Our findings underscore the well-established subjectivity inherent in procedures
 \end{table}
 
 \subsubsection{Correlation between GSs, Coronal and Near-Sun Parameters}
-In Figure 3, we present a scatter plot depicting the relationship between the modulus of the GS Dst index and the CME speed, as derived from the data in Table~\ref{tab_GS_sol}. To enhance clarity, the averaged results of the three model fits are collectively illustrated and labeled as '3D-mean' in Table 4. These values are juxtaposed with the 2D SOHO-LASCO CME speed. Horizontal lines, representing the error estimates from the 3D de-projections, are also included for completeness, despite the substantial overlap. For demonstrative purposes, we highlight the largest error value among the two observers, as outlined in Table 3.
+In Figure~\ref{fig_speeds_dst}, we present a scatter plot depicting the relationship between the modulus of the GS Dst index and the CME speed, as derived from the data in Table~\ref{tab_GS_sol}. To enhance clarity, the averaged results of the three model fits are collectively illustrated and labeled as \textit{3D-mean} in Table~\ref{tab_cc_CME}. These values are juxtaposed with the 2D SOHO-LASCO CME speed. Horizontal lines, representing the error estimates from the 3D de-projections, are also included for completeness, despite the substantial overlap. For demonstrative purposes, we highlight the largest error value among the two observers, as outlined in Table~\ref{tab_fits}.
 
-The analysis conducted reveals no discernible trend between the Dst index and the CME speed, irrespective of whether the 3D de-projection or the 2D CME speeds are considered. It is important to note that, due to data constraints, 3D speed de-projections were not feasible for the most robust GSs. This limitation results in a skewed distribution of the 3D speeds, impacting the overall findings. Despite the modest sample size (comprising between 10 and 20 event pairs), the quality of the fit is assessed through Pearson correlations. The correlation coefficients, reflecting the relationship between all CME speed estimations and the GS Dst index, are systematically documented in Table 4. These coefficients range from negligible (e.g., 0.04 for the 2D LASCO speeds) to moderate (with the highest value reaching 0.55, observed with the GCS model). Importantly, no significant correlations are identified between the Dst index and other coronal parameters, such as SF class, location, and CME AW, as inclusively presented in the same table for comprehensive evaluation.
+The analysis conducted reveals no discernible trend between the Dst index and the CME speed, irrespective of whether the 3D de-projection or the 2D CME speeds are considered. It is important to note that, due to data constraints, 3D speed de-projections were not feasible for the most robust GSs. This limitation results in a skewed distribution of the 3D speeds, impacting the overall findings. Despite the modest sample size (comprising between 10 and 20 event pairs), the quality of the fit is assessed through Pearson correlations. The correlation coefficients, reflecting the relationship between all CME speed estimations and the GS Dst index, are systematically documented in Table~\ref{tab_cc_CME}. These coefficients range from negligible (e.g., 0.04 for the 2D LASCO speeds) to moderate (with the highest value reaching 0.55, observed with the GCS model). Importantly, no significant correlations are identified between the Dst index and other coronal parameters, such as SF class, location, and CME AW, as inclusively presented in the same table for comprehensive evaluation.
+
+\begin{table}[!htp] 
+	\small
+	\centering
+	\caption{Table displaying Pearson correlation coefficients among the GS Dst index, CME speed, and various solar parameters, with the respective sample sizes indicated in parentheses. Credit goes to \citet{miteva_2023}.}
+	\label{tab_cc_CME}
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{CME source}	& \textbf{Dst$-$speed} & \textbf{solar parameter} & \textbf{Dst$-$solar parameter}	\\
+		\midrule
+		LASCO              & 0.04 (20) & SF class      & $-$0.04 (14) \\
+		{\bf 3D - mean}    & {\bf 0.49 (12)} & SF latitude   & $-$0.16 (14)   \\
+		3D spheroid - mean & 0.34 (12) & SF longitude  & 0.13 (14)	\\
+		3D spheroid - obs1 & 0.14 (11) & CME AW        & 0.03 (20) \\
+		3D spheroid - obs2 & 0.15 (10) & \\ 
+		3D ellipsoid - mean & 0.53 (12) & &	\\
+		3D ellipsoid - obs1 & 0.28 (11) & & \\
+		3D ellipsoid - obs2 & 0.40 (10) & &\\
+		3D GCS - mean & 0.55 (12) & &\\
+		3D GCS - obs1 & 0.49 (11) & &\\
+		3D GCS - obs2 & 0.27 (10) & & \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=0.7\hsize]{chapter2/figs/Fig_GS_speed_er_mean.pdf}
+	\caption{Scatter plot illustrating the relationship between the Dst index and CME speed, incorporating data from the SOHO/LASCO instrument (represented by filled circles) and 3D de-projections (depicted by empty circles). Credit goes to \citet{miteva_2023}.}
+	\label{fig_speeds_dst}
+\end{figure}
+
+\begin{figure}[!htp]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{chapter2/figs/Fig_GS_ICMEspeed.pdf}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{chapter2/figs/Fig_GS_IPspeed.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{chapter2/figs/Fig_GS_Ms.pdf}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{chapter2/figs/Fig_GS_sheath.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{chapter2/figs/Fig_GS_Bz.pdf}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{chapter2/figs/Fig_GS_Bjump.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+	\includegraphics[width=\textwidth]{chapter2/figs/Fig_GS_Tjump.pdf}
+\end{subfigure}
+	\hfill
+\begin{subfigure}[b]{0.45\textwidth}
+	\includegraphics[width=\textwidth]{chapter2/figs/Fig_GS_Njump.pdf}
+\end{subfigure}
+	\caption{Comprehensive scatter plots illustrating the relationships between Dst index and various solar wind parameters, including Wind/ACE ICME speed, IP shock speed, Mach number, duration of sheath region, Bz, magnetic field jump, temperature jump, and density jump. Credit goes to \citet{miteva_2023}.}
+	\label{fig_dst_scatterplots}
+\end{figure}
+
+\begin{table}[!htp] 
+	\small
+	\centering
+	\caption{Tabular representation of Pearson correlation coefficients between the GS Dst index and various parameters of IP phenomena. The data is derived from Wind satellite measurements, unless otherwise stated, with the corresponding sample sizes indicated in parentheses. Credit goes to \citet{miteva_2023}.}
+	\label{tab_cc_IP}
+	\begin{tabular}{lc}
+		\toprule
+		\textbf{IP parameter} & \textbf{Dst$-$IP parameter} \\
+		\midrule
+		ICME speed  & 0.37 (24)	\\
+		ICME speed (ACE)   & 0.44 (22)	\\
+		IP shock speed  & 0.35 (22)	\\
+		Mach number  & 0.36 (21)	\\ 
+		sheath duration & 0.22 (20) \\
+		$|B_z|$      & 0.37 (25) \\
+		$B_d/B_u$  & 0.48 (21)	\\
+		$T_d/T_u$  & 0.40 (21)	\\
+		$N_d/N_u$  & 0.46 (21)	\\
+		{\bf $B$}  & {\bf $-$0.14 (20)}  \\
+		{\bf $V$}       & {\bf 0.19 (20)}	\\
+		{\bf $\beta_u$} & {\bf $-$0.14 (21)}	\\
+		\bottomrule
+	\end{tabular}
+\end{table}
 
 \subsubsection{Correlation between GSs and IP Parameters}
-Here, we explore the correlations between Geospace Storms (GSs) and various parameters associated with pre-selected Interplanetary (IP) phenomena. To visually represent these relationships, scatter plots are employed for specific parameter pairs, as follows: the Dst index versus Interplanetary Coronal Mass Ejection (ICME) speed and IP shock speed in Figure 4; Dst versus Mach number and sheath duration in Figure 5; Dst versus jBzj and Bd/Bu in Figure 6; and Dst versus Td/Tu and Nd/Nu in Figure 7. The corresponding Pearson correlation values elucidating these trends are documented in Table 5.
+Here, we explore the correlations between GSs and various parameters associated with pre-selected IP phenomena. To visually represent these relationships, scatter plots are employed for specific parameter pairs. These parameters include Dst index versus ICME speed and IP shock speed, Dst versus Mach number and sheath duration, Dst versus $|Bz|$ and $B_d/B_u$, Dst versus $T_d/T_u$ and $N_d/N_u$. Figure~\ref{fig_dst_scatterplots} shows these relationships, and the corresponding Pearson correlation values elucidating these trends are documented in Table~\ref{tab_cc_IP}.
 
-For the limited sample of GS storms utilized in our analyses, we observe a moderately positive trend between the Dst index and the plasma compression parameters at the shock interface (downstream to upstream ratio). Interestingly, these correlations are comparable to, or slightly larger than, those obtained when considering ICME speeds from the Wind and ACE spacecraft. Notably, the trend with jBzj is weaker (0.37 for our dataset), in contrast to the robust trend reported in previous studies. Furthermore, the correlations involving Dst and IP shock speed, Mach number, or sheath duration are relatively smaller.
+For the limited sample of GS storms utilized in our analyses, we observe a moderately positive trend between the Dst index and the plasma compression parameters at the shock interface (downstream to upstream ratio). Interestingly, these correlations are comparable to, or slightly larger than, those obtained when considering ICME speeds from the Wind and ACE spacecraft. Notably, the trend with $|Bz|$ is weaker (0.37 for our dataset), in contrast to the robust trend reported in previous studies. Furthermore, the correlations involving Dst and IP shock speed, Mach number, or sheath duration are relatively smaller.
 
-Recent reports have highlighted strong correlations with different components of the electric and magnetic fields [12], although this aspect exceeds the scope of our current analyses. It is essential to exercise caution in interpreting these results, given the absence of uncertainty estimates for the correlation coefficients.
-
-The ICME and IP shock catalogs employed in our study offer additional parameters, including averaged magnetic field B, plasma speed V inside the magnetic structure, and upstream plasma beta bu (not presented in Table 1). However, no robust correlations emerge between these parameters and the Dst index, with all correlation coefficients found being smaller than 0.2.
+Recent reports have highlighted strong correlations with different components of the electric and magnetic fields \citep{echer_2022}, although this aspect exceeds the scope of our current analyses. It is essential to exercise caution in interpreting these results, given the absence of uncertainty estimates for the correlation coefficients.
+The ICME and IP shock catalogs employed in our study offer additional parameters, including averaged magnetic field B, plasma speed V inside the magnetic structure, and upstream plasma beta bu (not presented in Table~\ref{tab_GS_IP}). However, no robust correlations emerge between these parameters and the Dst index, with all correlation coefficients found being smaller than 0.2.
 
 \subsubsection{On the GS Strength Forecasting Based on Solar and IP Parameters}
-We examine the collective impact of magnetic obstacle type and orientation upon Earth arrival (columns 5 and 9 from Table 1), along with the 3D reconstructed Coronal Mass Ejection (CME) speeds (columns 10–12 from Table 2), on the intensity of Geospace Storms (GSs), approximated in this study using the Dst index.
+We examine the collective impact of magnetic obstacle type and orientation upon Earth arrival (columns 5 and 9 from Table~\ref{tab_GS_IP}), along with the 3D reconstructed CME speeds (columns 10–12 from Table~\ref{tab_GS_sol}), on the intensity of GSs, approximated in this study using the Dst index.
 
-The most potent GSs in our compilation, arranged in descending order based on their Dst values (nT), exhibit distinctive magnetic structure parameters, including complexity, orientation of arrival, and speed at Earth (refer to Tables 1 and 2):
+The most potent GSs in our compilation, arranged in descending order based on their Dst values (nT), exhibit distinctive magnetic structure parameters, including complexity, orientation of arrival, and speed at Earth (refer to Tables~\ref{tab_GS_IP} and~\ref{tab_GS_sol}):
 
-- E15 (-234): Magnetic obstacle type undefined, fast speed (f), no 3D speed estimation
-- E16 (-198): Complex (Cx) structure, nose-like (n) orientation, no 3D speed estimation
-- E25 (-175): Flux-rope (Fr) structure, nose-like (n) orientation, no 3D speed estimation
-- E19 (-166): Flux-rope (Fr) structure, nose-like (n) orientation, no 3D speed estimation
-- E03 (-147): Complex (Cx) structure, fast speed (f), reduced 3D speed compared to 2D
-- E04 (-145): Complex (Cx) structure, nose-like (n) orientation, similar 3D speed compared to 2D
-- E06 (-139): Flux-rope (Fr) structure, nose-like (n) orientation, larger 3D speed compared to 2D
-- E10 (-132): Flux-rope (Fr) structure, nose-like (n) orientation, similar 3D speed compared to 2D
+\begin{itemize}
+	\item E15 (-234): Magnetic obstacle type undefined, fast speed (f), no 3D speed estimation;
+	\item E16 (-198): Complex (Cx) structure, nose-like (n) orientation, no 3D speed estimation;
+	\item E25 (-175): Flux-rope (Fr) structure, nose-like (n) orientation, no 3D speed estimation;
+	\item E19 (-166): Flux-rope (Fr) structure, nose-like (n) orientation, no 3D speed estimation;
+	\item E03 (-147): Complex (Cx) structure, fast speed (f), reduced 3D speed compared to 2D;
+	\item E04 (-145): Complex (Cx) structure, nose-like (n) orientation, similar 3D speed compared to 2D;
+	\item E06 (-139): Flux-rope (Fr) structure, nose-like (n) orientation, larger 3D speed compared to 2D;
+	\item E10 (-132): Flux-rope (Fr) structure, nose-like (n) orientation, similar 3D speed compared to 2D.
+\end{itemize}
 
-Upon scrutiny of these cases, it becomes apparent that the most intense GSs are linked to magnetic obstacles characterized by a nose-like (n) orientation upon arrival, coupled with either a complex (Cx) or flux-rope (Fr) structure. Exceptions include instances of fast speed flank hits or flank hits in combination with a complex (Cx) structure. It has been established that sheath duration does not serve as a decisive ordering parameter. Other GSs of lesser intensity (refer to Table 1) predominantly result from flank hits or exhibit uncertain configurations, possibly influenced by fast solar wind streams or Corotating Interaction Regions (CIRs). Notably, E20 is an exception, resulting from a nose hit; however, the Interplanetary (IP) structure associated with it has a notably low speed, as observed in the examined animations.
+Upon scrutiny of these cases, it becomes apparent that the most intense GSs are linked to magnetic obstacles characterized by a nose-like (n) orientation upon arrival, coupled with either a complex (Cx) or flux-rope (Fr) structure. Exceptions include instances of fast speed flank hits or flank hits in combination with a complex (Cx) structure. It has been established that sheath duration does not serve as a decisive ordering parameter. Other GSs of lesser intensity (refer to Table~\ref{tab_GS_IP}) predominantly result from flank hits or exhibit uncertain configurations, possibly influenced by fast solar wind streams or CIRs. Notably, E20 is an exception, resulting from a nose hit; however, the IP structure associated with it has a notably low speed, as observed in the examined animations.
 
 It is crucial to acknowledge that the IP shock speed provided by the Wind and ACE satellites represents a single point sample within the entire structure. In contrast, animations offer a global speed distribution. Therefore, our interpretation considers information from both sources — speed reconstructions and in situ measurements — to enhance the robustness of our analysis.
 
-\subsection{Discussion}
-In this study, we conduct post-event analyses of all geo-effective storms observed during solar cycle 24 with the aim of identifying distinct and reliable predictors for GS intensity. The overarching objective is to derive dependable solar or near-Sun parameters from remote sensing image data that can be effectively utilized for early warnings regarding potential GS onsets and their strength. Our approach involves the integration of solar, near-Sun, and interplanetary parameters, primarily sourced from catalogs but also subject to our analysis using space-related databases. Notably, we incorporate the results obtained from a novel tool for CME speed de-projection, termed PyThea, which is employed for the first time alongside well-established parameters in space weather and geophysics research.
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Discussion}
+%%% Nedal et al. (2023) paper
+The eruption on May 11, 2011, presented a complex set of solar phenomena, including a fast partial-halo CME, a weak solar flare, an eruptive filament, and a type II radio burst. The interplay of these events and their effects on the solar and interplanetary environment provides valuable insights into the dynamic nature of solar processes.
+
+\subsection{CME Kinematics and Coronal Shockwave Characteristics}
+The CME associated with the eruption exhibited notable characteristics, such as a linear speed of 745 \kms, an acceleration of 3.3 m s$^{-2}$, and an angular width of 225\degree. The shockwave generated by the CME displayed intricate kinematics, as analyzed in both the low and middle/outer corona.
+
+In the low corona, the shockwave was asymmetric, with differences observed in the time-dependent evolution between the left and right flanks. The aspect ratio evolution from elongation to symmetry and subsequent flattening revealed the dynamic nature of the shockwave geometry. The lateral directions exhibited differences in thickness, speed, and acceleration, indicating a complex interaction with the coronal environment. The right flank demonstrated over six times the sheath thickness observed on the left, emphasizing lateral expansion over radial propagation.
+
+Further analysis segmented the shock surface into the Cap zone, Zone 1, and Zone 2. The shock speed at the flanks exceeded that at the Cap zone, suggesting variations in shock characteristics along its surface. The shock density jump remained consistent across the segments, indicating a relatively homogeneous magnetic structure.
+
+In the middle/outer corona, the height-time profile of the CME leading edge provided by SOHO/LASCO measurements showcased the dynamic evolution of the EUV wave. The Gallagher model fitting captured the early stages of the event near the Sun, emphasizing the importance of a comprehensive approach in combining AIA and LASCO measurements.
+
+The wave's rapid acceleration and subsequent speed decrease within a distance of 5\rsun from the Sun highlighted the intricate interplay between the CME and the surrounding medium. The fluctuations in acceleration and speed over time further underscored the complexity of the coronal shockwave dynamics.
+
+\subsection{Statistical Study and Correlations}
+The statistical analysis of coronal wave events in the AIA and LASCO FOVs revealed intriguing patterns. Waves in the radial direction exhibited higher speeds, acceleration, lower mean intensities, and lower thickness compared to the lateral direction, indicating early elongation near the Sun.
+
+Cumulative dynamic spectra illustrated the decline in shock speed and intensity with increasing distance, aligning with expectations of decreasing momentum and plasma densities in the solar environment.
+
+The investigation into plasma parameters and shock characteristics over 26 events demonstrated correlations between various pairs of parameters. Noteworthy correlations included those between the shock-field $\theta_{BN}$ angle and magnetic field amplitude, as well as between shock density jump and magnetic field magnitude.
+
+The scatter plot analysis highlighted strong correlations among parameter pairs, suggesting hidden connections between shock and plasma parameters. Power fits were identified as suitable models, laying the groundwork for developing parameterizations in the subsequent phases of the project.
+
+%%% Stepanyuk et al. (2022) paper
+\subsection{Unveiling Dynamic Coronal Features with Wavetrack}
+In this study, \citet{stepanyuk_2022} applied the Wavetrack methodology to investigate eruptive solar events, focusing particularly on the May 11, 2011 event associated with a prominent CBF. The analysis encompassed two additional events, occurring on June 7, 2011, and December 12, 2013, showcasing Wavetrack's versatility in tracking various solar features both on the solar disk and off the limb.
+
+The Wavetrack algorithm efficiently delineated the evolving CBFs across consecutive time steps for the May 11, 2011 event, as depicted in Figure~\ref{fig_wavetrack_cbf_filament}. Notably, the algorithm's adaptability was evident despite variations in pixel distributions and intensities on the solar disk and near the limb. This capability allowed for a detailed exploration of the time-dependent shapes and changing intensity distributions of CBFs, distinct from the broader corona.
+
+The segmentation of the CBF during the December 12, 2013 event underscored Wavetrack's efficacy in tracking multiple separate parts of the same feature, even under heightened coronal activity. This highlights the potential of Wavetrack as a valuable tool for studying complex solar phenomena with varying activity states.
+
+To further probe the kinematics of CBFs and filaments, we employed the FLCT method. The results, presented in Figure~\ref{fig_flct_110511}, revealed the instantaneous plane-of-sky direction and speed of different regions within the CBF during the May 11, 2011 event. Intriguingly, the uneven expansion of the CBF from the central source was evident, with the thinnest part driven by the erupting filament exhibiting the fastest motion. This nuanced information, not discernible from intensity observations alone, underscores the complementary nature of the Wavetrack and FLCT approach in elucidating the dynamic behavior of coronal features.
+
+\subsection{Coronal Bright Front (CBF) Kinematics}
+The highest speeds observed during the event were consistently in the direction away from the Sun, above the erupting filament driver. The continued compression by the driving filament caused a thinner wavefront region and higher speeds there. The study calculated the plane-of-sky velocities of the erupting filament driver, showing that the region of highest speeds in the rising filament was directly below the region of highest speeds in the CBF.
+
+\subsection{Geometric Centers (GC) and Centers of Mass (CM)}
+The Wavetrack method provided the geometric centers and centers of mass for the May 11, 2011 event. The GC is defined as the geometric center of all Wavetrack mask pixels at a given time, while the CM includes a weighting based on the AIA 193 $\AA$ channel's base difference intensity. The study presented the kinematics of the center of mass and geometric centers for this event, showing the X-axis and Y-axis positions, radial distances, radial speeds, and the angle between the two position vectors over time.
+
+These results provide insights into the dynamics and characteristics of the May 11, 2011 solar eruption event, highlighting the movement and speeds of key features such as the CBF and the erupting filament driver.
+
+%%% Miteva et al. (2023) paper
+\subsection{Projection Effects: The Challenge of Subjectivity in CME Speed Determination}
+Our investigation into CMEs reveals a nuanced landscape marked by the inherent subjectivity in the fitting and de-projection procedures. The analysis of approximately 10 CMEs, employing three models from the PyThea framework, underscores the considerable variability in results. Two designated observers within our research team, accounting for individual considerations, conducted fitting analyses. The iterative 3D de-projection procedure led to averaged CME speeds, documented in Table~\ref{tab_fits}. The associated errors, ranging from 10\kms to twice the estimated speed, highlight the challenges and uncertainties in this process.
+
+The observed disparities among observers, even using the same model, and the impact of different models and operating systems on results emphasize the subjective nature of visual fitting procedures. Technical limitations, such as PyThea computing resource failures and uncertainty in visual assessments, further contributed to incomplete data for specific events. Our findings echo the well-established subjectivity inherent in procedures relying on personal judgment for fit quality, aligning with the broader discussion presented by \citet{verbeke_2022}.
+
+The averaged CME speed values, categorized by model and determined by both observers, serve as the foundation for subsequent correlation studies. Despite the challenges posed by subjectivity, these averaged values provide a basis for further analysis.
+
+\subsection{Correlation between GSs, Coronal, and Near-Sun Parameters}
+Our exploration of the correlation between GSs and various parameters, such as the GS Dst index, CME speed, and 2D LASCO CME speed, unfolds in Figure~\ref{fig_speeds_dst} and Table~\ref{tab_cc_CME}. Despite the modest sample size, the analysis reveals no discernible trend between the Dst index and CME speed, irrespective of the 3D de-projection or the 2D CME speeds. The absence of 3D speed de-projections for the most robust GSs introduces a limitation in the distribution of 3D speeds, impacting overall findings.
+
+Pearson correlation coefficients, systematically documented in Table~\ref{tab_cc_CME}, range from negligible to moderate, indicating diverse relationships between CME speed estimations and the GS Dst index. Notably, no significant correlations are identified between the Dst index and other coronal parameters, such as SF class, location, and CME AW. The complexities in these relationships highlight the need for cautious interpretation, given the data constraints and uncertainties associated with the correlation coefficients.
+
+\subsection{Correlation between GSs and IP Parameters}
+The examination of correlations between GSs and IP parameters unfolds in scatter plots in Figure~\ref{fig_dst_scatterplots}, accompanied by Pearson correlation values in Table 5. Noteworthy trends include a moderately positive correlation between the Dst index and plasma compression parameters at the shock interface, comparable to correlations with ICME speeds. However, caution is advised in interpreting results due to the absence of uncertainty estimates for correlation coefficients.
+
+Additional parameters from ICME and IP shock catalogs, including averaged magnetic field $B$, plasma speed $V$, and upstream plasma $\beta_u$, exhibit no robust correlations with the Dst index. The complexities in these relationships underline the multifaceted nature of GS-IP parameter associations.
+
+\subsection{GS Strength Forecasting: Unraveling Magnetic Structures}
+Our analysis of the collective impact of magnetic obstacle type, orientation, and 3D reconstructed CME speeds on Geospace Storms (GSs) sheds light on intriguing patterns. The most potent GSs, based on descending Dst values, exhibit distinctive magnetic structure parameters, such as complexity, orientation of arrival, and speed at Earth. Notably, nose-like (n) orientation, coupled with a complex (Cx) or flux-rope (Fr) structure, characterizes the most intense GSs. Exceptions include instances of fast-speed flank hits or flank hits in combination with a complex (Cx) structure.
+
+The interplay of magnetic obstacle characteristics, orientation, and 3D CME speeds provides valuable insights into the factors influencing GS intensity. However, it is crucial to acknowledge the limitations of single-point IP shock speed measurements and the need for a comprehensive interpretation that considers both speed reconstructions and in situ measurements.
+
+\section{Conclusions}
+%%% Nedal et al. (2023) paper
+I have conducted a comprehensive study focusing on the characterization of 26 historical CME-driven CBFs in the low solar corona. These events were accompanied by type III radio bursts, and SEP events near Earth and were observed by the AIA instrument onboard the SDO spacecraft in the EUV 193~\AA band. To achieve this, we utilized the SPREAdFAST framework, which encompasses physics-based and data-driven models to estimate the coronal magnetic field, dynamics of coronal shock waves, energetic particle acceleration, and SEP propagation in the heliosphere.
+
+Our analysis relied on sequences of base-difference images obtained from the AIA instrument. These images served as the primary input data for our investigation. We employed these data to generate annulas plots and J-maps to estimate the kinematic measurements in both the radial and lateral directions for the EUV waves.
+
+In order to obtain a thorough understanding of the CBFs, we computed various time-dependent and distance-dependent kinematic parameters. These included shock speed, acceleration, intensity, and thickness of the front, peak, and back edges of the waves, as well as the major and minor axes and the rate of change of the waves' aspect ratios. To augment our analysis based on AIA observations, we incorporated LASCO measurements up to 17\rsun. This additional data is important in improving the characterization of the SEP spectra near the Sun.
+
+The analysis of kinematic measurements played a pivotal role in our study as they enabled us to generate time-dependent 3D geometric models of wavefronts. In addition, these measurements provided valuable insights for deriving time-dependent plasma diagnostics by incorporating the outcomes of the MHD and DEM models.
+
+To accurately represent the shocks, we employed shock kinematic measurements to fit a geometric spheroid surface model for each measured time step. This approach allowed us to capture the intricate characteristics of the shocks with precision.
+
+In order to gain a deeper understanding of the phenomenon, we explored the parametrized relationships between the modeled plasma parameters. Through this analysis, we aimed to identify potential connections and interdependencies, shedding light on the complex dynamics at play.
+
+Overall, our findings in this study and in \citet{kozarev_2022} as well as \citet{stepanyuk_2022} contribute to a nuanced understanding of shock kinematics and shock plasma parameters.
+
+Moving forward, our future investigations will focus on examining SEP acceleration near the Sun, as well as investigating the transport of coronal and interplanetary particles using the insights gained from our models. Additionally, we aim to refine the methods of shock and coronal parameters characterization, which will contribute to enhancing the accuracy and reliability of the results.
+
+%%% Stepanyuk et al. (2022) paper
+In the study led by \citet{stepanyuk_2022}, we introduce Wavetrack, an innovative approach designed for the automated identification and monitoring of dynamic coronal phenomena. Employing wavelet decomposition, feature enhancement, filtering, and ultimate object recomposition, Wavetrack generates time-dependent masks for feature pixels. These masks can be applied to integral or base-difference images, yielding comprehensive feature maps. Notably, Wavetrack excels in tracing pixels associated with faint, large-scale features, such as coronal bright fronts/EUV waves in AIA observations, and has demonstrated efficacy in tracking eruptive filaments.
+Operable for both on-disk and off-limb features, Wavetrack adeptly follows features that evolve into distinct components over time. Implemented as a versatile, object-oriented framework in Python, Wavetrack is freely accessible for download and utilization.
+
+The application of Wavetrack to four distinct events, with emphasis on three – the CBFs occurring on May 11 and June 07, 2011, and December 12, 2013 – reveals its proficiency in tracking complete CBF pixel maps. These model results, when integrated with the FLCT method for calculating plane-of-sky speeds, unveil the dynamic evolution of driven and non-driven regions within CBFs, as well as their correlation with eruptive filament drivers. Our findings indicate that drivers induce a compression effect, causing CBF thinning and increased speed, aligning with theoretical models. However, the brightness of CBFs in the driven regions, as observed in AIA data, does not necessarily exhibit a significant increase.
+
+Furthermore, Wavetrack facilitates the tracking of temporal changes in feature regions by computing the time-dependent vector between the pixel geometric center and the center of mass, determined by weighing the observed pixel intensities. This proves particularly valuable for large-scale features like CBFs, providing a straightforward metric in the form of a one-dimensional time series for characterizing feature evolution.
+
+While the method demonstrates widespread applicability to various solar dynamic features and observational data, it currently relies on human input for the segmentation of specific feature types, particularly dim ones. Manual setting of object criteria, including threshold intervals and recomposition weight coefficients, is necessary. In instances of base difference imaging, precise selection of the base image is crucial to prevent contamination of input data with spurious features. Additionally, parameter fine-tuning through trial and error may be required for specific events. These limitations are acknowledged, and future work will address them to enhance the model's versatility.
+
+The methodology holds promise for extensive application across diverse solar dynamic features and observational datasets. Subsequent research endeavors will extend its use to in-depth studies of filament evolution and coronagraph data. The objective is to refine our comprehension of how large-scale eruptive fronts manifest variations across distinct observational contexts, spanning the low and middle corona.
+
+%%% Miteva et al. (2023) paper
+In the study led by \citet{miteva_2023}, we conduct post-event analyses of all geo-effective storms observed during solar cycle 24 with the aim of identifying distinct and reliable predictors for GS intensity. The overarching objective is to derive dependable solar or near-Sun parameters from remote sensing image data that can be effectively utilized for early warnings regarding potential GS onsets and their strength. Our approach involves the integration of solar, near-Sun, and interplanetary parameters, primarily sourced from catalogs but also subject to our analysis using space-related databases. Notably, we incorporate the results obtained from a novel tool for CME speed de-projection, termed PyThea, which is employed for the first time alongside well-established parameters in space weather and geophysics research.
 
 Among the solar and near-Sun phenomena considered, certain selected parameters exhibit a positive correlation with the Dst index. Notably, the correlation coefficient, when comparing the observed projected CME speed, experiences an improvement from 0.04 (as obtained from LASCO) to a range of 0.34–0.55, achieved through various geometrical models provided by the PyThea software package, combining LASCO and STEREO data. However, our exploration of different CME geometry reconstruction techniques reveals a susceptibility to large speed errors, particularly in the case of fast CMEs. This aligns with findings from prior studies focusing on CME arrival time and speed forecasts for Earth, suggesting a potential overestimation of CME launch speed for fast events, likely attributable to the increased complexity in discerning coronal structures due to the rapid expansion of the magnetic structure associated with the CME.
 
@@ -739,65 +949,12 @@ Other IP parameters, such as ICME and IP shock speeds, along with their derivati
 
 Among the multitude of considered solar, near-Sun, and IP parameters, only the combination of speed and orientation (nose-like) of the magnetic obstacle appears to exert a positive influence on GS strength, as indicated by qualitative results obtained from animations accessible at \textit{helioweather}. Consistent with earlier studies, de-projected CME speeds emerge as imperative for enhancing modeling accuracy when predicting CME propagation through the IP space. However, a notable observation is the apparent lack of direct impact of 3D de-projected CME speed on GS intensity. Consequently, an accurate estimation of the ICME speed distribution over the entire ICME structure upon arrival at Earth assumes significant importance. We emphasize the imperative need for permanent stereoscopic observations, exemplified by the upcoming ESA Vigil mission situated at Lagrange point L5. Future research endeavors should aim for a more comprehensive disentanglement of distinct CME structures, thereby enabling more reliable 3D reconstructions of CME geometries for a nuanced estimation of 3D speed and directivity.
 
+%%% Total
+% Mohamed
+The identified correlations and statistical patterns provide a foundation for the ongoing project. Further work will focus on refining parameterizations and establishing synoptic MHD parameters corresponding to measured shock parameters. The ultimate goal is to enhance the representation of shock parameters in the \textit{S3M} synoptic model, contributing to a more comprehensive understanding of solar dynamics and space weather forecasting.
 
+% Oleg
+Our findings emphasize the significance of integrating advanced tracking methodologies like Wavetrack with kinematic analyses such as FLCT. This synergistic approach enables a more comprehensive understanding of the intricate dynamics involved in eruptive solar events, shedding light on the complexities of CBF evolution and its correlation with eruptive features. As we continue to refine and expand such methodologies, our ability to decipher the underlying mechanisms governing solar phenomena will undoubtedly advance, contributing to the broader field of Heliophysics.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+% Rosi
+In conclusion, our findings underscore the complexity and subjectivity inherent in studying CMEs and their impact on Geospace Storms. The integration of observational data, model outputs, and correlation analyses offers a comprehensive perspective, laying the groundwork for further investigations into the dynamic interplay between solar and interplanetary phenomena in shaping space weather events.

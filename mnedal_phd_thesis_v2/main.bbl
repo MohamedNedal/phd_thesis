@@ -1,4 +1,4 @@
-\begin{thebibliography}{300}
+\begin{thebibliography}{302}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{ish(2017)}]{ishikawa_2017}
@@ -134,8 +134,8 @@ Cane, H.~V., Erickson, W., \& Prestage, N. 2002, Journal of Geophysical
 \bibitem[{Che(2018)}]{che_2018}
 Che, H. 2018, Journal of Physics: Conference Series, 1100, 012005
 
-\bibitem[{Chen {et~al.}(2013)Chen, Ip, \& Innes}]{chen_2013b}
-Chen, N., Ip, W.-H., \& Innes, D. 2013, The Astrophysical Journal, 769, 96
+\bibitem[{{Chen} {et~al.}(2013){Chen}, {Ip}, \& {Innes}}]{chen_2013b}
+{Chen}, N., {Ip}, W.-H., \& {Innes}, D. 2013, \apj, 769, 96
 
 \bibitem[{Chen(2016)}]{chen_2016}
 Chen, P. 2016, Low-Frequency Waves in Space Plasmas, 379
@@ -267,6 +267,11 @@ Fredkin, D.~R., Rice, J.~A., Colquhoun, D., \& Gibb, A. 1995, Philosophical
 
 \bibitem[{Gabriel {et~al.}(1990)Gabriel, Evans, \& Feynman}]{gabriel_1990}
 Gabriel, S., Evans, R., \& Feynman, J. 1990, Solar physics, 128, 415
+
+\bibitem[{Gallagher {et~al.}(2003)Gallagher, Lawrence, \&
+  Dennis}]{gallagher_2003}
+Gallagher, P.~T., Lawrence, G.~R., \& Dennis, B.~R. 2003, The Astrophysical
+  Journal Letters, 588, L53
 
 \bibitem[{{Gieseler} {et~al.}(2023){Gieseler}, {Dresing}, {Palmroos}, {Freiherr
   von Forstner}, {Price}, {Vainio}, {Kouloumvakos},
@@ -760,6 +765,11 @@ Nieves-Chinchilla, T., Vourlidas, A., Raymond, J.~C., {et~al.} 2018, Solar
   {Trottet}}]{nindos_2008}
 {Nindos}, A., {Aurass}, H., {Klein}, K.~L., \& {Trottet}, G. 2008, \solphys,
   253, 3
+
+\bibitem[{Nitta {et~al.}(2015)Nitta, Mason, Wang, Cohen, \&
+  Wiedenbeck}]{nitta_2015}
+Nitta, N.~V., Mason, G.~M., Wang, L., Cohen, C. M.~S., \& Wiedenbeck, M.~E.
+  2015, The Astrophysical Journal, 806, 235
 
 \bibitem[{Nitta {et~al.}(2013)Nitta, Schrijver, Liu, {et~al.}}]{nitta_2013}
 Nitta, N.~V., Schrijver, C.~J., Liu, W., {et~al.} 2013, The Astrophysical

@@ -16,41 +16,49 @@ A level-1 auxiliary file: appendix.aux
 Reallocating 'name_of_file' (item size: 1) to 3 items.
 The style file: aa.bst
 Reallocating 'name_of_file' (item size: 1) to 5 items.
-Reallocating 'field_info' (item size: 4) to 12600 items.
+Reallocating 'field_info' (item size: 4) to 12700 items.
 Database file #1: refs.bib
-Repeated entry---line 2394 of file refs.bib
+Repeated entry---line 2432 of file refs.bib
  : @article{pulkkinen_2007
  :                        ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 2537 of file refs.bib
+ : @article{echer_2022
+ :                    ,
+I'm skipping whatever remains of this entry
 Warning--entry type for "olah_2015" isn't style-file defined
---line 3236 of file refs.bib
+--line 3274 of file refs.bib
 Reallocating 'str_pool' (item size: 1) to 130000 items.
-Repeated entry---line 4258 of file refs.bib
+Warning--I'm ignoring chen_2013b's extra "year" field
+--line 4135 of file refs.bib
+Repeated entry---line 4302 of file refs.bib
  : @article{del_2011
  :                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4268 of file refs.bib
+Repeated entry---line 4312 of file refs.bib
  : @article{kong_2018
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4279 of file refs.bib
+Repeated entry---line 4323 of file refs.bib
  : @article{altschuler_1969
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4289 of file refs.bib
+Repeated entry---line 4333 of file refs.bib
  : @article{schatten_1969
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4299 of file refs.bib
+Repeated entry---line 4343 of file refs.bib
  : @article{thompson_2006
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4342 of file refs.bib
+Repeated entry---line 4386 of file refs.bib
  : @article{mann_2018
  :                   ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "chen_2013"
 Warning--I didn't find a database entry for "ontiveros_2009"
+Warning--I didn't find a database entry for "cheung_2015"
+Warning--I didn't find a database entry for "miteva_2016"
+Warning--I didn't find a database entry for "miteva_2017"
 Warning--I didn't find a database entry for "torsti_1995"
 Warning--I didn't find a database entry for "zhang_2022"
 Warning--to sort, need author or key in ishikawa_2017
@@ -94,45 +102,45 @@ while executing---line 1684 of file aa.bst
 Warning--empty publisher in reames_2021
 Warning--empty journal in tsurutani_1985
 Warning--empty institution in wilson_1988
-You've used 300 entries,
+You've used 302 entries,
             3039 wiz_defined-function locations,
-            2229 strings with 70462 characters,
-and the built_in function-call counts, 172814 in all, are:
-= -- 13976
-> -- 16228
+            2242 strings with 70870 characters,
+and the built_in function-call counts, 173798 in all, are:
+= -- 14056
+> -- 16308
 < -- 117
-+ -- 5486
-- -- 5097
-* -- 15050
-:= -- 31917
-add.period$ -- 300
-call.type$ -- 300
-change.case$ -- 2874
-chr.to.int$ -- 293
-cite$ -- 322
-duplicate$ -- 5763
-empty$ -- 8215
-format.name$ -- 5941
-if$ -- 34059
++ -- 5512
+- -- 5121
+* -- 15138
+:= -- 32099
+add.period$ -- 302
+call.type$ -- 302
+change.case$ -- 2890
+chr.to.int$ -- 295
+cite$ -- 324
+duplicate$ -- 5801
+empty$ -- 8267
+format.name$ -- 5971
+if$ -- 34251
 int.to.chr$ -- 8
 int.to.str$ -- 1
-missing$ -- 277
-newline$ -- 904
-num.names$ -- 1202
-pop$ -- 2958
+missing$ -- 279
+newline$ -- 910
+num.names$ -- 1210
+pop$ -- 2974
 preamble$ -- 1
-purify$ -- 2871
+purify$ -- 2887
 quote$ -- 0
-skip$ -- 5021
+skip$ -- 5053
 stack$ -- 0
-substring$ -- 6516
+substring$ -- 6558
 swap$ -- 207
 text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2670
+type$ -- 2688
 warning$ -- 20
-while$ -- 1206
+while$ -- 1214
 width$ -- 0
-write$ -- 3000
-(There were 17 error messages)
+write$ -- 3020
+(There were 18 error messages)
