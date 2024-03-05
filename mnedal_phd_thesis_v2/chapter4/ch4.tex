@@ -502,12 +502,77 @@ The evaluation of the model revealed notable trends as the length of the output 
 }
 \end{table}
 
-\section{Conclusions}
+%%% Talk about the preliminary results of the hourly-averaged model.
+
+
+
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=\textwidth]{chapter4/figs/hourly_PF10/scatterplot_obs_vs_model_valset.pdf}
+	\caption{comparison val set}
+	\label{fig_1}
+\end{figure}
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=\textwidth]{chapter4/figs/hourly_PF10/scatterplot_obs_vs_model_tstset.pdf}
+	\caption{comparison test set}
+	\label{fig_2}
+\end{figure}
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{chapter4/figs/hourly_PF10/scatter_error_metrics.pdf}
+	\caption{error metrics over different output windows}
+	\label{fig_3}
+\end{figure}
+
+\begin{table}[!htp]
+	\centering
+	\caption{MSE/MAE for the validation and test sets.}
+	\label{tab:my-table}
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{lcccccc}
+			\hline
+			& 1-hr        & 2-hr        & 3-hr        & 4-hr        & 5-hr        & 6-hr        \\ \hline
+			Valid. Set & 0.078/0.238 & 0.086/0.254 & 0.091/0.263 & 0.098/0.273 & 0.102/0.280 & 0.115/0.299 \\ \hline
+			Test Set   & 0.012/0.080 & 0.012/0.079 & 0.012/0.080 & 0.011/0.079 & 0.011/0.080 & 0.011/0.079 \\ \hline
+		\end{tabular}%
+	}
+\end{table}
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=\textwidth]{chapter4/figs/hourly_PF10/temporal_heatmap_val.pdf}
+	\caption{temporal heatmap val set}
+	\label{fig_4}
+\end{figure}
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=\textwidth]{chapter4/figs/hourly_PF10/temporal_heatmap_test.pdf}
+	\caption{temporal heatmap test set}
+	\label{fig_5}
+\end{figure}
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{chapter4/figs/hourly_PF10/sample_valandtestsets_2003.pdf}
+	\caption{val and test sets samples in 2003}
+	\label{fig_6}
+\end{figure}
+
+
+
+
+
+\subsection{Conclusions}
 %\label{sec_ch4_conclusion}
 Forecasting the SEP flux is a crucial task in heliophysics since it affects satellite operations, astronaut safety, and ground-based communication systems. It is a challenging task due to its non-linear, non-stationary, and complex nature. Machine learning techniques, particularly neural networks, have shown promising results in predicting SEP flux.
 In this study, I developed and trained BiLSTM neural network models to predict the daily-averaged integral flux of SEP at 1-day, 2-day, and 3-day ahead, for the energy channels $>$10 MeV, $>$30 MeV, and $>$60 MeV.
 I used a combination of solar and interplanetary magnetic field indices from the OMNIWeb database for the past 4 solar cycles as input to the model.
-I compared the models with baseline models and evaluated them using the Huber loss and the error metrics in Appendix~\ref{ch4_appendix_eval}.
+I compared the models with baseline models and evaluated them using the Huber loss and the error metrics in Appendix~\ref{eval_appendix}.
 
 The data windowing method I used, based on the MIMO strategy, eliminates the need to feed the output forecast as input back into the model and that allows to do forecasting relatively far into the future while maintaining decent results (e.g., the MSE is ranging between 0.007 and 0.015 for 1-day forecasting in the test set, compared to an MSE of 0.236 for a persistence model. See Table~\ref{table_performance}).
 The results show that the model can make reasonably accurate predictions given the difficulty and complexity of the problem.

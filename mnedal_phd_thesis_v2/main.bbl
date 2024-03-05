@@ -1,4 +1,4 @@
-\begin{thebibliography}{302}
+\begin{thebibliography}{304}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{ish(2017)}]{ishikawa_2017}
@@ -150,6 +150,11 @@ Chen, P.~F., Wu, S.~T., Shibata, K., \& Fang, C. 2002, The Astrophysical
 {Chen}, X., {Kontar}, E.~P., {Chrysaphi}, N., {et~al.} 2023, arXiv e-prints,
   arXiv:2306.09160
 
+\bibitem[{Cheung {et~al.}(2015)Cheung, Boerner, Schrijver, Testa, Chen, Peter,
+  \& Malanushenko}]{cheung_2015}
+Cheung, M.~C., Boerner, P., Schrijver, C., {et~al.} 2015, The Astrophysical
+  Journal, 807, 143
+
 \bibitem[{Chhabra {et~al.}(2021)Chhabra, Klimchuk, \& Gary}]{chhabra_2021}
 Chhabra, S., Klimchuk, J.~A., \& Gary, D.~E. 2021, The Astrophysical Journal,
   922, 128
@@ -195,11 +200,6 @@ Dierckxsens, M., Tziotziou, K., Dalla, S., {et~al.} 2015, Solar Physics, 290,
 
 \bibitem[{Domingo {et~al.}(1995)Domingo, Fleck, \& Poland}]{domingo_1995}
 Domingo, V., Fleck, B., \& Poland, A.~I. 1995, Solar Physics, 162, 1
-
-\bibitem[{Downs {et~al.}(2021)Downs, Warmuth, Long, Bloomfield, Kwon, Veronig,
-  Vourlidas, \& Vr{\v{s}}nak}]{downs_2021}
-Downs, C., Warmuth, A., Long, D.~M., {et~al.} 2021, The Astrophysical Journal,
-  911, 118
 
 \bibitem[{Dulk {et~al.}(1985)Dulk, Steinberg, Lecacheux, Hoang, \&
   MacDowall}]{dulk_1985}
@@ -622,10 +622,6 @@ Long, D.~M., Bloomfield, D.~S., Chen, P.-F., {et~al.} 2017, Solar physics, 292,
 \bibitem[{{Long} {et~al.}(2011){Long}, {DeLuca}, \& {Gallagher}}]{long_2011}
 {Long}, D.~M., {DeLuca}, E.~E., \& {Gallagher}, P.~T. 2011, apjl, 741, L21
 
-\bibitem[{Long {et~al.}(2021)Long, Reid, Valori, \& O'Kane}]{long_2021}
-Long, D.~M., Reid, H.~A., Valori, G., \& O'Kane, J. 2021, The Astrophysical
-  Journal, 921, 61
-
 \bibitem[{Ma {et~al.}(2011)Ma, Raymond, Golub, Lin, Chen, Grigis, Testa, \&
   Long}]{ma_2011}
 Ma, S., Raymond, J.~C., Golub, L., {et~al.} 2011, The Astrophysical Journal,
@@ -712,6 +708,17 @@ Miteva, R., Klein, K.-L., Malandraki, O., \& Dorrian, G. 2013, Solar Physics,
 
 \bibitem[{Miteva {et~al.}(2023)Miteva, Nedal, Samwel, \& Temmer}]{miteva_2023}
 Miteva, R., Nedal, M., Samwel, S.~W., \& Temmer, M. 2023, Universe, 9, 179
+
+\bibitem[{Miteva {et~al.}(2016)Miteva, Samwel, Costa-Duarte, \&
+  Danov}]{miteva_2016}
+Miteva, R., Samwel, S., Costa-Duarte, M., \& Danov, D. 2016, in Proceedings of
+  the Eighth Workshop” Solar Influences on the Magnetosphere, Ionosphere and
+  Atmosphere, Vol.~30, 27--30
+
+\bibitem[{Miteva {et~al.}(2017)Miteva, Samwel, Costa-Duarte, \&
+  Malandraki}]{miteva_2017}
+Miteva, R., Samwel, S., Costa-Duarte, M., \& Malandraki, O. 2017, Sun Geosph,
+  12
 
 \bibitem[{Moore {et~al.}(2001)Moore, Sterling, Hudson, \& Lemen}]{moore_2001}
 Moore, R.~L., Sterling, A.~C., Hudson, H.~S., \& Lemen, J.~R. 2001, The
@@ -807,6 +814,9 @@ Olah, C. 2015, Neural Networks, Types, and Functional Programming, [Blog post]
   Cheng}]{olmedo_2012}
 Olmedo, O., Vourlidas, A., Zhang, J., \& Cheng, X. 2012, The Astrophysical
   Journal, 756, 143
+
+\bibitem[{Ontiveros \& Vourlidas(2009)}]{ontiveros_2009}
+Ontiveros, V. \& Vourlidas, A. 2009, The Astrophysical Journal, 693, 267
 
 \bibitem[{{Ontiveros} \& {Vourlidas}(2009)}]{ontiveross_2009}
 {Ontiveros}, V. \& {Vourlidas}, A. 2009, apj, 693, 267

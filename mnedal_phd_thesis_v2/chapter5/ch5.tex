@@ -1,32 +1,33 @@
-\chapter{Summary and Future Work}
+\chapter{Summary}
 \label{chapter5}
+In this final chapter, I present a comprehensive summary of the key findings from the dissertation's chapters, providing insights into the analysis of EUV waves, solar type III bursts, and SEP modeling and forecasting. The exploration of CBFs and the introduction of the Wavetrack tool have significantly contributed to our nuanced understanding of solar dynamics. As we look towards the future, the extension of the CBF dataset promises deeper insights into their kinematics, while the utilization of multi-wavelength observations from LOFAR, PSP, and Solar Orbiter aims to unravel the origin and evolution of energetic particles in the solar corona. Furthermore, the development of interpretable deep learning models, driven by higher resolution data, holds the key to advancing SEP forecasting capabilities. These future endeavors underscore the commitment to refining models, incorporating advanced data analysis techniques, and leveraging cutting-edge observational tools to unlock new dimensions in our comprehension of space weather phenomena.
 
-\section{}
+Chapter~\ref{chapter2} centered on the analysis of base-difference images obtained from the SDO/AIA instrument to investigate EUV waves. Key kinematic parameters, including shock speed, acceleration, intensity, and thickness, were computed. SOHO/LASCO measurements up to 17\rsun were incorporated to enhance the understanding of shock plasma parameters. Kinematic measurements played a pivotal role in generating 3D geometric models of wavefronts and informing plasma diagnostics using MHD and DEM models. The use of shock kinematic measurements facilitated the fitting of geometric spheroid surface models. Parametrized relationships between plasma parameters were explored to uncover connections and interdependencies. The study also introduced Wavetrack, an automated tool for identifying and monitoring dynamic coronal phenomena. Its application to CBF events revealed proficiency in tracking complete pixel maps, aiding in understanding CBF evolution. Limitations were acknowledged, and future work will address them for enhanced versatility. The methodology holds promise for extensive application in solar dynamic features and observational datasets.
 
-\section{}
+Chapter~\ref{chapter3} delved into the analysis of type III bursts during the second near-Sun encounter period of PSP. Sixteen separate radio bursts were observed using the PSP/FIELDS instrument and LOFAR ground-based telescope. A semi-automated pipeline facilitated data analysis, alignment, and interferometric imaging. Uniform frequency drifts among bursts suggested related origins. Interferometric observations located type III emissions off the southeast limb of the Sun, hinting at a single source of electron beams low in the corona. Magnetic extrapolation favored the active region AR12737 as the source, aligning with previous studies. However, caution was advised regarding potential deviations in magnetic field configurations near active regions. The study also explored discrepancies in observed and modeled density profiles, attributing them to scattering and propagation effects. Future work will integrate TDoA technique and Solar Orbiter observations for a more comprehensive analysis of solar radio bursts.
 
-\section{}
+The pioneering multi-event exploration in Chapter~\ref{chapter4} focused on Sun-to-Earth SEP simulations, investigating 62 eruptive events with EUV CBFs. The SPREAdFAST framework was employed to analyze coronal diffusive shock acceleration and interplanetary propagation. Input spectra for coronal proton acceleration were derived from quiet-time suprathermal spectra, exhibiting influences of solar corona conditions on proton acceleration. Comparison with in situ observations demonstrated overall alignment, validating the efficiency of the SPREAdFAST model. Discrepancies at the highest energies were noted, prompting future work to refine modeling and incorporate three-dimensional transport effects. The study also introduced a BiLSTM neural network model for forecasting SEP integral flux at 1 AU, showcasing promising results for short-term predictions with implications for space weather forecasting.
 
-\section{}
+In conclusion, the dissertation contributions include a nuanced understanding of EUV waves, an automated tool for tracking coronal phenomena, insights into type III bursts and their sources, and advancements in SEP simulations and forecasting using deep learning. Future directions involve addressing limitations, refining models, and incorporating more recent data for a comprehensive understanding of solar dynamics and space weather forecasting.
 
 \section{Future Work}
-The research presented in this thesis establishes an important foundation and provides a precursor for future advances that can build upon the present work. Some open questions and promising areas for future investigations include:
+Future work will expand our understanding of CBFs by extending the list of observed events, aiming for a more comprehensive analysis of their kinematics and early-stage evolution within the complex coronal environment. Leveraging multi-wavelength remote-sensing observations from LOFAR and Solar Orbiter will be instrumental in probing the origin and evolution of energetic particles in the solar corona. The integration of high-resolution data from these sources will provide a more detailed and accurate representation of the dynamic processes involved. Additionally, future research endeavors will focus on developing interpretable deep learning models for SEP forecasting. These models, built with higher resolution data, aim to enhance the precision and reliability of predictions, contributing to the advancement of space weather forecasting capabilities. The incorporation of advanced methodologies and diverse observational datasets is essential for refining our comprehension of solar dynamics and improving the accuracy of predictive models.
 
-- Additional coronal wave statistical studies using expanded event samples and new imaging datasets from Solar Orbiter and ground observatories to improve generalizability of findings.
-
-- Incorporating 3D analytical and numerical coronal wave propagation models for more physics-based forecasting approaches. 
-
-- Modeling mechanisms for type III radio burst onset and time profiles using particle-in-cell and MHD models. 
-
-- Ensemble forecasting models for SEP events combining multiple machine learning algorithms trained on multi-mission data.
-
-- Validation of data-driven models for other solar wind driven geospace extremes such as radiation belt enhancements and ionospheric storms.
-
-- Leveraging new solar observatory missions and assimilative models within operational prediction systems for real-time space weather forecasts.
-
-- Exploring applications of deep learning and physics-informed machine learning to additional outstanding problems in heliophysics and astrophysics.
-
-In summary, the present work opens exciting avenues for more cross-disciplinary studies synthesizing heliophysics domain knowledge with cutting-edge data science and artificial intelligence methods. The new generation of solar, heliospheric and geospace missions will yield transformative observations to continue advancing both science understanding and predictive capabilities.
+%The research presented in this thesis establishes an important foundation and provides a precursor for future advances that can build upon the present work. Some open questions and promising areas for future investigations include:
+%
+%- Additional coronal wave statistical studies using expanded event samples and new imaging datasets from Solar Orbiter and ground observatories to improve generalizability of findings.
+%
+%- Incorporating 3D analytical and numerical coronal wave propagation models for more physics-based forecasting approaches. 
+%
+%- Modeling mechanisms for type III radio burst onset and time profiles using particle-in-cell and MHD models. 
+%
+%- Ensemble forecasting models for SEP events combining multiple machine learning algorithms trained on multi-mission data.
+%
+%- Leveraging new solar observatory missions and assimilative models within operational prediction systems for real-time space weather forecasts.
+%
+%- Exploring applications of deep learning and physics-informed machine learning to additional outstanding problems in heliophysics and astrophysics.
+%
+%In summary, the present work opens exciting avenues for more cross-disciplinary studies synthesizing heliophysics domain knowledge with cutting-edge data science and artificial intelligence methods. The new generation of solar, heliospheric and geospace missions will yield transformative observations to continue advancing both science understanding and predictive capabilities.
 
 \section{Definitions and Acronyms}
 Some of the key technical terms and acronyms used in this thesis are listed below:

@@ -1,9 +1,9 @@
 \chapter{Appendix}
 \label{appendix}
 
-\section{Appendix for Radio Observation-related Work}
-\label{ch3_appendix_lofar_psp}
-\subsection{Persistent imaging technique}
+%\section{Appendix for Radio Observation-related Work}
+%\label{ch3_appendix_lofar_psp}
+\section{Persistent imaging technique}
 \label{ch3_append_a}
 Persistent imaging is a technique used in medical imaging, particularly ultrasound imaging, to create a continuous, real-time display of the anatomy being imaged (see \citeauthor{pysz_2011} \citeyear{pysz_2011}, and references within). The core idea of persistent imaging is to use persistence, or the ability of the human eye to retain an image for a brief moment after it has disappeared to create a more informative and visually clear image \citep{fredkin_1995, thompson_2016}.
 
@@ -19,11 +19,11 @@ where \textbf{max} represents the maximum of its two arguments. The current imag
 	,\end{equation}
 The resulting image $I'(t,x,y)$ is a modified version of the current image that emphasizes the differences from the previous persistence image.
 
-The persistent imaging technique has been shown to improve the visual quality of ultrasound images and other medical imaging modalities, and is commonly used in clinical practice. In this paper, we utilize the persistent imaging technique to improve the visualization of the solar radio sources of type III emissions (Fig.~\ref{fig_persistence}).
+The persistent imaging technique has been shown to improve the visual quality of ultrasound images and other medical imaging modalities, and is commonly used in clinical practice. In this work, I utilize the persistent imaging technique to improve the visualization of the solar radio sources of type III emissions (Fig.~\ref{fig_persistence}).
 
-\subsection{Resolving the radio emission location ambiguity}
+\section{Resolving the radio emission location ambiguity}
 \label{ch3_append_b}
-In this part, we show that the -Z solution of Equation~\ref{zpos} is highly unlikely in our case. Figure~\ref{fig_negZ_posZ} shows the positive and negative solutions of Equation~\ref{zpos}. We take the innermost and outermost coronal radio sources at $R_1$ and $R_2$, respectively, as an example. $r_1$ and $r_2$ are the projections of $R_1$ and $R_2$ on the POS, respectively. Harmonic radio emission from $R_1$ will theoretically be absorbed by a region along the LOS with plasma frequency (and corresponding density) equal to or higher than the harmonic emission frequency at $R_1$. In the case of the spherically symmetric Newkirk model, the highest density location the emission from $R_1$ could pass through is $r_1$ on the POS. Thus, for harmonic radio emission from behind the POS (-Z, where Z = 0 is defined at the center of the Sun and positive Z is towards the observer) to be observed at the Earth, it must satisfy the following condition:
+In this part, we show that the -Z solution of Equation~\ref{zpos} is highly unlikely in our case. Figure~\ref{fig_negZ_posZ} shows the positive and negative solutions of Equation~\ref{zpos}. I take the innermost and outermost coronal radio sources at $R_1$ and $R_2$, respectively, as an example. $r_1$ and $r_2$ are the projections of $R_1$ and $R_2$ on the POS, respectively. Harmonic radio emission from $R_1$ will theoretically be absorbed by a region along the LOS with plasma frequency (and corresponding density) equal to or higher than the harmonic emission frequency at $R_1$. In the case of the spherically symmetric Newkirk model, the highest density location the emission from $R_1$ could pass through is $r_1$ on the POS. Thus, for harmonic radio emission from behind the POS (-Z, where Z = 0 is defined at the center of the Sun and positive Z is towards the observer) to be observed at the Earth, it must satisfy the following condition:
 \begin{equation}
 	2f_{R_1} > f_{r_1}
 	\label{eq_assumption}
@@ -79,19 +79,19 @@ From Table~\ref{table_negZ}, the assumption of Equation~\ref{eq_condition} is no
 	\label{fig_cutpower}
 \end{figure}
 
-Furthermore, we analyzed the time difference of arrival of the radio emission at interplanetary wavelengths in Figure~\ref{fig_cutpower}. Specifically, we compared the timing of peak signals at a low frequency between two spacecraft, Wind and STEREO. This analysis was conducted under the assumption of two possible scenarios:
+Furthermore, I analyzed the time difference of arrival of the radio emission at interplanetary wavelengths in Figure~\ref{fig_cutpower}. Specifically, we compared the timing of peak signals at a low frequency between two spacecraft, Wind and STEREO. This analysis was conducted under the assumption of two possible scenarios:
 \begin{itemize}
 	\item one in which the radio emission source follows a trajectory that is roughly equidistant between Wind and STEREO -- if the $+Z$ assumption is true.
 	\item the trajectory implies significantly longer travel times from the source to Wind compared to STEREO -- if the $-Z$ assumption is true.
 \end{itemize}
-Examining the data, we selected the frequency channel 700 kHz observed by Wind and its nearest counterpart 675 kHz for STEREO. Interestingly, the difference in the arrival times of these signals was merely one minute, which is within the bounds of the time resolution of the instrument. This negligible difference in arrival times supports the $+Z$ assumption for the beam trajectory, meaning it travels approximately at an equal distance between the two spacecraft.
+Examining the data, I selected the frequency channel 700 kHz observed by Wind and its nearest counterpart 675 kHz for STEREO. Interestingly, the difference in the arrival times of these signals was merely one minute, which is within the bounds of the time resolution of the instrument. This negligible difference in arrival times supports the $+Z$ assumption for the beam trajectory, meaning it travels approximately at an equal distance between the two spacecraft.
 
-\section{Appendix for SEP-related Work}
-\label{ch4_appendix_eval}
+%\section{Appendic for SEP-related Work}}
+%\label{ch4_appendix_eval}
 
-\subsection{Terminologies}
+\section{Machine Learning Terminologies}
 \label{terminologies_appendix}
-In this section, we introduce the main concepts related to machine learning which are presented in this paper.
+In this section, I introduce the main concepts related to machine learning which are presented in the dissertation.
 
 \begin{itemize}
     \item \textbf{Cross-validation}: A technique used to evaluate the performance of a machine learning model by dividing the data into subsets and assessing the model on different combinations of these subsets.
@@ -215,14 +215,14 @@ MSE, MAE, RMSE, and MAPE are often used in regression analysis to assess the acc
 
 Finally, $R$ is the Pearson correlation coefficient, which measures the strength and direction of the relationship between two continuous variables, and can provide an indication of the extent to which changes in one variable may be related to changes in the other.
 
-\subsection{Model Configuration}
+\section{Deep Learning Model Configuration}
 \label{config_appendix}
 The configurations for the ML models shown in Figure~\ref{fig_benchmark} and their performance on the validation set and the test set for the SEP integral flux $\geq$10 MeV are presented in Table~\ref{table_models_config}.
 The batch size was set to be 64 and the number of training epochs was set to be 100. 
 The \textit{EarlyStopping} callback function, with a \textit{patience} of 10, is used to help prevent overfitting during the training process by stopping training when the monitored metric has stopped improving for a certain number of epochs.
 The \textit{patience} parameter controls how many epochs the training will continue without improvement before it is stopped. This is useful because if the validation loss stops getting better, the model has probably overfitted the training data and is not generalizing effectively to new data. By stopping the training early, we can avoid wasting time and resources on further training that is unlikely to improve the model's performance.
 
-We used the \textit{ModelCheckpoint} callback function to save the best weights of the model during training so that they can be reused later.
+I used the \textit{ModelCheckpoint} callback function to save the best weights of the model during training so that they can be reused later.
 The \textit{LearningRateScheduler} callback function allows to dynamically adjust the learning rate of the model during training using a function passed to it that will be called at the beginning of each epoch, and it should return the desired learning rate for that epoch. It can be useful when training deep neural networks, as it allows for a higher learning rate in the early stages of training when the model is still far from convergence, and a lower learning rate as the model approaches convergence, which can help it to converge more accurately. The downside might be the longer training time.
 
 \begin{table}[h!]
@@ -247,11 +247,11 @@ Linear                                                                        & 
 All the calculations and model runs were implemented under the framework of TensorFlow 2.3.0 \citep{singh_2020} in Python 3.6.13. 
 The models were executed on Ubuntu 20.04.1 LTS OS with 4 × GPUs (NVIDIA GeForce RTX 2080 Ti, 11019 MiB, 300 MHz).
 According to the Keras API guide \citep{keras_2017}, the requirements to use the cuDNN implementation are the activation function must be set to \textit{tanh} and the recurrent activation must be set to \textit{sigmoid}.
-We also set the seed number to 7 across all the model runs to maintain reproducibility.
+I also set the seed number to 7 across all the model runs to maintain reproducibility.
 
 Stateful RNNs can be difficult to work with when using callbacks in Keras because their hidden state must be manually managed across mini-batch updates. When training a stateful RNN in Keras, the hidden state is carried over from the previous epoch and can cause problems with certain callbacks, such as \textit{EarlyStopping} or \textit{ModelCheckpoint}. To work around this issue, one can use stateless RNNs or manually reset the hidden state at the end of each epoch, but this can be complex and prone to errors.
 
-\subsection{Skill Scores}
+\section{Description of Skill Scores}
 \label{skillscores_appendix}
 Skill scores and ratios are commonly used in evaluating the performance of classification models, particularly in binary classification tasks. They provide insights into the model's ability to correctly predict positive and negative instances. Here is a brief description of each skill score and ratio, along with their formulas:
 
