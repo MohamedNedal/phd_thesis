@@ -4,7 +4,7 @@
 \contentsline {table}{\numberline {2.1}{\ignorespaces List of the CBF events with their associated flares and CMEs.}}{11}{table.caption.9}%
 \contentsline {table}{\numberline {2.2}{\ignorespaces Mean values and their standard deviation of the wave parameters in the radial direction and the lateral direction for the left and right flanks, at the front, peak, and back sides of the wave for the event occurred on May 11, 2011, in the SDO/AIA FOV.}}{18}{table.caption.16}%
 \contentsline {table}{\numberline {2.3}{\ignorespaces Mean, median, and standard deviation of the shock parameters output, from the interaction of the S2M spheroid with the MAS MHD model results, for the shock's cap and flanks and for the whole shock surface, for the event on May 11, 2011.}}{19}{table.caption.17}%
-\contentsline {table}{\numberline {2.4}{\ignorespaces Statistics of the EUV wave kinematics in the SDO/AIA FOV for the 26 events. LL and LR refer to the lateral left and right flanks, respectively. Rad refer to the radial front direction.}}{22}{table.caption.20}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Statistics of the EUV wave kinematics in the SDO/AIA FOV for the 26 events. LL and LR refer to the lateral left and right flanks, respectively. Rad refer to the radial front direction.}}{21}{table.caption.20}%
 \contentsline {table}{\numberline {2.5}{\ignorespaces Characteristics of GSs, ICMEs, and IP Shock Waves. Magnetic Obstacle (MO) categorized as Flux-rope (Fr), Small rotation flux-rope (F-), Large rotation flux-rope (F+), Complex (Cx), or Ejecta (E). The timestamp includes month (mm), day (dd), and time (UT). Dst is measured in nT, speed in $\,km\,s^{-1}\,$, $\Delta $ (duration from ICME start to MO start) in hours, $B_z$ in nT, hit locations denoted as n (nose), f (flank), */** (fast/slow speed), u (streamer/no clear ICME). {\bf Additional abbreviations:} $X$: magnetic field/plasma density/temperature; d/u: downstream/upstream side of the shock interface; $M_{\rm ms}$: Mach number. Credit goes to \citet {miteva_2023}.}}{40}{table.2.5}%
 \contentsline {table}{\numberline {2.6}{\ignorespaces Parameters of the solar origin, SFs, and CMEs for GSs from Table~\ref {tab_GS_IP}. All times are in UT, speeds in $\,km\,s^{-1}\,$, AW and MPA in degrees. Credit goes to \citet {miteva_2023}.}}{41}{table.caption.32}%
 \contentsline {table}{\numberline {2.7}{\ignorespaces CME Speeds ($\,km\,s^{-1}\,$) for Observers 1 and 2. Credit goes to \citet {miteva_2023}.}}{41}{table.caption.33}%
@@ -13,11 +13,11 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Characteristics of the type III bursts detected via the automatic algorithm from the combined spectrum.}}{56}{table.caption.45}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Summary of the performance results of the models for the validation and test sets.}}{89}{table.caption.65}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Confusion matrix for the energy channel $\geq $10 MeV predictions in the test set.}}{89}{table.caption.66}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Comparing the skill scores with previous models. The dashed entries mean the data is unavailable (\citet {whitman_2022} for more details).}}{90}{table.caption.67}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces MSE/MAE for the validation and test sets.}}{90}{table.caption.71}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Summary of the performance results of the models for the validation and test sets.}}{85}{table.caption.66}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Confusion matrix for the energy channel $\geq $10 MeV predictions in the test set.}}{87}{table.caption.67}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Comparing the skill scores with previous models. The dashed entries mean the data is unavailable (\citet {whitman_2022} for more details).}}{87}{table.caption.68}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces The MSE/MAE for the validation and test sets over six forecasting windows.}}{90}{table.caption.73}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Radial distances and densities at the first ($R_1$) and last ($R_2$) radio sources were obtained from the 2.5$\times $Newkirk model, as well as their impact parameters $r_1$ and $r_2$, respectively.}}{99}{table.caption.76}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Configuration of the ML model. (1) refers to the error value for 1-day forecasting. Same for (2) refers to 2-day forecasting, and (3) for 3-day forecasting. $^*$In the 1D-CNN layer, 32 filters, a kernel size of 5, and strides of 1 were used.}}{103}{table.caption.78}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Radial distances and densities at the first ($R_1$) and last ($R_2$) radio sources were obtained from the 2.5$\times $Newkirk model, as well as their impact parameters $r_1$ and $r_2$, respectively.}}{123}{table.caption.101}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Configuration of the ML model. (1) refers to the error value for 1-day forecasting. Same for (2) refers to 2-day forecasting, and (3) for 3-day forecasting. $^*$In the 1D-CNN layer, 32 filters, a kernel size of 5, and strides of 1 were used.}}{128}{table.caption.103}%

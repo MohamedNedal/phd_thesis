@@ -1,4 +1,4 @@
-\begin{thebibliography}{304}
+\begin{thebibliography}{306}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{ish(2017)}]{ishikawa_2017}
@@ -740,9 +740,15 @@ Muhr, N., Veronig, A.~M., Kienreich, I.~W., {et~al.} 2014, Solar Physics, 289,
 Nammous, M.~K., Saeed, K., \& Kobojek, P. 2022, Journal of King Saud University
   - Computer and Information Sciences, 34, 764
 
-\bibitem[{{Nedal} {et~al.}(2023){Nedal}, {Kozarev}, {Zhang}, \&
+\bibitem[{{Nedal} {et~al.}(2023{\natexlab{a}}){Nedal}, {Kozarev}, {Arsenov}, \&
+  {Zhang}}]{mnedal_2023a}
+{Nedal}, M., {Kozarev}, K., {Arsenov}, N., \& {Zhang}, P. 2023{\natexlab{a}},
+  J. Space Weather Space Clim., 13, 26
+
+\bibitem[{{Nedal} {et~al.}(2023{\natexlab{b}}){Nedal}, {Kozarev}, {Zhang}, \&
   Pietro}]{nedal_lofar_psp_2023}
-{Nedal}, M., {Kozarev}, K., {Zhang}, P., \& Pietro, Z. 2023, A\&A, 680, A106
+{Nedal}, M., {Kozarev}, K., {Zhang}, P., \& Pietro, Z. 2023{\natexlab{b}},
+  A\&A, 680, A106
 
 \bibitem[{{Nedal} {et~al.}(2019){Nedal}, {Mahrous}, \& {Youssef}}]{mnedal_2019}
 {Nedal}, M., {Mahrous}, A., \& {Youssef}, M. 2019, Astrophysics and Space
@@ -1139,6 +1145,11 @@ Thompson, B.~c., Gurman, J., Neupert, W., {et~al.} 1999, The Astrophysical
 
 \bibitem[{{Thompson, W. T.}(2006)}]{thompson_2006}
 {Thompson, W. T.} 2006, A\&A, 449, 791
+
+\bibitem[{{Torsti} {et~al.}(1995){Torsti}, {Valtonen}, {Lumme}, {Peltonen},
+  {Eronen}, {Louhola}, {Riihonen}, {Schultz}, {Teittinen}, {Ahola}, {Holmlund},
+  {Kelh{\"a}}, {Lepp{\"a}l{\"a}}, {Ruuska}, \& {Str{\"o}mmer}}]{torsti_1995}
+{Torsti}, J., {Valtonen}, E., {Lumme}, M., {et~al.} 1995, \solphys, 162, 505
 
 \bibitem[{Trottet {et~al.}(2015)Trottet, Samwel, Klein, Dudok~de Wit, \&
   Miteva}]{trottet_2015}
