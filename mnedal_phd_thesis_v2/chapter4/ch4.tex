@@ -94,7 +94,6 @@ A meticulous examination of the remaining dataset revealed 62 events with measur
 For a comprehensive reference, this table provides detailed information for each event, including the date, start and end times, and class of the associated flare. Additionally, it includes the source location on the solar disk specified in helioprojective Cartesian coordinates. These key details were sourced from the Heliophysics Events Knowledge Base, ensuring accurate and standardized information for each event in our study.
 
 \subsection{Coronal SEP Acceleration}
-%\subsection{Coronal Diffusive Shock Acceleration Model}
 Having established plasma parameters along individual shock-crossing field lines, our study employs the coronal DSA model \citep{kozarev_2016, kozarev_2019} to calculate proton acceleration dynamics from the low corona to 10\rsun. Specifically designed to utilize remote solar observations and data-driven model output from the CASHeW framework, this model solves for the large-scale acceleration of charged particles induced by CME-driven shocks.
 
 The model incorporates time-dependent estimates of shock speed ($V_{shock}$), density jump ratio ($r$), magnetic field strength ($|B|$), and shock angle ($\theta_{BN}$) for multiple shock-crossing field lines. Using these parameters, the model computes the minimum shock injection momenta for particles. It takes as input a particle distribution function and produces time-dependent distribution function spectra or fluxes as output. The obtained solution (Equations 8–11 in c\citet{kozarev_2016}) provides both the first distribution function ($f_1$) and momentum ($p_1$) values for an initial momentum ($p_0$). The model iteratively solves for subsequent values ($f_i$ and $p_i$) at time steps separated by the observational cadence $\delta$t of the instrument (in this case, SDO/AIA). The model is executed for each individual shock-crossing field line, based on observed and calculated parameters at a single shock-crossing point along it. Flux spectra at each time step are then computed, and the model's validity has been confirmed through its application in the analysis of several SEP events.
@@ -120,13 +119,13 @@ An energy grid with 20 points, logarithmically spaced between 1 and 200 MeV, and
 We used a combination of telescopic observations and dynamic physical models to simulate the acceleration of SEPs in global coronal shock events. We first observed off-limb CBFs and studied their interaction with the coronal plasma using synoptic MHD simulations. Based on these observations and simulations, we then employed an analytical DSA model to simulate the SEP acceleration. The simulated fluxes obtained from the DSA model were used as time-dependent inner boundary conditions for modeling the particle transport to 1 AU. This approach allowed us to study the early-stage acceleration and transport of SEPs from the Sun to 1 AU.
 
 The criteria used to select the events for analysis in the study of the SPREAdFAST framework were as follows:
-\begin{enumerate}
+\begin{itemize}
     \item Proton events in the energy range of 17-22 MeV observed by the SOHO/ERNE instrument from 2010 to 2017 were initially identified.
-    \item Events without identified flares and coronal mass ejections (CMEs) and without EUV waves preceding the SEP event were excluded.
+    \item Events without identified flares and CMEs and without EUV waves preceding the SEP event were excluded.
     \item Events without EUV waves or no EUV data, even if they had identified flares/CMEs, were also excluded.
     \item Uncertain EUV waves that were not relevant to the specific solar eruption were dropped.
-    \item Events with measurable near-limb or off-limb Coronal Bright Fronts (CBFs) that could be analyzed with the SPREAdFAST framework were selected.
-\end{enumerate}
+    \item Events with measurable near-limb or off-limb CBFs that could be analyzed with the SPREAdFAST framework were selected.
+\end{itemize}
 In total, 62 events met the selection criteria and were included in the analysis.
 
 The kinematics of CBFs are characterized using the methodology of the CASHeW framework. This framework estimates the CBF kinematics by following the leading edge of the front on consecutive images. It calculates the kinematics of the front, peak, and back edge of the CBFs over time, allowing for the estimation of their time-dependent mean intensity and thickness. The kinematics are determined using time-height maps (J-maps) generated with the CASHeW code for each event. The radial and lateral wave front positions are measured in these J-maps, providing information on the radial and lateral positions, speeds, accelerations, mean wave intensities, and wave thickness of the CBFs.
@@ -156,7 +155,6 @@ The integration of geometric shock models with existing and novel observations o
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Solar Proton Flux Forecasting with Deep Learning Models}
-% ... with Data-driven Models
 \subsection{Data preparation}
 %\label{sec_ch4_data_prep}
 In this section, I describe the physical quantities, the types of inputs and their sources, as well as the outputs I are forecasting. Some of the technical terms used in this study are explained further in the appendices.
@@ -210,7 +208,7 @@ It is worth to mention that the timeseries data must not be shuffled as that wil
 
 \subsection{Method}
 %\label{sec_ch4_methods}
-In this section, I introduce the data analysis methods used in this work. I start with explaining the model selection phase, followed by a discussion of the bidirectional long-short-term memory (BiLSTM) neural network architecture. The technical terminologies are described in the appendices.
+In this section, I introduce the data analysis methods used in this work. I start with explaining the model selection phase, followed by a discussion of the bi-directional long short-term memory (BiLSTM) neural network architecture. The technical terminologies are described in the appendices.
 
 \subsubsection{The Bi-LSTM Model}
 Recurrent neural networks (RNNs) that support processing input sequences both forward and backward are known as Bidirectional Long Short-Term Memory (BiLSTM) neural networks \citep{schuster_1997}. Regular RNNs \citep{hochreiter_1997, kolen_2001} depend on the prior hidden state and the current input to determine the output at a given time. The output of a BiLSTM network, on the other hand, is dependent on the input at a given moment as well as the previous and future hidden states. As a result, the network is able to make predictions using contexts from the past as well as the future. Hence, accuracy is improving.
