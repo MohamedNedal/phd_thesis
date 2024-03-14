@@ -1,4 +1,4 @@
-\begin{thebibliography}{306}
+\begin{thebibliography}{305}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{ish(2017)}]{ishikawa_2017}
@@ -740,15 +740,10 @@ Muhr, N., Veronig, A.~M., Kienreich, I.~W., {et~al.} 2014, Solar Physics, 289,
 Nammous, M.~K., Saeed, K., \& Kobojek, P. 2022, Journal of King Saud University
   - Computer and Information Sciences, 34, 764
 
-\bibitem[{{Nedal} {et~al.}(2023{\natexlab{a}}){Nedal}, {Kozarev}, {Arsenov}, \&
+\bibitem[{{Nedal} {et~al.}(2023){Nedal}, {Kozarev}, {Arsenov}, \&
   {Zhang}}]{mnedal_2023a}
-{Nedal}, M., {Kozarev}, K., {Arsenov}, N., \& {Zhang}, P. 2023{\natexlab{a}},
-  J. Space Weather Space Clim., 13, 26
-
-\bibitem[{{Nedal} {et~al.}(2023{\natexlab{b}}){Nedal}, {Kozarev}, {Zhang}, \&
-  Pietro}]{nedal_lofar_psp_2023}
-{Nedal}, M., {Kozarev}, K., {Zhang}, P., \& Pietro, Z. 2023{\natexlab{b}},
-  A\&A, 680, A106
+{Nedal}, M., {Kozarev}, K., {Arsenov}, N., \& {Zhang}, P. 2023, J. Space
+  Weather Space Clim., 13, 26
 
 \bibitem[{{Nedal} {et~al.}(2019){Nedal}, {Mahrous}, \& {Youssef}}]{mnedal_2019}
 {Nedal}, M., {Mahrous}, A., \& {Youssef}, M. 2019, Astrophysics and Space
