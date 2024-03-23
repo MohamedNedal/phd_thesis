@@ -1,0 +1,142 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: chapter1/ch1.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: chapter2/ch2.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: chapter3/ch3.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: chapter4/ch4.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: chapter5/ch5.aux
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+A level-1 auxiliary file: appendix.aux
+Reallocating 'name_of_file' (item size: 1) to 3 items.
+The style file: aa.bst
+Reallocating 'name_of_file' (item size: 1) to 5 items.
+Reallocating 'field_info' (item size: 4) to 12700 items.
+Database file #1: refs.bib
+Repeated entry---line 2487 of file refs.bib
+ : @article{pulkkinen_2007
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2592 of file refs.bib
+ : @article{echer_2022
+ :                    ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "olah_2015" isn't style-file defined
+--line 3369 of file refs.bib
+Reallocating 'str_pool' (item size: 1) to 130000 items.
+Warning--I'm ignoring chen_2013b's extra "year" field
+--line 4216 of file refs.bib
+Repeated entry---line 4383 of file refs.bib
+ : @article{del_2011
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4393 of file refs.bib
+ : @article{kong_2018
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4404 of file refs.bib
+ : @article{altschuler_1969
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4414 of file refs.bib
+ : @article{schatten_1969
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4424 of file refs.bib
+ : @article{thompson_2006
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4467 of file refs.bib
+ : @article{mann_2018
+ :                   ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "nedal_lofar_psp_2023"
+Warning--I didn't find a database entry for "zhang_2022"
+Warning--to sort, need author or key in ishikawa_2017
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Warning--empty author in ishikawa_2017
+Warning--empty journal in benz_1988
+Warning--Space Weather of the Heliosphere: Processes and Forecasts, Vol.~13Both volume and number fields in dalla_2017
+You can't pop an empty literal stack for entry dalla_2017
+while executing---line 1684 of file aa.bst
+Warning--Journal of Physics: Conference Series, Vol. 900Both volume and number fields in gopalswamy_2017
+You can't pop an empty literal stack for entry gopalswamy_2017
+while executing---line 1684 of file aa.bst
+Warning--Proceedings of Machine Learning Research, Vol.~32, Proceedings of the 31st International Conference on Machine Learning, ed. E.~P. Xing \& T.~JebaraBoth volume and number fields in graves_2014
+You can't pop an empty literal stack for entry graves_2014
+while executing---line 1684 of file aa.bst
+Warning--AIP Conference Proceedings, Vol. 1216Both volume and number fields in jackson_2010
+You can't pop an empty literal stack for entry jackson_2010
+while executing---line 1684 of file aa.bst
+Warning--Journal of Physics: Conference Series, Vol. 900Both volume and number fields in kahler_2017
+You can't pop an empty literal stack for entry kahler_2017
+while executing---line 1684 of file aa.bst
+Warning--AIP Conference Proceedings, Vol. 781Both volume and number fields in kota_2005
+You can't pop an empty literal stack for entry kota_2005
+while executing---line 1684 of file aa.bst
+Warning--Annales Geophysicae, Vol.~28Both volume and number fields in mierla_2010
+You can't pop an empty literal stack for entry mierla_2010
+while executing---line 1684 of file aa.bst
+Warning--AIP Conference Proceedings, Vol. 1436Both volume and number fields in ng_2012
+You can't pop an empty literal stack for entry ng_2012
+while executing---line 1684 of file aa.bst
+Warning--empty publisher in perez_Suarez_2011
+Warning--empty publisher in pick_radio_2006
+Warning--empty publisher in pick_2006
+Warning--empty publisher in priest_forbes_2007
+Warning--AIP Conference Proceedings, Vol. 516Both volume and number fields in reames_2000
+You can't pop an empty literal stack for entry reames_2000
+while executing---line 1684 of file aa.bst
+Warning--no book title in reames_2021
+`title' is a missing field, not a string, for entry reames_2021
+while executing---line 1684 of file aa.bst
+Warning--empty publisher in reames_2021
+Warning--empty journal in tsurutani_1985
+Warning--empty institution in wilson_1988
+You've used 306 entries,
+            3039 wiz_defined-function locations,
+            2254 strings with 71773 characters,
+and the built_in function-call counts, 176169 in all, are:
+= -- 14251
+> -- 16529
+< -- 119
++ -- 5587
+- -- 5190
+* -- 15342
+:= -- 32528
+add.period$ -- 306
+call.type$ -- 306
+change.case$ -- 2929
+chr.to.int$ -- 299
+cite$ -- 328
+duplicate$ -- 5886
+empty$ -- 8382
+format.name$ -- 6053
+if$ -- 34720
+int.to.chr$ -- 8
+int.to.str$ -- 1
+missing$ -- 282
+newline$ -- 922
+num.names$ -- 1226
+pop$ -- 3018
+preamble$ -- 1
+purify$ -- 2926
+quote$ -- 0
+skip$ -- 5121
+stack$ -- 0
+substring$ -- 6645
+swap$ -- 214
+text.length$ -- 15
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 2724
+warning$ -- 20
+while$ -- 1231
+width$ -- 0
+write$ -- 3060
+(There were 18 error messages)

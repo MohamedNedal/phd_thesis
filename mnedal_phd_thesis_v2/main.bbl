@@ -1,8 +1,5 @@
-\begin{thebibliography}{305}
+\begin{thebibliography}{307}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
-
-\bibitem[{ish(2017)}]{ishikawa_2017}
- 2017, Nature Astronomy, 1, 771
 
 \bibitem[{Abe {et~al.}(2023)Abe, Fakomiti, Igboama, Akinola, Ogunmodimu, \&
   Migoya-Oru{\'e}}]{abe_2023}
@@ -302,6 +299,11 @@ Gopalswamy, N. 2022, Atmosphere, 13, 1781
 Gopalswamy, N., Akiyama, S., Yashiro, S., Michalek, G., \& Lepping, R. 2008,
   Journal of Atmospheric and Solar-Terrestrial Physics, 70, 245
 
+\bibitem[{{Gopalswamy} {et~al.}(2019){Gopalswamy}, {M{\"a}kel{\"a}}, \&
+  {Yashiro}}]{gopalswamy_2019}
+{Gopalswamy}, N., {M{\"a}kel{\"a}}, P., \& {Yashiro}, S. 2019, Sun and
+  Geosphere, 14, 111
+
 \bibitem[{Gopalswamy {et~al.}(2017)Gopalswamy, M{\"a}kel{\"a}, Yashiro, Thakur,
   Akiyama, \& Xie}]{gopalswamy_2017}
 Gopalswamy, N., M{\"a}kel{\"a}, P., Yashiro, S., {et~al.} 2017in , IOP
@@ -391,6 +393,11 @@ Ihianle, I.~K., Nwajana, A.~O., Ebenuwa, S.~H., {et~al.} 2020, IEEE Access, 8,
   {Mumford}, {Hayes}, {Thompson}, \& {Hughitt}}]{ireland_2019}
 {Ireland}, J., {Inglis}, A.~R., {Shih}, A.~Y., {et~al.} 2019, Solar Physics,
   294, 158
+
+\bibitem[{Ishikawa {et~al.}(2017)Ishikawa, Glesener, Krucker, Christe,
+  Buitrago-Casas, Narukage, \& Vievering}]{ishikawa_2017}
+Ishikawa, S.-n., Glesener, L., Krucker, S., {et~al.} 2017, Nature Astronomy, 1,
+  771
 
 \bibitem[{Jackson {et~al.}(2010)Jackson, Hick, Buffington, Bisi, Clover,
   Hamilton, Tokumaru, \& Fujiki}]{jackson_2010}
@@ -1203,6 +1210,11 @@ Verkhoglyadova, O., Li, G., Zank, G., Hu, Q., \& Mewaldt, R. 2009, The
   Vr{\v{s}}nak}]{veronig_2010}
 Veronig, A., Muhr, N., Kienreich, I., Temmer, M., \& Vr{\v{s}}nak, B. 2010, The
   Astrophysical Journal Letters, 716, L57
+
+\bibitem[{Vourlidas {et~al.}(2013)Vourlidas, Lynch, Howard, \&
+  Li}]{vourlidas_2013}
+Vourlidas, A., Lynch, B.~J., Howard, R.~A., \& Li, Y. 2013, Solar Physics, 284,
+  179
 
 \bibitem[{{Vourlidas} {et~al.}(2012){Vourlidas}, {Syntelis}, \&
   {Tsinganos}}]{vourlidas_2012}

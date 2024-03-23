@@ -16,50 +16,48 @@ A level-1 auxiliary file: appendix.aux
 Reallocating 'name_of_file' (item size: 1) to 3 items.
 The style file: aa.bst
 Reallocating 'name_of_file' (item size: 1) to 5 items.
-Reallocating 'field_info' (item size: 4) to 12675 items.
+Reallocating 'field_info' (item size: 4) to 12725 items.
 Database file #1: refs.bib
-Repeated entry---line 2470 of file refs.bib
+Repeated entry---line 2485 of file refs.bib
  : @article{pulkkinen_2007
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2575 of file refs.bib
+Repeated entry---line 2590 of file refs.bib
  : @article{echer_2022
  :                    ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "olah_2015" isn't style-file defined
---line 3352 of file refs.bib
+--line 3367 of file refs.bib
 Reallocating 'str_pool' (item size: 1) to 130000 items.
 Warning--I'm ignoring chen_2013b's extra "year" field
---line 4199 of file refs.bib
-Repeated entry---line 4366 of file refs.bib
+--line 4214 of file refs.bib
+Repeated entry---line 4381 of file refs.bib
  : @article{del_2011
  :                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4376 of file refs.bib
+Repeated entry---line 4391 of file refs.bib
  : @article{kong_2018
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4387 of file refs.bib
+Repeated entry---line 4402 of file refs.bib
  : @article{altschuler_1969
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4397 of file refs.bib
+Repeated entry---line 4412 of file refs.bib
  : @article{schatten_1969
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4407 of file refs.bib
+Repeated entry---line 4422 of file refs.bib
  : @article{thompson_2006
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4450 of file refs.bib
+Repeated entry---line 4465 of file refs.bib
  : @article{mann_2018
  :                   ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "nedal_lofar_psp_2023"
 Warning--I didn't find a database entry for "zhang_2022"
-Warning--to sort, need author or key in ishikawa_2017
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
-Warning--empty author in ishikawa_2017
 Warning--empty journal in benz_1988
 Warning--Space Weather of the Heliosphere: Processes and Forecasts, Vol.~13Both volume and number fields in dalla_2017
 You can't pop an empty literal stack for entry dalla_2017
@@ -98,45 +96,45 @@ while executing---line 1684 of file aa.bst
 Warning--empty publisher in reames_2021
 Warning--empty journal in tsurutani_1985
 Warning--empty institution in wilson_1988
-You've used 305 entries,
+You've used 307 entries,
             3039 wiz_defined-function locations,
-            2248 strings with 71574 characters,
-and the built_in function-call counts, 175723 in all, are:
-= -- 14213
-> -- 16498
+            2259 strings with 72136 characters,
+and the built_in function-call counts, 177000 in all, are:
+= -- 14314
+> -- 16634
 < -- 119
-+ -- 5577
-- -- 5181
-* -- 15304
-:= -- 32446
-add.period$ -- 305
-call.type$ -- 305
-change.case$ -- 2922
-chr.to.int$ -- 298
-cite$ -- 327
-duplicate$ -- 5867
-empty$ -- 8356
-format.name$ -- 6041
-if$ -- 34632
++ -- 5621
+- -- 5223
+* -- 15418
+:= -- 32697
+add.period$ -- 307
+call.type$ -- 307
+change.case$ -- 2944
+chr.to.int$ -- 300
+cite$ -- 325
+duplicate$ -- 5906
+empty$ -- 8404
+format.name$ -- 6091
+if$ -- 34876
 int.to.chr$ -- 8
 int.to.str$ -- 1
-missing$ -- 281
-newline$ -- 919
-num.names$ -- 1222
-pop$ -- 3010
+missing$ -- 283
+newline$ -- 925
+num.names$ -- 1234
+pop$ -- 3032
 preamble$ -- 1
-purify$ -- 2919
+purify$ -- 2941
 quote$ -- 0
-skip$ -- 5106
+skip$ -- 5136
 stack$ -- 0
-substring$ -- 6624
+substring$ -- 6664
 swap$ -- 214
 text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2715
-warning$ -- 20
-while$ -- 1227
+type$ -- 2733
+warning$ -- 18
+while$ -- 1238
 width$ -- 0
-write$ -- 3050
+write$ -- 3071
 (There were 18 error messages)
