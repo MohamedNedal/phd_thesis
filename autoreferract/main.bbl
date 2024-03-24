@@ -1,8 +1,5 @@
-\begin{thebibliography}{306}
+\begin{thebibliography}{304}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
-
-\bibitem[{ish(2017)}]{ishikawa_2017}
- 2017, Nature Astronomy, 1, 771
 
 \bibitem[{Abe {et~al.}(2023)Abe, Fakomiti, Igboama, Akinola, Ogunmodimu, \&
   Migoya-Oru{\'e}}]{abe_2023}
@@ -73,9 +70,6 @@ Benson, B., Pan, W.~D., Prasad, A., Gary, G.~A., \& Hu, Q. 2020, Solar Physics,
 
 \bibitem[{Benz \& Thejappa(1988)}]{benz_1988}
 Benz, A. \& Thejappa, G. 1988
-
-\bibitem[{Benz(2017)}]{benz_2017}
-Benz, A.~O. 2017, Living reviews in solar physics, 14, 1
 
 \bibitem[{Berghmans {et~al.}(2021)Berghmans, Auch{\`e}re, Long, Soubri{\'e},
   Mierla, Zhukov, Sch{\"u}hle, Antolin, Harra, Parenti,
@@ -396,6 +390,11 @@ Ihianle, I.~K., Nwajana, A.~O., Ebenuwa, S.~H., {et~al.} 2020, IEEE Access, 8,
   {Mumford}, {Hayes}, {Thompson}, \& {Hughitt}}]{ireland_2019}
 {Ireland}, J., {Inglis}, A.~R., {Shih}, A.~Y., {et~al.} 2019, Solar Physics,
   294, 158
+
+\bibitem[{Ishikawa {et~al.}(2017)Ishikawa, Glesener, Krucker, Christe,
+  Buitrago-Casas, Narukage, \& Vievering}]{ishikawa_2017}
+Ishikawa, S.-n., Glesener, L., Krucker, S., {et~al.} 2017, Nature Astronomy, 1,
+  771
 
 \bibitem[{Jackson {et~al.}(2010)Jackson, Hick, Buffington, Bisi, Clover,
   Hamilton, Tokumaru, \& Fujiki}]{jackson_2010}
@@ -827,11 +826,6 @@ Ontiveros, V. \& Vourlidas, A. 2009, The Astrophysical Journal, 693, 267
 \bibitem[{{Ontiveros} \& {Vourlidas}(2009)}]{ontiveross_2009}
 {Ontiveros}, V. \& {Vourlidas}, A. 2009, apj, 693, 267
 
-\bibitem[{Oughton {et~al.}(2017)Oughton, Skelton, Horne, Thomson, \&
-  Gaunt}]{oughton_2017}
-Oughton, E.~J., Skelton, A., Horne, R.~B., Thomson, A.~W., \& Gaunt, C.~T.
-  2017, Space Weather, 15, 65
-
 \bibitem[{Pala \& Atici(2019)}]{pala_2019}
 Pala, Z. \& Atici, R. 2019, Solar Physics, 294, 50
 
@@ -1067,9 +1061,6 @@ Selvakumaran, R., Veenadhari, B., Akiyama, S., {et~al.} 2016, Journal of
 Sheeley~Jr, N., Walters, J., Wang, Y.-M., \& Howard, R. 1999, Journal of
   Geophysical Research: Space Physics, 104, 24739
 
-\bibitem[{Shibata \& Magara(2011)}]{shibata_2011}
-Shibata, K. \& Magara, T. 2011, Living Reviews in Solar Physics, 8, 1
-
 \bibitem[{Singh {et~al.}(2020)Singh, Manure, Singh, \& Manure}]{singh_2020}
 Singh, P., Manure, A., Singh, P., \& Manure, A. 2020, Learn TensorFlow 2.0:
   Implement Machine Learning and Deep Learning Models with Python, 1
@@ -1208,6 +1199,11 @@ Verkhoglyadova, O., Li, G., Zank, G., Hu, Q., \& Mewaldt, R. 2009, The
   Vr{\v{s}}nak}]{veronig_2010}
 Veronig, A., Muhr, N., Kienreich, I., Temmer, M., \& Vr{\v{s}}nak, B. 2010, The
   Astrophysical Journal Letters, 716, L57
+
+\bibitem[{Vourlidas {et~al.}(2013)Vourlidas, Lynch, Howard, \&
+  Li}]{vourlidas_2013}
+Vourlidas, A., Lynch, B.~J., Howard, R.~A., \& Li, Y. 2013, Solar Physics, 284,
+  179
 
 \bibitem[{{Vourlidas} {et~al.}(2012){Vourlidas}, {Syntelis}, \&
   {Tsinganos}}]{vourlidas_2012}
