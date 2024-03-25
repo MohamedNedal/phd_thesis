@@ -1,4 +1,4 @@
-\begin{thebibliography}{304}
+\begin{thebibliography}{270}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Abe {et~al.}(2023)Abe, Fakomiti, Igboama, Akinola, Ogunmodimu, \&
@@ -16,9 +16,6 @@ Akasofu, S.~I. 1981, Space Science Reviews, 28, 121
 Alharbi, F.~R. \& Csala, D. 2021, in 2021 International Conference on
   Electrical, Communication, and Computer Engineering (ICECCE), IEEE, 1--6
 
-\bibitem[{Alielden \& Taroyan(2022)}]{khaled_2022}
-Alielden, K. \& Taroyan, Y. 2022, The Astrophysical Journal, 935, 66
-
 \bibitem[{Altschuler \& Newkirk(1969)}]{altschuler_1969}
 Altschuler, M.~D. \& Newkirk, G. 1969, Solar Physics, 9, 131
 
@@ -30,9 +27,6 @@ Amari, T., Canou, A., \& Aly, J.-J. 2014, Nature, 514, 465
   \& Daglis}]{aminalragia_2021}
 Aminalragia-Giamini, S., Raptis, S., Anastasiadis, A., {et~al.} 2021, Journal
   of Space Weather and Space Climate, 11, 59
-
-\bibitem[{Aran {et~al.}(2006)Aran, Sanahuja, \& Lario}]{aran_2006}
-Aran, A., Sanahuja, B., \& Lario, D. 2006, Advances in Space Research, 37, 1240
 
 \bibitem[{Aschwanden(2002)}]{aschwanden_2002}
 Aschwanden, M.~J. 2002, Space Science Reviews, 101, 1
@@ -67,9 +61,6 @@ Battarbee, M., Vainio, R., Laitinen, T., \& Hietala, H. 2013, Astronomy \&
 \bibitem[{Benson {et~al.}(2020)Benson, Pan, Prasad, Gary, \& Hu}]{benson_2020}
 Benson, B., Pan, W.~D., Prasad, A., Gary, G.~A., \& Hu, Q. 2020, Solar Physics,
   295, 65
-
-\bibitem[{Benz \& Thejappa(1988)}]{benz_1988}
-Benz, A. \& Thejappa, G. 1988
 
 \bibitem[{Berghmans {et~al.}(2021)Berghmans, Auch{\`e}re, Long, Soubri{\'e},
   Mierla, Zhukov, Sch{\"u}hle, Antolin, Harra, Parenti,
@@ -153,19 +144,6 @@ Cheung, M.~C., Boerner, P., Schrijver, C., {et~al.} 2015, The Astrophysical
 Chhabra, S., Klimchuk, J.~A., \& Gary, D.~E. 2021, The Astrophysical Journal,
   922, 128
 
-\bibitem[{Cohen \& Mewaldt(2018)}]{cohen_2018}
-Cohen, C. \& Mewaldt, R. 2018, Space Weather, 16, 1616
-
-\bibitem[{{Curto} {et~al.}(2008){Curto}, {Blanca}, \&
-  {Mart{\'\i}nez}}]{curto_2008}
-{Curto}, J.~J., {Blanca}, M., \& {Mart{\'\i}nez}, E. 2008, Solar Physics, 250,
-  411
-
-\bibitem[{Dabrowski {et~al.}(2021)Dabrowski, Flisek, Miku{\l}a, Fro{\'n},
-  Vocks, Magdaleni{\'c}, Krankowski, Zhang, Zucca, \& Mann}]{dabrowski_2021}
-Dabrowski, B., Flisek, P., Miku{\l}a, K., {et~al.} 2021, Remote Sensing, 13,
-  148
-
 \bibitem[{{Dalla} {et~al.}(2017){Dalla}, {Swalwell}, {Battarbee}, {Marsh},
   {Laitinen}, \& {Proctor}}]{dalla_2017}
 {Dalla}, S., {Swalwell}, B., {Battarbee}, M., {et~al.} 2017in  (Cambridge
@@ -176,16 +154,8 @@ Dabrowski, B., Flisek, P., Miku{\l}a, K., {et~al.} 2021, Remote Sensing, 13,
 Debrunner, H., Fl{\"u}ckiger, E., Gr{\"a}del, H., Lockwood, J., \& McGuire, R.
   1988, Journal of Geophysical Research: Space Physics, 93, 7206
 
-\bibitem[{Del~Zanna {et~al.}(2011)Del~Zanna, Aulanier, Klein, \&
-  T{\"o}r{\"o}k}]{del_2011}
-Del~Zanna, G., Aulanier, G., Klein, K.-L., \& T{\"o}r{\"o}k, T. 2011, Astronomy
-  \& Astrophysics, 526, A137
-
 \bibitem[{Delann{\'e}e \& Aulanier(1999)}]{delannee_1999}
 Delann{\'e}e, C. \& Aulanier, G. 1999, Solar Physics, 190, 107
-
-\bibitem[{Desai \& Giacalone(2016)}]{desai_2016}
-Desai, M. \& Giacalone, J. 2016, Living Reviews in Solar Physics, 13, 3
 
 \bibitem[{Dierckxsens {et~al.}(2015)Dierckxsens, Tziotziou, Dalla, Patsou,
   Marsh, Crosby, Malandraki, \& Tsiropoula}]{dierckxsens_2015}
@@ -199,12 +169,6 @@ Domingo, V., Fleck, B., \& Poland, A.~I. 1995, Solar Physics, 162, 1
   MacDowall}]{dulk_1985}
 Dulk, G., Steinberg, J.-L., Lecacheux, A., Hoang, S., \& MacDowall, R.~J. 1985,
   Astronomy and Astrophysics, 150, L28
-
-\bibitem[{Dumbovi{\'c} {et~al.}(2021)Dumbovi{\'c}, Veronig, Podladchikova,
-  Thalmann, Chikunova, Dissauer, Magdaleni{\'c}, Temmer, Guo, \&
-  Samara}]{dumbovic_2021}
-Dumbovi{\'c}, M., Veronig, A., Podladchikova, T., {et~al.} 2021, Astronomy \&
-  Astrophysics, 652, A159
 
 \bibitem[{Dungey(1961)}]{dungey_1961}
 Dungey, J. 1961, Journal of Geophysical Research, 66, 1043
@@ -352,13 +316,6 @@ Gurnett, D.~A. \& Anderson, R.~R. 1977, Journal of Geophysical Research, 82,
 Harra, L., Brooks, D.~H., Bale, S.~D., {et~al.} 2021, Astronomy \&
   Astrophysics, 650, A7
 
-\bibitem[{{Harvey} {et~al.}(1996){Harvey}, {Hill}, {Hubbard}, {Kennedy},
-  {Leibacher}, {Pintar}, {Gilman}, {Noyes}, {Title}, {Toomre}, {Ulrich},
-  {Bhatnagar}, {Kennewell}, {Marquette}, {Patron}, {Saa}, \&
-  {Yasukawa}}]{gong_1996}
-{Harvey}, J.~W., {Hill}, F., {Hubbard}, R.~P., {et~al.} 1996, Science, 272,
-  1284
-
 \bibitem[{Hochreiter \& Schmidhuber(1997)}]{hochreiter_1997}
 Hochreiter, S. \& Schmidhuber, J. 1997, Neural computation, 9, 1735
 
@@ -410,11 +367,6 @@ Jang, S., Moon, Y.-J., Kim, R.-S., Lee, H., \& Cho, K.-S. 2016, The
 Kahler, S., Cliver, E., Cane, H., {et~al.} 1987, in Proceedings of the
   20$^{th}$ International Cosmic Ray Conference Moscow, Volume 3, p. 121
 
-\bibitem[{Kahler {et~al.}(2017)Kahler, Kazachenko, Lynch, \&
-  Welsch}]{kahler_2017}
-Kahler, S., Kazachenko, M., Lynch, B., \& Welsch, B. 2017in , IOP Publishing,
-  012011
-
 \bibitem[{Kahler {et~al.}(1984)Kahler, Sheeley~Jr, Howard, Koomen, Michels,
   McGuire, von Rosenvinge, \& Reames}]{kahler_1984}
 Kahler, S., Sheeley~Jr, N., Howard, R., {et~al.} 1984, Journal of Geophysical
@@ -440,10 +392,6 @@ Kay, C. \& Gopalswamy, N. 2018, Journal of Geophysical Research: Space Physics,
 Ketkar, N. \& Ketkar, N. 2017, Deep learning with python: a hands-on
   introduction, 97
 
-\bibitem[{{Kim} {et~al.}(2019){Kim}, {Park}, {Lee}, {Moon}, {Bae}, {Lim},
-  {Jang}, {Kim}, {Cho}, {Choi}, \& {Cho}}]{kim_2019}
-{Kim}, T., {Park}, E., {Lee}, H., {et~al.} 2019, Nature Astronomy, 3, 397
-
 \bibitem[{Kingma \& Ba(2015)}]{kingma_2015}
 Kingma, D.~P. \& Ba, J. 2015, International Conference on Learning
   Representations (ICLR), San Diego
@@ -465,10 +413,6 @@ Klein, K.-L. \& Dalla, S. 2017, Space Science Reviews, 212, 1107
 Kolen, J.~F. \& Kremer, S.~C. 2001, Gradient Flow in Recurrent Nets: The
   Difficulty of Learning LongTerm Dependencies (IEEE), 237--243
 
-\bibitem[{Kong {et~al.}(2018)Kong, Pan, Yan, Wang, \& Li}]{kong_2018}
-Kong, D., Pan, G., Yan, X., Wang, J., \& Li, Q. 2018, The Astrophysical Journal
-  Letters, 863, L22
-
 \bibitem[{Kong {et~al.}(2017)Kong, Guo, Giacalone, Li, \& Chen}]{kong_2017}
 Kong, X., Guo, F., Giacalone, J., Li, H., \& Chen, Y. 2017, The Astrophysical
   Journal, 851, 38
@@ -487,11 +431,6 @@ Kontar, E.~P., Emslie, A.~G., Clarkson, D.~L., {et~al.} 2023, arXiv preprint
   Melnik, Bian, \& Subramanian}]{kontar_2017}
 Kontar, E.~P., Yu, S., Kuznetsov, A., {et~al.} 2017, Nature communications, 8,
   1515
-
-\bibitem[{K{\'o}ta {et~al.}(2005)K{\'o}ta, Manchester, Jokipii, De~Zeeuw, \&
-  Gombosi}]{kota_2005}
-K{\'o}ta, J., Manchester, W., Jokipii, J., De~Zeeuw, D., \& Gombosi, T. 2005in
-  , American Institute of Physics, 201--206
 
 \bibitem[{Kouloumvakos {et~al.}(2022)Kouloumvakos, Rodr{\'\i}guez-Garc{\'\i}a,
   Gieseler, Price, Vourlidas, \& Vainio}]{kouloumvakos_2022}
@@ -559,10 +498,6 @@ Lakhina, G.~S. \& Tsurutani, B.~T. 2016, Geoscience Letters, 3, 1
 Lanzerotti, L.~J. 2001, Washington DC American Geophysical Union Geophysical
   Monograph Series, 125, 11
 
-\bibitem[{Laurenza {et~al.}(2009)Laurenza, Cliver, Hewitt, Storini, Ling,
-  Balch, \& Kaiser}]{laurenza_2009}
-Laurenza, M., Cliver, E., Hewitt, J., {et~al.} 2009, Space Weather, 7
-
 \bibitem[{Lavasa {et~al.}(2021)Lavasa, Giannopoulos, Papaioannou, Anastasiadis,
   Daglis, Aran, Pacheco, \& Sanahuja}]{lavasa_2021}
 Lavasa, E., Giannopoulos, G., Papaioannou, A., {et~al.} 2021, Solar Physics,
@@ -588,16 +523,9 @@ Lemen, J.~R., Title, A.~M., Akin, D.~J., {et~al.} 2012, Solar Physics, 275, 17
 \bibitem[{Li \& Cairns(2012)}]{li_2012a}
 Li, B. \& Cairns, I.~H. 2012, The Astrophysical Journal, 753, 124
 
-\bibitem[{Li {et~al.}(2012)Li, Shalchi, Ao, Zank, \& Verkhoglyadova}]{li_2012b}
-Li, G., Shalchi, A., Ao, X., Zank, G., \& Verkhoglyadova, O. 2012, Advances in
-  Space Research, 49, 1067
-
 \bibitem[{Li {et~al.}(2003)Li, Zank, \& Rice}]{li_2003}
 Li, G., Zank, G., \& Rice, W. 2003, Journal of Geophysical Research: Space
   Physics, 108
-
-\bibitem[{{Li} \& {Zhu}(2013)}]{li_2013}
-{Li}, R. \& {Zhu}, J. 2013, Research in Astronomy and Astrophysics, 13, 1118
 
 \bibitem[{Lilensten {et~al.}(2014)Lilensten, Coates, Dehant, Dudok~de Wit,
   Horne, Leblanc, Luhmann, Woodfield, \& Barth{\'e}lemy}]{lilensten_2014}
@@ -606,9 +534,6 @@ Lilensten, J., Coates, A.~J., Dehant, V., {et~al.} 2014, The Astronomy and
 
 \bibitem[{Lin(2005)}]{lin_2005}
 Lin, R. 2005, Advances in Space Research, 35, 1857
-
-\bibitem[{Lin(2011)}]{lin_2011}
-Lin, R. 2011, Space science reviews, 159, 421
 
 \bibitem[{Liu \& Ofman(2014)}]{liu_2014}
 Liu, W. \& Ofman, L. 2014, Solar Physics, 289, 3233
@@ -732,22 +657,19 @@ Moore, R.~L., Sterling, A.~C., Hudson, H.~S., \& Lemen, J.~R. 2001, The
 {Morosan}, D.~E. \& {Gallagher}, P.~T. 2017, in Planetary Radio Emissions VIII,
   ed. G.~{Fischer}, G.~{Mann}, M.~{Panchenko}, \& P.~{Zarka}, 357--368
 
-\bibitem[{Morton {et~al.}(2015)Morton, Tomczyk, \& Pinto}]{morton_2015}
-Morton, R., Tomczyk, S., \& Pinto, R. 2015, Nature Communications, 6, 7813
-
-\bibitem[{Muhr {et~al.}(2014)Muhr, Veronig, Kienreich, Vr{\v{s}}nak, Temmer, \&
-  Bein}]{muhr_2014}
-Muhr, N., Veronig, A.~M., Kienreich, I.~W., {et~al.} 2014, Solar Physics, 289,
-  4563
-
 \bibitem[{Nammous {et~al.}(2022)Nammous, Saeed, \& Kobojek}]{nammous_2022}
 Nammous, M.~K., Saeed, K., \& Kobojek, P. 2022, Journal of King Saud University
   - Computer and Information Sciences, 34, 764
 
-\bibitem[{{Nedal} {et~al.}(2023){Nedal}, {Kozarev}, {Arsenov}, \&
+\bibitem[{{Nedal} {et~al.}(2023{\natexlab{a}}){Nedal}, {Kozarev}, {Arsenov}, \&
   {Zhang}}]{mnedal_2023a}
-{Nedal}, M., {Kozarev}, K., {Arsenov}, N., \& {Zhang}, P. 2023, J. Space
-  Weather Space Clim., 13, 26
+{Nedal}, M., {Kozarev}, K., {Arsenov}, N., \& {Zhang}, P. 2023{\natexlab{a}},
+  J. Space Weather Space Clim., 13, 26
+
+\bibitem[{{Nedal} {et~al.}(2023{\natexlab{b}}){Nedal}, {Kozarev}, {Zhang}, \&
+  {Zucca}}]{mnedal_2023b}
+{Nedal}, M., {Kozarev}, K., {Zhang}, P., \& {Zucca}, P. 2023{\natexlab{b}},
+  A\&A, 680, A106
 
 \bibitem[{{Nedal} {et~al.}(2019){Nedal}, {Mahrous}, \& {Youssef}}]{mnedal_2019}
 {Nedal}, M., {Mahrous}, A., \& {Youssef}, M. 2019, Astrophysics and Space
@@ -758,15 +680,6 @@ Newkirk, G. 1967, Annual Review of Astronomy and Astrophysics, 5, 213
 
 \bibitem[{{Newkirk}(1961)}]{newkirk_1961}
 {Newkirk}, Gordon, J. 1961, \apj, 133, 983
-
-\bibitem[{Ng {et~al.}(2012)Ng, Reames, \& Tylka}]{ng_2012}
-Ng, C.~K., Reames, D.~V., \& Tylka, A.~J. 2012in , American Institute of
-  Physics, 212--218
-
-\bibitem[{Nieves-Chinchilla {et~al.}(2018)Nieves-Chinchilla, Vourlidas,
-  Raymond, Linton, Al-Haddad, Savani, Szabo, \& Hidalgo}]{nieves_2018}
-Nieves-Chinchilla, T., Vourlidas, A., Raymond, J.~C., {et~al.} 2018, Solar
-  Physics, 293, 1
 
 \bibitem[{{Nindos} {et~al.}(2011){Nindos}, {Alissandrakis}, {Hillaris}, \&
   {Preka-Papadema}}]{nindos_2011}
@@ -935,9 +848,6 @@ Ramstad, R., Holmstr{\"o}m, M., Futaana, Y., {et~al.} 2018, Geophysical
 \bibitem[{Reames(1999)}]{reames_1999}
 Reames, D.~V. 1999, Space Science Reviews, 90, 413
 
-\bibitem[{Reames(2000)}]{reames_2000}
-Reames, D.~V. 2000in , American Institute of Physics, 289--300
-
 \bibitem[{Reames(2013)}]{reames_2013}
 Reames, D.~V. 2013, Space Science Reviews, 175, 53
 
@@ -955,9 +865,6 @@ Reid, H.~A. \& Kontar, E.~P. 2018{\natexlab{a}}, Astronomy \& Astrophysics,
 Reid, H.~A. \& Kontar, E.~P. 2018{\natexlab{b}}, The Astrophysical Journal,
   867, 158
 
-\bibitem[{Reid \& Vilmer(2017)}]{reid_2017}
-Reid, H.~A. \& Vilmer, N. 2017, Astronomy \& Astrophysics, 597, A77
-
 \bibitem[{Reid \& Ratcliffe(2014)}]{reid_2014}
 Reid, H. A.~S. \& Ratcliffe, H. 2014, Research in Astronomy and Astrophysics,
   14, 773
@@ -965,10 +872,6 @@ Reid, H. A.~S. \& Ratcliffe, H. 2014, Research in Astronomy and Astrophysics,
 \bibitem[{Reiner {et~al.}(2009)Reiner, Goetz, Fainberg, Kaiser, Maksimovic,
   Cecconi, Hoang, Bale, \& Bougeret}]{reiner_2009}
 Reiner, M.~J., Goetz, K., Fainberg, J., {et~al.} 2009, Solar Physics, 259, 255
-
-\bibitem[{Richardson {et~al.}(2016)Richardson, von Rosenvinge, \&
-  Cane}]{richardson_2016}
-Richardson, I., von Rosenvinge, T., \& Cane, H. 2016, Solar Physics, 291, 2117
 
 \bibitem[{Ripley(1996)}]{ripley_2007}
 Ripley, B.~D. 1996, Pattern Recognition and Neural Networks (Cambridge
@@ -1056,11 +959,6 @@ Schwenn, R. 2006, Living reviews in solar physics, 3, 1
 Selvakumaran, R., Veenadhari, B., Akiyama, S., {et~al.} 2016, Journal of
   Geophysical Research: Space Physics, 121, 8188
 
-\bibitem[{Sheeley~Jr {et~al.}(1999)Sheeley~Jr, Walters, Wang, \&
-  Howard}]{sheeley_1999}
-Sheeley~Jr, N., Walters, J., Wang, Y.-M., \& Howard, R. 1999, Journal of
-  Geophysical Research: Space Physics, 104, 24739
-
 \bibitem[{Singh {et~al.}(2020)Singh, Manure, Singh, \& Manure}]{singh_2020}
 Singh, P., Manure, A., Singh, P., \& Manure, A. 2020, Learn TensorFlow 2.0:
   Implement Machine Learning and Deep Learning Models with Python, 1
@@ -1100,14 +998,6 @@ Suzuki, S. \& Dulk, G. 1985, Cambridge: Cambridge University Press, 289
 \bibitem[{{\v{S}}vestka(1995)}]{vsvestka_1995}
 {\v{S}}vestka, Z. 1995, Advances in Space Research, 16, 27
 
-\bibitem[{{Szenicer} {et~al.}(2019){Szenicer}, {Fouhey}, {Munoz-Jaramillo},
-  {Wright}, {Thomas}, {Galvez}, {Jin}, \& {Cheung}}]{szenicer_2019}
-{Szenicer}, A., {Fouhey}, D.~F., {Munoz-Jaramillo}, A., {et~al.} 2019, Science
-  Advances, 5, eaaw6548
-
-\bibitem[{{Temmer}(2016)}]{temmer_2016}
-{Temmer}, M. 2016, Astronomische Nachrichten, 337, 1010
-
 \bibitem[{Temmer(2021)}]{temmer_2021}
 Temmer, M. 2021, Living Reviews in Solar Physics, 18, 4
 
@@ -1134,9 +1024,6 @@ Thompson, B.~c., Gurman, J., Neupert, W., {et~al.} 1999, The Astrophysical
 {Thompson}, B.~J., {Plunkett}, S.~P., {Gurman}, J.~B., {et~al.} 1998, grl, 25,
   2465
 
-\bibitem[{{Thompson, W. T.}(2006)}]{thompson_2006}
-{Thompson, W. T.} 2006, A\&A, 449, 791
-
 \bibitem[{{Torsti} {et~al.}(1995){Torsti}, {Valtonen}, {Lumme}, {Peltonen},
   {Eronen}, {Louhola}, {Riihonen}, {Schultz}, {Teittinen}, {Ahola}, {Holmlund},
   {Kelh{\"a}}, {Lepp{\"a}l{\"a}}, {Ruuska}, \& {Str{\"o}mmer}}]{torsti_1995}
@@ -1161,20 +1048,9 @@ Tsurutani, B.~T. 1985
 Tsurutani, B.~T., Gonzalez, W.~D., \& Kamide, Y. 1997, Surveys in geophysics,
   18, 363
 
-\bibitem[{Vainio {et~al.}(2009)Vainio, Desorgher, Heynderickx, Storini,
-  Fl{\"u}ckiger, Horne, Kovaltsov, Kudela, Laurenza, McKenna-Lawlor,
-  {et~al.}}]{vainio_2009}
-Vainio, R., Desorgher, L., Heynderickx, D., {et~al.} 2009, Space science
-  reviews, 147, 187
-
 \bibitem[{{Vainio} \& {Laitinen}(2008)}]{vainio_2008}
 {Vainio}, R. \& {Laitinen}, T. 2008, Journal of Atmospheric and
   Solar-Terrestrial Physics, 70, 467
-
-\bibitem[{van Diepen {et~al.}(2018)van Diepen, Dijkema, \&
-  Offringa}]{dppp_2018}
-van Diepen, G., Dijkema, T.~J., \& Offringa, A. 2018, Astrophysics Source Code
-  Library, ascl
 
 \bibitem[{van Haarlem {et~al.}(2013)van Haarlem, Wise, Gunst, Heald, McKean,
   Hessels, de~Bruyn, Nijboer, Swinbank, Fallows, {et~al.}}]{lofar_2013}
@@ -1250,12 +1126,6 @@ Whitman, K., Egeland, R., Richardson, I.~G., {et~al.} 2023, Advances in Space
   Research, 72, 5161, cOSPAR Space Weather Roadmap 2022: Scientific Research
   and Applications
 
-\bibitem[{Wild(1950{\natexlab{a}})}]{wild_1950b}
-Wild, J. 1950{\natexlab{a}}, Australian Journal of Chemistry, 3, 399
-
-\bibitem[{Wild(1950{\natexlab{b}})}]{wild_1950c}
-Wild, J. 1950{\natexlab{b}}, Australian Journal of Chemistry, 3, 541
-
 \bibitem[{Wild \& McCready(1950)}]{wild_1950a}
 Wild, J. \& McCready, L. 1950, Australian Journal of Chemistry, 3, 387
 
@@ -1284,10 +1154,6 @@ Wood, B., Howard, R., \& Socker, D. 2010, The Astrophysical Journal, 715, 1524
 
 \bibitem[{Wu \& Lepping(2016)}]{wu_2016}
 Wu, C.-C. \& Lepping, R.~P. 2016, Solar Physics, 291, 265
-
-\bibitem[{Wu {et~al.}(2002)Wu, Wang, Yoon, Zheng, \& Wang}]{wu_2002}
-Wu, C.~S., Wang, C.~B., Yoon, P.~H., Zheng, H.~N., \& Wang, S. 2002, The
-  Astrophysical Journal, 575, 1094
 
 \bibitem[{{Wuelser} {et~al.}(2004){Wuelser}, {Lemen}, {Tarbell}, {Wolfson},
   {Cannon}, {Carpenter}, {Duncan}, {Gradwohl}, {Meyer}, {Moore}, {Navarro},
@@ -1327,9 +1193,6 @@ Zhang, J., Cheng, X., \& Ding, M.-d. 2012, Nature communications, 3, 747
   Kasper, Nitta, Poomvises, Thompson, Wu, {et~al.}}]{zhang_2007}
 Zhang, J., Richardson, I., Webb, D., {et~al.} 2007, Journal of Geophysical
   Research: Space Physics, 112
-
-\bibitem[{Zhang {et~al.}(2019)Zhang, Wang, Ye, \& Wang}]{zhang_2019}
-Zhang, P., Wang, C., Ye, L., \& Wang, Y. 2019, Solar Physics, 294, 62
 
 \bibitem[{Zhang {et~al.}(2018)Zhang, Wang, \& Ye}]{zhang_2018}
 Zhang, P., Wang, C.~B., \& Ye, L. 2018, Astronomy \& Astrophysics, 618, A165
