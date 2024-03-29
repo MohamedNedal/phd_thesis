@@ -9,7 +9,6 @@ CBFs are disturbances propagating over the solar disk and limb, often faster tha
 
 Studies have clarified CBF characteristics both on the solar disk and off the limb, confirming their wave-like nature \citep{nitta_2013, long_2011, olmedo_2012}. Observations from instruments like LASCO onboard SOHO have extended shock wave investigations beyond 2.5 \rsun \citep{domingo_1995, vourlidas_2003}. While EUV observations link CMEs and EUV waves, understanding shock waves in EUV remains incomplete \citep{patsourakos_2009, kozarev_2011}. Emission measure modeling using AIA's EUV channels provides insights into temperature and density changes in the wavefront's sheath \citep{kozarev_2011}. Multi-wavelength observations from SOHO/LASCO and SDO/AIA instruments have revealed valuable information about CBF properties near the Sun \citep{warmuth_2015}.
 Factors such as nearby active regions or coronal holes can distort CBF morphology, and a connection between CBFs and chromospheric disturbances known as Moreton waves has been established \citep{ofman_2002, mann_2003, piantschitsch_2018, thompson_1999b}.
-
 In this study, I analyzed 26 CBF events up to \almost17\rsun using observations and modeling tools from the Solar Particle Radiation Environment Analysis and Forecasting--Acceleration and Scattering Transport (SPREAdFAST) framework \citep{kozarev_2022}. The study aims to characterize CBF kinematics and estimate ambient plasma properties to understand the relationships between shock and plasma parameters.
 
 \section{EUV Observations}
@@ -73,7 +72,6 @@ Furthermore, plasma parameters and modeling were performed using information ret
 \end{figure}
 
 To accurately determine the positions of CBFs over time, we employed several algorithms, including Savitzky-Golay filtering \citep{savitzky_1964} for data smoothening and local minima/maxima ordering for identifying wave positions. Additionally, we manually specified starting and ending times for each CBF event and determined their corresponding heights above the solar limb.
-
 By analyzing intensity values, we defined the positions of CBFs at each time step, considering the front and back of the wave to be at 20\% of the peak intensity. Furthermore, we applied mathematical techniques such as Levenberg-Marquardt least squares minimization \citep{markwardt_2009} and bootstrapping optimization \citep{efron_1979} to fit fourth-order polynomials to the wave positions, enabling measurements of speeds, accelerations, intensities, and thicknesses in both radial and lateral directions.
 
 Finally, measurements of CBF heights and lateral positions were obtained relative to the solar disk and wavefront direction, respectively, providing comprehensive insights into the dynamics of these solar phenomena.
@@ -87,7 +85,6 @@ The SPREAdFAST catalog offers summary plots of J-maps and kinematic data for eac
 Moving forward, the development of synthetic shock models (S2M) forms the next phase of the study, as mentioned by \citet{kozarev_2022}. These models, operating at a 24-second cadence, are constructed based on extrapolated radial and lateral kinematic results and incorporate major and minor axes of spheroids representing compressive waves. The shock surface is delineated from the onset of the CBF until its nose reaches 10 \rsun and then extended up to 30 \rsun utilizing results from the Magnetohydrodynamic Algorithm outside a Sphere (MAS) synoptic coronal model.
 
 The methodology for estimating shock density jump is detailed by \citet{kozarev_2017}, involving the calculation of differential emission measure (DEM) during and before the event at each shock crossing and timestep. This approach, informed by \citet{cheung_2015}, provides insights into the variation in density across shock structures. Notably, while the density jump within the AIA FOV typically remains below 1.2, regions beyond observational limits are assigned a value of 1.2, assuming the presence of weak shocks.
-
 To facilitate analysis, the synthetic shock model is segmented into distinct regions--the cap representing the shock nose, Zone 1, and Zone 2 representing the shock flanks--as explained by \citet{kozarev_2022}. This segmentation aids in the examination of plasma parameter distributions across different sectors of the shock surface, as depicted in Figure~\ref{fig_segments}.
 
 \begin{figure}[!htp] % updated!
@@ -101,6 +98,7 @@ In this section, I analyze a case study event in the low corona region and inves
 
 \subsection{Event Context}
 The eruption occurred on May 11, 2011, at around 02:20 UT (Fig.~\ref{fig_aia_event}), originating from an active region in the northwestern sector (N18W52). It involved a massive shock wave propelled by a fast partial-halo CME, with a linear speed of 745 \kms, a 2$^{nd}$-order speed at 20\rsun of 776 \kms, and an acceleration of 3.3 m s$^{-2}$. The eruption was accompanied by a weak B8.1 solar flare and an eruptive filament observed by the SDO/AIA instrument.
+Additionally, a type II radio burst was associated with the eruption, observed by the Learmonth spectrogram. Proton fluxes near 1 AU showed an increase, and an SEP event was detected at Earth with onset time of 03:39 UT and a $J_p$ of 0.0133 protons/(cm$^2$ s sr MeV) in the energy channel 17-22 MeV \citep{miteva_2016, miteva_2017}.  $J_p$ is the peak proton intensity after subtracting the pre-event level.
 
 \begin{figure}[!htp] % updated!
 	\centerline{\includegraphics[width=0.8\columnwidth]{chapter2/figs/RGB_panel.pdf}}
@@ -108,10 +106,9 @@ The eruption occurred on May 11, 2011, at around 02:20 UT (Fig.~\ref{fig_aia_eve
 	\label{fig_aia_event}
 \end{figure}
 
-Additionally, a type II radio burst was associated with the eruption, observed by the Learmonth spectrogram. Proton fluxes near 1 AU showed an increase, and an SEP event was detected at Earth with onset time of 03:39 UT and a $J_p$ of 0.0133 protons/(cm$^2$ s sr MeV) in the energy channel 17-22 MeV \citep{miteva_2016, miteva_2017}.  $J_p$ is the peak proton intensity after subtracting the pre-event level.
-
 \subsection{Low Corona Part}
 To investigate the kinematics of the CBF event, I employed the CASHeW module within the SPREAdFAST framework. The shock wave's asymmetrical evolution is detailed, along with its morphological changes over time. The average speeds and accelerations for the radial and lateral directions are provided (Fig.~\ref{fig_kinematics_110511}), along with a comparison of wave thickness between flanks. The shock surface is divided into segments for further analysis (Fig.~\ref{fig_segments}). Table~\ref{T_110511} provides a summary of the statistical results, and the results for the three segments are summarized in Table~\ref{T_sh_param_110511}.
+Moreover, shock-crossing magnetic field lines during this event were investigated in \citep{kozarev_2022}, with key plasma parameters analyzed up to 10\rsun. The aspect ratio of the coronal wave's geometry is discussed, along with changes in shock-field angle and magnetic field amplitude over time and radial distance.
 
 \begin{figure}[!htp] % updated!
 	\centerline{
@@ -175,13 +172,11 @@ To investigate the kinematics of the CBF event, I employed the CASHeW module wit
 	\end{tabular}
 \end{table}
 
-Moreover, shock-crossing magnetic field lines during this event were investigated in \citep{kozarev_2022}, with key plasma parameters analyzed up to 10\rsun. The aspect ratio of the coronal wave's geometry is discussed, along with changes in shock-field angle and magnetic field amplitude over time and radial distance.
-
 \subsection{Middle/Outer Corona Part}
 Complementary measurements from the SOHO/LASCO instrument\footnote{LASCO CME Catalog: \url{https://cdaw.gsfc.nasa.gov/CME_list/}} expand the analysis of EUV waves' kinematics in the middle/outer corona. The height-time profile of the CME leading edge associated with the coronal wave is examined, employing fitting models of \citet{gallagher_2003} and \citet{byrne_2013} to analyze the data (Fig.~\ref{fig_height_profile_aialasco_110511}). Insights into the wave's acceleration and speed variation over time and distance from the Sun are provided (Fig.~\ref{fig_rad_kinematics_aialasco_110511}).
 
 \begin{figure}[!htp] % updated!
-	\centerline{\includegraphics[width=0.7\columnwidth]{chapter2/figs/height_profile_residuals_aia_lasco_110511_01.pdf}}
+	\centerline{\includegraphics[width=0.6\columnwidth]{chapter2/figs/height_profile_residuals_aia_lasco_110511_01.pdf}}
 	\caption{Top panel -- Height-time profile compiled from AIA and LASCO measurements for the event occurred on May 11, 2011, fitted with two CME kinematics models from the photosphere up to 17\rsun. Middle panel -- Difference between the fitting and the real observations. Bottom panel -- Relative residuals in \%.}
 	\label{fig_height_profile_aialasco_110511}
 \end{figure}
@@ -192,14 +187,11 @@ Complementary measurements from the SOHO/LASCO instrument\footnote{LASCO CME Cat
 	\label{fig_rad_kinematics_aialasco_110511}
 \end{figure}
 
-
-
 \section{Statistical Study}
 I conduct a thorough statistical analysis of coronal wave events observed in the AIA and LASCO FOVs, focusing on kinematic characteristics and plasma parameters.
 
 Table~\ref{T_sh_param_all} summarizes statistical parameters related to shock characteristics, such as wave speed, intensity, and thickness in the AIA FOV.
 Analysis reveals higher speeds, accelerations, lower mean intensities, and thickness in the radial direction compared to the lateral direction, suggesting early elongation of waves near the Sun.
-
 Figure~\ref{fig_kinematics_spect_hist} illustrates EUV waves' kinematics evolution in the AIA FOV, showing parameter distributions as a function of distance for shock speed, acceleration, wave intensity, and thickness in radial and lateral directions.
 Speed and intensity decline with distance due to momentum loss and decreasing plasma densities. All dynamic spectra for individual events are accessible on the SPREAdFAST catalog webpage\footnote{SPREAdFAST Catalog: \url{https://spreadfast.astro.bas.bg/catalog/}}.
 
@@ -286,7 +278,6 @@ Observations from SDO/AIA, particularly in 193 and 211 $\AA$ wavelengths, are in
 
 \subsection{Image Filtering Techniques}
 Image filtering techniques, including thresholding, wavelet decomposition, and segmentation, were central to the method. Initial thresholding narrowed the dynamic range of base difference images, focusing on the object of interest.
-
 Following thresholding, the base difference images underwent \'A trous wavelet decomposition into multiple scales. Each wavelet coefficient was then thresholded relative to the statistical distribution of pixel intensities at each decomposition level. Segmentation produced object masks for each time step, which were subsequently multiplied by the original data to reveal intensity variations within the object.
 
 Tailored approaches were employed due to variations in statistical distributions of pixel intensities between base and running difference images. Base difference images focused on specific segments containing the object of interest, such as a CBF, while running difference images, used for eruption initiation identification, were dependent on specific features and objects observed.
@@ -300,7 +291,7 @@ Wavetrack employed wavelet decomposition, feature enhancement, and filtering for
 
 For filament tracking, Wavetrack utilized wavelet decomposition, feature recognition, object mask generation, and image recomposition. The method identified different scales of features and enhanced them for tracking. Object masks isolated filament features at each time step, and image recomposition produced final feature maps. Image choice, such as inverted AIA 193 $\AA$ images, depended on source data and filament velocity.
 
-\subsection{Fourier Local Correlation Tracking (FLCT) Model}
+\subsection{Fourier Local Correlation Tracking (FLCT)}
 The study employed the FLCT model to determine solar feature velocities, utilizing the FLCT method. FLCT analyzed consecutive solar images and tracked feature motion over time using object masks from Wavetrack. The output provided detailed maps of instantaneous velocity, aiding in understanding solar feature expansion and evolution.
 
 The study integrated advanced image processing techniques, including wavelet transform, filtering, feature detection algorithms, and machine learning, for comprehensive solar observation analysis. Wavetrack emerged as a versatile tool, particularly valuable for dynamic coronal feature tracking, offering significant insights into solar dynamics.
@@ -537,7 +528,6 @@ Analysis reveals no discernible trend between the Dst index and CME speed, regar
 
 \subsubsection{Correlation between GSs and IP Parameters}
 We explore correlations between GSs and various parameters linked to pre-selected IP phenomena. Scatter plots illustrate relationships such as Dst index versus ICME speed and IP shock speed, Dst versus Mach number and sheath duration, and Dst versus $|Bz|$ and $B_d/B_u$. Figure~\ref{fig_dst_scatterplots} and Table~\ref{tab_cc_IP} detail these correlations.
-
 For the limited sample used, we observe moderately positive trends between Dst index and plasma compression parameters at the shock interface, comparable to or slightly larger than correlations with ICME speeds. However, the trend with $|Bz|$ is weaker (0.37), contrasting with robust trends from prior studies. Correlations involving Dst and IP shock speed, Mach number, or sheath duration are relatively smaller.
 
 Recent reports suggest strong correlations with electric and magnetic field components \citep{echer_2022}, although this exceeds our current analysis scope. Caution is warranted in interpreting results due to lack of uncertainty estimates for correlation coefficients. Additional parameters from ICME and IP shock catalogs show no robust correlations with Dst index, all correlation coefficients being smaller than 0.2.
@@ -546,7 +536,6 @@ Recent reports suggest strong correlations with electric and magnetic field comp
 We examine how magnetic obstacle type, orientation upon Earth arrival, and 3D reconstructed CME speeds collectively impact GS intensity, approximated by the Dst index.
 
 The most potent GSs in our compilation exhibit distinctive magnetic structure parameters, including complexity, orientation, and speed at Earth. Exceptions include instances of fast speed flank hits or uncertain configurations, possibly influenced by fast solar wind streams or CIRs. Notably, IP structure associated with certain GSs has notably low speeds.
-
 Interpretation considers information from both speed reconstructions and in situ measurements to enhance analysis robustness.
 
 \section{Discussion}
@@ -560,7 +549,6 @@ In the low corona, the shock wave's asymmetry and evolving geometry revealed dyn
 In the middle/outer corona, SOHO/LASCO measurements depicted the dynamic evolution of the EUV wave. Gallagher model fitting emphasized the importance of combining AIA and LASCO measurements. Fluctuations in acceleration and speed underscored the shock wave's complexity.
 
 Statistical analysis revealed patterns in coronal wave events, with radial waves exhibiting distinct characteristics compared to lateral waves. Cumulative dynamic spectra illustrated trends in shock speed and intensity with distance.
-
 Correlations between plasma parameters and shock characteristics were identified, laying the groundwork for further parameterizations in subsequent phases of the project.
 
 \subsection{Dynamic Coronal Features Analysis with Wavetrack}
@@ -571,7 +559,6 @@ Wavetrack efficiently delineated evolving CBFs across consecutive time steps, ev
 To analyze CBF and filament kinematics, the FLCT method was employed. Results revealed the plane-of-sky direction and speed of different CBF regions during the May 11, 2011 event. The study showcased the complementary nature of Wavetrack and FLCT in elucidating dynamic behavior.
 
 The study calculated plane-of-sky speeds of the erupting filament driver (Fig.~\ref{fig_flct_110511}), showing higher speeds directly below the region of highest speeds in the CBF. Geometric centers and centers of mass were determined, providing insights into the dynamics of the solar eruption event.
-
 These findings offer insights into the dynamics and characteristics of the May 11, 2011 solar eruption event, particularly regarding the movement and speeds of key features like the CBF and erupting filament driver.
 
 \subsection{Subjectivity in CME Speed Determination}
@@ -609,5 +596,4 @@ Among various parameters, the combination of speed and orientation of the magnet
 In conclusion, our study lays the groundwork for ongoing projects aimed at refining parameterizations and integrating synoptic MHD parameters into the \textit{S3M} synoptic model, enhancing our understanding of solar dynamics and space weather forecasting.
 
 Our findings highlight the importance of integrating advanced tracking methodologies like Wavetrack with kinematic analyses such as FLCT, providing deeper insights into the complexities of eruptive solar events. As we refine these methodologies, our understanding of solar phenomena will advance, contributing to Heliophysics.
-
 Furthermore, our study emphasizes the complexity of studying CMEs and their impact on geomagnetic storms. Integrating observational data and model outputs offers a comprehensive perspective for further investigations into the dynamic interplay between solar and interplanetary phenomena in shaping space weather events.

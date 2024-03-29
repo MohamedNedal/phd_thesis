@@ -17,13 +17,9 @@ The chapter is structured as follows: Section~\ref{sec_ch3_obs} describes LOFAR 
 \label{sec_ch3_obs}
 Several studies have investigated solar radio emissions during the PSP's second encounter in late 2019 \cite{krupar_2020, pulupa_2020, cattell_2021, harra_2021, badman_2022}. This study focuses on type III radio bursts occurring on April 3, 2019, between approximately 12:10 and 12:50 UT, coinciding with active regions AR12737 and AR12738. AR12737, on the near side of the Sun, exhibited a $\beta$ magnetic configuration with eight sunspots \cite{hale_2019}, while detailed observations of AR12738 were unattainable due to its far-side position.
 
-Intense type III radio bursts were observed by four instruments (Wind/WAVES, PSP/FIELDS, STEREO-A/SWAVES, and LOFAR/LBA) during a regular survey. Figure~\ref{fig_alldyspec} displays the first type III burst observed by these instruments, with the start time determined using the second derivative of the light curve at specific frequency channels. The relative orientations of the instruments with respect to Earth are shown in Figure~\ref{locations}, with PSP and STEREO spacecraft almost aligned with the Sun. The solar disk appeared quiet, with no X-ray or EUV transient emissions during the study period, confirmed by GOES-15/XRS and SDO/EVE observations. Despite this, the sensitive LOFAR telescope detected bursts close to noon, corroborated by PSP data.
-
-Localized regions of relatively higher intensity, likely small-scale coronal brightening spots or campfires, were observed in EUVI and AIA images \cite{young_2018, madjarska_2019, berghmans_2021}. Subsequent subsections introduce the PSP and LOFAR instruments and their observations of the radio bursts.
-
 \begin{figure}
 \centering
-\includegraphics[width=0.9\hsize]{chapter3/figs/all_dyspec.png}
+\includegraphics[width=0.7\hsize]{chapter3/figs/all_dyspec.png}
 \caption{Radio dynamic spectra for a single burst obtained from multiple instruments. The top-left panel is from the LOFAR/LBA instrument, the top-right is from the PSP/FIELDS instrument, the bottom-left is from the STEREO/SWAVES instrument, and the bottom-right is from the Wind/WAVES. The vertical red dashed line denotes the start time of the burst.}
 \label{fig_alldyspec}
 \end{figure}
@@ -36,12 +32,16 @@ Localized regions of relatively higher intensity, likely small-scale coronal bri
 \end{figure}
 
 \begin{figure}[!htp]
-\centering
-\includegraphics[width=\hsize]{chapter3/figs/aia_sta_cutout.pdf}
-\includegraphics[width=12cm]{chapter3/figs/xrs_eve.pdf}
-\caption{Exploring the X-ray and extreme ultraviolet (EUV) emissions from the Sun. The top panel showcases a cutout region of the SDO/AIA 193\,\AA image of the solar disk along with the STEREO-A EUVI 195\,\AA point of view. The white curve is the limb of the solar disk as seen by AIA from the right side. The red and blue colors are the contours of the line-of-sight magnetogram from the SDO/HMI instrument. The levels are (50, 100, 150, 300, 500, 1000) Gauss. The middle panel shows the X-ray flux from the GOES-14 spacecraft shows minimum activity. The bottom panel shows the time series of the ESP Quad band from the SDO/EVE instrument, which shows the solar irradiance in the extreme ultraviolet (EUV) band.}
-\label{soldisk_xrs}
+	\centering
+	\includegraphics[width=\hsize]{chapter3/figs/aia_sta_cutout.pdf}
+	\includegraphics[width=12cm]{chapter3/figs/xrs_eve.pdf}
+	\caption{Exploring the X-ray and EUV emissions from the Sun. The top panel showcases a cutout region of the SDO/AIA 193 $\AA$ image of the solar disk along with the STEREO-A EUVI 195 $\AA$ point of view. The white curve is the limb of the solar disk as seen by AIA from the right side. The red and blue colors are the contours of the line-of-sight magnetogram from the SDO/HMI instrument. The levels are (50, 100, 150, 300, 500, 1000) Gauss. The middle panel shows the X-ray flux from the GOES-14 spacecraft shows minimum activity. The bottom panel shows the time series of the ESP Quad band from the SDO/EVE instrument, which shows the solar irradiance in the EUV band.}
+	\label{soldisk_xrs}
 \end{figure}
+
+Intense type III radio bursts were observed by four instruments (Wind/WAVES, PSP/FIELDS, STEREO-A/SWAVES, and LOFAR/LBA) during a regular survey. Figure~\ref{fig_alldyspec} displays the first type III burst observed by these instruments, with the start time determined using the second derivative of the light curve at specific frequency channels. The relative orientations of the instruments with respect to Earth are shown in Figure~\ref{locations}, with PSP and STEREO spacecraft almost aligned with the Sun. The solar disk appeared quiet, with no X-ray or EUV transient emissions during the study period, confirmed by GOES-15/XRS and SDO/EVE observations. Despite this, the sensitive LOFAR telescope detected bursts close to noon, corroborated by PSP data.
+
+Localized regions of relatively higher intensity, likely small-scale coronal brightening spots or campfires, were observed in EUVI and AIA images \cite{young_2018, madjarska_2019, berghmans_2021}. Subsequent subsections introduce the PSP and LOFAR instruments and their observations of the radio bursts.
 
 \subsection{PSP Observations}
 Parker Solar Probe (PSP) is a spacecraft launched in 2018 to study solar corona and solar wind \citep{fox_2016}. I utilized level-2 data from the FIELDS instrument suite \citep{bale_2016, pulupa_2017}, available in CDF format on the PSP FIELDS data products website\footnote{PSP FIELDS data products: \url{http://research.ssl.berkeley.edu/data/psp/data/sci/fields/}}. Data values were converted from $V^2/Hz$ to $dB$ units using a threshold of 10$^{-16}$ $V^2/Hz$ for radio burst detection \citep{pulupa_2020}. High- and Low-Frequency Receiver data were combined into a single dynamic spectrum covering 10.5 kHz to 19.2 MHz, with noise minimized through subtraction of mean intensity values.
@@ -182,5 +182,4 @@ Integration of burst source location with magnetic modeling suggested discrepanc
 
 The study highlighted LOFAR's efficacy in characterizing solar eruptive events and quiet periods, with implications for space weather monitoring. Future work aims to automate burst analysis and investigate their relation to solar surface activity.
 Additionally, analysis using LOFAR imaging and MAS modeling indicated discrepancies between observed and modeled burst trajectories, emphasizing the need for model refinements.
-
 Overall, this study underscores the importance of considering scattering effects and refining models to enhance understanding of solar radio emissions' propagation in the corona \citep{kontar_2019, kontar_2023, chen_2023}.

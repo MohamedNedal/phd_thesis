@@ -1,344 +1,112 @@
 \chapter{Modeling and Forecasting of Solar Energetic Protons}
 \label{chapter4}
-
-
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-This chapter has two parts. In the first part, I describe a modeling study that we conducted on energetic proton acceleration and propagation from the solar corona to 1 AU. For this modeling, we employ the physics-based approach utilized in the first chapter, including the 3D coronal models and a 3D MAS-MHD model run. With these models, we use the EPREM model to find the fluxes and spectra of energetic protons at 1 AU. We then compare the modeling results with in-situ measurements. In the second part, I describe a deep learning approach that I developed to forecast the integral flux of energetic protons in three energy channels across three different forecasting horizons.
+This chapter comprises two sections. The first focuses on a modeling study concerning energetic proton acceleration and propagation from the solar corona to 1 AU. Utilizing a physics-based approach, including 3D coronal models and a 3D MAS-MHD model, we employ the EPREM model to determine fluxes and spectra of energetic protons at 1 AU, comparing results with in-situ measurements. The second part introduces a deep learning approach for forecasting the integral flux of energetic protons across three energy channels over three forecasting horizons.
 
 \section{Introduction}
 \label{sec_ch4_intro}
-CMEs represent significant phenomena in solar physics, captivating attention due to their prominent role in solar activity. Traditionally, CMEs have been identified through white light observations, providing valuable insights into their characteristics \citep{vourlidas_2003, zhang_2006, bein_2011}. However, a comprehensive understanding of these eruptions requires examination across multiple wavelengths, including ultraviolet and radio bands, where observations reveal additional facets of their dynamics \citep{bastian_2001, veronig_2010}. Notably, EUV observations, facilitated by instruments like the AIA on the Solar Dynamics Observatory, have become instrumental in capturing the early stages of CMEs \citep{lemen_2012, pesnell_2012}.
+CMEs are pivotal in solar physics, attracting attention for their role in solar activity. Observations across various wavelengths provide insights into their dynamics \citep{vourlidas_2003, zhang_2006, bein_2011, bastian_2001, veronig_2010}. Particularly, EUV observations, aided by instruments like AIA, have become crucial in capturing early CME stages \citep{lemen_2012, pesnell_2012}. CMEs can induce shock waves in the solar corona, observable as EUV waves or CBFs, crucial for SEP acceleration \citep{thompson_1998, long_2011, ontiveross_2009, gopalswamy_2011, battarbee_2013, kozarev_2013, schwadron_2014, kong_2017}.
 
-CMEs, in their trajectory through the solar corona, can give rise to shock waves when their propagation speeds surpass the local fast magnetosonic speed, observable as EUV waves or CBFs \citep{thompson_1998, long_2011}. These shock waves are crucial in the context of SEP acceleration. While solar flares also contribute to SEP production, recent advancements in observations and numerical modeling have reshaped the prevailing understanding. It is now recognized that, especially in their early stages (below 5–10\rsun), CMEs often drive shocks capable of accelerating SEPs to energies exceeding 100 MeV/n \citep{ontiveross_2009, gopalswamy_2011, battarbee_2013, kozarev_2013, schwadron_2014, kong_2017}.
+Previous research has focused on characterizing CME dynamics and their associated shocks, notably their relationship with CBFs \citep{kozarev_2019}. Extending this work, our study models CBF-related shock dynamics and particle acceleration up to 10\rsun, integrating with a numerical particle transport model, marking a significant advancement in Sun-to-Earth physics-based modeling \citep{kozarev_2022}.
 
-Previous research has primarily focused on characterizing the dynamics of CMEs and their associated shocks within the solar corona, utilizing advanced observations spanning white light, EUV, and radio wavelengths \citep{vourlidas_2003, zhang_2006, bein_2011}. The relationship between CMEs and shock waves, particularly CBFs, has been a subject of in-depth investigation. Notably, \citet{kozarev_2019} conducted a comprehensive study of nine distinct western CBF events, employing the DSA model proposed by \citet{kozarev_2016}. Their findings revealed variations in SEP production among events, coupled with evolving patterns over the course of each event. Moreover, the acceleration efficiency demonstrated a strong dependence on the diverse coronal environments traversed by the propagating shock waves.
+SEP production by coronal shocks throughout the inner heliosphere has garnered attention. CMEs, particularly in their early stages, play a major role in SEP acceleration \citep{reames_1999, ontiveross_2009, gopalswamy_2011, battarbee_2013, kozarev_2013, schwadron_2014, kong_2017}. Our study extends modeling of CBF-related shock dynamics and particle acceleration, marking the first validated Sun-to-Earth physics-based modeling for SEP acceleration and transport \citep{kozarev_2022}.
 
-Building upon the groundwork laid by \citet{kozarev_2019}, this present study extends its scope by modeling the dynamics of CBF-related shock/compression waves and particle acceleration up to 10\rsun. This advancement involves integrating outcomes with a comprehensive numerical particle transport model, allowing for comparisons with in situ observations. This marks a significant enhancement in our methodology, representing the first validated extension of Sun-to-Earth physics-based modeling for SEP acceleration and transport within our current understanding of solar physics \citep{kozarev_2022}.
-
-In the quest to understand the mechanisms through which SEPs are produced by coronal shocks throughout the inner heliosphere, considerable progress has been made. Traditionally, the prevailing assumption was that SEP acceleration primarily occurred in interplanetary space, driven by in situ measurements of Energetic Storm Particle (ESP) fluxes during encounters with IP shocks by spacecraft. However, recent advancements in observations and numerical modeling have reshaped this understanding.
-
-CMEs emerge as the principal contributors to the generation of SEPs, encompassing ions and electrons with energies several orders of magnitude beyond the thermal coronal plasma \citep{reames_1999}. While solar flares also contribute to SEP production during solar eruptions, CMEs predominantly facilitate SEP generation within the magnetized shock waves they instigate and in plasma compressions resulting from their expansive forces. The prevailing assumption that the majority of SEP acceleration transpired in interplanetary space has been challenged by the revelation that, particularly in their initial stages (below 5–10\rsun), CMEs frequently induce shocks capable of accelerating SEPs to energies surpassing 100 MeV/n \citep{ontiveross_2009, gopalswamy_2011, battarbee_2013, kozarev_2013, schwadron_2014, kong_2017}.
-
-Efforts have been directed towards characterizing the dynamics of CMEs and the accompanying shocks within the solar corona, employing increasingly sophisticated observations spanning white light, EUV, and radio wavelengths. This exploration aims to deduce early-stage SEP production in the solar corona \citep{kozarev_2013, schwadron_2015}. In a notable contribution, \citet{kozarev_2019} conducted an in-depth study of nine distinct western CBF events, utilizing the Diffusive Shock Acceleration (DSA) model proposed by \citet{kozarev_2016}. Their findings highlighted variations in SEP production among events, along with evolving patterns over the duration of each event. Importantly, the acceleration efficiency exhibited a strong dependence on the diverse coronal environments traversed by the propagating shock waves.
-
-This study, led by \citet{kozarev_2022}, advances the work of \citet{kozarev_2019} by extending the modeling of CBF-related shock/compression wave dynamics and particle acceleration to 10\rsun. Our approach involves coupling these results with a global numerical particle transport model and comparing the outcomes to in situ observations. This represents a significant enhancement in our methodology, marking the first validated extension of Sun-to-Earth physics-based modeling for SEP acceleration and transport within our current understanding of solar physics.
-
-
-
-
-
-
-
-
-Several models are available, or under development, for forecasting SEP, which use diverse approaches and serve different objectives. These models comprise computationally complex physics-based models, quick and simple empirical models, Machine Learning (ML)-based models, and hybrid models that combine different approaches and produce different types of outputs, including deterministic, probabilistic, categorical, and binary. Deterministic models always generate the same output without any randomness or stochastic components, such as predicting the SEP flux at a specific moment or the arrival time of SEP. On the other hand, probabilistic models provide a probability value that reflects the likelihood of an SEP event occurring. However, replicating SEP fluxes at a specific time is still a significant challenge for current models.
-
-An excellent review on SEP models and predictive efforts was recently published by \citet{whitman_2022}, which summarizes the majority of the existing models.
-For instance, \citet{papaioannou_2022} introduced the Probabilistic Solar Particle Event Forecasting (PROSPER) model, which is incorporated into the Advanced Solar Particle Event Casting System (ASPECS)\footnote{ASPECS: \url{http://phobos-srv.space.noa.gr/}}. The PROSPER model utilizes a Bayesian approach and data-driven methodology to probabilistically predict SEP events for 3 integral energy channels $>$10, $>$30, and $>$100 MeV. The model's validation results indicate that the solar flare and CME modules have hit rates of 90\% and 100\%, respectively, while the combined flare and CME module has a hit rate of 100\%.
-\citet{bruno_2021} developed an empirical model to predict the peak intensity and spectra of SEP at 1 AU between 10 and 130 MeV, using data from multiple spacecraft. The model is tested on 20 SEP events and shows good agreement with observed values. The spatial distribution of SEP intensities was reconstructed successfully, and they found a correlation between SEP intensities and CME speed.
-
-\citet{hu_2017} extended the Particle Acceleration and Transport in the Heliosphere (PATH) model to study particle acceleration and transport at CME-driven shocks. They showed that the model can be used to obtain simultaneous calculations of SEP characteristics such as time-intensity profiles, instantaneous particle spectra, and particle pitch angle distributions at multiple heliospheric locations. Overall, results resemble closely those observed in situ near the Earth but also yield results at other places of interest, such as Mars, making it of particular interest to Mars missions.
-SPREAdFAST \citep{kozarev_2017, kozarev_2022} is a physics-based, data-driven framework that utilizes EUV observations and models to simulate SEP fluxes at 1 AU and to estimate energetic particle acceleration and transport to various locations in the inner heliosphere. It generates time-dependent histograms and movies distributing them through an online catalog. The accuracy and efficiency of the model were encouraging, but the highest energy fluxes showed disagreement with in situ observations by the SOHO/ERNE instrument. However, the framework has great potential for space weather science and forecasting.
-
-In \citet{aminalragia_2021}, they used neural networks to provide probabilities for the occurrence of SEP based on soft X-rays data from 1988 to 2013. They obtained $>$85\% for correct SEP occurrence predictions and $>$92\% for correct no-SEP predictions.
-\citet{lavasa_2021} described a consistent approach to making a binary prediction of SEP events using ML and conventional statistical techniques. The study evaluated various ML models and concluded that random forests could be the best approach for an optimal sample comprising both flares and CMEs. The most important features for identifying SEP were found to be the CME speed, width, and flare soft X-ray fluence.
-\citet{kasapis_2022} employed ML techniques to anticipate the occurrence of a SEP event in an active region that generates flares. They utilized the Space-Weather MDI Active Region Patches (SMARP) dataset, which comprises observations of solar magnetograms between June 1996 and August 2010. The SMARP dataset had a success rate of 72\% in accurately predicting whether an active region that produces a flare would result in a SEP event. Moreover, it provided a competitive lead time of 55.3 min in forecasting SEP events.
-
-\citet{engell_2017} introduced the Space Radiation Intelligence System (SPRINTS), a technology that uses pre- and post-event data to forecast solar-driven events such as SEP. It integrates automatic detections and ML to produce forecasts. Results show that SPRINTS can predict SEP with an 56\% probability of detection and 34\% false alarm rate.
-Nevertheless, the HESPERIA REleASE tools provide real-time predictions of the proton flux at L1 by using near-relativistic electrons as a warning for the later arrival of protons and have been set to operation \citep{malandraki_2018}. Historical data analysis indicates high prediction accuracy, with a low false alarm rate of approximately 30\% and a high probability of detection of 63\% \citep{malandraki_2018}.
-
-Forecasting SEP is a critical task that serves operational needs and provides insight into the broader field of space weather science and heliophysics. As emphasized in previous works, a high precision forecasting model is urgently required to predict SEP flux within a period of time, given the risks associated with these events. This highlights the critical requirement for a dependable forecasting system that can mitigate the risks associated with SEP.
-
-Scientists have been using physics-based and empirical models for decades to forecast SEP. However, these models have certain limitations. Physics-based models require accurate input data and underlying physical assumptions. In addition, the complexity of the physics involved and incorrect parameters may introduce uncertainties that can lead to inaccurate predictions.
-On the other hand, empirical models rely on historical data to make predictions.
-While they can be accurate sometimes, they may be unable to account for changes in physical conditions related to the acceleration and propagation of SEP, which can influence prediction accuracy.
-ML models, however, provide a different approach to SEP forecasting. These models can analyze vast amounts of data, learning patterns from the data that are used, and connections that may not be obvious to experts. Additionally, ML models can adapt to changes in underlying physical conditions, resulting in more accurate predictions as more data is collected; they also provide relatively rapid forecasts, which allows for incorporation into a real-time forecasting workflow.
-
-In the upcoming sections, I will explore the limitations in accuracy that arise from dealing with an imbalanced dataset and low-resolution data. Specifically, the presence of intrinsic outliers in the time series data pertaining to SEP flux poses a significant challenge in modeling. These outliers correspond to occurrences of SEP events and, consequently, have an impact on the accuracy of predictions. Notably, they often lead to an underestimation of the SEP fluxes, primarily due to the predominance of relatively low values throughout the majority of the time interval.
-
-In the first part, we extend the work in Chapter~\ref{chapter2} on the kinematics of CBFs and expand on previous relevant investigations by modeling CBF-related shocks and particle acceleration up to 10\rsun Our modeling approach incorporates coupling to a numerical model of particle transport throughout the heliosphere, with validation against in-situ spacecraft measurements. Our study implements, for the first time, an extensive physics-based model linking CME-driven shock acceleration with the propagation of SEPs from the Sun to Earth. In the second part, I present advanced deep learning models to forecast the daily integral flux of SEP over a 3-day forecasting window by using bi-directional long short-term memory (BiLSTM) neural networks, for 3 energy channels ($>$10, $>$30, and $>$60 MeV). Our models can forecast the time-dependent development of SEP events in different energy domains, which can be used to model the space radiation profiles using frameworks such as BRYNTRN \cite{wilson_1988} and GEANT4 \citep{truscott_2000}.
-%I describe the data selection and pre-processing in Section~\ref{sec_ch4_data_prep}. I present an overview on the analysis methods and the models implemented in Section~\ref{sec_ch4_methods}. Then I show the forecasting results in Section~\ref{sec_ch4_results}. Finally the summary and implications are presented in Section~\ref{sec_ch4_conclusion}.
+Various models exist for SEP forecasting \citep{whitman_2022}, including physics-based, empirical, and Machine Learning (ML) based models. Notably, the PROSPER model provides probabilistic predictions for multiple energy channels \citep{papaioannou_2022}, while ML approaches offer promising avenues for accurate and rapid forecasting \citep{lavasa_2021, kasapis_2022}. Despite advancements, forecasting SEP fluxes remains challenging, emphasizing the need for dependable forecasting systems.
+In upcoming sections, we address challenges in modeling SEP fluxes, particularly focusing on imbalanced datasets and low-resolution data. Our study builds upon previous work on CBF kinematics discussed in Chapter~\ref{chapter2} and presents advanced deep learning models for forecasting daily integral flux of SEP, offering insights into space radiation profiles.
 
 \section{Early-Stage SEP Acceleration by CME-Driven Shocks}
 \subsection{Overview}
-CMEs stand out as one of the most prevalent expressions of solar activity, attracting considerable attention in solar physics. Traditionally defined through white light observations \citep{vourlidas_2003, zhang_2006, bein_2011}, these eruptions reveal diverse facets when examined across ultraviolet and radio bands \citep{bastian_2001, veronig_2010}. Particularly noteworthy is their observation in EUV light, a realm where telescopes like the AIA onboard SDO \citep{lemen_2012, pesnell_2012} excel in capturing the early stages of CMEs.
-
-CMEs, in their dynamic journey through the solar corona, can generate shock waves if their propagation speeds surpass the local speed of information, typically the fast magnetosonic speed. These shock waves manifest prominently in EUV observations as EUV waves or, more specifically, as CBFs \citep{thompson_1998, long_2011}. The intricate relationship between CMEs and these shock waves forms a crucial aspect of solar physics.
-
-As the primary contributors to SEPs, CMEs play a pivotal role in the energization of ions and electrons to levels significantly exceeding the thermal coronal plasma \citep{reames_1999}. Flares also contribute to SEP production during solar eruptions. The acceleration of SEPs in CMEs predominantly occurs within the magnetized shock waves they propel, as well as in plasma compressions induced by the CMEs. While historical perspectives inferred the bulk of SEP acceleration in interplanetary space from in situ observations of energetic storm particle (ESP) fluxes during the traversal of interplanetary shocks by spacecraft, recent advancements in observations and numerical models have reshaped this understanding.
-
-Over the past fifteen years, sophisticated observations and modeling techniques have revealed that, in their early stages (below 5–10\rsun), CMEs often drive shocks \citep{ontiveross_2009, gopalswamy_2011}. These shocks, in turn, exhibit the capability to accelerate SEPs to energies exceeding 100 MeV/n \citep{battarbee_2013, kozarev_2013, schwadron_2014, kong_2017}. Consequently, recent research has focused on characterizing the dynamics of CMEs and the associated shocks in the solar corona, employing advanced observations spanning white light, EUV, and radio wavelengths.
-
-Building upon this foundation, efforts have been made to estimate the early-stage SEP production in the corona \citep{kozarev_2013, schwadron_2015}. In a notable contribution, \citet{kozarev_2019} conducted an in-depth study of nine distinct western CBF events. Utilizing the diffusive shock acceleration (DSA) model proposed by \citet{kozarev_2016}, they simulated particle acceleration in the very early stages, while the CMEs were still below 1.5\rsun. Their findings highlighted variations in SEP production among events, along with evolving patterns over the event's duration. Importantly, the acceleration efficiency exhibited a strong dependence on the diverse coronal environments traversed by the shock waves.
-
-This study, led by \citet{kozarev_2022}, advances the work of \citet{kozarev_2019} by extending the modeling of CBF-related shock/compression wave dynamics and particle acceleration to 10\rsun. Our approach involves coupling these results with a global numerical particle transport model and comparing the outcomes to in situ observations. This represents a significant enhancement in our methodology, marking the first validated extension of Sun-to-Earth physics-based modeling for SEP acceleration and transport within our current understanding of solar physics.
-In order to analyze particle fluxes at 1 AU and compare them with observational data, we employ the SPREAdFAST framework that is explained in Chapter~\ref{chapter2}.
-
-The purpose of the SPREAdFAST framework is to model and analyze the particle fluxes from the Sun to Earth, specifically focusing on SEP events. The project combines detailed observations of CBFs with modeling of the coronal plasma and the resulting SEP production and interplanetary transport. The SPREAdFAST framework utilizes physics-based modeling to simulate the evolution of the plasma upstream of the coronal shock associated with CBFs and the subsequent acceleration and transport of protons from the Sun to 1 AU. It incorporates various components such as EUV observations, shock dynamics, particle acceleration, and interplanetary transport. The project aims to provide a better understanding of the processes involved in SEP events and improve forecasting capabilities for these events. By modeling a large number of events and comparing the model results with in situ observations, the SPREAdFAST project contributes to the advancement of Sun-to-Earth physics-based modeling of SEP acceleration and transport. Overall, the SPREAdFAST project is a comprehensive effort to study and simulate the complex phenomena associated with SEP events, with the goal of enhancing our knowledge and predictive capabilities in this field.
-
-The SPREAdFAST framework includes the following components:
-\begin{itemize}
-    \item CBF Kinematics and Geometric Modeling: This component characterizes the kinematics of CBFs using observations from the AIA instrument. It estimates the CBF kinematics, including the front, peak, and back edge positions over time, as well as the mean intensity and thickness of the CBFs.
-    \item Coronal Shock and Particle Acceleration Modeling: This component models the evolution of the plasma immediately upstream of the coronal shock associated with CBFs. It incorporates the physics of coronal shock waves and the process of particle acceleration through diffusive shock acceleration.
-    \item Interplanetary Particle Transport Modeling: This component simulates the transport of accelerated particles from the corona to 1 AU, which is the distance between the Sun and Earth. It takes into account the interplanetary magnetic field and other factors that influence particle propagation.
-    \item Comparison with Observations: The framework compares the modeled particle fluxes and fluences at 1 AU with observations from instruments like the SOHO and the Energetic and Relativistic Nuclei and Electron (ERNE) instrument. It evaluates the accuracy of the model predictions by calculating metrics such as the Mean Squared Logarithmic Error (MSLE).
-\end{itemize}
-Overall, the SPREAdFAST framework combines detailed observations, physics-based modeling of coronal shocks and particle acceleration, and interplanetary transport modeling to analyze and forecast SEP events from the Sun to Earth.
-
-\subsection{Event Selection}
-Our study focuses on a carefully selected set of solar events to ensure the robustness of our analysis. We initiated the event selection process by identifying proton events within the energy range of 17–22 MeV, as observed by the Solar and Heliospheric Observatory/Energetic and Relativistic Nuclei and Electron (SOHO/ERNE) instrument during the period spanning 2010-2017. This initial screening yielded a total of 216 events.
-
-To refine our dataset and concentrate on events with clear solar signatures, we excluded proton events lacking associated flares,CMEs, and those devoid of EUV waves before the onset of SEP events. This step resulted in the exclusion of 39 events, leaving us with 177 events for further consideration.
-Further narrowing our focus, we excluded cases where EUV waves were absent or where EUV data was not available, even if flares or CMEs had been identified. This decision aligns with the requirements of the SPREAdFAST model, which necessitates the presence of an EUV wave for accurate analysis. Consequently, this step reduced the dataset to 105 events.
-In the interest of precision and relevance, we removed several events with uncertain EUV waves, deeming them more appropriate for investigations related to different solar eruptions. This additional refinement brought the total down to 99 events.
-
-A meticulous examination of the remaining dataset revealed 62 events with measurable near-limb or off-limb CBFs, aligning with the capabilities of our analytical framework. These 62 events constitute our final selection for in-depth analysis and interpretation, as outlined in Table 1 in our paper \citep{kozarev_2022}.
-For a comprehensive reference, this table provides detailed information for each event, including the date, start and end times, and class of the associated flare. Additionally, it includes the source location on the solar disk specified in helioprojective Cartesian coordinates. These key details were sourced from the Heliophysics Events Knowledge Base, ensuring accurate and standardized information for each event in our study.
+Recent studies highlight CMEs as primary contributors to SEP production \citep{reames_1999}, especially in their early stages \citep{ontiveross_2009, gopalswamy_2011}. Advanced modeling techniques have been employed to understand CME-related shock dynamics and SEP acceleration \citep{kozarev_2019, kozarev_2016, kozarev_2022}. Our study extends this modeling up to 10\rsun, marking a significant advancement in Sun-to-Earth physics-based modeling for SEP acceleration and transport. To analyze particle fluxes at 1 AU, we utilize the SPREAdFAST framework discussed in Chapter~\ref{chapter2}.
+SPREAdFAST aims to model and analyze SEP events, combining detailed CBF observations with modeling of coronal plasma and SEP production \citep{kozarev_2022}. Its components include CBF kinematics modeling, coronal shock and particle acceleration modeling, interplanetary particle transport modeling, and comparison with observations from instruments like SOHO and ERNE. This comprehensive framework enhances our understanding and forecasting capabilities for SEP events, contributing to advancements in Sun-to-Earth physics-based modeling.
 
 \subsection{Coronal SEP Acceleration}
-Having established plasma parameters along individual shock-crossing field lines, our study employs the coronal DSA model \citep{kozarev_2016, kozarev_2019} to calculate proton acceleration dynamics from the low corona to 10\rsun. Specifically designed to utilize remote solar observations and data-driven model output from the CASHeW framework, this model solves for the large-scale acceleration of charged particles induced by CME-driven shocks.
-
-The model incorporates time-dependent estimates of shock speed ($V_{shock}$), density jump ratio ($r$), magnetic field strength ($|B|$), and shock angle ($\theta_{BN}$) for multiple shock-crossing field lines. Using these parameters, the model computes the minimum shock injection momenta for particles. It takes as input a particle distribution function and produces time-dependent distribution function spectra or fluxes as output. The obtained solution (Equations 8–11 in c\citet{kozarev_2016}) provides both the first distribution function ($f_1$) and momentum ($p_1$) values for an initial momentum ($p_0$). The model iteratively solves for subsequent values ($f_i$ and $p_i$) at time steps separated by the observational cadence $\delta$t of the instrument (in this case, SDO/AIA). The model is executed for each individual shock-crossing field line, based on observed and calculated parameters at a single shock-crossing point along it. Flux spectra at each time step are then computed, and the model's validity has been confirmed through its application in the analysis of several SEP events.
+Utilizing the coronal Diffusive Shock Acceleration (DSA) model \citep{kozarev_2016, kozarev_2019}, we calculate proton acceleration dynamics from the low corona to 10\rsun, employing remote solar observations and data-driven model output from the CASHeW framework. The model incorporates shock parameters along multiple shock-crossing field lines to compute proton injection momenta and subsequent distribution function spectra or fluxes. Its validity is confirmed through analysis of several SEP events.
 
 \subsection{Input Data and Spectral Fitting}
-The model relies on input data derived from observations-based suprathermal proton spectra obtained from 1 AU fluxes recorded by the SOHO/ERNE instrument \citep{torsti_1995}. These spectra are acquired during the 24-hour period of quiet time preceding each SEP event. Power laws are fitted to each suprathermal spectrum within the energy range of 0.056–3.0 MeV and scaled to a distance of 1.05\rsun, assuming a simple inverse square dependence on radial distance to conserve flux. While the current implementation does not consider adiabatic cooling or other particle transport effects, acknowledging their significance, a comprehensive exploration of these effects will be conducted in future studies to determine general trends for forecasting.
+We utilize suprathermal proton spectra obtained from 1 AU fluxes recorded by the SOHO/ERNE instrument \citep{torsti_1995} as input data, fitted with power laws in the energy range of 0.056–3.0 MeV. These spectra serve as input for the DSA model, allowing detailed examination of proton acceleration dynamics under CME-driven shocks.
 
-The time-independent power law input spectra generated for the DSA model represent the suprathermal spectrum calculated for 1.05\rsun. These spectra are injected at all shock positions and distances without modification to account for changing shock locations in the current model implementation. This approach allows for a detailed examination of proton acceleration dynamics and flux evolution under the influence of CME-driven shocks in the solar corona.
-
-\subsection{Transport of Accelerated SEPs and Comparison with ERNE Observations}
-The culmination of our modeling chain involves the transport of accelerated SEPs to 1 AU, followed by a comprehensive comparison with particle observations obtained through the ERNE instrument. This final phase is executed by utilizing the averaged fluxes derived from the entire event, exemplified here with the illustrative case of the May 11, 2011 event.
-
-To achieve this, we employ a modified version of the Energetic Particle Radiation Environment Module model \citep[EPREM]{schwadron_2010}. The modified EPREM model facilitates the transport of fluxes through a Parker-type static interplanetary medium. The particle injection from the DSA model into EPREM is sustained throughout the duration of the coronal shock event. This model incorporates essential effects such as pitch-angle scattering, adiabatic focusing and cooling, convection, streaming, and stochastic acceleration.
-
-The solver demands inner boundary conditions, with no initial conditions imposed. It features a dynamic simulation grid where computational nodes are carried away from the Sun with the solar wind, naturally adopting the shape of a three-dimensional interplanetary magnetic field. EPREM employs an interplanetary magnetic field model, incorporating radial and azimuthal field components that fall off with radial distance and a constant latitudinal component—the Parker spiral model.
-
-The spatial grid structure is organized in nested cubes, subdivided into square arrays of square cells, representing the propagation pathway of energetic particles. The inner boundary surface rotates with the solar rotation rate and is expelled outward at the solar wind speed. At each time step, a new shell of cells is created at the inner boundary, initiating its outward propagation. The inner boundary for the EPREM simulation is fixed at 1.05\rsun, while the outer boundary varies for individual field lines due to dynamic conditions, consistently exceeding 1 AU. The model's credibility has been extensively validated through its application in Solar Energetic Particle studies \citep{kozarev_2010, schwadron_2014}.
-
-For the EPREM model runs conducted on the 62 events in this study, standardized input parameters were employed. These parameters include a mean free path ($\lambda_0$) of 0.1 AU at 1 AU and 1 GV magnetic rigidity, a constant solar wind speed ($V_{sw}$) of 500\kms, proton number density ($n$) at 1 AU set at 5.0 cm$^{-3}$, and a magnetic field magnitude ($|B|$) at 1 AU of 5.0 $\times$ 10$^{-5}$ G. The mean free path is additionally scaled with proton rigidity and radial distance from the Sun to incorporate the magnetic turbulence spectrum and its radial dependence \citep{zank_1998, li_2003, sokolov_2004, verkhoglyadova_2009}, providing the parallel mean free path for the simulation.
-
-An energy grid with 20 points, logarithmically spaced between 1 and 200 MeV, and a 4-point pitch-angle grid were utilized. A simulation time-step of 0.5 AU/c (approximately 4 minutes) with 30 sub-steps allowed for accurate calculation of SEP propagation among nodes. These baseline simulations encompassed all effects of diffusive transport, including adiabatic cooling/heating, adiabatic focusing, pitch-angle scattering, convection with the solar wind, and streaming. Subsequent work will incorporate the effects of perpendicular diffusion and particle drifts. The simulations were concluded at 9.6 hours from the onset of the event at the Sun for all events, focusing on modeling their initial stages.
-
-We used a combination of telescopic observations and dynamic physical models to simulate the acceleration of SEPs in global coronal shock events. We first observed off-limb CBFs and studied their interaction with the coronal plasma using synoptic MHD simulations. Based on these observations and simulations, we then employed an analytical DSA model to simulate the SEP acceleration. The simulated fluxes obtained from the DSA model were used as time-dependent inner boundary conditions for modeling the particle transport to 1 AU. This approach allowed us to study the early-stage acceleration and transport of SEPs from the Sun to 1 AU.
-
-The criteria used to select the events for analysis in the study of the SPREAdFAST framework were as follows:
-\begin{itemize}
-    \item Proton events in the energy range of 17-22 MeV observed by the SOHO/ERNE instrument from 2010 to 2017 were initially identified.
-    \item Events without identified flares and CMEs and without EUV waves preceding the SEP event were excluded.
-    \item Events without EUV waves or no EUV data, even if they had identified flares/CMEs, were also excluded.
-    \item Uncertain EUV waves that were not relevant to the specific solar eruption were dropped.
-    \item Events with measurable near-limb or off-limb CBFs that could be analyzed with the SPREAdFAST framework were selected.
-\end{itemize}
-In total, 62 events met the selection criteria and were included in the analysis.
-
-The kinematics of CBFs are characterized using the methodology of the CASHeW framework. This framework estimates the CBF kinematics by following the leading edge of the front on consecutive images. It calculates the kinematics of the front, peak, and back edge of the CBFs over time, allowing for the estimation of their time-dependent mean intensity and thickness. The kinematics are determined using time-height maps (J-maps) generated with the CASHeW code for each event. The radial and lateral wave front positions are measured in these J-maps, providing information on the radial and lateral positions, speeds, accelerations, mean wave intensities, and wave thickness of the CBFs.
-
-The methodology used to characterize the kinematics of CBFs is based on the CASHeW framework. This framework involves analyzing observations from the AIA instrument on board the SDO. The kinematics of CBFs are determined by tracking the leading edge of the front on consecutive images. Time-height maps, also known as J-maps, are created by stacking columns of pixels in a desired direction from a solar image. The shape of the track on these J-maps depends on the direction and speed of the CBF. The CASHeW code identifies the radial and lateral wave front positions over time in the J-maps, allowing for the estimation of the CBF kinematics, including speeds, accelerations, mean wave intensities, and wave thickness. A three-dimensional geometric model, known as the Synthetic Shock Model (S2M), is then created based on the measured front positions, which describes the shock surface at regular intervals. This model is propagated through the solar corona using a synoptic coronal MHD model, providing information on the relevant parameters for coronal shock acceleration of SEPs.
-
-In the SPREAdFAST DSA model, the shock-crossing field lines are modeled by dividing the shock surface into three regions: the \textit{nose} of the shock model, which consists of model points on the spheroidal cap; and two flanks or zones, divided by a plane parallel to the Sun-Earth line. The plasma parameters at the points on these three surfaces are examined separately. The model calculates the proton acceleration along these shock-crossing field lines based on time-dependent estimates of shock speed, density jump ratio, magnetic field strength, and shock angle. The model solves for the coronal charged particle acceleration by large-scale CME-driven shocks and provides time-dependent distribution function spectra or fluxes as output.
-
-The method used to compare the modeled and observed proton fluences is by analyzing scatter plots of the fitted power indices of the proton fluences from the EPREM model and the ERNE observations. The power law indices are compared between the two sets, and the onset hours for the proton events are also compared. The comparison helps evaluate the performance of the modeling framework in predicting the proton fluxes. Additionally, histograms and Mean Squared Logarithmic Error (MSLE) are used to assess the agreement between the modeled and observed fluence spectra and onset times.
+\subsection{Transport of SEPs and Comparison with ERNE Observations}
+To model the transport of accelerated SEPs to 1 AU, we employ a modified version of the Energetic Particle Radiation Environment Module \citep[EPREM]{schwadron_2010}. This model incorporates essential effects such as pitch-angle scattering, adiabatic focusing and cooling, convection, streaming, and stochastic acceleration. Comparison with ERNE observations is conducted, assessing the agreement between modeled and observed proton fluences and onset times.
+The methodology involves selecting events meeting specific criteria, characterizing CBF kinematics using the CASHeW framework, and comparing modeled and observed proton fluences through scatter plots and Mean Squared Logarithmic Error (MSLE).
 
 \subsection{Results and Discussions}
-The study's findings have important implications for understanding and predicting solar particle radiation. By modeling the dynamics of shock waves and particle acceleration in the solar corona, the study provides valuable insights into the factors that influence the efficiency of particle acceleration. The results highlight the significant role of the coronal environment in shaping the acceleration and transport of SEPs from the Sun to Earth. One key implication is that the overlying coronal structure and the particle energy play a crucial role in determining where SEPs are produced during CME-driven shock and compressive waves. The study shows that the large gradients in plasma parameters between neighboring streamers, quiet-Sun areas, and coronal holes lead to continuous changes in the acceleration process. This knowledge can help improve our understanding of the spatial distribution of SEPs and their energy dependence. Furthermore, the study's findings contribute to the development of physics-based models for forecasting SEP events. The SPREAdFAST framework used in the study demonstrates the potential for accurately simulating the evolution of SEPs from the Sun to 1 AU. This framework can be further refined and utilized for early-stage forecasting of SEP events, providing valuable information for space weather prediction and mitigation efforts. Overall, the study enhances our understanding of the complex processes involved in solar particle radiation and provides a foundation for improving our ability to predict and mitigate the impacts of these events on space weather.
-
-The main discrepancies between the modeled and observed fluxes in the study are primarily seen at higher energies. Above 15 MeV, there is a discrepancy in the time profile, with the observed proton fluxes rising approximately 1 hour before the simulation. Additionally, the fluxes at the highest energies show the most disagreement, mainly due to the slope of the increase and the onset times. These discrepancies indicate the need for further improvements and refinements in the modeling framework to better match the observations.
+Modeling the dynamics of shock waves and particle acceleration in the solar corona yields insights into solar particle radiation. The study underscores the coronal environment's pivotal role in SEP acceleration and transport. It reveals that coronal structures and particle energy significantly influence SEP production during CME-driven shocks. Continuous changes in acceleration occur due to plasma parameter gradients. This understanding aids in spatial distribution and energy dependence assessment of SEPs. Moreover, the SPREAdFAST framework shows promise for SEP event forecasting and space weather prediction. Discrepancies between modeled and observed fluxes, particularly at higher energies, suggest the need for refining the modeling framework to better align with observations.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Solar Proton Flux Forecasting with Deep Learning Models}
-\subsection{Data preparation}
-%\label{sec_ch4_data_prep}
-In this section, I describe the physical quantities, the types of inputs and their sources, as well as the outputs I are forecasting. Some of the technical terms used in this study are explained further in the appendices.
+\subsection{Data Preparation}
+This section outlines the selection of input physical quantities, their sources, and the forecasting outputs. Two categories of input features are considered: remote signatures and in-situ measurements. Remote signatures include the F10.7 index, long-wavelength ($X_L$), and short-wavelength ($X_S$) x-ray fluxes, obtained from the GOES database\footnote{GOES SXR Database: \url{https://satdat.ngdc.noaa.gov/sem/goes/data/avg/}}. In-situ measurements comprise near-Earth solar wind magnetic field and plasma parameters, sourced from spacecraft stationed at the Lagrange point (L1)\footnote{OMNI Database: \url{https://omniweb.gsfc.nasa.gov}}. Data covering December 1976 to July 2019 were acquired from the Space Physics Data Facility (SPDF) OMNIWeb database and supplemented with daily sunspot numbers from the SILSO archive\footnote{Sunspot Number Dataset: \url{https://www.sidc.be/silso/home}}.
 
-In order to capture the variability of solar activity, which modulates the SEP flux, I selected input physical quantities that describe both the interplanetary medium and solar activity. These input features can be categorized into two groups: remote signatures and in-situ measurements.
-The remote signatures consist of the F10.7 index, as well as the long-wavelength ($X_L$) and short-wavelength ($X_S$) x-ray fluxes. The F10.7 index represents the flux of solar radio emission at a wavelength of 10.7 cm, measured in solar flux units (sfu). To obtain the x-ray fluxes, I utilized 1- and 5-minute averaged data from the GOES database\footnote{GOES SXR Database: \url{https://satdat.ngdc.noaa.gov/sem/goes/data/avg/}}, specifically at long wavelengths (1 - 8 \AA) and short wavelengths (0.5 - 4.0 \AA).
+Figure~\ref{fig_allFeatures} displays the timeseries data for all features, including SEP integral fluxes, sunspot numbers, F10.7 index, x-ray fluxes, solar wind speed, and IMF magnitude. The dataset was split into training, validation, and test sets for deep learning model development \citep{ripley_2007}. Correlation analysis guided the selection of input parameters, focusing on logarithms of SEP fluxes, x-ray fluxes, F10.7 index, sunspot numbers, solar wind speed, and IMF magnitude. Separate models were trained for each target output feature.
+To ensure consistency, all timeseries data durations were aligned and resampled to daily averages. Missing values were linearly interpolated. The dataset split followed a 9-2-1 strategy over the 43-year timeframe, allocating 74.29\% to training, 16.2\% to validation, and 9.51\% to testing. This strategy aimed to mitigate bias and streamline training efficiency, without shuffling timeseries data to maintain temporal order \citep{mnedal_2019, pala_2019, benson_2020, zhang_lstm_2022, zhu_2022}.
 
-The in-situ measurements encompass the near-Earth solar wind magnetic field and plasma parameters. These include the solar wind speed (in km s$^{-1}$), average IMF strength (in nT), and the integral SEP fluxes at three energy channels: $>$10, $>$30, and $>$60 MeV, which correspond to the GOES channels (in 1/cm$^2$ sec ster). These SEP fluxes were obtained from multiple spacecraft stationed at the first Lagrange point (L1) throughout the study period.
-In particular, the IMF and plasma data in the OMNI database are obtained from the IMP, Wind, and ACE missions, while the energetic particle fluxes are obtained from the IMP and GOES spacecraft\footnote{OMNIWeb Data Documentation: \url{https://omniweb.gsfc.nasa.gov/html/ow_data.html}}.
-
-To ensure a comprehensive dataset, I acquired hourly-averaged data covering a timeframe from December 1976 to July 2019, which spans the past four solar cycles. These data were sourced from the Space Physics Data Facility (SPDF) OMNIWeb database\footnote{OMNI Database: \url{https://omniweb.gsfc.nasa.gov}}, hosted by the Goddard Space Flight Center. This database provides a wealth of information, including integral proton fluxes, as well as an extensive range of solar wind plasma and magnetic field parameters.
-Lastly, the daily data on sunspot numbers were obtained from the Sunspot Index and Long-term Solar Observations (SILSO) archive\footnote{Sunspot Number Dataset: \url{https://www.sidc.be/silso/home}}, maintained by the World Data Center.
-
-Figure~\ref{fig_allFeatures} shows a plot for the timeseries data of all features. The top 3 panels are the logarithms of the SEP integral flux at the 3 energy channels (log\_PF10, log\_PF30, and log\_PF60), then the sunspot number, the F10.7 index (F10\_idx), the logarithms of the x-ray fluxes (log\_Xs and log\_Xl), the solar wind speed (Vsw), and the average magnitude of the IMF (avg\_IMF).
-Throughout this chapter, I adopt the convention that "log" refers to the common logarithm with a base of 10.
-The gray shades refer to the timespan of solar cycles.
-The blue, orange, and gold colors refer to the training, validation, and test sets, respectively. The data split method will be explained shortly.
-
-Since the input SEP data have been compiled from various spacecraft, it may have artifacts even after processing. In particular, there are occasional jumps in the background level. There are also several day-long gaps in the OMNI solar wind parameters from the early 1980s to mid-1990s where only IMP 8 data are available and this spacecraft spent part of each orbit in the magnetosphere. I are reasonably confident that these issues do not influence the overall analysis significantly.
-
-In deep learning applications, the dataset is split into 3 sets; namely the training set, the validation set, and the test set. The training set is usually the largest chunk of data that is used to fit the model. The validation set is a smaller chunk of data used to fine-tune the model and evaluate its accuracy to ensure it is unbiased. The test set is the out-of-sample data exclusively used to assess the final model when performing on unseen data \citep{ripley_2007}.
-
-After inspecting the correlation between the solar wind indices and the SEP integral fluxes in the OMNIWeb database, I chose the top-correlated features with the SEP flux. The correlations were made between the SEP fluxes and the individual parameters. Hence I took only timeseries of logarithms of the protons' integral flux at 3 energy channels ($>$10, $>$30, and $>$60 MeV), the timeseries of logarithm of the X-ray fluxes, the F10.7 index, the sunspot number, the solar wind speed, and the average strength of the IMF as input parameters to our model.
-The log of the SEP flux was used across the whole study.
-The correlation matrices for the training, validation, and test sets are shown in Figure~\ref{fig_dataCorr}.
-The X-ray and proton fluxes were converted into the logarithmic form because it was more convenient than the original form of data since the time series data were mostly quiet and had numerous sharp spikes, which correspond to solar events.
-Based on a previous experience with NNs \citep{mnedal_2019}, I found that training separate models for each target (output) feature can lead to better results. This is because a dedicated model for each  output feature can more easily learn the interrelationships between input features and make more accurate predictions. Therefore, in our current study, I trained 3 separate models, each one targeting the logarithm of the protons integral flux at a specific energy channel.
-
-In order to ensure consistency across all features, all durations of the time series data of the physical quantities were matched to be within the same time range. Subsequently, the dataset was resampled to obtain daily averaged data, resulting in a significant reduction of the dataset size by a factor of 24. This reduction facilitated expeditious training and yielded prompt results.
-
-There were missing data values in the original dataset; for the $B_{avg}$ (\almost10.7\%), $V_{sw}$ (\almost10.5\%), F10.7-index (\almost0.08\%), short-band x-ray flux (\almost8\%), long-band x-ray flux (\almost9.8\%), and proton fluxes (\almost4.3\%). The data gaps were linearly interpolated.
-
-\begin{figure}[h!]
+\begin{figure}[!htp]
 	\centering
-    \includegraphics[width=0.9\textwidth]{chapter4/figs/subplots_dataSplit_allFeatures.pdf}
-    \caption{Data splitting for all input features, showing the training, validation, and testing sets. Daily data from 1976-12-25 00:00 to 2019-07-30 00:00. The gray shading labels the solar cycles from SC21 to SC24.}
-\label{fig_allFeatures}
-\end{figure}
-
-In timeseries forecasting, it is a common practice to take a continuous set of data points from the main dataset to be the validation set and another smaller chunk of data to be the test set, for instance in \citet{pala_2019, benson_2020, zhang_2022, zhu_2022}. 
-From our experiments, I got descent results when I applied the same data split method, but the results were a bit biased toward the end of the solar cycle 24 and the testing set was biased towards a quiet period. So, I adopted the 9-2-1 strategy, that is taking from each year 9 months to be added in the training set, 2 months to be added in the validation set, and 1 month to be added in the test set. This is applied over the $\sim$43 years of data (Fig.~\ref{fig_allFeatures}), which yields 74.29\% of the data for the training set, 16.2\% for the validation set, and 9.51\% for the testing set. By doing so, I eliminated the need to do cross-validation and hence, made the training more efficient.
-It is worth to mention that the timeseries data must not be shuffled as that will break temporal and logical order of measurements, which must be maintained.
-
-\begin{figure}[htp]
-	\centering
-    \includegraphics[width=\textwidth]{chapter4/figs/dataset_split_corr.pdf}
-    \caption{Correlation matrices show the correlation between the features in the training, validation, and test sets.}
-\label{fig_dataCorr}
+	\includegraphics[width=0.9\textwidth]{chapter4/figs/subplots_dataSplit_allFeatures.pdf}
+	\caption{Data splitting for all input features, showing the training, validation, and testing sets. Daily data from 1976-12-25 00:00 to 2019-07-30 00:00. The gray shading labels the solar cycles from SC21 to SC24.}
+	\label{fig_allFeatures}
 \end{figure}
 
 \subsection{Method}
-%\label{sec_ch4_methods}
-In this section, I introduce the data analysis methods used in this work. I start with explaining the model selection phase, followed by a discussion of the bi-directional long short-term memory (BiLSTM) neural network architecture. The technical terminologies are described in the appendices.
+This section outlines the data analysis methods employed in this study. It begins with an overview of model selection, followed by a detailed explanation of the Bi-directional Long Short-Term Memory (BiLSTM) neural network architecture.
 
 \subsubsection{The Bi-LSTM Model}
-Recurrent neural networks (RNNs) that support processing input sequences both forward and backward are known as Bidirectional Long Short-Term Memory (BiLSTM) neural networks \citep{schuster_1997}. Regular RNNs \citep{hochreiter_1997, kolen_2001} depend on the prior hidden state and the current input to determine the output at a given time. The output of a BiLSTM network, on the other hand, is dependent on the input at a given moment as well as the previous and future hidden states. As a result, the network is able to make predictions using contexts from the past as well as the future. Hence, accuracy is improving.
-Each BiLSTM layer consists of two LSTM layers; a forward layer that processes the input sequences from the past to future, and a backward layer that processes the input sequences from the future to the past, as illustrated in Figure~\ref{fig_model}, to capture information from both past and future contexts. The output from each layer is concatenated and fed to the next layer, which can be another BiLSTM layer or a fully connected layer for final prediction.
+BiLSTM neural networks, an extension of recurrent neural networks (RNNs), process input sequences in both forward and backward directions \citep{schuster_1997, hochreiter_1997, kolen_2001}. Unlike regular RNNs, which rely solely on past information, BiLSTM networks incorporate future context, enhancing prediction accuracy. Each BiLSTM layer comprises forward and backward LSTM layers, as depicted in Figure~\ref{fig_model}, enabling the model to capture long-term dependencies effectively.
 
-BiLSTM networks are advantageous than traditional LSTM networks in a variety of aspects \citep{graves_2005, ihianle_2020, alharbi_2021}. First, as I demonstrate in this study, they are excellent for tasks like timeseries forecasting, as well as speech recognition and language translation \citep{wollmer_2013, graves_2014, sundermeyer_2014, huang_2018, nammous_2022} because they can capture long-term dependencies in the input sequence in both forward and backward directions. Second, unlike feedforward networks, BiLSTM networks do not demand fixed-length input sequences, thus being able to handle variable-length sequences better. Furthermore, by taking into account both past and future contexts, BiLSTM networks can handle noisy data.
-However, BiLSTM networks are computationally more expensive than regular LSTM networks due to the need for processing the input sequence in both directions. They also have a higher number of parameters and require more training data to achieve good performance.
+BiLSTM networks offer several advantages over traditional LSTM networks \citep{graves_2005, ihianle_2020, alharbi_2021}. They excel in tasks like timeseries forecasting, speech recognition, and language translation by capturing long-term dependencies in both directions \citep{wollmer_2013, graves_2014, sundermeyer_2014, huang_2018, nammous_2022}. Additionally, they adapt well to variable-length sequences and handle noisy data. However, BiLSTM networks are computationally intensive, require more parameters, and demand larger training datasets.
 
-\begin{figure}[htp]
+The final dataset comprises 7 features, spanning from December 25$^{th}$, 1976, to July 30$^{th}$, 2019, totaling 15,558 samples. The model configuration includes 4 BiLSTM layers with 64 neurons each and an output dense layer with 3 neurons representing the forecasting horizon. The total number of trainable parameters is 333,699. Training involved 50 epochs, as further iterations did not yield significant improvements.
+Callbacks such as \textit{ModelCheckpoint}, \textit{EarlyStopping}, and \textit{ReduceLROnPlateau} were employed to monitor model performance, minimize overfitting, and adjust learning rate, respectively.
+
+\begin{figure}[!htp]
 	\centering
-    \includegraphics[width=0.6\textwidth]{chapter4/figs/diagram.drawio.pdf}
-    \caption{Architecture of a single BiLSTM layer. The blue circles at the bottom labeled by \textit{($x_0$, $x_1$, $x_2$, ..., $x_i$)} are the input data values at multiple time steps. The purple circles, on the other hand, are the output data values at multiple time steps labeled by \textit{($y_0$, $y_1$, $y_2$, ..., $y_i$)}. The dark green and light green boxes are the activation units of the forward layer and the backward layer, respectively. The orange and yellow circles are the hidden states at the forward layer and the backward layer, respectively. Both the forward and backward layers composes a single hidden BiLSTM layer. The figure is adopted from \citet{olah_2015}}
-\label{fig_model}
+	\includegraphics[width=0.6\textwidth]{chapter4/figs/diagram.drawio.pdf}
+	\caption{Architecture of a single BiLSTM layer. The blue circles at the bottom labeled by \textit{($x_0$, $x_1$, $x_2$, ..., $x_i$)} are the input data values at multiple time steps. The purple circles, on the other hand, are the output data values at multiple time steps labeled by \textit{($y_0$, $y_1$, $y_2$, ..., $y_i$)}. The dark green and light green boxes are the activation units of the forward and backward layers, respectively. The orange and yellow circles are the hidden states at the forward and backward layers, respectively. Both the forward and backward layers composes a single hidden BiLSTM layer. The figure is adopted from \citet{olah_2015}}
+	\label{fig_model}
 \end{figure}
 
-The final dataset has 7 features, including the target feature, from December 25$^{th}$ 1976 to July 30$^{th}$ 2019, with a total of 15,558 samples (number of days). The training set has 11,558 samples, the validation set has 2,520 samples, and the test set has 1,480 samples.
-
-The input horizon of 270 steps (30 days $\times$ 9 months) was used.
-A data batch size of 30 was used, which is the number of samples processed that result in one update to the model's weights (Appendix~\ref{bilstm_appendix}).
-The model consists of 4 BiLSTM layers with 64 neurons each, and an output dense layer with 3 neurons, representing the output forecasting horizon.
-The total number of trainable parameters is 333,699.
-The number of training epochs was set to 50 because from experiments, the model stopped improving remarkably after almost 50 epochs. Thus, there was no need to waste time and computational resources to train the model for more than 50 epochs.
-
-The \textit{ModelCheckpoint} callback function was used to register the model version with the minimal validation loss. 
-The \textit{EarlyStopping} callback function was used to halt the model run when detecting overfitting, with a \textit{patience} parameter of 7. 
-\textit{ReduceLROnPlateau} callback function was used to reduce the learning rate when the validation loss stops improving, with a \textit{patience} parameter of 5, a reduction factor of 0.1 and minimal learning rate of 1e$^{-6}$.
-% ---------------------------------------------------------------
 \subsubsection{Model Selection}
-To determine the most suitable model for our objective and provide justifiable reasons, I conducted the following analysis.
-First I examined the naive (persistence) model, which is very simplistic and assumes that the timeseries values will remain constant in the future. In other words, it assumes that the future value will be the same as the most recent historical value. That was the baseline. Next I examined the moving-average model, which calculates the future values based on the average value of historical data within a specific time widow. This gives a little bit lower error.
+To determine the most suitable model, I conducted a comprehensive analysis, starting with baseline models like the naive (persistence) model and moving-average model. Following this, I explored ML-based models, opting for the Adaptive moment estimation (Adam) optimizer for its efficiency \citep{kingma_2015}.
 
-\begin{figure}[htp]
+Data preparation involved creating a windowed dataset using a Multi-Input Multiple Output (MIMO) strategy, minimizing the imbalance of active and quiet days \citep{benson_2020}. The Huber loss function was selected due to its robustness to outliers, crucial for our noisy data.
+
+Various neural network architectures were examined, including linear models, dense ML models, simple RNNs, LSTM, and BiLSTM models. Optimal learning rates were determined using the LearningRateScheduler callback function. Ultimately, a BiLSTM model with five hidden layers, each comprising 64 neurons, and a learning rate of 0.001 was chosen based on performance evaluation on validation and test sets.
+Figure~\ref{fig_benchmark} illustrates the comparative analysis of Huber loss across the evaluated models. Multiple evaluation metrics were utilized to assess model accuracy and performance, guiding further refinement.
+
+\begin{figure}[!htp]
 	\centering
-    \includegraphics[width=0.5\textwidth]{chapter4/figs/sliding_window_lstm.pdf}
-    \caption{Illustration of the sliding window technique for a sample of 10 timesteps, where each number denotes a distinct time step. As an example here, the input horizon (blue color) length is 4 timesteps and the output horizon length is 3 timesteps. The input window slides 1 time step at a time across the entire data sequence to generate 4 distinct input and forecast horizon pairs. The purple, orange, and green colors of the output horizon represent 1-day, 2-day, and 3-day ahead forecasting, respectively. The timesteps of 1-day ahead forecasting across the data sequences are then concatenated into a single timeseries list that is called 1-day ahead prediction. The same for 2-day and 3-day ahead.}
-\label{fig_slide_window}
+	\includegraphics[width=\textwidth]{chapter4/figs/models_benchmark.pdf}
+	\caption{Benchmarking of 10 models, shows the Huber loss for the validation and test sets.}
+	\label{fig_benchmark}
 \end{figure}
-
-After that, I went towards the machine learning (ML)-based models. For all the ML models, I chose the Adaptive moment estimation (Adam) optimizer \citep{kingma_2015} as the optimization algorithm due to its minimal memory requirements and high computational efficiency as it is well-suited for applications that involve large number of parameters or large datasets. As a rule of thumb, I set the optimizer’s learning rate to be 0.001 as it is usually recommended \citep{zhang_2022}.
-
-In order to prepare the data in a readable format to the ML models, I created a windowed dataset with an input horizon of 365 steps representing 1 year of data and an output horizon of 3 steps representing the forecast window of three days. I call this windowing method as Multi-Input Multiple Output (MIMO) strategy, in which the entire output sequence is predicted in one shot. The MIMO strategy adopts the sliding window method that was mentioned in \citet{benson_2020} in which each sequence is shifted by one step with respect to the previous sequence until reaching the end of the available data (Fig.~\ref{fig_slide_window}).
-This approach minimized the imbalance of active days, with high SEP fluxes, and quiet days.
-
-\begin{figure}[htp]
-	\centering
-    \includegraphics[width=\textwidth]{chapter4/figs/models_benchmark.pdf}
-    \caption{Benchmarking of 10 models, shows the Huber loss for the validation and test sets.}
-\label{fig_benchmark}
-\end{figure}
-
-After experiments with different loss functions and evaluate their performance on our dataset, I chose the Huber function~\ref{eq_huber} as the loss function and the Mean Absolute Error (MAE) is used as the metric function to monitor the model performance.
-I used the Huber function because it is robust and combines the advantages of both Mean Squared Error (MSE) and MAE loss functions. It is less sensitive to outliers than MSE, while still being differentiable and providing gradients, unlike MAE. Since our data is noisy and contains outliers that may negatively impact the model's performance, the Huber loss function is a good choice.
-
-I examined various neural network models to determine the optimal architecture for our task.
-Initially, I started with a simple linear model comprising of a single layer with a single neuron. However, this model did not yield satisfactory results.
-I then explored a dense ML model consisting of two hidden layers, each with 32 neurons and a \textit{RelU} activation function. Next, I experimented with a simple RNN model with the same number of hidden layers and neurons.
-To find the optimal learning rate, I utilized the \textit{LearningRateScheduler} callback function and discovered that a rate of 1.58e$^{-4}$ under the basic settings minimized the loss.
-I proceeded to examine stateful versions of RNN, LSTM, and BiLSTM models with three hidden layers, each with 32 neurons and a learning rate of 1.58e$^{-4}$.
-In addition, I explored a hybrid model that consisted of a 1-dimensional convolutional layer with 32 filters, a kernel size of 5, and a \textit{RelU} activation function. I combined this with a two-hidden layer LSTM network with 32 neurons each and a learning rate of 1.58e$^{-4}$. I experimented with \textit{Dropout} layers but did not observe any significant improvement in the results.
-Finally, I evaluated a BiLSTM model with five hidden layers, 64 neurons each, and a learning rate of 0.001.
-Based on the evaluation of all the models on both the validation and test sets (Fig.~\ref{fig_benchmark} and Table~\ref{table_models_config}), I selected the BiLSTM model for further refinement. More details on the final model architecture and hyperparameters are explained in the Appendix~\ref{config_appendix}.
-Figure~\ref{fig_benchmark} presents a comparative analysis of the Huber loss within the validation and testing sets across the ten aforementioned models.
-I used several evaluation measures to assess our models since each metric provides valuable insights into the accuracy and performance of the forecasts (Appendix~\ref{eval_appendix}), helping to identify areas for improvement and adjust the forecasting models accordingly.
 
 \subsection{Results and discussion}
-%\label{sec_ch4_results}
-\subsubsection{Long-term forecasting}
-The benchmarking in Figure~\ref{fig_benchmark} showed that, in general, the ML-based methods were not much different. On the other hand, the persistence model and moving average model resulted in the highest errors compared with the ML-based models, and their results were close to some extent. 
-As I see, the BiLSTM model performed the best over both the validation and test sets compared with the other models.
+\subsubsection{Long-term Forecasting}
+In Figure~\ref{fig_benchmark}, ML-based methods showed similar performance, outperforming persistence and moving average models. The BiLSTM model exhibited superior performance across validation and test sets.
 
-I developed and trained 3 BiLSTM models to forecast the integral flux of SEP, one model per energy channels. After the training was completed, I evaluated the performance of the models from the loss curve (Fig.~\ref{fig_lossCurve}) using the Huber loss (the left panel) and the metric MAE (the middle panel). During the training, the learning rate was reduced multiple times via the \textit{LearningRateScheduler} callback function (the right panel).
-The left panel quantifies the discrepancy between the model's predictions and the true values over time. It shows how the Huber loss function changes during the training iterations (Epochs) for the training and validation sets for the three energy channels so that each channel has one color.
-The middle panel shows how the model's metric MAE changes with training epochs. It is used to evaluate the performance of the trained model by measuring the average absolute difference between the model's predictions and the true values, providing a single numerical value that indicates the model's error at a given epoch.
-The right panel shows how the learning rate of the model's optimizer changes with epochs via the \textit{LearningRateScheduler} callback function, which changes the learning rate based on a predefined schedule to improve training efficiency and convergence.
-The learning rate refers to the rate at which the model's parameters are updated during the training process.
-I noticed that at the epochs where the learning rate has changed, there were bumps in the loss curves across all the energy channels, which is expected. This highlights the boundaries within which the learning rate yields better performance.
+Three BiLSTM models, one per energy channel, were developed and trained to forecast SEP integral flux. Model performance was evaluated using Huber loss (Fig.~\ref{fig_lossCurve}), MAE, and learning rate adjustments via \textit{LearningRateScheduler} callback function.
 
-\begin{figure}[htp]
+Experimentation revealed batch size and optimizer learning rate as critical hyperparameters affecting model performance \citep{greff_2016}. Other architectural changes yielded marginal improvements but increased training time and computational resources.
+
+Figure~\ref{fig_model_vs_obs_tstset} depicts model predictions against observations for 1-day, 2-day, and 3-day forecasts across energy channels. Correlation analysis on the out-of-sample test set showed high correlation across forecast windows.
+Correlation between modeled data and observations declined with longer forecast horizons, especially noticeable between 1 and 1.5 on the x-axis. Rolling window analysis (Fig.~\ref{fig_crosscorr_tstset}) revealed correlation drops during solar cycle transitions.
+
+During low solar activity, forecasting low SEP fluxes becomes challenging due to increased randomness. Factors influencing correlation during quiet periods require further investigation.
+
+Model performance ranked highest for $>$60 MeV, followed by $>$10 MeV and $>$30 MeV channels. Correlation decline at $>$30 MeV is consistent with previous findings \citep{le_2017}.
+
+Visual inspection of test set examples (Fig.~\ref{fig_model_vs_obs_tstset}) revealed strong correlation between predicted and observed onset time, peak time, and end times of SEP events. This suggests that the model effectively captures temporal variations and flux trends in SEP events.
+
+Evaluation using skill scores and threshold-based clustering algorithm demonstrated declining performance with longer forecasting windows. Our model showed comparable performance with previous studies (Table~\ref{table_skillscores_comparison}), with lower false alarm rate compared to UMASEP model.
+
+\begin{figure}[!htp]
 	\centering
-    \includegraphics[width=\textwidth]{chapter4/figs/loss_curve_allenergies.pdf}
-    \caption{\textit{Left Panel} - The Huber loss vs. the number of training epochs for the BiLSTM model for the validation and test sets, for the 3 energy channels. \textit{Middle Panel} - The mean absolute error (MAE); the model's metric vs. the number of training epochs. \textit{Right Panel} - Shows how the learning rate of the Adam optimizer changes over the number of epochs.}
-\label{fig_lossCurve}
+	\includegraphics[width=\textwidth]{chapter4/figs/loss_curve_allenergies.pdf}
+	\caption{\textit{Left Panel} - The Huber loss vs. the number of training epochs for the BiLSTM model for the validation and test sets, for the 3 energy channels. \textit{Middle Panel} - The mean absolute error (MAE); the model's metric vs. the number of training epochs. \textit{Right Panel} - Shows how the learning rate of the Adam optimizer changes over the number of epochs.}
+	\label{fig_lossCurve}
 \end{figure}
 
-From experimentation, I found that the batch size and the optimizer learning rate are the most important hyperparameters that have a strong influence on the overall model's performance \citep{greff_2016}.
-In addition, adding \textit{dropout} layers as well as varying the number of hidden layers and hidden neurons resulted in only marginal improvements to the final model performance, while substantially increasing training time and requiring greater computational resources.
-
-The term \textit{batch size} refers to the number of data sequences processed in one iteration during the training of a ML model \citep{goodfellow_2016}. Initially, a batch size of 64 was selected, however, I observed that the model produced better results when a batch size of 30 was used instead. This could be related to the Carrington rotation, which lasts for $\sim$27 days. There were $\sim$570 Carrington rotations between December 25$^{th}$ 1976 and July 30$^{th}$ 2019. Therefore, updating the model's weights after every Carrington rotation could be a reasonable choice for improving its performance.
-Figure~\ref{fig_model_vs_obs_valset} shows how good the model predictions are (on the y-axis) compared with the observations of the validation set (on the x-axis). The blue, orange, and gold colors refer to 1-day, 2-day, and 3-day ahead predictions, respectively. The top panel is for the $>$10 MeV channel, the middle panel is for the $>$30 MeV channel, and the bottom panel is for the $>$60 MeV channel. The left column is for the entire validation set, while the right column is for the observations points $\geq$10 proton flux units (pfu). That is the threshold value of proton flux as measured by the National Oceanic and Atmospheric Administration (NOAA) GOES spacecraft to indicate severity of space weather events caused by SEP.
-
-\begin{figure}[htp]
-    \centering
-    \begin{subfigure}{0.4\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF10.pdf}
-    \end{subfigure}
-    %\hfill
-    \begin{subfigure}{0.4\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF10.pdf}
-    \end{subfigure}
-    \begin{subfigure}{0.4\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF30.pdf}
-    \end{subfigure}
-    %\hfill
-    \begin{subfigure}{0.4\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF30.pdf}
-    \end{subfigure}
-    \begin{subfigure}{0.4\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_log_PF60.pdf}
-    \end{subfigure}
-    %\hfill
-    \begin{subfigure}{0.4\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_valset_3in1_LOG_PF_LT1_log_PF60.pdf}
-    \end{subfigure}
-\caption{Correlation between the model predictions and observations for 1-day, 2-day, and 3-day ahead for $>$10 MeV (top panel), $>$30 MeV (middle panel), and $>$60 MeV (bottom panel). The panels in the left column represent all the points of the validation set, those in the right column represent all the observations points with daily mean flux $\geq$10 pfu.}
-\label{fig_model_vs_obs_valset}
-\end{figure}
-
-I found that, overall, the models performed very well. The $R$ correlation was $>$0.9 for all points of the validation set across the forecasting windows for the 3 energy channels. The $R$ correlation was $>$0.7 for the observations points $\geq$10 pfu as well. However, the correlation between the modeled data and the observations exhibited a decline as the forecast horizon increased, in accordance with the anticipated result.
-To confirm the validity of the models, I performed the same correlation analysis between the modeled data and the observations of the out-of-sample test set (Fig.~\ref{fig_model_vs_obs_tstset}), which was not given to the model. Again, I found a high correlation across the forecasting windows for the 3 energy channels. 
-The points were more dispersed between 1 and 1.5 on the x-axis, which reflected in a bit lower correlation. This might be a limitation in the current version of the model between that range of SEP fluxes since the models underestimated the flux values within that range across all energy channels, possibly due to the relatively smaller training samples with fluxes above 10 pfu compared with the majority of the data.
-
-\begin{figure}[htp]
+\begin{figure}[!htp]
     \centering
     \begin{subfigure}{0.4\textwidth}
          \centering
@@ -367,52 +135,25 @@ The points were more dispersed between 1 and 1.5 on the x-axis, which reflected 
          \centering
          \includegraphics[width=\textwidth]{chapter4/figs/scatterplot_obs_vs_model_tstset_3in1_LOG_PF_LT1_log_PF60.pdf}
     \end{subfigure}
-\caption{Same as Figure~\ref{fig_model_vs_obs_valset} but for the test set.}
-\label{fig_model_vs_obs_tstset}
+	\caption{Correlation between the model predictions and observations for 1-day, 2-day, and 3-day ahead for $>$10 MeV (top panel), $>$30 MeV (middle panel), and $>$60 MeV (bottom panel). The panels in the left column represent all the points of the test set, those in the right column represent all the observations points with daily mean flux $\geq$10 pfu.}
+	\label{fig_model_vs_obs_tstset}
 \end{figure}
 
-In order to see the temporal variation of the correlation between the modeled data and the observations, I applied a rolling window of 90 steps (3 months $\times$ 30 days/month = 1 season) that shows the seasonal variation of the correlation, as shown in Figure~\ref{fig_crosscorr_tstset}.  
-Here, I show only the 1-day ahead predictions for the test set, for the 3 energy channels. 
-I observe drops in the correlation factor synchronized with the transition between solar cycles (e.g., particularly between $\sim$1995-2000, which represents the declining phase of the solar cycle 22 and the rising phase of the solar cycle 23). This could be related to the fact that the low SEP fluxes during quiet times are more random and thus more difficult to forecast \citep{feynman_1990, gabriel_1990, rodriguez_2010, xapsos_2012}.
-
-During periods of low solar activity, the forecasting of low SEP fluxes becomes more challenging due to their increased randomness. This difficulty arises from the reduced occurrence of conventional SEP drivers, such as solar flares and CMEs. Studies have suggested that the most significant solar eruptions tend to happen shortly before or after the solar cycle reaches its maximum \citep{vsvestka_1995}. Additionally, sporadic increases in solar activity have been observed \citep{kane_2011}, which might contribute to the diminished correlations observed in our research.
-There is clearly some factor that is influencing the correlation during certain periods where there are no or only weak SEP events. However, it is not obvious which physical phenomena are the cause rather than, for instance, some artifact of the data. Understanding the interplay between these factors and their influence on SEP fluxes during periods of reduced solar activity remains a critical area of research. It would be interesting to find what is reducing the correlations, thus more investigation is needed.
-
-Overall, the modeled data was correlated the most with observations at $>$60 MeV, then the second rank was for the $>$10 MeV channel, and the third rank was for the $>$30 MeV channel. That could be related to the relatively larger extent of drops in correlation at the $>$30 MeV channel.
-The decline in correlation at the $>$30 MeV channel is consistent with the findings of \citet{le_2017}.
-A summary of the performance results of the models for both the validation set and test set is presented in Table~\ref{table_performance}.
-
-\begin{figure}[h!]
+\begin{figure}[!htp]
 	\centering
     \includegraphics[width=\textwidth]{chapter4/figs/comparison_crosscorr_tstset_1day_3channels.pdf}
     \caption{Comparison between the model outputs and observations of the test set for the 3 energy channels. In addition to the rolling-mean window correlation for 1-day ahead predictions.}
 \label{fig_crosscorr_tstset}
 \end{figure}
 
-\begin{figure}[htp]
+\begin{figure}[!htp]
 	\centering
     \includegraphics[width=\textwidth]{chapter4/figs/log_pf10/examples_10_tstset.pdf}
     \caption{The model's forecasts for the out-of-sample testing set for the $>$10 MeV channel are shown at forecast horizons of 1 day, 2 days, and 3 days ahead, using samples of data from December in selected years mentioned in the top-left side of the plots.}
 \label{fig_examples_pf10_tstset}
 \end{figure}
 
-\begin{figure}[htp]
-	\centering
-    \includegraphics[width=\textwidth]{chapter4/figs/log_pf30/examples_30_tstset.pdf}
-    \caption{The model's forecasts for the out-of-sample testing set for the $>$30 MeV channel are shown at forecast horizons of 1 day, 2 days, and 3 days ahead, using samples of data from December in selected years mentioned in the top-left side of the plots.}
-\label{fig_examples_pf30_tstset}
-\end{figure}
-
-\begin{figure}[htp]
-	\centering
-    \includegraphics[width=\textwidth]{chapter4/figs/log_pf60/examples_60_tstset.pdf}
-    \caption{The model's forecasts for the out-of-sample testing set for the $>$60 MeV channel are shown at forecast horizons of 1 day, 2 days, and 3 days ahead, using samples of data from December in selected years mentioned in the top-left side of the plots.}
-\label{fig_examples_pf60_tstset}
-\end{figure}
-
-From the visual inspection of the test set examples (Fig.~\ref{fig_examples_pf10_tstset}, ~\ref{fig_examples_pf30_tstset}, and~\ref{fig_examples_pf60_tstset}), I found that the predicted onset time, the peak time, and end times of SEP events were highly correlated with those of the observations, which implies that the model captured the temporal variations, as well as the trends in SEP flux.
-
-\begin{table}[htp]
+\begin{table}[!htp]
 \centering
 \caption{Summary of the performance results of the models for the validation and test sets.}
 \begin{tabular}{lccccccccl}
@@ -439,12 +180,7 @@ MAPE   & 30.135         & 37.498         & 48.139        & 20.599         & 34.3
 \label{table_performance}
 \end{table}
 
-To get further insight into the model's performance, I conducted an assessment of various skill scores, including True Positive (TP), True Negative (TN), False Positive (FP), and False Negative (FN). Additionally, skill score ratios such as Probability of Detection (POD), Probability of False Detection (POFD), False Alarm Rate (FAR), Critical Success Index (CSI), True Skill Statistic (TSS), and Heidke Skill Score (HSS). Detailed descriptions of these skill scores can be found in Appendix~\ref{skillscores_appendix}.
-To extract individual SEP events from the test dataset, I implemented a threshold-based clustering algorithm. This algorithm uses the NOAA/SWPC warning threshold value of 10 pfu for the E $\geq$10 MeV channel. Upon analysis, I identified the number of detected SEP events for each output forecasting window and calculated the skill scores (Table~\ref{table_skillscores}). In the true test set, I identified 12 SEP events.
-
-The evaluation of the model revealed notable trends as the length of the output forecasting window increased. The POD and CSI exhibited a declining pattern, indicating a reduced ability of the model to accurately detect and capture positive events (SEP occurrences) as the forecasting horizon extended further into the future. This suggests that the model's performance in identifying and capturing true positive instances diminishes with longer forecasting windows. Moreover, the POFD demonstrated an increasing trend, indicating an elevated rate of false positive predictions as the forecasting horizon lengthened. The model's propensity to generate false alarms rose with the lengthening forecasting window, leading to incorrect identification of non-events as positive events. Consequently, the TSS and HSS exhibited decreasing values, signifying a deterioration in the model's overall skill in accurately capturing and distinguishing between positive and negative instances. Overall, our skill scores are comparable with those reported by previous studies (Table~\ref{table_skillscores_comparison}). Although the UMASEP model does better than ours (i.e., has a higher POD), our FAR is much lower, thus, making fewer false alarms than the UMASEP model.
-
-\begin{table}[htp]
+\begin{table}[!htp]
 \centering
 \caption{Confusion matrix for the energy channel $\geq$10 MeV predictions in the test set.}
 \label{table_skillscores}
@@ -478,18 +214,12 @@ The evaluation of the model revealed notable trends as the length of the output 
 }
 \end{table}
 
-\subsubsection{Short-term forecasting}
-This work focuses on improving the prediction accuracy of the SEP integral flux, a critical aspect for mitigating the potential hazards posed by high-energy protons originating from the Sun. Expanding on previous work \citep{mnedal_2023a}, the study utilizes a BiLSTM NN model, incorporating high-resolution hourly-averaged data for four standard integral GOES channels.
+\subsubsection{Short-term Forecasting}
+This study aims to enhance the prediction accuracy of SEP integral flux, crucial for mitigating space weather hazards \citep{mnedal_2023a}. Employing a BiLSTM NN model, it utilizes high-resolution hourly-averaged data from four standard integral GOES channels. Key input parameters include the F10.7 index, sunspot number, x-ray flux, solar wind speed, and IP magnetic field strength, sourced from OMNIWeb and GOES databases across two solar cycles. Additional features, like active region locations from NOAA daily reports, are incorporated for improved predictions.
 
-So far, the forecasting models, developed with 6-hour forecast window, integrate key input parameters such as the F10.7 index, sunspot number, x-ray flux, solar wind speed, and IP magnetic field strength, obtained from the OMNIWeb and GOES databases, spanning two solar cycles. Additional features, including the location of active regions obtained from the NOAA daily reports, are introduced to enhance predictive capabilities.
+Evaluation involves out-of-sample testing, assessing feature impacts, and benchmarking against existing methods. Data partitioning follows the 9-2-1 strategy over a 23-year period (1996–2018), with 73.99\%, 16.44\%, and 9.57\% allocated to training, validation, and testing sets respectively. Data formatting adopts the MIMO strategy \citep{benson_2020}.
 
-Rigorous evaluation involves independent out-of-sample testing, quantifying the impact of different features on prediction results, and benchmarking against existing approaches. This comprehensive approach contributes to advancing our ability to forecast SEP flux and better understand its implications for space weather.
-
-I employed the 9-2-1 strategy to partition the data, allocating 9 months to the training set, 2 months to the validation set, and 1 month to the test set for each year. This approach spans the 23-year period from January 1996 to December 2018, resulting in 73.99\% of the data for the training set, 16.44\% for the validation set, and 9.57\% for the testing set. To facilitate model training, we formatted the data using the MIMO
-strategy, predicting the entire output sequence in one iteration \citep{benson_2020}.
-The model forecasts the logarithm of the integral proton flux, encompassing various energy channels. However, for clarity in our poster, I specifically present results for the $>$10 MeV channel.
-
-Figure~\ref{fig_temp_heatmap_valtest} illustrates the temporal correlation across six future windows, with Figure~\ref{fig_scatterplot_pf10_hr} providing a visual representation through a scatter plot. Additionally, Figure~\ref{fig_error_metrics_hr} showcases the variation in prediction errors across these windows. For a more detailed examination, Figure~\ref{fig_sample_pf10_hr} compares our model's 1-hour predictions with observations specifically for two sample SEP events in the $>$10 MeV channel.
+The model forecasts the logarithm of integral proton flux across energy channels, with a focus on $>$10 MeV. Figure~\ref{fig_sample_pf10_hr} compares 1-hour predictions with observations for two sample SEP events.
 
 \begin{figure}[!htp]
 	\centering
@@ -497,21 +227,6 @@ Figure~\ref{fig_temp_heatmap_valtest} illustrates the temporal correlation acros
 	\includegraphics[width=\textwidth]{chapter4/figs/hourly_PF10/temporal_heatmap_test.pdf}
 	\caption{Temporal heatmap shows a comparison between the model outputs and observations for the rolling-mean window correlation of the integral $>$10 MeV proton flux at six predicting windows. The top panel represents the validation set and the bottom panel represents the testing set. The numbers on the y-axis are the mean R values.}
 	\label{fig_temp_heatmap_valtest}
-\end{figure}
-
-\begin{figure}[!htp]
-	\centering
-	\includegraphics[width=\textwidth]{chapter4/figs/hourly_PF10/scatterplot_obs_vs_model_valset.pdf}
-	\includegraphics[width=\textwidth]{chapter4/figs/hourly_PF10/scatterplot_obs_vs_model_tstset.pdf}
-	\caption{Correlation between model predictions and observations for the integral $>$10 MeV proton flux of the validation (top two rows) and testing (bottom two rows) sets.}
-	\label{fig_scatterplot_pf10_hr}
-\end{figure}
-
-\begin{figure}[!htp]
-	\centering
-	\includegraphics[width=0.8\textwidth]{chapter4/figs/hourly_PF10/scatter_error_metrics.pdf}
-	\caption{Correlation between model predictions and observations for the integral $>$10 MeV proton flux of the testing set.}
-	\label{fig_error_metrics_hr}
 \end{figure}
 
 \begin{table}[!htp]
@@ -530,57 +245,22 @@ Figure~\ref{fig_temp_heatmap_valtest} illustrates the temporal correlation acros
 
 \begin{figure}[!htp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{chapter4/figs/hourly_PF10/sample_valandtestsets_2003.pdf}
+	\includegraphics[width=0.7\textwidth]{chapter4/figs/hourly_PF10/sample_valandtestsets_2003.pdf}
 	\caption{Comparison between the model’s forecast and the observations for the integral $>$10 MeV proton flux at forecast horizon of 1 hour ahead. The top panel represents a sample of the validation set and the bottom panel represents a sample of the testing set.}
 	\label{fig_sample_pf10_hr}
 \end{figure}
 
-%%% Conclusions:
-Predicting SEPs remains a complex task due to their non-linear nature. This study, however, demonstrates promise by utilizing BiLSTM NNs. These models effectively captured the intricate patterns within SEP data, leading to successful hourly-averaged integral flux predictions across various energy channels. The model exhibited robust performance with low MSE values ranging from 0.011 to 0.012 in the test set. However, challenges remain, particularly during solar minimum phases, highlighting the inherent complexity of SEP prediction. Despite this, BiLSTM networks showcase significant potential for time series forecasting in heliophysics, especially when considering sequential data.  Moving forward, we aim to optimize the model by fine-tuning parameters and benchmarking it against established methods. Additionally, extending the forecasting window and incorporating more energy channels with differential energy forecasting will offer a more comprehensive analysis and improve model interpretability.
-%The challenging nature of SEP prediction is effectively addressed by BiLSTM neural network models, showing promise in handling non-linear and complex patterns.
-%The study successfully predicts hourly-averaged integral flux across various energy channels.
-%Robust model performance is evident, with low MSE ranging from 0.011 to 0.012 in the test set.
-%Despite overall success, challenges persist, particularly during solar minimum activity, highlighting the complexity of the SEP prediction problem.
-%BiLSTM networks demonstrate potential in handling sequential data for time series forecasting in heliophysics, with considerations for data requirements and computational complexity.
-%My next steps involve optimizing this model, fine-tuning parameters, and benchmarking against established models for enhanced effectiveness.
-%Extending the forecasting window is a key focus to assess performance over longer time periods.
-%Including additional energy channels and introducing forecasting for differential energies are part of our plan for a more comprehensive analysis while enhancing model explainability.
-
 \section{Conclusions}
-%\label{sec_ch4_conclusion}
-In \citet{kozarev_2022} we represents a pioneering multi-event exploration, presenting a comprehensive examination of Sun-to-1 AU SEP simulations grounded in detailed coronal diffusive shock acceleration and interplanetary propagation—a unique endeavor within the current body of knowledge. Investigating 62 distinct eruptive events, each characterized by an EUV CBF and notable enhancements in 1 AU proton fluxes, our approach utilized the SPREAdFAST framework. This framework, originally designed for forecasting early-stage SEP events, demonstrated its efficacy in the analysis of this extensive event set.
+In \citet{kozarev_2022}, we pioneer a multi-event exploration, comprehensively examining Sun-to-1 AU SEP simulations utilizing detailed coronal diffusive shock acceleration and interplanetary propagation. Analyzing 62 eruptive events with the SPREAdFAST framework, originally designed for early-stage SEP event forecasting, yielded promising results, showcasing the framework's efficacy.
 
-The input spectra for coronal proton acceleration were derived from quiet-time suprathermal spectra averaged over one to three days preceding each event. These averages were then scaled back to the Sun, assuming a simple inverse square proportionality to heliospheric distance. Utilizing an energy-independent mean free path for coronal proton acceleration in the diffusive shock acceleration model, we observed significant influences of solar corona conditions on proton acceleration. The gradients in plasma parameters among neighboring streamers, quiet-Sun regions, and coronal holes induced continuous changes in the $\theta_{BN}$ angle along the shock wave surface, as well as in density and density enhancements.
+Input spectra for coronal proton acceleration were derived from quiet-time suprathermal spectra scaled to the Sun. Coronal proton acceleration, influenced by solar corona conditions, exhibited significant impacts on proton acceleration and shock wave surface characteristics.
 
-The results from the DSA model, serving as time-dependent input to the interplanetary transport EPREM model, were compared with in situ observations by the SOHO/ERNE instrument at 1 AU. The overall alignment between model predictions and observations is promising, affirming the efficiency and accuracy of the SPREAdFAST model chain. Nevertheless, discrepancies, particularly at the highest energies, were observed, mainly attributed to variations in the slope of increase and onset times.
+Comparing DSA model results with SOHO/ERNE instrument observations at 1 AU revealed promising alignment, though discrepancies, particularly at higher energies, were noted. Future work will focus on realistic event modeling, incorporating time-dependent injection of source spectra and three-dimensional transport effects.
 
-To address these discrepancies and enhance model precision, future work will delve into more realistic modeling of events. This includes exploring time-dependent injection of source spectra at the inner boundary of the EPREM simulation to better match observed decay rates. Acknowledging the importance of three-dimensional transport effects in realistic interplanetary magnetic fields, perpendicular transport will be incorporated in subsequent investigations. Furthermore, introducing location-dependent output to accommodate varying connectivity between the source and observer will be explored.
+In \citet{mnedal_2023a}, BiLSTM neural networks are developed and trained to predict daily-averaged integral flux of SEP at 1-day, 2-day, and 3-day ahead, focusing on energy channels $>$10 MeV, $>$30 MeV, and $>$60 MeV. Input data from OMNIWeb databases span four solar cycles, utilizing MIMO strategy for forecasting, achieving promising results with low MSE values and strong correlations.
 
-The integration of geometric shock models with existing and novel observations of CME evolution in the middle corona is anticipated to reduce uncertainties in the results. Ongoing efforts involve comparing near-Sun in situ observations of quiet-time suprathermal populations from the Parker Solar Probe and Solar Orbiter with 1 au fluxes, aiming to refine the estimation of input spectra. This holistic approach contributes to advancing our understanding of SEP dynamics, paving the way for more accurate modeling and forecasting capabilities in the realm of solar-terrestrial physics.
+The study highlights challenges in longer-term SEP forecasting, particularly in maintaining model performance over extended forecasting windows. Short-term predictions are crucial for space weather forecasting, emphasizing the significance of accurate modeling for protecting space assets.
 
-%%% Nedal et al. (2023)
-Forecasting the SEP flux is a crucial task in heliophysics since it affects satellite operations, astronaut safety, and ground-based communication systems. It is a challenging task due to its non-linear, non-stationary, and complex nature. Machine learning techniques, particularly neural networks, have shown promising results in predicting SEP flux.
-In \citet{mnedal_2023a} I developed and trained BiLSTM neural network models to predict the daily-averaged integral flux of SEP at 1-day, 2-day, and 3-day ahead, for the energy channels $>$10 MeV, $>$30 MeV, and $>$60 MeV.
-I used a combination of solar and interplanetary magnetic field indices from the OMNIWeb database for the past 4 solar cycles as input to the model.
-I compared the models with baseline models and evaluated them using the Huber loss and the error metrics in Appendix~\ref{eval_appendix}.
+BiLSTM networks offer promise for heliophysics forecasting tasks, warranting further investigation into optimal model configurations and data requirements. Our study contributes to the growing field of deep learning in heliophysics and space weather research.
 
-The data windowing method I used, based on the MIMO strategy, eliminates the need to feed the output forecast as input back into the model and that allows to do forecasting relatively far into the future while maintaining decent results (e.g., the MSE is ranging between 0.007 and 0.015 for 1-day forecasting in the test set, compared to an MSE of 0.236 for a persistence model. See Table~\ref{table_performance}).
-The results show that the model can make reasonably accurate predictions given the difficulty and complexity of the problem.
-The MSE was ranged between 0.009 and 0.055 for the validation set, and between 0.007 and 0.05 for the test set.
-The correlations between the observations and predictions were $>$0.9 for the validation and test sets (Fig.~\ref{fig_model_vs_obs_valset} and Fig.~\ref{fig_model_vs_obs_tstset}).
-Nevertheless, the mean temporal correlation was $\sim$0.8 for the test set (Fig.~\ref{fig_crosscorr_tstset}).
-Although our models performed well, I observed a relatively large discrepancy between the predictions and the observations in the $>$30 MeV energy band.
-
-The findings of this study underscore the challenges encountered by the forecasting model in accurately predicting SEP data over longer time periods. As the length of the output forecasting window increased, the model's ability to detect true positives and its overall skill in differentiating positive and negative instances diminished. Additionally, the model displayed an elevated rate of false negative predictions, indicating an increased tendency to generate misses as the forecasting horizon extended. These results highlight the importance of carefully considering the appropriate forecasting window length for SEP data to ensure the model's optimal performance. Our skill scores generally align with those from previous works (Table~\ref{table_skillscores_comparison}). There are variations in the metrics' values across different studies, highlighting the complexities and nuances associated with each study. Nevertheless, it is important to acknowledge that the statistical significance of the results in this study is limited due to data averaging. Future studies should consider incorporating hourly data, as this is likely to result in a greater number of identified events.
-The model can provide short-term predictions, which can be used to anticipate the behavior of the near-Earth space environment. These predictions have important implications for space weather forecasting, which is essential for protecting satellites, spacecraft, and astronauts from the adverse effects of solar storms.
-
-Multiple techniques exist for identifying the optimal combination of hidden layers and neurons for a given task such as empirical methods, parametric methods, and the grid search cross-validation method, which I will explore in future work.
-The observed reduction in correlation necessitates further investigation to determine its origin, whether stemming from tangible causal factors or potential aberrations within the model or data.
-I plan to expand upon this work by performing short-term forecasting using hourly-averaged data. This extension will involve integrating additional relevant features such as the location and area of active regions and coronal holes on the Sun.
-
-BiLSTM networks are particularly useful for tasks involving sequential data such as timeseries forecasting. Given their capacity to handle input sequences in both directions in time and capture long-term dependencies, they are valuable in a broad range of applications. Nonetheless, one should carefully consider their data requirements and computational complexity before adopting them.
-Our results emphasize that the use of deep learning models in forecasting tasks in heliophysics are promising and encouraging, as pointed out by \citet{zhang_lstm_2022}.
-
-This work is a stepping stone towards real-time forecasting of SEP flux based on the public-available datasets. As an extension, I are currently working on developing a set of models that deliver near-real time prediction of SEP fluxes at multiple energy bands, multiple forecasting windows, with hourly-averaged data resolution, with a more sophisticated model architecture, as well as more features that address the state of solar activity more comprehensively. 
-I plan to extend the analysis to include more recent data from solar cycle 25, in order to improve the accuracy of the models.
-In conclusion, our study highlights the potential of using BiLSTM neural networks for forecasting SEP integral fluxes. Our models provide a promising approach for predicting the near-Earth space environment too, which is crucial for space weather forecasting and ensuring the safety of our space assets. Our findings contribute to the growing body of literature on the applications of deep learning techniques in heliophysics and space weather forecasting.
+In conclusion, our work demonstrates the potential of BiLSTM neural networks in forecasting SEP integral fluxes, essential for space weather forecasting and safeguarding space assets. Future efforts will focus on real-time prediction models, incorporating recent data and enhancing model sophistication for improved accuracy.

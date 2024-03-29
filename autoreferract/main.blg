@@ -11,12 +11,10 @@ Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: chapter4/ch4.aux
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: chapter5/ch5.aux
-Reallocating 'name_of_file' (item size: 1) to 13 items.
-A level-1 auxiliary file: appendix.aux
 Reallocating 'name_of_file' (item size: 1) to 3 items.
 The style file: aa.bst
 Reallocating 'name_of_file' (item size: 1) to 5 items.
-Reallocating 'field_info' (item size: 4) to 11775 items.
+Reallocating 'field_info' (item size: 4) to 11375 items.
 Database file #1: refs.bib
 Repeated entry---line 2485 of file refs.bib
  : @article{pulkkinen_2007
@@ -38,12 +36,7 @@ Repeated entry---line 4412 of file refs.bib
  : @article{schatten_1969
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4465 of file refs.bib
- : @article{mann_2018
- :                   ,
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "zhang_2022"
-Reallocating 'str_pool' (item size: 1) to 130000 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Warning--Space Weather of the Heliosphere: Processes and Forecasts, Vol.~13Both volume and number fields in dalla_2017
 You can't pop an empty literal stack for entry dalla_2017
@@ -69,46 +62,45 @@ Warning--no book title in reames_2021
 while executing---line 1684 of file aa.bst
 Warning--empty publisher in reames_2021
 Warning--empty journal in tsurutani_1985
-Warning--empty institution in wilson_1988
-You've used 270 entries,
+You've used 254 entries,
             3039 wiz_defined-function locations,
-            2097 strings with 65671 characters,
-and the built_in function-call counts, 157537 in all, are:
-= -- 12690
-> -- 15042
-< -- 101
-+ -- 5086
-- -- 4731
-* -- 13773
-:= -- 29151
-add.period$ -- 270
-call.type$ -- 270
-change.case$ -- 2633
-chr.to.int$ -- 263
-cite$ -- 283
-duplicate$ -- 5176
-empty$ -- 7374
-format.name$ -- 5497
-if$ -- 31008
+            2021 strings with 60481 characters,
+and the built_in function-call counts, 144372 in all, are:
+= -- 11694
+> -- 13392
+< -- 99
++ -- 4532
+- -- 4197
+* -- 12537
+:= -- 26674
+add.period$ -- 254
+call.type$ -- 254
+change.case$ -- 2392
+chr.to.int$ -- 247
+cite$ -- 266
+duplicate$ -- 4869
+empty$ -- 6954
+format.name$ -- 4919
+if$ -- 28456
 int.to.chr$ -- 8
 int.to.str$ -- 1
-missing$ -- 250
-newline$ -- 814
-num.names$ -- 1086
-pop$ -- 2709
+missing$ -- 236
+newline$ -- 766
+num.names$ -- 1022
+pop$ -- 2464
 preamble$ -- 1
-purify$ -- 2630
+purify$ -- 2390
 quote$ -- 0
-skip$ -- 4497
+skip$ -- 4247
 stack$ -- 0
-substring$ -- 5809
-swap$ -- 174
+substring$ -- 5492
+swap$ -- 166
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2400
-warning$ -- 13
-while$ -- 1086
+type$ -- 2256
+warning$ -- 12
+while$ -- 1023
 width$ -- 0
-write$ -- 2700
-(There were 11 error messages)
+write$ -- 2541
+(There were 10 error messages)
