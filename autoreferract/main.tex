@@ -2,6 +2,7 @@
 \usepackage{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+%\usepackage{lscape}
 \usepackage{natbib}
 \usepackage{amsmath}
 \usepackage{multirow}
@@ -44,6 +45,18 @@
 \newcommand{\mnedal}[1]{\textbf{\textcolor{blue}{(Mohamed: #1)}}}
 
 
+% Use the sectsty package to modify section titles
+\usepackage{sectsty}
+
+% Set the font size for the body text
+\renewcommand{\normalsize}{\fontsize{12}{15}\selectfont}
+
+% Exclude the title page and section titles from font size change
+\sectionfont{\fontsize{12}{15}\selectfont}
+\subsectionfont{\fontsize{12}{15}\selectfont}
+\subsubsectionfont{\fontsize{12}{15}\selectfont}
+
+
 
 \begin{document}
 	
@@ -71,8 +84,9 @@
 	\include{chapter3/ch3}
 	\include{chapter4/ch4}
 	\include{chapter5/ch5}
-	%\appendix
-	%\include{appendix}
+	
+	\include{extras/publications}
+	\include{extras/requirements}
 	
 	\bibliographystyle{aa}
 	\bibliography{refs}

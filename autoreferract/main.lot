@@ -1,18 +1,14 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces List of the CBF events with their associated flares and CMEs.}}{8}{table.caption.11}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Mean values and their standard deviation of the wave parameters in the radial direction and the lateral direction for the left and right flanks, at the front, peak, and back sides of the wave for the event occurred on May 11, 2011, in the SDO/AIA FOV.}}{12}{table.caption.16}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces Mean, median, and standard deviation of the shock parameters output, from the interaction of the S2M spheroid with the MAS MHD model results, for the shock's cap and flanks and for the whole shock surface, for the event on May 11, 2011.}}{13}{table.caption.17}%
-\contentsline {table}{\numberline {2.4}{\ignorespaces Statistics of the EUV wave kinematics in the SDO/AIA FOV for the 26 events. LL and LR refer to the lateral left and right flanks, respectively. Rad refer to the radial front direction.}}{15}{table.caption.20}%
-\contentsline {table}{\numberline {2.5}{\ignorespaces CME Speeds ($\,km\,s^{-1}\,$) for Observers 1 and 2. Credit goes to \citet {miteva_2023}.}}{25}{table.caption.28}%
-\contentsline {table}{\numberline {2.6}{\ignorespaces Table displaying Pearson correlation coefficients among the GS Dst index, CME speed, and various solar parameters, with the respective sample sizes indicated in parentheses. Credit goes to \citet {miteva_2023}.}}{26}{table.caption.31}%
-\contentsline {table}{\numberline {2.7}{\ignorespaces Tabular representation of Pearson correlation coefficients between the GS Dst index and various parameters of IP phenomena. The data is derived from Wind satellite measurements, unless otherwise stated, with the corresponding sample sizes indicated in parentheses. Credit goes to \citet {miteva_2023}.}}{26}{table.caption.34}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Mean values and their standard deviation of the wave parameters in the radial direction and the lateral direction for the left and right flanks, at the front, peak, and back sides of the wave for the event occurred on May 11, 2011, in the SDO/AIA FOV.}}{16}{table.caption.15}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Mean, median, and standard deviation of the shock parameters output, from the interaction of the S2M spheroid with the MAS MHD model results, for the shock's cap and flanks and for the whole shock surface, for the event on May 11, 2011.}}{16}{table.caption.16}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Statistics of the EUV wave kinematics in the SDO/AIA FOV for the 26 events. LL and LR refer to the lateral left and right flanks, respectively. Rad refer to the radial front direction.}}{18}{table.caption.19}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Characteristics of the type III bursts detected via the automatic algorithm from the combined spectrum.}}{35}{table.caption.41}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Characteristics of the type III bursts detected via the automatic algorithm from the combined spectrum.}}{27}{table.caption.26}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Summary of the performance results of the models for the validation and test sets.}}{47}{table.caption.57}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Confusion matrix for the energy channel $\geq $10 MeV predictions in the test set.}}{48}{table.caption.58}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Comparing the skill scores with previous models. The dashed entries mean the data is unavailable (\citet {whitman_2022} for more details).}}{49}{table.caption.59}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces The MSE/MAE for the validation and test sets over six forecasting windows.}}{51}{table.caption.62}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Summary of the performance results of the models for the validation and test sets.}}{40}{table.caption.42}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Confusion matrix for the energy channel $\geq $10 MeV predictions in the test set.}}{41}{table.caption.43}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Comparing the skill scores with previous models. The dashed entries mean the data is unavailable (\citet {whitman_2022} for more details).}}{43}{table.caption.44}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces The MSE/MAE for the validation and test sets over six forecasting windows.}}{44}{table.caption.47}%
 \addvspace {10\p@ }

@@ -1,6 +1,6 @@
 \chapter{Modeling and Forecasting of Solar Energetic Protons}
 \label{chapter4}
-This chapter comprises two sections. The first focuses on a modeling study concerning energetic proton acceleration and propagation from the solar corona to 1 AU. Utilizing a physics-based approach, including 3D coronal models and a 3D MAS-MHD model, we employ the EPREM model to determine fluxes and spectra of energetic protons at 1 AU, comparing results with in-situ measurements. The second part introduces a deep learning approach for forecasting the integral flux of energetic protons across three energy channels over three forecasting horizons.
+This chapter introduces a deep learning approach for forecasting the integral flux of energetic protons across three energy channels over three forecasting horizons.
 
 \section{Introduction}
 \label{sec_ch4_intro}
@@ -12,26 +12,6 @@ SEP production by coronal shocks throughout the inner heliosphere has garnered a
 
 Various models exist for SEP forecasting \citep{whitman_2022}, including physics-based, empirical, and Machine Learning (ML) based models. Notably, the PROSPER model provides probabilistic predictions for multiple energy channels \citep{papaioannou_2022}, while ML approaches offer promising avenues for accurate and rapid forecasting \citep{lavasa_2021, kasapis_2022}. Despite advancements, forecasting SEP fluxes remains challenging, emphasizing the need for dependable forecasting systems.
 In upcoming sections, we address challenges in modeling SEP fluxes, particularly focusing on imbalanced datasets and low-resolution data. Our study builds upon previous work on CBF kinematics discussed in Chapter~\ref{chapter2} and presents advanced deep learning models for forecasting daily integral flux of SEP, offering insights into space radiation profiles.
-
-\section{Early-Stage SEP Acceleration by CME-Driven Shocks}
-\subsection{Overview}
-Recent studies highlight CMEs as primary contributors to SEP production \citep{reames_1999}, especially in their early stages \citep{ontiveross_2009, gopalswamy_2011}. Advanced modeling techniques have been employed to understand CME-related shock dynamics and SEP acceleration \citep{kozarev_2019, kozarev_2016, kozarev_2022}. Our study extends this modeling up to 10\rsun, marking a significant advancement in Sun-to-Earth physics-based modeling for SEP acceleration and transport. To analyze particle fluxes at 1 AU, we utilize the SPREAdFAST framework discussed in Chapter~\ref{chapter2}.
-SPREAdFAST aims to model and analyze SEP events, combining detailed CBF observations with modeling of coronal plasma and SEP production \citep{kozarev_2022}. Its components include CBF kinematics modeling, coronal shock and particle acceleration modeling, interplanetary particle transport modeling, and comparison with observations from instruments like SOHO and ERNE. This comprehensive framework enhances our understanding and forecasting capabilities for SEP events, contributing to advancements in Sun-to-Earth physics-based modeling.
-
-\subsection{Coronal SEP Acceleration}
-Utilizing the coronal Diffusive Shock Acceleration (DSA) model \citep{kozarev_2016, kozarev_2019}, we calculate proton acceleration dynamics from the low corona to 10\rsun, employing remote solar observations and data-driven model output from the CASHeW framework. The model incorporates shock parameters along multiple shock-crossing field lines to compute proton injection momenta and subsequent distribution function spectra or fluxes. Its validity is confirmed through analysis of several SEP events.
-
-\subsection{Input Data and Spectral Fitting}
-We utilize suprathermal proton spectra obtained from 1 AU fluxes recorded by the SOHO/ERNE instrument \citep{torsti_1995} as input data, fitted with power laws in the energy range of 0.056–3.0 MeV. These spectra serve as input for the DSA model, allowing detailed examination of proton acceleration dynamics under CME-driven shocks.
-
-\subsection{Transport of SEPs and Comparison with ERNE Observations}
-To model the transport of accelerated SEPs to 1 AU, we employ a modified version of the Energetic Particle Radiation Environment Module \citep[EPREM]{schwadron_2010}. This model incorporates essential effects such as pitch-angle scattering, adiabatic focusing and cooling, convection, streaming, and stochastic acceleration. Comparison with ERNE observations is conducted, assessing the agreement between modeled and observed proton fluences and onset times.
-The methodology involves selecting events meeting specific criteria, characterizing CBF kinematics using the CASHeW framework, and comparing modeled and observed proton fluences through scatter plots and Mean Squared Logarithmic Error (MSLE).
-
-\subsection{Results and Discussions}
-Modeling the dynamics of shock waves and particle acceleration in the solar corona yields insights into solar particle radiation. The study underscores the coronal environment's pivotal role in SEP acceleration and transport. It reveals that coronal structures and particle energy significantly influence SEP production during CME-driven shocks. Continuous changes in acceleration occur due to plasma parameter gradients. This understanding aids in spatial distribution and energy dependence assessment of SEPs. Moreover, the SPREAdFAST framework shows promise for SEP event forecasting and space weather prediction. Discrepancies between modeled and observed fluxes, particularly at higher energies, suggest the need for refining the modeling framework to better align with observations.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Solar Proton Flux Forecasting with Deep Learning Models}
 \subsection{Data Preparation}
@@ -148,7 +128,7 @@ Evaluation using skill scores and threshold-based clustering algorithm demonstra
 
 \begin{figure}[!htp]
 	\centering
-    \includegraphics[width=\textwidth]{chapter4/figs/log_pf10/examples_10_tstset.pdf}
+    \includegraphics[width=\textwidth]{chapter4/figs/examples_10_tstset.pdf}
     \caption{The model's forecasts for the out-of-sample testing set for the $>$10 MeV channel are shown at forecast horizons of 1 day, 2 days, and 3 days ahead, using samples of data from December in selected years mentioned in the top-left side of the plots.}
 \label{fig_examples_pf10_tstset}
 \end{figure}
@@ -251,12 +231,6 @@ The model forecasts the logarithm of integral proton flux across energy channels
 \end{figure}
 
 \section{Conclusions}
-In \citet{kozarev_2022}, we pioneer a multi-event exploration, comprehensively examining Sun-to-1 AU SEP simulations utilizing detailed coronal diffusive shock acceleration and interplanetary propagation. Analyzing 62 eruptive events with the SPREAdFAST framework, originally designed for early-stage SEP event forecasting, yielded promising results, showcasing the framework's efficacy.
-
-Input spectra for coronal proton acceleration were derived from quiet-time suprathermal spectra scaled to the Sun. Coronal proton acceleration, influenced by solar corona conditions, exhibited significant impacts on proton acceleration and shock wave surface characteristics.
-
-Comparing DSA model results with SOHO/ERNE instrument observations at 1 AU revealed promising alignment, though discrepancies, particularly at higher energies, were noted. Future work will focus on realistic event modeling, incorporating time-dependent injection of source spectra and three-dimensional transport effects.
-
 In \citet{mnedal_2023a}, BiLSTM neural networks are developed and trained to predict daily-averaged integral flux of SEP at 1-day, 2-day, and 3-day ahead, focusing on energy channels $>$10 MeV, $>$30 MeV, and $>$60 MeV. Input data from OMNIWeb databases span four solar cycles, utilizing MIMO strategy for forecasting, achieving promising results with low MSE values and strong correlations.
 
 The study highlights challenges in longer-term SEP forecasting, particularly in maintaining model performance over extended forecasting windows. Short-term predictions are crucial for space weather forecasting, emphasizing the significance of accurate modeling for protecting space assets.
